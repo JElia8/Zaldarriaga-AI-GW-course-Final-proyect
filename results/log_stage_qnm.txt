@@ -1,0 +1,3 @@
+=== stage qnm
+    done in 3283 s
+total 3284 s

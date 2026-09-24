@@ -1,0 +1,8 @@
+﻿=== parity=odd model=C
+   side + projected
+   side - projected
+  background residual: Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+  unknowns: [chi_a, U, Pp, dPp]
+  n_eqs=4 n_unknowns=4 rank(A)=4 rank([A|B])=4 residual=3.35e-16
+  T(test) = [[1.00000000e+00-1.52655666e-16j 6.66133815e-16+0.00000000e+00j]
+ [1.28455841e-01+8.32667268e-17j 1.47528661e+00+3.05311332e-16j]]

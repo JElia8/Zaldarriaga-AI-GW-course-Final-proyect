@@ -1,0 +1,12 @@
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\scattering.py:62: RuntimeWarning: invalid value encountered in sqrt
+  scale = np.sqrt(w / Lstar.imag) / abs(up[0])
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\scattering.py:101: RuntimeWarning: invalid value encountered in scalar divide
+  return abs(Bout / Bin)**2, 1.0 / abs(Bin)**2
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\scattering.py:62: RuntimeWarning: invalid value encountered in sqrt
+  scale = np.sqrt(w / Lstar.imag) / abs(up[0])
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\scattering.py:101: RuntimeWarning: invalid value encountered in scalar divide
+  return abs(Bout / Bin)**2, 1.0 / abs(Bin)**2
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\scattering.py:62: RuntimeWarning: invalid value encountered in sqrt
+  scale = np.sqrt(w / Lstar.imag) / abs(up[0])
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\scattering.py:101: RuntimeWarning: invalid value encountered in scalar divide
+  return abs(Bout / Bin)**2, 1.0 / abs(Bin)**2

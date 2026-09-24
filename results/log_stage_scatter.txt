@@ -1,0 +1,5 @@
+=== stage scatter
+    done in 546 s
+=== stage tracks
+    done in 702 s
+total 1248 s

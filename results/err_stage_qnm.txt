@@ -1,0 +1,16 @@
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\qnm.py:40: RuntimeWarning: invalid value encountered in scalar divide
+  y = integrate_ray([P / nrm, dP / nrm], rfar, R + 0j, l, parity, w, M, atol=1e-30)
+C:\Users\JUAMPI\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\linalg\_linalg.py:2765: RuntimeWarning: overflow encountered in dot
+  sqnorm = x_real.dot(x_real) + x_imag.dot(x_imag)
+C:\Users\JUAMPI\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\linalg\_linalg.py:2765: RuntimeWarning: overflow encountered in dot
+  sqnorm = x_real.dot(x_real) + x_imag.dot(x_imag)
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\qnm.py:40: RuntimeWarning: invalid value encountered in scalar divide
+  y = integrate_ray([P / nrm, dP / nrm], rfar, R + 0j, l, parity, w, M, atol=1e-30)
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\qnm.py:40: RuntimeWarning: invalid value encountered in scalar divide
+  y = integrate_ray([P / nrm, dP / nrm], rfar, R + 0j, l, parity, w, M, atol=1e-30)
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\qnm.py:40: RuntimeWarning: invalid value encountered in scalar divide
+  y = integrate_ray([P / nrm, dP / nrm], rfar, R + 0j, l, parity, w, M, atol=1e-30)
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\qnm.py:40: RuntimeWarning: invalid value encountered in scalar divide
+  y = integrate_ray([P / nrm, dP / nrm], rfar, R + 0j, l, parity, w, M, atol=1e-30)
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\shellgw\qnm.py:40: RuntimeWarning: invalid value encountered in scalar divide
+  y = integrate_ray([P / nrm, dP / nrm], rfar, R + 0j, l, parity, w, M, atol=1e-30)

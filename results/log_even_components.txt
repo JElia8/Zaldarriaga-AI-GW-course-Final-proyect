@@ -1,0 +1,4 @@
+dh + tt (2*H*M*R - H*R**2 + 2*M*xip_a)/(R*(2*M - R))
+dh + tA 0
+dh + tr R*(K*R + 2*xip_a)
+dh + tf 0

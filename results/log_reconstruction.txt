@@ -1,0 +1,10 @@
+﻿K  coeff Psi : (24*M**2 + 6*M*mu*r + mu**2*r**2 + 2*mu*r**2)/(2*r**2*(6*M + mu*r))
+K  coeff Psi': (-2*M + r)/r
+LATEX K \frac{24 M^{2} + 6 M \mu r + \mu^{2} r^{2} + 2 \mu r^{2}}{2 r^{2} \left(6 M + \mu r\right)}  ||  \frac{- 2 M + r}{r}
+H1  coeff Psi : -I*omega*(-6*M**2 - 3*M*mu*r + mu*r**2)/((-2*M + r)*(6*M + mu*r))
+H1  coeff Psi': -I*omega*r
+LATEX H1 - \frac{i \omega \left(- 6 M^{2} - 3 M \mu r + \mu r^{2}\right)}{\left(- 2 M + r\right) \left(6 M + \mu r\right)}  ||  - i \omega r
+H  coeff Psi : -(144*M**4 + 72*M**3*mu*r - 72*M**3*r + 12*M**2*mu**2*r**2 - 36*M**2*mu*r**2 + 72*M**2*omega**2*r**4 + 2*M*mu**3*r**3 - 2*M*mu**2*r**3 + 24*M*mu*omega**2*r**5 - mu**3*r**4 + 2*mu**2*omega**2*r**6 - 2*mu**2*r**4)/(2*r**2*(-2*M + r)*(6*M + mu*r)**2)
+H  coeff Psi': (-6*M**2 - 3*M*mu*r + mu*r**2)/(r*(6*M + mu*r))
+LATEX H - \frac{144 M^{4} + 72 M^{3} \mu r - 72 M^{3} r + 12 M^{2} \mu^{2} r^{2} - 36 M^{2} \mu r^{2} + 72 M^{2} \omega^{2} r^{4} + 2 M \mu^{3} r^{3} - 2 M \mu^{2} r^{3} + 24 M \mu \omega^{2} r^{5} - \mu^{3} r^{4} + 2 \mu^{2} \omega^{2} r^{6} - 2 \mu^{2} r^{4}}{2 r^{2} \left(- 2 M + r\right) \left(6 M + \mu r\right)^{2}}  ||  \frac{- 6 M^{2} - 3 M \mu r + \mu r^{2}}{r \left(6 M + \mu r\right)}
+H coeff: num= -144*M**4 - 72*M**3*mu*r + 72*M**3*r - 12*M**2*mu**2*r**2 + 36*M**2*mu*r**2 - 2*M*mu**3*r**3 + 2*M*mu**2*r**3 + mu**3*r**4 + 2*mu**2*r**4 + omega**2*(-72*M**2*r**4 - 24*M*mu*r**5 - 2*mu**2*r**6)  den= 2*r**2*(-2*M + r)*(6*M + mu*r)**2

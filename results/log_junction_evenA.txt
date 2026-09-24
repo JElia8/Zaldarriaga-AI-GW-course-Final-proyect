@@ -1,0 +1,11 @@
+=== parity=even model=A
+   side + projected
+   side - projected
+  background residual: Matrix([[0, 0, 0], [0, (-3*M*sqrt(R) - R**(5/2)*Rdd + R**(3/2) + R**2*Rdd*sqrt(-2*M + R) - R*sqrt(-2*M + R))/sqrt(-2*M + R), 0], [0, 0, 4*u_tanhalf**2*(-3*M*sqrt(R) - R**(5/2)*Rdd + R**(3/2) + R**2*Rdd*sqrt(-2*M + R) - R*sqrt(-2*M + R))/(sqrt(-2*M + R)*(u_tanhalf**4 + 2*u_tanhalf**2 + 1))]])
+  Rddot = (-3*M*sqrt(R) + R**(3/2) - R*sqrt(-2*M + R))/(R**(5/2) - R**2*sqrt(-2*M + R))
+  background residual after Rdd: Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+  unknowns: [xip_a, xim_a, zeta_a, eta_a, Pp, dPp]
+  n_eqs=8 n_unknowns=6 rank(A)=6 rank([A|B])=8 residual=7.12e-03
+  T(test) = [[ 0.69134253-0.00878964j -0.17950669-0.03405945j]
+ [ 0.34032678-0.02592654j  1.43871582+0.00368891j]]
+  exported C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\code\symbolic\..\shellgw\junction_even_A.py
