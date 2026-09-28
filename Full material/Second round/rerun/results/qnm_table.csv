@@ -1,0 +1,847 @@
+l,n,parity,model,R_over_M,Gamma,Re_wM,Im_wM,method,residual,literature
+2,0,odd=even (isospectral),Schwarzschild BH,,,0.3736716844180418,-0.08896231568893571,Leaver continued fraction,,"0.373672-0.088962i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,0,odd=even (isospectral),Schwarzschild BH,,,0.3731620648548888,-0.08921744722425146,WKB 3rd order,,"0.373672-0.088962i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,0,odd=even (isospectral),Schwarzschild BH,,,0.37361935722645234,-0.08889097955333286,WKB 6th order,,"0.373672-0.088962i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,1,odd=even (isospectral),Schwarzschild BH,,,0.34671099687916346,-0.2739148752912348,Leaver continued fraction,,"0.346711-0.273915i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,1,odd=even (isospectral),Schwarzschild BH,,,0.3460172566514762,-0.27491535490010305,WKB 3rd order,,"0.346711-0.273915i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,1,odd=even (isospectral),Schwarzschild BH,,,0.34629657088274024,-0.2734797737645134,WKB 6th order,,"0.346711-0.273915i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,2,odd=even (isospectral),Schwarzschild BH,,,0.30105345461236643,-0.4782769832230719,Leaver continued fraction,,"0.301053-0.478277i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,2,odd=even (isospectral),Schwarzschild BH,,,0.3029346678358905,-0.4710639997597499,WKB 3rd order,,"0.301053-0.478277i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,2,odd=even (isospectral),Schwarzschild BH,,,0.29851995630844946,-0.477560222538813,WKB 6th order,,"0.301053-0.478277i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,3,odd=even (isospectral),Schwarzschild BH,,,0.2515049621855906,-0.7051482024334954,Leaver continued fraction,,"0.251505-0.705148i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,3,odd=even (isospectral),Schwarzschild BH,,,0.24746191684572022,-0.6728977127559097,WKB 3rd order,,"0.251505-0.705148i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,3,odd=even (isospectral),Schwarzschild BH,,,0.24171547719241648,-0.7095954583865636,WKB 6th order,,"0.251505-0.705148i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,0,odd=even (isospectral),Schwarzschild BH,,,0.5994432884374901,-0.09270304794494759,Leaver continued fraction,,"0.599443-0.092703i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,0,odd=even (isospectral),Schwarzschild BH,,,0.5992651178421474,-0.0927284025961153,WKB 3rd order,,"0.599443-0.092703i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,0,odd=even (isospectral),Schwarzschild BH,,,0.5994433703276558,-0.09270252323657162,WKB 6th order,,"0.599443-0.092703i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,1,odd=even (isospectral),Schwarzschild BH,,,0.5826438030332994,-0.281298113435044,Leaver continued fraction,,"0.582644-0.281298i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,1,odd=even (isospectral),Schwarzschild BH,,,0.5823546785472143,-0.28140605783254996,WKB 3rd order,,"0.582644-0.281298i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,1,odd=even (isospectral),Schwarzschild BH,,,0.5826420257828245,-0.28129044400568176,WKB 6th order,,"0.582644-0.281298i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,2,odd=even (isospectral),Schwarzschild BH,,,0.5516849007784513,-0.4790927509669623,Leaver continued fraction,,"0.551685-0.479093i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,2,odd=even (isospectral),Schwarzschild BH,,,0.553200075588754,-0.47668413707313106,WKB 3rd order,,"0.551685-0.479093i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,2,odd=even (isospectral),Schwarzschild BH,,,0.5515939021239379,-0.47904685211053266,WKB 6th order,,"0.551685-0.479093i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,3,odd=even (isospectral),Schwarzschild BH,,,0.5119619110583373,-0.6903370959692391,Leaver continued fraction,,"0.511962-0.690337i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,3,odd=even (isospectral),Schwarzschild BH,,,0.5157474997794953,-0.6774293277934174,WKB 3rd order,,"0.511962-0.690337i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+3,3,odd=even (isospectral),Schwarzschild BH,,,0.5110994465200001,-0.6904681598204712,WKB 6th order,,"0.511962-0.690337i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,0,odd=even (isospectral),Schwarzschild BH,,,0.8091783775322392,-0.09416396098892324,Leaver continued fraction,,"0.809178-0.094164i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,0,odd=even (isospectral),Schwarzschild BH,,,0.8090978131048662,-0.09417105890280406,WKB 3rd order,,"0.809178-0.094164i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,0,odd=even (isospectral),Schwarzschild BH,,,0.8091783494954681,-0.09416406972785686,WKB 6th order,,"0.809178-0.094164i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,1,odd=even (isospectral),Schwarzschild BH,,,0.7966315320345025,-0.28433434940484065,Leaver continued fraction,,"0.796632-0.284334i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,1,odd=even (isospectral),Schwarzschild BH,,,0.79649889720665,-0.2843663711109473,WKB 3rd order,,"0.796632-0.284334i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,1,odd=even (isospectral),Schwarzschild BH,,,0.7966312535922374,-0.28433415473933626,WKB 6th order,,"0.796632-0.284334i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,2,odd=even (isospectral),Schwarzschild BH,,,0.7727095326067093,-0.47990817512116307,Leaver continued fraction,,"0.772710-0.479908i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,2,odd=even (isospectral),Schwarzschild BH,,,0.7736360205150946,-0.4789739838582393,WKB 3rd order,,"0.772710-0.479908i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,2,odd=even (isospectral),Schwarzschild BH,,,0.7726953642739129,-0.4798996473439332,WKB 6th order,,"0.772710-0.479908i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,3,odd=even (isospectral),Schwarzschild BH,,,0.7398367300055386,-0.6839243190178821,Leaver continued fraction,,"0.739837-0.683924i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,3,odd=even (isospectral),Schwarzschild BH,,,0.7433124886096785,-0.6783003084980259,WKB 3rd order,,"0.739837-0.683924i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+4,3,odd=even (isospectral),Schwarzschild BH,,,0.7396650553048396,-0.6839015818610183,WKB 6th order,,"0.739837-0.683924i (Berti, Cardoso & Starinets 2009; Leaver 1985)"
+2,0,odd,C=A (odd: model independent) [wave],2.2,,0.42110967743248423,-0.03502424075944324,M1 transfer matrix + continued fraction,3.9829553918698314e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],2.2,,0.4211096774323644,-0.035024240759635054,M2 shooting (complex-ray DOP853),2.2617573835689668e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],2.2,,0.6619576577980337,-0.19735764703904585,M1 transfer matrix + continued fraction,2.5583130197353685e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],2.2,,0.6619576573105059,-0.1973576472316983,M2 shooting (complex-ray DOP853),5.242120926719684e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],2.2,,0.6669231242279641,-0.2804275643052938,M1 transfer matrix + continued fraction,3.952541930068278e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],2.2,,0.666923124713021,-0.2804275647625802,M2 shooting (complex-ray DOP853),6.666265892038461e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],2.2,,0.7837697453734483,-0.714372274641683,M1 transfer matrix + continued fraction,2.449717360158437e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],2.2,,0.7837695982115193,-0.714372326046323,M2 shooting (complex-ray DOP853),1.5588159091136765e-07,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],2.2,,1.1439340083964153,-0.22684885930800555,M1 transfer matrix + continued fraction,4.942336110542912e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],2.2,,1.1439340084339293,-0.22684885941378471,M2 shooting (complex-ray DOP853),1.1223426819777378e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,odd,C=A (odd: model independent) [wave],2.2,,1.583621257628302,-0.24530222749604386,M1 transfer matrix + continued fraction,4.701511361880795e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,odd,C=A (odd: model independent) [wave],2.2,,1.5836212577097168,-0.24530222755923298,M2 shooting (complex-ray DOP853),1.030594333772759e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,6,odd,C=A (odd: model independent) [wave],2.2,,2.019944888589581,-0.26011031193182804,M1 transfer matrix + continued fraction,2.2702510891983895e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,6,odd,C=A (odd: model independent) [wave],2.2,,2.0199448886868745,-0.2601103119888959,M2 shooting (complex-ray DOP853),1.1279504763517507e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,7,odd,C=A (odd: model independent) [wave],2.2,,2.4544296588135257,-0.2724155546421395,M1 transfer matrix + continued fraction,1.1967665430052575e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,7,odd,C=A (odd: model independent) [wave],2.2,,2.4544296589268937,-0.2724155546976412,M2 shooting (complex-ray DOP853),1.2622495617695727e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],2.5,,0.45288051878677094,-0.10849227185870226,M1 transfer matrix + continued fraction,3.790900035703269e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],2.5,,0.45288051878461255,-0.10849227186057284,M2 shooting (complex-ray DOP853),2.8561631395546532e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],2.5,,0.522469179526024,-0.47599287373749416,M1 transfer matrix + continued fraction,5.157292922426459e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],2.5,,0.5224691789554387,-0.4759928740559863,M2 shooting (complex-ray DOP853),6.534561047428392e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],2.5,,0.5237766100187129,-0.96076520395492,M1 transfer matrix + continued fraction,5.992323363102798e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],2.5,,0.523776664054179,-0.9607651635858859,M2 shooting (complex-ray DOP853),6.744991113588576e-08,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],2.5,,0.9096652883582468,-0.28504909642535226,M1 transfer matrix + continued fraction,2.121844530790375e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],2.5,,0.9096652883980579,-0.2850490964875559,M2 shooting (complex-ray DOP853),7.385268944920893e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],2.5,,1.492926149000543,-0.31710273581442605,M1 transfer matrix + continued fraction,1.882655035899543e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],2.5,,1.4929261489383416,-0.31710273587580395,M2 shooting (complex-ray DOP853),8.73856712120871e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,odd,C=A (odd: model independent) [wave],2.5,,2.067062599119744,-0.3410566786867248,M1 transfer matrix + continued fraction,8.897061271546648e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,odd,C=A (odd: model independent) [wave],2.5,,2.067062599034692,-0.3410566787390437,M2 shooting (complex-ray DOP853),9.985543024559653e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],3.0,,0.20371201829453103,-1.0148934957484466,M1 transfer matrix + continued fraction,1.255375463983675e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],3.0,,0.20371202095603994,-1.0148934957913147,M2 shooting (complex-ray DOP853),2.661854112239425e-09,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],3.0,,0.35351644541316046,-0.5590406831188951,M1 transfer matrix + continued fraction,3.891287332406489e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],3.0,,0.35351644534390597,-0.5590406830607719,M2 shooting (complex-ray DOP853),9.041287386593406e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],3.0,,0.4263809416050042,-0.17727796507985277,M1 transfer matrix + continued fraction,6.724285390066608e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],3.0,,0.4263809416020234,-0.1772779650795503,M2 shooting (complex-ray DOP853),2.9961455726301128e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],3.0,,0.9795546251199894,-0.33508253398652615,M1 transfer matrix + continued fraction,1.5460225884645613e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],3.0,,0.9795546251993416,-0.33508253395499293,M2 shooting (complex-ray DOP853),8.538802191854359e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],3.0,,1.6061031085746853,-0.3675068481795859,M1 transfer matrix + continued fraction,1.238067864462592e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],3.0,,1.6061031086099442,-0.36750684822827395,M2 shooting (complex-ray DOP853),6.011420030592764e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,odd,C=A (odd: model independent) [wave],3.0,,2.223783676939555,-0.39299812575452886,M1 transfer matrix + continued fraction,1.0863721712381891e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,odd,C=A (odd: model independent) [wave],3.0,,2.223783676890251,-0.39299812576370646,M2 shooting (complex-ray DOP853),5.015101482166369e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],4.0,,0.1599958688704298,-0.5306631282318932,M1 transfer matrix + continued fraction,8.055857969822404e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],4.0,,0.15999586888661094,-0.5306631282272544,M2 shooting (complex-ray DOP853),1.6832948810271187e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],4.0,,0.3501222291662666,-0.22469595228765976,M1 transfer matrix + continued fraction,3.4330199190551106e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],4.0,,0.35012222916579494,-0.2246959522867596,M2 shooting (complex-ray DOP853),1.0162599534484517e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],4.0,,0.8995694777319314,-0.3426519940030713,M1 transfer matrix + continued fraction,4.754269604487234e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],4.0,,0.8995694777179907,-0.3426519940090421,M2 shooting (complex-ray DOP853),1.5165587050755052e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],4.0,,1.474993361133513,-0.3708474965184903,M1 transfer matrix + continued fraction,2.427377041906616e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],4.0,,1.4749933611209378,-0.3708474965343271,M2 shooting (complex-ray DOP853),2.0222289800093248e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],4.0,,2.042382888598542,-0.393869120985637,M1 transfer matrix + continued fraction,7.302218116804098e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],4.0,,2.0423828885989743,-0.3938691210022526,M2 shooting (complex-ray DOP853),1.662122688480325e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],6.0,,0.24738599824547056,-0.225341646008413,M1 transfer matrix + continued fraction,1.1823028032399994e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],6.0,,0.24738599824545096,-0.2253416460082412,M2 shooting (complex-ray DOP853),1.7292088035849965e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],6.0,,0.6918881650018069,-0.297490605904941,M1 transfer matrix + continued fraction,8.471584390998127e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],6.0,,0.6918881649994141,-0.29749060590376764,M2 shooting (complex-ray DOP853),2.665055628221757e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],6.0,,1.134819529530312,-0.3181916422610877,M1 transfer matrix + continued fraction,4.698664396260367e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],6.0,,1.1348195295265961,-0.3181916422592039,M2 shooting (complex-ray DOP853),4.166153762722054e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],6.0,,1.571661411657959,-0.3355277746830931,M1 transfer matrix + continued fraction,7.146368541462948e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],6.0,,1.5716614116543262,-0.33552777468003775,M2 shooting (complex-ray DOP853),4.7468749495332144e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],6.0,,2.005044271279653,-0.3498410974106422,M1 transfer matrix + continued fraction,8.283456405707631e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],6.0,,2.005044271277526,-0.3498410974078902,M2 shooting (complex-ray DOP853),3.477980719368944e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,odd,C=A (odd: model independent) [wave],6.0,,2.436559216545074,-0.36186170605873086,M1 transfer matrix + continued fraction,3.926350222806589e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,odd,C=A (odd: model independent) [wave],6.0,,2.4365592165430328,-0.36186170605545664,M2 shooting (complex-ray DOP853),3.858276644798088e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],10.0,,0.1534192530403152,-0.1848983779520879,M1 transfer matrix + continued fraction,1.8652530878620978e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,odd,C=A (odd: model independent) [wave],10.0,,0.1534192530403714,-0.18489837795171413,M2 shooting (complex-ray DOP853),3.7798642441232573e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],10.0,,0.45404541649763214,-0.22153003779481428,M1 transfer matrix + continued fraction,3.3887017096197345e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,odd,C=A (odd: model independent) [wave],10.0,,0.45404541649781893,-0.2215300377934326,M2 shooting (complex-ray DOP853),1.3942422414457275e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],10.0,,0.7451810016904298,-0.234565682566847,M1 transfer matrix + continued fraction,1.3390729419515757e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,odd,C=A (odd: model independent) [wave],10.0,,0.745181001689657,-0.2345656825655537,M2 shooting (complex-ray DOP853),1.506612822990925e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],10.0,,1.0323910161607062,-0.24567186902998947,M1 transfer matrix + continued fraction,8.872958108525885e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,odd,C=A (odd: model independent) [wave],10.0,,1.0323910161596728,-0.24567186902828064,M2 shooting (complex-ray DOP853),1.996997234523326e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],10.0,,1.3173296614754888,-0.2549345828862206,M1 transfer matrix + continued fraction,2.3325921061673166e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,odd,C=A (odd: model independent) [wave],10.0,,1.3173296614742411,-0.2549345828839127,M2 shooting (complex-ray DOP853),2.623590174192065e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,odd,C=A (odd: model independent) [wave],10.0,,1.6010230072029326,-0.26275424620093346,M1 transfer matrix + continued fraction,3.8139411536698526e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,odd,C=A (odd: model independent) [wave],10.0,,1.601023007201598,-0.2627542461980934,M2 shooting (complex-ray DOP853),3.1379623734661695e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,6,odd,C=A (odd: model independent) [wave],10.0,,1.8839765795558063,-0.26948000009728307,M1 transfer matrix + continued fraction,5.385941778280834e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,6,odd,C=A (odd: model independent) [wave],10.0,,1.8839765795550711,-0.26948000009529227,M2 shooting (complex-ray DOP853),2.12220975591664e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,7,odd,C=A (odd: model independent) [wave],10.0,,2.166457579880196,-0.275364350903696,M1 transfer matrix + continued fraction,8.833364882365824e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,7,odd,C=A (odd: model independent) [wave],10.0,,2.1664575798793555,-0.27536435090122247,M2 shooting (complex-ray DOP853),2.612473686176577e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,8,odd,C=A (odd: model independent) [wave],10.0,,2.4486188943373204,-0.2805869086185441,M1 transfer matrix + continued fraction,5.979604427927094e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,8,odd,C=A (odd: model independent) [wave],10.0,,2.448618894336322,-0.28058690861538954,M2 shooting (complex-ray DOP853),3.3087310678215703e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [wave],2.2,2.0,0.44693885730098265,-0.0438499305745734,M1 transfer matrix + continued fraction,1.3217227551847382e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [wave],2.2,2.0,0.44693885730140503,-0.04384993057511662,M2 shooting (complex-ray DOP853),6.881149197179058e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],2.2,2.0,0.5799617211033398,-0.19970160203704101,M1 transfer matrix + continued fraction,1.91667223594167e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],2.2,2.0,0.5799617210942419,-0.19970160200526174,M2 shooting (complex-ray DOP853),3.305590431888431e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],2.2,2.0,0.6975608697711964,-0.5605013105947735,M1 transfer matrix + continued fraction,1.5893869643313266e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],2.2,2.0,0.697560889611213,-0.5605013149282464,M2 shooting (complex-ray DOP853),2.030776322880014e-08,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],2.2,2.0,0.9205494566752396,-0.21412159044893347,M1 transfer matrix + continued fraction,3.417625221965253e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],2.2,2.0,0.9205494566569549,-0.21412159043154733,M2 shooting (complex-ray DOP853),2.523110497012731e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],2.2,2.0,1.363989410908001,-0.2363276949487551,M1 transfer matrix + continued fraction,6.215230553903859e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],2.2,2.0,1.363989410961375,-0.23632769504927184,M2 shooting (complex-ray DOP853),1.1380858779647524e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,even,C static fluid shell [wave],2.2,2.0,1.8019888319524242,-0.2529554678711907,M1 transfer matrix + continued fraction,1.7327253725742538e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,even,C static fluid shell [wave],2.2,2.0,1.801988832026159,-0.2529554679517583,M2 shooting (complex-ray DOP853),1.0921515776089568e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [matter-unstable],2.2,2.0,1.808837953227018e-17,0.24429206879363158,M1 transfer matrix + continued fraction,3.679625165944844e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-unstable],2.2,2.0,7.52499103984802e-20,0.24429206879364562,M2 shooting (complex-ray DOP853),1.4044332813248585e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],2.2,2.0,1.2679251417775487e-16,-0.2442859117588357,M1 transfer matrix + continued fraction,2.741456263298361e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],2.2,2.0,-3.1058530996287932e-06,-0.2442910430151859,M2 shooting (complex-ray DOP853),5.998009270462241e-06,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [wave],2.5,2.0,0.47218954884092057,-0.7468169494982448,M1 transfer matrix + continued fraction,1.2533980321915285e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [wave],2.5,2.0,0.47218954290141496,-0.7468169557734039,M2 shooting (complex-ray DOP853),8.640332638408539e-09,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],2.5,2.0,0.4957552720588497,-0.16347026016114535,M1 transfer matrix + continued fraction,2.208586820739397e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],2.5,2.0,0.49575527205442144,-0.1634702601674387,M2 shooting (complex-ray DOP853),7.69519820965396e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],2.5,2.0,0.5968887706470226,-0.312978647027808,M1 transfer matrix + continued fraction,1.2842357822875867e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],2.5,2.0,0.5968887705802511,-0.31297864712404516,M2 shooting (complex-ray DOP853),1.171325143904978e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],2.5,2.0,1.2007073308104927,-0.3013778139412719,M1 transfer matrix + continued fraction,1.537716750873489e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],2.5,2.0,1.2007073307079252,-0.30137781400753605,M2 shooting (complex-ray DOP853),1.2211074123852943e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],2.5,2.0,1.780431020003936,-0.3293671163968758,M1 transfer matrix + continued fraction,1.1053887793229958e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],2.5,2.0,1.780431019911594,-0.3293671164560977,M2 shooting (complex-ray DOP853),1.0970075737172964e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [matter-unstable],2.5,2.0,-3.6835578983108536e-14,0.18860087149021298,M1 transfer matrix + continued fraction,5.043533759396259e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-unstable],2.5,2.0,-2.456331406964793e-18,0.18860087149006508,M2 shooting (complex-ray DOP853),1.5242666436094906e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],2.5,2.0,5.751858549927556e-16,-0.18866459465481264,M1 transfer matrix + continued fraction,2.5512938185909084e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],2.5,2.0,-1.9788581555792053e-05,-0.18860422524539908,M2 shooting (complex-ray DOP853),6.352994217654701e-05,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [wave],3.0,2.0,0.21102215593512144,-0.7659855697052055,M1 transfer matrix + continued fraction,3.587956393273226e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [wave],3.0,2.0,0.21102215588911283,-0.7659855695711133,M2 shooting (complex-ray DOP853),1.417656719543994e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],3.0,2.0,0.4076609813829572,-0.2942523704075264,M1 transfer matrix + continued fraction,9.579247601975088e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],3.0,2.0,0.407660981366072,-0.29425237040549757,M2 shooting (complex-ray DOP853),1.7006663918317328e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],3.0,2.0,0.6159438067679871,-0.31861644913982495,M1 transfer matrix + continued fraction,7.43045408365756e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],3.0,2.0,0.615943806761652,-0.3186164490892298,M2 shooting (complex-ray DOP853),5.099021762740769e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],3.0,2.0,1.9154578947313445,-0.38053250946005907,M1 transfer matrix + continued fraction,1.6867504842275694e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],3.0,2.0,1.915457894703231,-0.3805325094956507,M2 shooting (complex-ray DOP853),4.535564376005946e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],3.0,2.0,2.5305007749291946,-0.4036975356379267,M1 transfer matrix + continued fraction,1.4072153637298936e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],3.0,2.0,2.5305007749013955,-0.40369753558575006,M2 shooting (complex-ray DOP853),5.912015528200354e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [matter-stable],3.0,2.0,-2.1684099025458137e-18,0.13320576129466033,M1 transfer matrix + continued fraction,1.033218663902074e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-stable],3.0,2.0,-2.1684348221226933e-18,0.13320576129462164,M2 shooting (complex-ray DOP853),3.8691272408186705e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],3.0,2.0,-4.048643758915178e-17,-0.13325714914707132,M1 transfer matrix + continued fraction,2.4507067926798945e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],3.0,2.0,-2.7639067640052794e-05,-0.1332255697167716,M2 shooting (complex-ray DOP853),4.196639701074917e-05,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [wave],4.0,2.0,0.2583473801371122,-0.31506591933888883,M1 transfer matrix + continued fraction,1.714009563570406e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [wave],4.0,2.0,0.2583473801364721,-0.3150659193370254,M2 shooting (complex-ray DOP853),1.970326631840794e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],4.0,2.0,0.5781809590144449,-0.3260722947502079,M1 transfer matrix + continued fraction,7.534781455095399e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],4.0,2.0,0.5781809590151522,-0.32607229475121174,M2 shooting (complex-ray DOP853),1.2280261388946348e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],4.0,2.0,1.1866109522555395,-0.35609567573094747,M1 transfer matrix + continued fraction,1.1085271289846398e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],4.0,2.0,1.1866109522746389,-0.3560956757195771,M2 shooting (complex-ray DOP853),2.2227718932541988e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],4.0,2.0,1.7591726011751563,-0.38259099803982183,M1 transfer matrix + continued fraction,4.693492743184784e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],4.0,2.0,1.7591726011812163,-0.3825909980226228,M2 shooting (complex-ray DOP853),1.823541580919262e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],4.0,2.0,2.3241412952515703,-0.40360382471741957,M1 transfer matrix + continued fraction,1.8200418920783787e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],4.0,2.0,2.324141295246983,-0.40360382470454353,M2 shooting (complex-ray DOP853),1.3668828056108467e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [matter-stable],4.0,2.0,0.1485110562925563,-0.00018837598020446004,M1 transfer matrix + continued fraction,8.057051589284333e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-stable],4.0,2.0,0.14851105629244413,-0.00018837598022916263,M2 shooting (complex-ray DOP853),1.148483651920669e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-unstable],4.0,2.0,-4.627340740614097e-19,0.07957925654585665,M1 transfer matrix + continued fraction,1.1315324229588441e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-unstable],4.0,2.0,-1.468204250509252e-18,0.07957925654496584,M2 shooting (complex-ray DOP853),8.908151993841774e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],4.0,2.0,3.1240753794858293e-16,-0.07959631678715874,M1 transfer matrix + continued fraction,7.774163111899242e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],4.0,2.0,-1.2351938697752926e-05,-0.07959981273988725,M2 shooting (complex-ray DOP853),1.2837136560805284e-05,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [wave],6.0,2.0,0.13709981304998922,-0.26884536116408964,M1 transfer matrix + continued fraction,1.0671753598198247e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [wave],6.0,2.0,0.13709981304946633,-0.268845361164123,M2 shooting (complex-ray DOP853),5.239505258481911e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],6.0,2.0,0.4501089082018023,-0.28792935881210313,M1 transfer matrix + continued fraction,6.0453589533018e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],6.0,2.0,0.45010890819958255,-0.2879293588142248,M2 shooting (complex-ray DOP853),3.070667450309105e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],6.0,2.0,0.912877999230682,-0.30736153542516065,M1 transfer matrix + continued fraction,3.038556532748251e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],6.0,2.0,0.9128779992336677,-0.3073615354265165,M2 shooting (complex-ray DOP853),3.2791609450650603e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],6.0,2.0,1.353606243740305,-0.32702244969375205,M1 transfer matrix + continued fraction,2.581609800945252e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],6.0,2.0,1.3536062437429923,-0.32702244969591976,M2 shooting (complex-ray DOP853),3.452697328200555e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],6.0,2.0,1.788598732732999,-0.3429207817928476,M1 transfer matrix + continued fraction,1.3282887490689608e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],6.0,2.0,1.7885987327354536,-0.3429207817956717,M2 shooting (complex-ray DOP853),3.741682311713752e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,even,C static fluid shell [wave],6.0,2.0,2.220953770741944,-0.3560552249940311,M1 transfer matrix + continued fraction,4.002353680461014e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,even,C static fluid shell [wave],6.0,2.0,2.220953770744661,-0.35605522499787,M2 shooting (complex-ray DOP853),4.703354277765513e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [matter-stable],6.0,2.0,0.08941886368961385,-5.397694706138202e-05,M1 transfer matrix + continued fraction,2.598799175435363e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-stable],6.0,2.0,0.08941886368964433,-5.397694707064718e-05,M2 shooting (complex-ray DOP853),3.185289142625537e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-unstable],6.0,2.0,-1.5653105744240767e-17,0.04013787355836555,M1 transfer matrix + continued fraction,2.0937924261372803e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-unstable],6.0,2.0,-3.8453008339035046e-19,0.040137873557089296,M2 shooting (complex-ray DOP853),1.2762568780491819e-12,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],6.0,2.0,-2.233829327144281e-17,-0.04014349157218572,M1 transfer matrix + continued fraction,2.934892074567601e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],6.0,2.0,-1.9228282527789735e-06,-0.04014502230952431,M2 shooting (complex-ray DOP853),2.457727667859181e-06,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [wave],10.0,2.0,0.06151526424169336,-0.19748416381733172,M1 transfer matrix + continued fraction,1.3396358917837882e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [wave],10.0,2.0,0.06151526424200148,-0.19748416381753395,M2 shooting (complex-ray DOP853),3.685576210858789e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],10.0,2.0,0.29783780529293896,-0.21714430250794572,M1 transfer matrix + continued fraction,2.527249500311074e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,1,even,C static fluid shell [wave],10.0,2.0,0.2978378052912203,-0.21714430250686312,M2 shooting (complex-ray DOP853),2.0312310981667988e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],10.0,2.0,0.5992974144743141,-0.2278310461775254,M1 transfer matrix + continued fraction,2.542405144866832e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,2,even,C static fluid shell [wave],10.0,2.0,0.5992974144748524,-0.22783104617873287,M2 shooting (complex-ray DOP853),1.322052239824034e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],10.0,2.0,0.8890156811579474,-0.24021786381491017,M1 transfer matrix + continued fraction,2.5073970409051424e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,3,even,C static fluid shell [wave],10.0,2.0,0.8890156811593017,-0.2402178638169307,M2 shooting (complex-ray DOP853),2.4324484851376434e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],10.0,2.0,1.1750214857896795,-0.2504514555990195,M1 transfer matrix + continued fraction,1.5175551633795865e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,4,even,C static fluid shell [wave],10.0,2.0,1.1750214857907124,-0.25045145560088755,M2 shooting (complex-ray DOP853),2.1346291671946487e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,even,C static fluid shell [wave],10.0,2.0,1.459277518430697,-0.25897440857018666,M1 transfer matrix + continued fraction,8.230184690816268e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,5,even,C static fluid shell [wave],10.0,2.0,1.4592775184315916,-0.2589744085721545,M2 shooting (complex-ray DOP853),2.1616280762274355e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,6,even,C static fluid shell [wave],10.0,2.0,1.7425653992073655,-0.2662226608693143,M1 transfer matrix + continued fraction,1.196507002166551e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,6,even,C static fluid shell [wave],10.0,2.0,1.7425653992083079,-0.26622266087166935,M2 shooting (complex-ray DOP853),2.53660159944406e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,7,even,C static fluid shell [wave],10.0,2.0,2.0252615558437568,-0.2725071896003329,M1 transfer matrix + continued fraction,2.0971513968120373e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,7,even,C static fluid shell [wave],10.0,2.0,2.025261555844883,-0.27250718960336096,M2 shooting (complex-ray DOP853),3.2307281825259142e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,8,even,C static fluid shell [wave],10.0,2.0,2.3075696331951723,-0.2780447378620835,M1 transfer matrix + continued fraction,0.0,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,8,even,C static fluid shell [wave],10.0,2.0,2.3075696331957887,-0.278044737864184,M2 shooting (complex-ray DOP853),2.1890607902998497e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,9,even,C static fluid shell [wave],10.0,2.0,2.5896093724869256,-0.2829891559373316,M1 transfer matrix + continued fraction,2.0274118582575045e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,9,even,C static fluid shell [wave],10.0,2.0,2.5896093724876192,-0.28298915593989504,M2 shooting (complex-ray DOP853),2.6556444572268645e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+2,0,even,C static fluid shell [matter-stable],10.0,2.0,0.044214868171479335,-8.784029116938108e-06,M1 transfer matrix + continued fraction,6.933499311555426e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-stable],10.0,2.0,0.04421486817149817,-8.784029121137685e-06,M2 shooting (complex-ray DOP853),1.9294730579733917e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-unstable],10.0,2.0,-5.249112757425483e-19,0.017623791498792188,M1 transfer matrix + continued fraction,5.553084325764906e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-unstable],10.0,2.0,-1.2644348035966366e-18,0.01762379149776437,M2 shooting (complex-ray DOP853),1.0278167206226205e-12,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],10.0,2.0,3.518283952281808e-17,-0.01762479572433087,M1 transfer matrix + continued fraction,1.366510506344091e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,C static fluid shell [matter-imag-damped],10.0,2.0,-1.3595026590959446e-07,-0.01762499199635011,M2 shooting (complex-ray DOP853),2.3875757652100557e-07,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+2,0,even,A frozen domain wall [wave],2.2,,0.1028436287206943,-0.04069987976112373,M1 transfer matrix + continued fraction,9.990389550005004e-18,none found
+2,0,even,A frozen domain wall [wave],2.2,,0.1028436287183194,-0.04069987975660929,M2 shooting (complex-ray DOP853),5.101011962753994e-12,none found
+2,1,even,A frozen domain wall [wave],2.2,,0.4544507472900836,-0.10427689883590138,M1 transfer matrix + continued fraction,5.520128963464186e-16,none found
+2,1,even,A frozen domain wall [wave],2.2,,0.4544507472874659,-0.10427689883826914,M2 shooting (complex-ray DOP853),3.529708334626271e-12,none found
+2,2,even,A frozen domain wall [wave],2.2,,0.5602416945989603,-0.44388133947998776,M1 transfer matrix + continued fraction,2.307949582309631e-14,none found
+2,2,even,A frozen domain wall [wave],2.2,,0.5602416950240934,-0.44388133960959586,M2 shooting (complex-ray DOP853),4.444506291047539e-10,none found
+2,3,even,A frozen domain wall [wave],2.2,,0.6559462208952984,-0.8587765594733795,M1 transfer matrix + continued fraction,3.188412149645806e-12,none found
+2,3,even,A frozen domain wall [wave],2.2,,0.6559464449410928,-0.8587767222529297,M2 shooting (complex-ray DOP853),2.7693627412343417e-07,none found
+2,4,even,A frozen domain wall [wave],2.2,,0.7096666605529823,-0.03762109250927244,M1 transfer matrix + continued fraction,8.197102420508827e-16,none found
+2,4,even,A frozen domain wall [wave],2.2,,0.7096666605555111,-0.037621092508757566,M2 shooting (complex-ray DOP853),2.580638648421244e-12,none found
+2,5,even,A frozen domain wall [wave],2.2,,1.1526966108557137,-0.07117403888697833,M1 transfer matrix + continued fraction,4.924235121813243e-16,none found
+2,5,even,A frozen domain wall [wave],2.2,,1.1526966108564445,-0.07117403888747058,M2 shooting (complex-ray DOP853),8.810783578154061e-13,none found
+2,6,even,A frozen domain wall [wave],2.2,,1.5903606212735284,-0.09361627549181392,M1 transfer matrix + continued fraction,3.018102837377092e-16,none found
+2,6,even,A frozen domain wall [wave],2.2,,1.5903606212747132,-0.09361627549107561,M2 shooting (complex-ray DOP853),1.3960397722554101e-12,none found
+2,7,even,A frozen domain wall [wave],2.2,,2.025365509448758,-0.11031639911769238,M1 transfer matrix + continued fraction,1.3095315563813072e-15,none found
+2,7,even,A frozen domain wall [wave],2.2,,2.0253655094504803,-0.11031639911743144,M2 shooting (complex-ray DOP853),1.7418348674934658e-12,none found
+2,8,even,A frozen domain wall [wave],2.2,,2.4589568099362964,-0.12364902247518683,M1 transfer matrix + continued fraction,1.2534418863050358e-15,none found
+2,8,even,A frozen domain wall [wave],2.2,,2.458956809938491,-0.12364902247501525,M2 shooting (complex-ray DOP853),2.2013860769514175e-12,none found
+2,0,even,A frozen domain wall [wave],2.5,,0.41477530339677066,-0.5767804977720988,M1 transfer matrix + continued fraction,4.4115326975375866e-14,none found
+2,0,even,A frozen domain wall [wave],2.5,,0.41477530361427273,-0.5767804976477995,M2 shooting (complex-ray DOP853),2.5051442941449006e-10,none found
+2,1,even,A frozen domain wall [wave],2.5,,0.42364240774655454,-0.1805158534438327,M1 transfer matrix + continued fraction,6.366287966003106e-14,none found
+2,1,even,A frozen domain wall [wave],2.5,,0.4236424077412081,-0.18051585344299403,M2 shooting (complex-ray DOP853),5.411823566879497e-12,none found
+2,2,even,A frozen domain wall [wave],2.5,,0.9075419267269602,-0.08794601805383177,M1 transfer matrix + continued fraction,2.465394569730401e-14,none found
+2,2,even,A frozen domain wall [wave],2.5,,0.9075419267224019,-0.08794601805540296,M2 shooting (complex-ray DOP853),4.8215369909852956e-12,none found
+2,3,even,A frozen domain wall [wave],2.5,,1.495018783419903,-0.13376866220130082,M1 transfer matrix + continued fraction,6.1919578659185056e-15,none found
+2,3,even,A frozen domain wall [wave],2.5,,1.495018783420378,-0.13376866220180023,M2 shooting (complex-ray DOP853),6.893461665950588e-13,none found
+2,4,even,A frozen domain wall [wave],2.5,,2.069402202518778,-0.16284575928390876,M1 transfer matrix + continued fraction,1.6179563827431717e-15,none found
+2,4,even,A frozen domain wall [wave],2.5,,2.0694022025176464,-0.16284575928473496,M2 shooting (complex-ray DOP853),1.4010667382595272e-12,none found
+2,0,even,A frozen domain wall [wave],3.0,,0.052883353797644514,-0.9781698311118019,M1 transfer matrix + continued fraction,1.153591981704351e-12,none found
+2,0,even,A frozen domain wall [wave],3.0,,0.052883353507048335,-0.9781698314747251,M2 shooting (complex-ray DOP853),4.6492948121991136e-10,none found
+2,1,even,A frozen domain wall [wave],3.0,,0.24913308741431459,-0.5991584494139365,M1 transfer matrix + continued fraction,1.491780842018298e-14,none found
+2,1,even,A frozen domain wall [wave],3.0,,0.24913308747338622,-0.5991584491994711,M2 shooting (complex-ray DOP853),2.2245187768669793e-10,none found
+2,2,even,A frozen domain wall [wave],3.0,,0.356753953980872,-0.22994729108777917,M1 transfer matrix + continued fraction,5.771797445974145e-15,none found
+2,2,even,A frozen domain wall [wave],3.0,,0.35675395397853443,-0.22994729108456632,M2 shooting (complex-ray DOP853),3.973240307403054e-12,none found
+2,3,even,A frozen domain wall [wave],3.0,,0.9622350555363772,-0.13441026051828556,M1 transfer matrix + continued fraction,5.483065393273442e-15,none found
+2,3,even,A frozen domain wall [wave],3.0,,0.9622350555409215,-0.1344102605134025,M2 shooting (complex-ray DOP853),6.670425655026079e-12,none found
+2,4,even,A frozen domain wall [wave],3.0,,1.6012299129793912,-0.18255588424897645,M1 transfer matrix + continued fraction,2.8070574337708095e-15,none found
+2,4,even,A frozen domain wall [wave],3.0,,1.6012299129823364,-0.18255588425028335,M2 shooting (complex-ray DOP853),3.222139972353742e-12,none found
+2,5,even,A frozen domain wall [wave],3.0,,2.221429974478886,-0.2131883406817129,M1 transfer matrix + continued fraction,4.383577243061427e-16,none found
+2,5,even,A frozen domain wall [wave],3.0,,2.221429974476975,-0.21318834068285647,M2 shooting (complex-ray DOP853),2.2269537829738285e-12,none found
+2,0,even,A frozen domain wall [wave],4.0,,0.09750786504851093,-0.5234288987518573,M1 transfer matrix + continued fraction,1.928231425284647e-14,none found
+2,0,even,A frozen domain wall [wave],4.0,,0.09750786505676667,-0.523428898755796,M2 shooting (complex-ray DOP853),9.147182977360588e-12,none found
+2,1,even,A frozen domain wall [wave],4.0,,0.2674774644505079,-0.24697733900338295,M1 transfer matrix + continued fraction,1.612595892965922e-15,none found
+2,1,even,A frozen domain wall [wave],4.0,,0.26747746445037957,-0.246977339002585,M2 shooting (complex-ray DOP853),8.082004115075183e-13,none found
+2,2,even,A frozen domain wall [wave],4.0,,0.8721595316598686,-0.16811366228220756,M1 transfer matrix + continued fraction,5.855235338847346e-16,none found
+2,2,even,A frozen domain wall [wave],4.0,,0.8721595316584687,-0.16811366228474184,M2 shooting (complex-ray DOP853),2.8952083389128875e-12,none found
+2,3,even,A frozen domain wall [wave],4.0,,1.4647187306226457,-0.2093021770933268,M1 transfer matrix + continued fraction,1.3108780656371901e-16,none found
+2,3,even,A frozen domain wall [wave],4.0,,1.4647187306217462,-0.20930217709563398,M2 shooting (complex-ray DOP853),2.4763268984241733e-12,none found
+2,4,even,A frozen domain wall [wave],4.0,,2.0362568535587284,-0.23652817632671744,M1 transfer matrix + continued fraction,3.6710212260255483e-16,none found
+2,4,even,A frozen domain wall [wave],4.0,,2.0362568535593213,-0.23652817632850107,M2 shooting (complex-ray DOP853),1.8795780387219776e-12,none found
+2,0,even,A frozen domain wall [wave],6.0,,0.18120376629722207,-0.22393269899339627,M1 transfer matrix + continued fraction,1.0138925347229396e-15,none found
+2,0,even,A frozen domain wall [wave],6.0,,0.18120376629704968,-0.22393269899337356,M2 shooting (complex-ray DOP853),1.738785356417418e-13,none found
+2,1,even,A frozen domain wall [wave],6.0,,0.6640110139625497,-0.17021315360142428,M1 transfer matrix + continued fraction,4.672836360872145e-16,none found
+2,1,even,A frozen domain wall [wave],6.0,,0.6640110139623084,-0.170213153601158,M2 shooting (complex-ray DOP853),3.5932023443192835e-13,none found
+2,2,even,A frozen domain wall [wave],6.0,,1.123366954692796,-0.19838363942244755,M1 transfer matrix + continued fraction,6.1953136797354845e-16,none found
+2,2,even,A frozen domain wall [wave],6.0,,1.1233669546922707,-0.19838363942191709,M2 shooting (complex-ray DOP853),7.465876977955388e-13,none found
+2,3,even,A frozen domain wall [wave],6.0,,1.5645267268379779,-0.2184392129268496,M1 transfer matrix + continued fraction,2.492619083414495e-16,none found
+2,3,even,A frozen domain wall [wave],6.0,,1.564526726837474,-0.21843921292613752,M2 shooting (complex-ray DOP853),8.722823351043357e-13,none found
+2,4,even,A frozen domain wall [wave],6.0,,1.9998358662362186,-0.2339532279478554,M1 transfer matrix + continued fraction,5.239770833115377e-16,none found
+2,4,even,A frozen domain wall [wave],6.0,,1.9998358662358844,-0.23395322794719597,M2 shooting (complex-ray DOP853),7.392598249927e-13,none found
+2,5,even,A frozen domain wall [wave],6.0,,2.4324411655598994,-0.24660184455530798,M1 transfer matrix + continued fraction,2.8142452795170537e-16,none found
+2,5,even,A frozen domain wall [wave],6.0,,2.4324411655595353,-0.24660184455447123,M2 shooting (complex-ray DOP853),9.125533551299467e-13,none found
+2,0,even,A frozen domain wall [wave],10.0,,0.11383079220328336,-0.17403118439222268,M1 transfer matrix + continued fraction,3.3539748809059364e-15,none found
+2,0,even,A frozen domain wall [wave],10.0,,0.11383079220324765,-0.1740311843922391,M2 shooting (complex-ray DOP853),3.930669957006581e-14,none found
+2,1,even,A frozen domain wall [wave],10.0,,0.43293262465316673,-0.14212044614768274,M1 transfer matrix + continued fraction,1.115384806952503e-15,none found
+2,1,even,A frozen domain wall [wave],10.0,,0.4329326246533034,-0.14212044614744143,M2 shooting (complex-ray DOP853),2.7732169461566414e-13,none found
+2,2,even,A frozen domain wall [wave],10.0,,0.7360309429492013,-0.15790962593894972,M1 transfer matrix + continued fraction,3.110856700447916e-16,none found
+2,2,even,A frozen domain wall [wave],10.0,,0.7360309429490339,-0.15790962593852256,M2 shooting (complex-ray DOP853),4.58796494768584e-13,none found
+2,3,even,A frozen domain wall [wave],10.0,,1.0265945298633046,-0.1704104563801207,M1 transfer matrix + continued fraction,1.282968732013061e-16,none found
+2,3,even,A frozen domain wall [wave],10.0,,1.0265945298631263,-0.17041045637966412,M2 shooting (complex-ray DOP853),4.901592815861848e-13,none found
+2,4,even,A frozen domain wall [wave],10.0,,1.313063060922481,-0.1803242468691692,M1 transfer matrix + continued fraction,2.1947282222599582e-16,none found
+2,4,even,A frozen domain wall [wave],10.0,,1.3130630609223657,-0.18032424686878715,M2 shooting (complex-ray DOP853),3.990575478073381e-13,none found
+2,5,even,A frozen domain wall [wave],10.0,,1.597633124826159,-0.18849110551581708,M1 transfer matrix + continued fraction,4.322365570144314e-17,none found
+2,5,even,A frozen domain wall [wave],10.0,,1.5976331248260125,-0.1884911055153112,M2 shooting (complex-ray DOP853),5.266729088033459e-13,none found
+2,6,even,A frozen domain wall [wave],10.0,,1.8811572503806546,-0.19542194354196613,M1 transfer matrix + continued fraction,1.175980715121488e-16,none found
+2,6,even,A frozen domain wall [wave],10.0,,1.8811572503805187,-0.19542194354142853,M2 shooting (complex-ray DOP853),5.545067893099035e-13,none found
+2,7,even,A frozen domain wall [wave],10.0,,2.1640405332679427,-0.20143688515562044,M1 transfer matrix + continued fraction,3.3413619154549885e-16,none found
+2,7,even,A frozen domain wall [wave],10.0,,2.164040533267847,-0.2014368851551688,M2 shooting (complex-ray DOP853),4.616208542039605e-13,none found
+2,8,even,A frozen domain wall [wave],10.0,,2.4465014753608494,-0.20674744995854052,M1 transfer matrix + continued fraction,2.769262825992107e-17,none found
+2,8,even,A frozen domain wall [wave],10.0,,2.4465014753607752,-0.20674744995812133,M2 shooting (complex-ray DOP853),4.257023052895686e-13,none found
+3,0,odd,C=A (odd: model independent) [wave],2.2,,0.6119658757460738,-0.01609774290771195,M1 transfer matrix + continued fraction,4.952860469450552e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],2.2,,0.611965875746486,-0.01609774290803125,M2 shooting (complex-ray DOP853),5.214237223673374e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],2.2,,0.7955916203876561,-0.14939515963948732,M1 transfer matrix + continued fraction,1.1978618686964777e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],2.2,,0.795591620377742,-0.1493951596467786,M2 shooting (complex-ray DOP853),1.2306564114685165e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],2.2,,0.9256273915557838,-0.2619089836933999,M1 transfer matrix + continued fraction,4.6265186003024764e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],2.2,,0.9256273910633831,-0.2619089850181913,M2 shooting (complex-ray DOP853),1.4133402964357653e-09,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],2.2,,1.3259076954126516,-0.24723272379260502,M1 transfer matrix + continued fraction,8.98257025608523e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],2.2,,1.3259076955347173,-0.24723272373862656,M2 shooting (complex-ray DOP853),1.334680002838282e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],2.2,,1.7717694538861348,-0.2593504737890672,M1 transfer matrix + continued fraction,1.5576495569938036e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],2.2,,1.771769453950705,-0.2593504736557027,M2 shooting (complex-ray DOP853),1.4817355455201305e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,odd,C=A (odd: model independent) [wave],2.2,,2.2126251008606284,-0.2706491310688416,M1 transfer matrix + continued fraction,2.30702844431371e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,odd,C=A (odd: model independent) [wave],2.2,,2.21262510087015,-0.2706491309254124,M2 shooting (complex-ray DOP853),1.4374492066702507e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],2.5,,0.678880799113697,-0.09671481585413569,M1 transfer matrix + continued fraction,3.2565504665571037e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],2.5,,0.6788807991137391,-0.0967148158580589,M2 shooting (complex-ray DOP853),3.923434619314182e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],2.5,,0.7723679770580762,-0.431875698032024,M1 transfer matrix + continued fraction,1.5140409630355236e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],2.5,,0.7723679774018951,-0.43187569805587345,M2 shooting (complex-ray DOP853),3.4464504204019696e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],2.5,,1.1366029542475717,-0.32909043964070733,M1 transfer matrix + continued fraction,5.052074786876205e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],2.5,,1.1366029542983145,-0.3290904397829773,M2 shooting (complex-ray DOP853),1.5104824191004762e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],2.5,,1.72927905795178,-0.34337785742308424,M1 transfer matrix + continued fraction,4.168047358991063e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],2.5,,1.7292790580756063,-0.34337785750314964,M2 shooting (complex-ray DOP853),1.4745648961884655e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],2.5,,2.312189634962573,-0.3589753015470558,M1 transfer matrix + continued fraction,1.332124638201131e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],2.5,,2.3121896350866495,-0.35897530161811586,M2 shooting (complex-ray DOP853),1.4298450913837353e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],3.0,,0.45894545358870914,-0.9650762352318512,M1 transfer matrix + continued fraction,4.4141773713643584e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],3.0,,0.4589454508120995,-0.9650762352440374,M2 shooting (complex-ray DOP853),2.7766364063818466e-09,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],3.0,,0.6056930933910114,-0.5569906650024429,M1 transfer matrix + continued fraction,5.674932734403902e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],3.0,,0.6056930934562267,-0.5569906649239833,M2 shooting (complex-ray DOP853),1.0202419762435851e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],3.0,,0.6550913521589463,-0.18819922636828787,M1 transfer matrix + continued fraction,2.7538677035461096e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],3.0,,0.6550913521491556,-0.18819922637483016,M2 shooting (complex-ray DOP853),1.177539338591235e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],3.0,,1.2229771250900192,-0.38276963652986706,M1 transfer matrix + continued fraction,1.7270320497756829e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],3.0,,1.222977125116029,-0.38276963647405754,M2 shooting (complex-ray DOP853),6.157284951877348e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],3.0,,1.8600318181583975,-0.39574700415082487,M1 transfer matrix + continued fraction,1.9108467954607594e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],3.0,,1.8600318182249203,-0.39574700414449604,M2 shooting (complex-ray DOP853),6.68231641747034e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,odd,C=A (odd: model independent) [wave],3.0,,2.487391661170636,-0.4122457956666986,M1 transfer matrix + continued fraction,4.806009009725202e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,odd,C=A (odd: model independent) [wave],3.0,,2.487391661167946,-0.4122457957337444,M2 shooting (complex-ray DOP853),6.709976721680689e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],4.0,,0.13551507988109146,-0.8593186468272704,M1 transfer matrix + continued fraction,7.130901516875861e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],4.0,,0.13551507993759293,-0.8593186468341363,M2 shooting (complex-ray DOP853),5.691709679054205e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],4.0,,0.38424898071950697,-0.564201349368734,M1 transfer matrix + continued fraction,6.02752061221094e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],4.0,,0.3842489807172616,-0.564201349354155,M2 shooting (complex-ray DOP853),1.4750900518517886e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],4.0,,0.5529980678388462,-0.25744278447760627,M1 transfer matrix + continued fraction,3.988667789208888e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],4.0,,0.5529980678373811,-0.2574427844773331,M2 shooting (complex-ray DOP853),1.4903001191295843e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],4.0,,1.1229816248720084,-0.38727949060212363,M1 transfer matrix + continued fraction,2.056473333150187e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],4.0,,1.1229816248566786,-0.38727949060219014,M2 shooting (complex-ray DOP853),1.5329881726604636e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],4.0,,1.7083509581972063,-0.39707635072005365,M1 transfer matrix + continued fraction,1.384890649274418e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],4.0,,1.7083509581855512,-0.39707635073711,M2 shooting (complex-ray DOP853),2.0658197984669936e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,odd,C=A (odd: model independent) [wave],4.0,,2.284610425860332,-0.41175346358654197,M1 transfer matrix + continued fraction,1.8275468425969997e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,odd,C=A (odd: model independent) [wave],4.0,,2.284610425862284,-0.41175346360158566,M2 shooting (complex-ray DOP853),1.5169771865191592e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],6.0,,0.19277223473927432,-0.4610872162335727,M1 transfer matrix + continued fraction,1.568832507603564e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],6.0,,0.1927722347393232,-0.46108721623188775,M2 shooting (complex-ray DOP853),1.6856387607426883e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],6.0,,0.40293759692587905,-0.2652838315818246,M1 transfer matrix + continued fraction,1.2499199460141299e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],6.0,,0.40293759692552045,-0.2652838315816585,M2 shooting (complex-ray DOP853),3.9519754288479343e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],6.0,,0.8644369122842572,-0.33236371358527395,M1 transfer matrix + continued fraction,7.919103975452765e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],6.0,,0.8644369122830443,-0.3323637135828575,M2 shooting (complex-ray DOP853),2.7037808520720463e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],6.0,,1.314845782454709,-0.3388186571076529,M1 transfer matrix + continued fraction,0.0,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],6.0,,1.314845782451989,-0.338818657105042,M2 shooting (complex-ray DOP853),3.7703463060259985e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],6.0,,1.758333025868408,-0.3496041012324174,M1 transfer matrix + continued fraction,5.311473510806192e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],6.0,,1.7583330258661343,-0.34960410122962565,M2 shooting (complex-ray DOP853),3.6005334039545285e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,odd,C=A (odd: model independent) [wave],6.0,,2.1963300902065863,-0.3604086933945802,M1 transfer matrix + continued fraction,6.379851795148257e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,odd,C=A (odd: model independent) [wave],6.0,,2.1963300902041523,-0.3604086933910268,M2 shooting (complex-ray DOP853),4.3071013339407946e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],10.0,,0.07849484642705769,-0.3181972621174466,M1 transfer matrix + continued fraction,1.2646904049617575e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,odd,C=A (odd: model independent) [wave],10.0,,0.07849484643001528,-0.3181972621151023,M2 shooting (complex-ray DOP853),3.77399731304424e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],10.0,,0.25779078930550914,-0.21801791424634576,M1 transfer matrix + continued fraction,1.5802840298850181e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,odd,C=A (odd: model independent) [wave],10.0,,0.2577907893045701,-0.2180179142463278,M2 shooting (complex-ray DOP853),9.391983307229215e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],10.0,,0.5682328111413448,-0.24477018315769491,M1 transfer matrix + continued fraction,1.050372473592775e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,odd,C=A (odd: model independent) [wave],10.0,,0.5682328111424761,-0.24477018315588714,M2 shooting (complex-ray DOP853),2.132588417773979e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],10.0,,0.8639266297257233,-0.24850527923902682,M1 transfer matrix + continued fraction,5.953644627484764e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,odd,C=A (odd: model independent) [wave],10.0,,0.8639266297252344,-0.24850527923709953,M2 shooting (complex-ray DOP853),1.9883454518012265e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],10.0,,1.1552981968234401,-0.2551977037908048,M1 transfer matrix + continued fraction,1.6293574145475232e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,odd,C=A (odd: model independent) [wave],10.0,,1.1552981968226181,-0.25519770378886464,M2 shooting (complex-ray DOP853),2.107121162083221e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,odd,C=A (odd: model independent) [wave],10.0,,1.4431813124915853,-0.2620749267862654,M1 transfer matrix + continued fraction,4.743698580930917e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,odd,C=A (odd: model independent) [wave],10.0,,1.4431813124906707,-0.2620749267840735,M2 shooting (complex-ray DOP853),2.3750748013056196e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,6,odd,C=A (odd: model independent) [wave],10.0,,1.7289992968376728,-0.2684233200348163,M1 transfer matrix + continued fraction,0.0,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,6,odd,C=A (odd: model independent) [wave],10.0,,1.7289992968369687,-0.2684233200328687,M2 shooting (complex-ray DOP853),2.070975969238156e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,7,odd,C=A (odd: model independent) [wave],10.0,,2.0135462499358012,-0.27415855076561485,M1 transfer matrix + continued fraction,1.8826100288439458e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,7,odd,C=A (odd: model independent) [wave],10.0,,2.0135462499351475,-0.27415855076360995,M2 shooting (complex-ray DOP853),2.1087749444277872e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,8,odd,C=A (odd: model independent) [wave],10.0,,2.297263422247176,-0.27933420977164003,M1 transfer matrix + continued fraction,0.0,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,8,odd,C=A (odd: model independent) [wave],10.0,,2.297263422246556,-0.2793342097695315,M2 shooting (complex-ray DOP853),2.197784892008468e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,9,odd,C=A (odd: model independent) [wave],10.0,,2.580410718754315,-0.2840265852835921,M1 transfer matrix + continued fraction,2.6563159132489522e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,9,odd,C=A (odd: model independent) [wave],10.0,,2.5804107187536967,-0.28402658528129676,M2 shooting (complex-ray DOP853),2.3771157674867373e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [wave],2.2,2.0,0.6240613210372216,-0.0179723109740876,M1 transfer matrix + continued fraction,5.461321275496257e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [wave],2.2,2.0,0.6240613210375211,-0.017972310974280713,M2 shooting (complex-ray DOP853),3.563926255645419e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],2.2,2.0,0.9466783281956788,-0.4265528359270209,M1 transfer matrix + continued fraction,1.5155202379677635e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],2.2,2.0,0.9466783247958258,-0.42655283774824054,M2 shooting (complex-ray DOP853),3.8569211835858365e-09,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],2.2,2.0,1.057695816205546,-0.8350155935410987,M1 transfer matrix + continued fraction,7.761843219840158e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],2.2,2.0,1.0576946594698986,-0.835016152941704,M2 shooting (complex-ray DOP853),1.2848993716875918e-06,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],2.2,2.0,1.092054326825216,-0.23716688968327151,M1 transfer matrix + continued fraction,2.5762396849921286e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],2.2,2.0,1.0920543267652425,-0.23716688974173286,M2 shooting (complex-ray DOP853),8.375296755991903e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],2.2,2.0,1.5484501336755565,-0.25234818123243624,M1 transfer matrix + continued fraction,9.04277517513809e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],2.2,2.0,1.548450133767779,-0.2523481811520374,M2 shooting (complex-ray DOP853),1.2234768652162006e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,even,C static fluid shell [wave],2.2,2.0,1.992348888524435,-0.26469581350929566,M1 transfer matrix + continued fraction,1.4442660244463463e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,even,C static fluid shell [wave],2.2,2.0,1.9923488885500016,-0.2646958133864559,M2 shooting (complex-ray DOP853),1.2547213006889495e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [matter-unstable],2.2,2.0,2.0138484961954774e-18,0.3371460111258218,M1 transfer matrix + continued fraction,2.447327340774561e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],2.2,2.0,2.013850489440471e-18,0.3371460111258104,M2 shooting (complex-ray DOP853),1.1435297153639112e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],2.2,2.0,3.446209224135169e-18,-0.3371460279600731,M1 transfer matrix + continued fraction,2.7116686956417653e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],2.2,2.0,1.2267549458743083e-08,-0.33714602889860185,M2 shooting (complex-ray DOP853),1.2303398142853743e-08,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [wave],2.5,2.0,0.6997595117896096,-0.1151920961774957,M1 transfer matrix + continued fraction,1.4095107423874866e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [wave],2.5,2.0,0.6997595117919244,-0.11519209618389713,M2 shooting (complex-ray DOP853),6.807096304570941e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],2.5,2.0,0.795583006208145,-0.6588620656558191,M1 transfer matrix + continued fraction,1.460135566997668e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],2.5,2.0,0.7955830019331125,-0.658862060009669,M2 shooting (complex-ray DOP853),7.082013434812025e-09,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],2.5,2.0,0.8438578975619809,-0.3354932314754419,M1 transfer matrix + continued fraction,2.72133300875287e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],2.5,2.0,0.8438578974145191,-0.3354932316257411,M2 shooting (complex-ray DOP853),2.105583686631234e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],2.5,2.0,1.4273691011840073,-0.33244340364742647,M1 transfer matrix + continued fraction,4.364530903514476e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],2.5,2.0,1.4273691012386704,-0.3324434037718951,M2 shooting (complex-ray DOP853),1.3594298173604486e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],2.5,2.0,2.0207230757540753,-0.34977973068077856,M1 transfer matrix + continued fraction,2.2423455179533393e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],2.5,2.0,2.020723075855212,-0.34977973075480284,M2 shooting (complex-ray DOP853),1.253326088464784e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [matter-stable],2.5,2.0,0.347568280076784,-1.7968601262679227e-05,M1 transfer matrix + continued fraction,1.592439052443093e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-stable],2.5,2.0,0.34756828007647095,-1.7968601274478528e-05,M2 shooting (complex-ray DOP853),3.13249685169018e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],2.5,2.0,-8.890889023829556e-18,0.2898713348942049,M1 transfer matrix + continued fraction,4.5301249039655264e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],2.5,2.0,-8.890889023829556e-18,0.2898713348942049,M2 shooting (complex-ray DOP853),0.0,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],2.5,2.0,8.828924433560335e-06,-0.28987373198956523,M1 transfer matrix + continued fraction,1.9027674225121498e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],2.5,2.0,2.092907308930582e-07,-0.28987146738634473,M2 shooting (complex-ray DOP853),8.91215534618146e-06,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [wave],3.0,2.0,0.350565084549535,-1.1739154710541686,M1 transfer matrix + continued fraction,3.0616177730582563e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [wave],3.0,2.0,0.35056508242160417,-1.173915480325882,M2 shooting (complex-ray DOP853),9.512768205979503e-09,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],3.0,2.0,0.5427343339611983,-0.7330866759113503,M1 transfer matrix + continued fraction,5.0625598211407956e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],3.0,2.0,0.5427343333139028,-0.7330866753288163,M2 shooting (complex-ray DOP853),8.70825708930926e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],3.0,2.0,0.6690595458760212,-0.23953880369502129,M1 transfer matrix + continued fraction,2.109252257695397e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],3.0,2.0,0.6690595458611409,-0.23953880370537842,M2 shooting (complex-ray DOP853),1.8129922200017303e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],3.0,2.0,0.8364022607014354,-0.4245572886425648,M1 transfer matrix + continued fraction,7.89499965570403e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],3.0,2.0,0.8364022608573416,-0.4245572885508239,M2 shooting (complex-ray DOP853),1.8089534921726148e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],3.0,2.0,1.5355174060733017,-0.3842124975289435,M1 transfer matrix + continued fraction,1.8978121092091898e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],3.0,2.0,1.5355174061009995,-0.38421249746529473,M2 shooting (complex-ray DOP853),6.9414222702748e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,even,C static fluid shell [wave],3.0,2.0,2.1738933493881554,-0.4024873721409292,M1 transfer matrix + continued fraction,1.7232192020505169e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,even,C static fluid shell [wave],3.0,2.0,2.173893349432073,-0.4024873721704715,M2 shooting (complex-ray DOP853),5.2929334736774045e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [matter-stable],3.0,2.0,0.310961287744449,-3.257745719304315e-05,M1 transfer matrix + continued fraction,2.8638453928594815e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-stable],3.0,2.0,0.3109612877441465,-3.257745722878679e-05,M2 shooting (complex-ray DOP853),3.045848276376439e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],3.0,2.0,2.315659522337966e-19,0.22263440402985446,M1 transfer matrix + continued fraction,8.178480026059807e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],3.0,2.0,-2.734752124820129e-23,0.2226344040298221,M2 shooting (complex-ray DOP853),3.236300116865197e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],3.0,2.0,-4.05014012900432e-16,-0.22263444509336117,M1 transfer matrix + continued fraction,6.0869499641564845e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],3.0,2.0,7.341272147609751e-07,-0.22263441588181024,M2 shooting (complex-ray DOP853),7.347081616226944e-07,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [wave],4.0,2.0,0.25935356556085204,-0.6756699207751167,M1 transfer matrix + continued fraction,1.1414064485901315e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [wave],4.0,2.0,0.2593535655771738,-0.6756699207609402,M2 shooting (complex-ray DOP853),2.1618783540324978e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],4.0,2.0,0.5194845597854587,-0.33389324140132937,M1 transfer matrix + continued fraction,2.3940047096744945e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],4.0,2.0,0.5194845597800574,-0.33389324139869403,M2 shooting (complex-ray DOP853),6.0099531545363135e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],4.0,2.0,0.7608690771353004,-0.41059361180642906,M1 transfer matrix + continued fraction,1.5474081744548634e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],4.0,2.0,0.7608690771235755,-0.41059361181069665,M2 shooting (complex-ray DOP853),1.2477349219160965e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],4.0,2.0,1.4107048440572956,-0.38720200360654966,M1 transfer matrix + continued fraction,2.0684154693005938e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],4.0,2.0,1.4107048440771073,-0.3872020035963872,M2 shooting (complex-ray DOP853),2.226611342074224e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],4.0,2.0,1.9967096257327202,-0.4030495980075233,M1 transfer matrix + continued fraction,1.9335287372976513e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],4.0,2.0,1.996709625737521,-0.40304959798990025,M2 shooting (complex-ray DOP853),1.826528178689144e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,even,C static fluid shell [wave],4.0,2.0,2.569503355828386,-0.41863093142767455,M1 transfer matrix + continued fraction,5.822463043819674e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,even,C static fluid shell [wave],4.0,2.0,2.569503355823735,-0.4186309314189817,M2 shooting (complex-ray DOP853),9.858828260658118e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [matter-stable],4.0,2.0,0.22692474566416748,-1.923762006003219e-05,M1 transfer matrix + continued fraction,7.369031666407048e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-stable],4.0,2.0,0.22692474566409812,-1.9237620082267877e-05,M2 shooting (complex-ray DOP853),7.283817324573989e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],4.0,2.0,-2.914805991527367e-19,0.14364040930085678,M1 transfer matrix + continued fraction,1.8865506598237563e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],4.0,2.0,1.177822879652293e-19,0.14364040930055796,M2 shooting (complex-ray DOP853),2.9881652707814114e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],4.0,2.0,-1.9354426435158388e-18,-0.14363951573299505,M1 transfer matrix + continued fraction,3.018095101531356e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],4.0,2.0,6.482747445237097e-07,-0.14363997627930503,M2 shooting (complex-ray DOP853),7.952125803980782e-07,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [wave],6.0,2.0,0.059816665947802196,-0.509842372423186,M1 transfer matrix + continued fraction,1.0755333873513788e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [wave],6.0,2.0,0.05981666594937386,-0.5098423724228225,M2 shooting (complex-ray DOP853),1.6131516081528017e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],6.0,2.0,0.3318243943505242,-0.320967857500216,M1 transfer matrix + continued fraction,4.804386531106318e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],6.0,2.0,0.33182439435040734,-0.3209678574999365,M2 shooting (complex-ray DOP853),3.029416500548626e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],6.0,2.0,0.5975773138072056,-0.34763828769596383,M1 transfer matrix + continued fraction,3.0304274116933305e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],6.0,2.0,0.5975773138025703,-0.34763828769716626,M2 shooting (complex-ray DOP853),4.788712156709715e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],6.0,2.0,1.0860514649779334,-0.3320580773046223,M1 transfer matrix + continued fraction,5.3835387657120836e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],6.0,2.0,1.0860514649795239,-0.3320580773067065,M2 shooting (complex-ray DOP853),2.6217718799079638e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],6.0,2.0,1.5367412390229376,-0.3431911896735858,M1 transfer matrix + continued fraction,1.4643286015746844e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],6.0,2.0,1.5367412390257416,-0.3431911896766193,M2 shooting (complex-ray DOP853),4.1309236846662424e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,even,C static fluid shell [wave],6.0,2.0,1.9776327163072613,-0.35476230019114935,M1 transfer matrix + continued fraction,1.455150480901114e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,even,C static fluid shell [wave],6.0,2.0,1.9776327163095244,-0.3547623001943014,M2 shooting (complex-ray DOP853),3.880314979531871e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,6,even,C static fluid shell [wave],6.0,2.0,2.4139606788148757,-0.36531037409323036,M1 transfer matrix + continued fraction,2.7579174397515803e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,6,even,C static fluid shell [wave],6.0,2.0,2.41396067881772,-0.365310374097653,M2 shooting (complex-ray DOP853),5.258346605592822e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [matter-stable],6.0,2.0,0.13334034786369833,-4.540064928773779e-06,M1 transfer matrix + continued fraction,2.4374155844484053e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-stable],6.0,2.0,0.13334034786372836,-4.5400649429157875e-06,M2 shooting (complex-ray DOP853),3.319471906859271e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],6.0,2.0,2.3157886576509918e-18,0.07704882159132685,M1 transfer matrix + continued fraction,1.1158553343022502e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],6.0,2.0,2.4591837487586475e-18,0.07704882159079902,M2 shooting (complex-ray DOP853),5.278277814824345e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],6.0,2.0,-2.988118553354399e-19,-0.07704874115750458,M1 transfer matrix + continued fraction,1.67644343806543e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],6.0,2.0,1.3211163646976433e-07,-0.07704858380175086,M2 shooting (complex-ray DOP853),2.054612316696349e-07,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [wave],10.0,2.0,0.1873263599836874,-0.2464399967387153,M1 transfer matrix + continued fraction,2.610816323354505e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [wave],10.0,2.0,0.187326359983623,-0.2464399967376155,M2 shooting (complex-ray DOP853),1.1016997613070326e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],10.0,2.0,0.39971913779681095,-0.2556581528912435,M1 transfer matrix + continued fraction,7.576677792570649e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,1,even,C static fluid shell [wave],10.0,2.0,0.39971913779328866,-0.25565815288839533,M2 shooting (complex-ray DOP853),4.5297463926466084e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],10.0,2.0,0.7137681795004527,-0.24471409389587323,M1 transfer matrix + continued fraction,2.5025829745224464e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,2,even,C static fluid shell [wave],10.0,2.0,0.713768179500272,-0.24471409389719517,M2 shooting (complex-ray DOP853),1.3342265564300169e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],10.0,2.0,1.0096652346067447,-0.2512115907781571,M1 transfer matrix + continued fraction,4.802961347244817e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,3,even,C static fluid shell [wave],10.0,2.0,1.0096652346075996,-0.2512115907803924,M2 shooting (complex-ray DOP853),2.3932143147258474e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],10.0,2.0,1.2994232909508245,-0.2584745301075839,M1 transfer matrix + continued fraction,6.026858567239219e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,4,even,C static fluid shell [wave],10.0,2.0,1.2994232909515289,-0.258474530109337,M2 shooting (complex-ray DOP853),1.8892924129283484e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,even,C static fluid shell [wave],10.0,2.0,1.58623253839636,-0.2652274100095697,M1 transfer matrix + continued fraction,5.674008070113072e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,5,even,C static fluid shell [wave],10.0,2.0,1.5862325383974794,-0.26522741001229433,M2 shooting (complex-ray DOP853),2.9456121825860634e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,6,even,C static fluid shell [wave],10.0,2.0,1.871373693429565,-0.27131296846610853,M1 transfer matrix + continued fraction,2.8583549775220144e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,6,even,C static fluid shell [wave],10.0,2.0,1.8713736934305418,-0.2713129684687893,M2 shooting (complex-ray DOP853),2.8531524717791393e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,7,even,C static fluid shell [wave],10.0,2.0,2.1554768542293936,-0.2767812981439717,M1 transfer matrix + continued fraction,1.46823419685328e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,7,even,C static fluid shell [wave],10.0,2.0,2.155476854230309,-0.27678129814676755,M2 shooting (complex-ray DOP853),2.941875299393814e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,8,even,C static fluid shell [wave],10.0,2.0,2.4388896362242085,-0.281717436414141,M1 transfer matrix + continued fraction,3.053858461683656e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,8,even,C static fluid shell [wave],10.0,2.0,2.438889636225112,-0.28171743641717056,M2 shooting (complex-ray DOP853),3.1613674998384947e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+3,0,even,C static fluid shell [matter-stable],10.0,2.0,0.06488688778710426,-5.253894483872166e-07,M1 transfer matrix + continued fraction,9.011396763076747e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-stable],10.0,2.0,0.06488688778712438,-5.253894552847056e-07,M2 shooting (complex-ray DOP853),2.1272097350603974e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],10.0,2.0,-1.6665623939772096e-17,0.03529817589443818,M1 transfer matrix + continued fraction,2.1835448263691978e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-unstable],10.0,2.0,-4.166149990876725e-19,0.035298175894157145,M2 shooting (complex-ray DOP853),2.810321424718977e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],10.0,2.0,4.2992930276436227e-19,-0.035298153275935926,M1 transfer matrix + continued fraction,1.3445800669610059e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,C static fluid shell [matter-imag-damped],10.0,2.0,8.439275245568527e-09,-0.035298139295611,M2 shooting (complex-ray DOP853),1.6330059757568682e-08,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+3,0,even,A frozen domain wall [wave],2.2,,0.6617194264068532,-0.05294690705265681,M1 transfer matrix + continued fraction,2.1108066181708612e-16,none found
+3,0,even,A frozen domain wall [wave],2.2,,0.6617194264076185,-0.052946907054080825,M2 shooting (complex-ray DOP853),1.616620997378779e-12,none found
+3,1,even,A frozen domain wall [wave],2.2,,0.8020053805960194,-0.337084591479034,M1 transfer matrix + continued fraction,1.092956185675202e-14,none found
+3,1,even,A frozen domain wall [wave],2.2,,0.8020053804553993,-0.337084591553488,M2 shooting (complex-ray DOP853),1.5911452959454297e-10,none found
+3,2,even,A frozen domain wall [wave],2.2,,0.8678272633693656,-0.05466327166820131,M1 transfer matrix + continued fraction,1.0281869494659972e-13,none found
+3,2,even,A frozen domain wall [wave],2.2,,0.8678272642950613,-0.05466326915048569,M2 shooting (complex-ray DOP853),2.6824996890947818e-09,none found
+3,3,even,A frozen domain wall [wave],2.2,,0.9022088076028095,-0.7049238442666236,M1 transfer matrix + continued fraction,4.337676509942369e-13,none found
+3,3,even,A frozen domain wall [wave],2.2,,0.9022087682096896,-0.7049238583136075,M2 shooting (complex-ray DOP853),4.182266909956219e-08,none found
+3,4,even,A frozen domain wall [wave],2.2,,1.3291708391001924,-0.08364752901967405,M1 transfer matrix + continued fraction,3.6391279108268006e-16,none found
+3,4,even,A frozen domain wall [wave],2.2,,1.3291708391006105,-0.08364752901706236,M2 shooting (complex-ray DOP853),2.6449449017476103e-12,none found
+3,5,even,A frozen domain wall [wave],2.2,,1.7761977311996815,-0.10291572298605552,M1 transfer matrix + continued fraction,6.574858617796826e-14,none found
+3,5,even,A frozen domain wall [wave],2.2,,1.7761977318299522,-0.10291571954926693,M2 shooting (complex-ray DOP853),3.4941031749696e-09,none found
+3,6,even,A frozen domain wall [wave],2.2,,2.2167875403093653,-0.11773052424598703,M1 transfer matrix + continued fraction,2.7429660217298117e-16,none found
+3,6,even,A frozen domain wall [wave],2.2,,2.216787540309591,-0.11773052424321367,M2 shooting (complex-ray DOP853),2.7825114343354227e-12,none found
+3,0,even,A frozen domain wall [wave],2.5,,0.6734566565054214,-0.1460327137379317,M1 transfer matrix + continued fraction,1.530724834482284e-14,none found
+3,0,even,A frozen domain wall [wave],2.5,,0.6734566565000646,-0.1460327137480335,M2 shooting (complex-ray DOP853),1.1434251890712101e-11,none found
+3,1,even,A frozen domain wall [wave],2.5,,0.6951272156387204,-0.5089471623131461,M1 transfer matrix + continued fraction,2.1394805003827702e-14,none found
+3,1,even,A frozen domain wall [wave],2.5,,0.6951272152300102,-0.5089471624743329,M2 shooting (complex-ray DOP853),4.393463400924542e-10,none found
+3,2,even,A frozen domain wall [wave],2.5,,1.1131954630137328,-0.11649233713652021,M1 transfer matrix + continued fraction,1.2135018418797666e-14,none found
+3,2,even,A frozen domain wall [wave],2.5,,1.1131954630102519,-0.11649233713614891,M2 shooting (complex-ray DOP853),3.500739636651605e-12,none found
+3,3,even,A frozen domain wall [wave],2.5,,1.7262710269904629,-0.1512327118208201,M1 transfer matrix + continued fraction,4.789596403232098e-15,none found
+3,3,even,A frozen domain wall [wave],2.5,,1.7262710269939892,-0.1512327118208573,M2 shooting (complex-ray DOP853),3.526486503479316e-12,none found
+3,4,even,A frozen domain wall [wave],2.5,,2.312471552959274,-0.1756072720128075,M1 transfer matrix + continued fraction,2.313331047013337e-15,none found
+3,4,even,A frozen domain wall [wave],2.5,,2.312471552962457,-0.17560727201359275,M2 shooting (complex-ray DOP853),3.2786511482549294e-12,none found
+3,0,even,A frozen domain wall [wave],3.0,,0.36817655933619453,-0.9644303312115604,M1 transfer matrix + continued fraction,4.4215203312033015e-14,none found
+3,0,even,A frozen domain wall [wave],3.0,,0.36817655936471383,-0.9644303299682039,M2 shooting (complex-ray DOP853),1.2436835643300135e-09,none found
+3,1,even,A frozen domain wall [wave],3.0,,0.5222374700733177,-0.5856334132901087,M1 transfer matrix + continued fraction,1.2176677025335914e-14,none found
+3,1,even,A frozen domain wall [wave],3.0,,0.5222374700406858,-0.585633413330111,M2 shooting (complex-ray DOP853),5.16239043616516e-11,none found
+3,2,even,A frozen domain wall [wave],3.0,,0.6150144881281141,-0.22236761447366232,M1 transfer matrix + continued fraction,3.3725497532634237e-15,none found
+3,2,even,A frozen domain wall [wave],3.0,,0.615014488122498,-0.22236761447405767,M2 shooting (complex-ray DOP853),5.6299615881490525e-12,none found
+3,3,even,A frozen domain wall [wave],3.0,,1.1855810782557332,-0.1684046334913355,M1 transfer matrix + continued fraction,6.474791080200299e-16,none found
+3,3,even,A frozen domain wall [wave],3.0,,1.1855810782589293,-0.16840463348745807,M2 shooting (complex-ray DOP853),5.0248933340925025e-12,none found
+3,4,even,A frozen domain wall [wave],3.0,,1.8508844272443314,-0.20236428116800162,M1 transfer matrix + continued fraction,9.858071622132755e-16,none found
+3,4,even,A frozen domain wall [wave],3.0,,1.850884427247977,-0.2023642811663064,M2 shooting (complex-ray DOP853),4.020406985582634e-12,none found
+3,5,even,A frozen domain wall [wave],3.0,,2.4834013186403894,-0.22747828285182878,M1 transfer matrix + continued fraction,2.8835952150073777e-16,none found
+3,5,even,A frozen domain wall [wave],3.0,,2.4834013186416555,-0.22747828285477922,M2 shooting (complex-ray DOP853),3.210628180720967e-12,none found
+3,0,even,A frozen domain wall [wave],4.0,,0.08289141916886927,-0.822553817568307,M1 transfer matrix + continued fraction,3.965861293988701e-13,none found
+3,0,even,A frozen domain wall [wave],4.0,,0.08289141921402295,-0.8225538175848202,M2 shooting (complex-ray DOP853),4.8078450559593204e-11,none found
+3,1,even,A frozen domain wall [wave],4.0,,0.31880095751674403,-0.5593939760063207,M1 transfer matrix + continued fraction,1.0197493187120187e-15,none found
+3,1,even,A frozen domain wall [wave],4.0,,0.3188009575205542,-0.5593939759967428,M2 shooting (complex-ray DOP853),1.030793301591605e-11,none found
+3,2,even,A frozen domain wall [wave],4.0,,0.4975774614485075,-0.26605232368526394,M1 transfer matrix + continued fraction,1.1240497109835853e-15,none found
+3,2,even,A frozen domain wall [wave],4.0,,0.49757746144796505,-0.26605232368438303,M2 shooting (complex-ray DOP853),1.034530610280495e-12,none found
+3,3,even,A frozen domain wall [wave],4.0,,1.0800194741792015,-0.20212795914117102,M1 transfer matrix + continued fraction,7.143492388767913e-16,none found
+3,3,even,A frozen domain wall [wave],4.0,,1.0800194741774987,-0.20212795914235646,M2 shooting (complex-ray DOP853),2.0748498580945856e-12,none found
+3,4,even,A frozen domain wall [wave],4.0,,1.6949244386205293,-0.22850882060500724,M1 transfer matrix + continued fraction,2.3931174065881863e-16,none found
+3,4,even,A frozen domain wall [wave],4.0,,1.6949244386200104,-0.2285088206074226,M2 shooting (complex-ray DOP853),2.4704868097983717e-12,none found
+3,5,even,A frozen domain wall [wave],4.0,,2.2773624448592957,-0.25022992144775236,M1 transfer matrix + continued fraction,2.0677744336548713e-16,none found
+3,5,even,A frozen domain wall [wave],4.0,,2.2773624448599716,-0.2502299214492758,M2 shooting (complex-ray DOP853),1.6666552822288121e-12,none found
+3,0,even,A frozen domain wall [wave],6.0,,0.15669092953426098,-0.4415014345721062,M1 transfer matrix + continued fraction,4.305502990193877e-16,none found
+3,0,even,A frozen domain wall [wave],6.0,,0.15669092953491728,-0.4415014345718874,M2 shooting (complex-ray DOP853),6.918272911547399e-13,none found
+3,1,even,A frozen domain wall [wave],6.0,,0.3543657793478091,-0.2545868937372969,M1 transfer matrix + continued fraction,8.201639843000036e-16,none found
+3,1,even,A frozen domain wall [wave],6.0,,0.35436577934771857,-0.2545868937371403,M2 shooting (complex-ray DOP853),1.8093438019360993e-13,none found
+3,2,even,A frozen domain wall [wave],6.0,,0.8264958273980431,-0.19835399162905024,M1 transfer matrix + continued fraction,4.692283013858174e-16,none found
+3,2,even,A frozen domain wall [wave],6.0,,0.8264958273980938,-0.1983539916286695,M2 shooting (complex-ray DOP853),3.8408910565709883e-13,none found
+3,3,even,A frozen domain wall [wave],6.0,,1.3013115996051607,-0.21401501763180653,M1 transfer matrix + continued fraction,3.3237406772250465e-16,none found
+3,3,even,A frozen domain wall [wave],6.0,,1.301311599604702,-0.21401501763112443,M2 shooting (complex-ray DOP853),8.220081682263538e-13,none found
+3,4,even,A frozen domain wall [wave],6.0,,1.750510469095314,-0.22948253612726816,M1 transfer matrix + continued fraction,9.307397453299462e-17,none found
+3,4,even,A frozen domain wall [wave],6.0,,1.750510469095037,-0.22948253612671224,M2 shooting (complex-ray DOP853),6.210563045645805e-13,none found
+3,5,even,A frozen domain wall [wave],6.0,,2.190835854202315,-0.24250041590775195,M1 transfer matrix + continued fraction,1.3631065695270107e-16,none found
+3,5,even,A frozen domain wall [wave],6.0,,2.1908358542020285,-0.24250041590708604,M2 shooting (complex-ray DOP853),7.249034074791004e-13,none found
+3,0,even,A frozen domain wall [wave],10.0,,0.06375773104129931,-0.297841361582664,M1 transfer matrix + continued fraction,2.0374990154828656e-15,none found
+3,0,even,A frozen domain wall [wave],10.0,,0.0637577310427592,-0.2978413615824799,M2 shooting (complex-ray DOP853),1.4714468686724003e-12,none found
+3,1,even,A frozen domain wall [wave],10.0,,0.22599304889884944,-0.20104000952321519,M1 transfer matrix + continued fraction,1.6438390427625232e-16,none found
+3,1,even,A frozen domain wall [wave],10.0,,0.22599304889866723,-0.20104000952288198,M2 shooting (complex-ray DOP853),3.797742275303684e-13,none found
+3,2,even,A frozen domain wall [wave],10.0,,0.5414861376063707,-0.16172672701283955,M1 transfer matrix + continued fraction,6.996956835135232e-16,none found
+3,2,even,A frozen domain wall [wave],10.0,,0.5414861376067025,-0.16172672701283922,M2 shooting (complex-ray DOP853),3.3184582920674076e-13,none found
+3,3,even,A frozen domain wall [wave],10.0,,0.8534977174346521,-0.16877490346611312,M1 transfer matrix + continued fraction,2.7029426307347133e-16,none found
+3,3,even,A frozen domain wall [wave],10.0,,0.8534977174346455,-0.16877490346580654,M2 shooting (complex-ray DOP853),3.0665805467100997e-13,none found
+3,4,even,A frozen domain wall [wave],10.0,,1.1490946480575854,-0.17802446685447235,M1 transfer matrix + continued fraction,2.280745916412489e-16,none found
+3,4,even,A frozen domain wall [wave],10.0,,1.1490946480575155,-0.1780244668541441,M2 shooting (complex-ray DOP853),3.3560689117944754e-13,none found
+3,5,even,A frozen domain wall [wave],10.0,,1.4387603239601265,-0.18618083006059058,M1 transfer matrix + continued fraction,2.0668279705934713e-16,none found
+3,5,even,A frozen domain wall [wave],10.0,,1.4387603239600308,-0.18618083006020067,M2 shooting (complex-ray DOP853),4.0148323368295363e-13,none found
+3,6,even,A frozen domain wall [wave],10.0,,1.72554964655758,-0.19324008991291833,M1 transfer matrix + continued fraction,5.071163607016729e-16,none found
+3,6,even,A frozen domain wall [wave],10.0,,1.7255496465574918,-0.19324008991252373,M2 shooting (complex-ray DOP853),4.0432745080385613e-13,none found
+3,7,even,A frozen domain wall [wave],10.0,,2.010708041708269,-0.19940868974941317,M1 transfer matrix + continued fraction,5.523744183873671e-17,none found
+3,7,even,A frozen domain wall [wave],10.0,,2.010708041708124,-0.19940868974880155,M2 shooting (complex-ray DOP853),6.286249531969044e-13,none found
+3,8,even,A frozen domain wall [wave],10.0,,2.2948466131659866,-0.20486753290032234,M1 transfer matrix + continued fraction,1.2865071125516603e-16,none found
+3,8,even,A frozen domain wall [wave],10.0,,2.2948466131658747,-0.20486753289976795,M2 shooting (complex-ray DOP853),5.655723479342305e-13,none found
+3,9,even,A frozen domain wall [wave],10.0,,2.578302771765708,-0.20975496606579339,M1 transfer matrix + continued fraction,6.901728681136547e-17,none found
+3,9,even,A frozen domain wall [wave],10.0,,2.5783027717656104,-0.20975496606525518,M2 shooting (complex-ray DOP853),5.470040795154132e-13,none found
+4,0,odd,C=A (odd: model independent) [wave],2.2,,0.7834999677549057,-0.006323691179686171,M1 transfer matrix + continued fraction,1.1185842294165501e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],2.2,,0.7834999677565695,-0.006323691180130387,M2 shooting (complex-ray DOP853),1.7220607199969508e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],2.2,,0.9605459025874051,-0.10943487791599295,M1 transfer matrix + continued fraction,5.563898150050367e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],2.2,,0.9605459025902607,-0.10943487792196334,M2 shooting (complex-ray DOP853),6.61816022408888e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],2.2,,1.1205811103681955,-0.23836662883741425,M1 transfer matrix + continued fraction,6.123128658780682e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],2.2,,1.120581110989505,-0.23836662946665238,M2 shooting (complex-ray DOP853),8.842884482130126e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],2.2,,1.2197357145912162,-0.5233026832324438,M1 transfer matrix + continued fraction,1.4886800871627588e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],2.2,,1.2197356993791806,-0.5233026816609776,M2 shooting (complex-ray DOP853),1.5292989701050508e-08,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,odd,C=A (odd: model independent) [wave],2.2,,1.328683820969722,-0.9173367057714067,M1 transfer matrix + continued fraction,3.019838721148815e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,odd,C=A (odd: model independent) [wave],2.2,,1.3286792848336129,-0.9173408707938236,M2 shooting (complex-ray DOP853),6.1582418379563584e-06,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,odd,C=A (odd: model independent) [wave],2.2,,1.5038451439310287,-0.2665393294461042,M1 transfer matrix + continued fraction,8.879163972248733e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,odd,C=A (odd: model independent) [wave],2.2,,1.5038451439010494,-0.26653932921886103,M2 shooting (complex-ray DOP853),2.292121709231624e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,6,odd,C=A (odd: model independent) [wave],2.2,,1.9556136966317994,-0.2730070351614734,M1 transfer matrix + continued fraction,8.091543809332343e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,6,odd,C=A (odd: model independent) [wave],2.2,,1.9556136964585307,-0.273007035103109,M2 shooting (complex-ray DOP853),1.8283451470056967e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,7,odd,C=A (odd: model independent) [wave],2.2,,2.4010948223200037,-0.28102290962320137,M1 transfer matrix + continued fraction,3.4906716461991097e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,7,odd,C=A (odd: model independent) [wave],2.2,,2.401094822162837,-0.28102290969049126,M2 shooting (complex-ray DOP853),1.7096581308885012e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],2.5,,0.8854308824550751,-0.08424005909782878,M1 transfer matrix + continued fraction,1.861907700248818e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],2.5,,0.8854308824576289,-0.08424005910089914,M2 shooting (complex-ray DOP853),3.993652584908205e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],2.5,,0.9958074166116022,-0.39246809961470425,M1 transfer matrix + continued fraction,2.176080244443102e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],2.5,,0.9958074165635106,-0.39246809941706295,M2 shooting (complex-ray DOP853),2.034081768266061e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],2.5,,1.0173316631575953,-0.8177618396168636,M1 transfer matrix + continued fraction,3.9393304629081885e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],2.5,,1.0173316976112197,-0.8177618210721356,M2 shooting (complex-ray DOP853),3.9127473338262845e-08,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],2.5,,1.3623616832657552,-0.36656153170301664,M1 transfer matrix + continued fraction,3.2577437651912243e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],2.5,,1.3623616835373098,-0.3665615316930812,M2 shooting (complex-ray DOP853),2.7173625119869377e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,odd,C=A (odd: model independent) [wave],2.5,,1.9605030666641463,-0.3682298030113782,M1 transfer matrix + continued fraction,3.8894787260310395e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,odd,C=A (odd: model independent) [wave],2.5,,1.9605030667746135,-0.368229802831642,M2 shooting (complex-ray DOP853),2.1096945555730285e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,odd,C=A (odd: model independent) [wave],2.5,,2.5516181727373515,-0.37631002659340756,M1 transfer matrix + continued fraction,2.49353646695169e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,odd,C=A (odd: model independent) [wave],2.5,,2.551618172774821,-0.37631002642076633,M2 shooting (complex-ray DOP853),1.7666059421418517e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],3.0,,0.8361215605203198,-0.5549608713586165,M1 transfer matrix + continued fraction,8.085038883900968e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],3.0,,0.8361215604330439,-0.554960871210735,M2 shooting (complex-ray DOP853),1.7171496000644248e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],3.0,,0.8673366671469025,-0.19128013199980562,M1 transfer matrix + continued fraction,1.9028121499696133e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],3.0,,0.8673366671375495,-0.19128013201164115,M2 shooting (complex-ray DOP853),1.508501723185796e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],3.0,,1.4640106837510207,-0.4235229295527078,M1 transfer matrix + continued fraction,3.7025073188666064e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],3.0,,1.4640106836871551,-0.4235229295282389,M2 shooting (complex-ray DOP853),6.839254803471537e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],3.0,,2.1083120770341126,-0.4224244165455015,M1 transfer matrix + continued fraction,5.66265519951944e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],3.0,,2.10831207704548,-0.4224244164751242,M2 shooting (complex-ray DOP853),7.128943230975085e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],4.0,,0.09587211854960001,-1.1694588962313537,M1 transfer matrix + continued fraction,2.232546079008037e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],4.0,,0.09587211816531543,-1.1694588959756522,M2 shooting (complex-ray DOP853),4.615819237085366e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],4.0,,0.3661064478055917,-0.8770390638470604,M1 transfer matrix + continued fraction,1.5057934988713064e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],4.0,,0.366106447831862,-0.877039063827589,M2 shooting (complex-ray DOP853),3.269963370848126e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],4.0,,0.5881210753268873,-0.5933603388930868,M1 transfer matrix + continued fraction,1.002663914945279e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],4.0,,0.5881210753146482,-0.5933603388851436,M2 shooting (complex-ray DOP853),1.4590750069788645e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],4.0,,0.7449917363236351,-0.27840681886175,M1 transfer matrix + continued fraction,1.3145489039874156e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],4.0,,0.74499173632215,-0.2784068188625351,M2 shooting (complex-ray DOP853),1.6798897590459806e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,odd,C=A (odd: model independent) [wave],4.0,,1.3439566969421008,-0.42571675075679194,M1 transfer matrix + continued fraction,4.269190580211322e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,odd,C=A (odd: model independent) [wave],4.0,,1.3439566969220071,-0.4257167507524896,M2 shooting (complex-ray DOP853),2.0549137621564918e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,odd,C=A (odd: model independent) [wave],4.0,,1.9364092042532188,-0.4218272913743688,M1 transfer matrix + continued fraction,2.873923425488124e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,odd,C=A (odd: model independent) [wave],4.0,,1.9364092042403254,-0.42182729139194375,M2 shooting (complex-ray DOP853),2.1797247180208572e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,6,odd,C=A (odd: model independent) [wave],4.0,,2.521139918895057,-0.42901916693029263,M1 transfer matrix + continued fraction,7.700225762624683e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,6,odd,C=A (odd: model independent) [wave],4.0,,2.521139918902169,-0.42901916694253484,M2 shooting (complex-ray DOP853),1.4157935135857459e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],6.0,,0.11489695967980998,-0.6620281050470694,M1 transfer matrix + continued fraction,5.330876584296792e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],6.0,,0.11489695968362008,-0.6620281050411061,M2 shooting (complex-ray DOP853),7.0766047830130604e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],6.0,,0.3472457529245409,-0.5039876556786571,M1 transfer matrix + continued fraction,6.109753116998873e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],6.0,,0.3472457529225074,-0.5039876556781222,M2 shooting (complex-ray DOP853),2.102660938607024e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],6.0,,0.5521651167493119,-0.2935902941913987,M1 transfer matrix + continued fraction,3.526237339299335e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],6.0,,0.5521651167490165,-0.29359029419209803,M2 shooting (complex-ray DOP853),7.591711374454662e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],6.0,,1.0346644265034268,-0.36254950611304076,M1 transfer matrix + continued fraction,6.506004240762283e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],6.0,,1.0346644265031864,-0.36254950610982156,M2 shooting (complex-ray DOP853),3.2281718977611996e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,odd,C=A (odd: model independent) [wave],6.0,,1.4906988725986796,-0.3582656547753066,M1 transfer matrix + continued fraction,0.0,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,odd,C=A (odd: model independent) [wave],6.0,,1.490698872596376,-0.3582656547719184,M2 shooting (complex-ray DOP853),4.097175485645061e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,odd,C=A (odd: model independent) [wave],6.0,,1.9405908787070607,-0.36320317390593815,M1 transfer matrix + continued fraction,1.3579438231198956e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,odd,C=A (odd: model independent) [wave],6.0,,1.940590878704427,-0.36320317390210943,M2 shooting (complex-ray DOP853),4.647072491156119e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,6,odd,C=A (odd: model independent) [wave],6.0,,2.3833797339360703,-0.3707723287095759,M1 transfer matrix + continued fraction,1.878987430014291e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,6,odd,C=A (odd: model independent) [wave],6.0,,2.3833797339336935,-0.3707723287055825,M2 shooting (complex-ray DOP853),4.647144032792762e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],10.0,,0.18065623386547075,-0.35695312201959245,M1 transfer matrix + continued fraction,2.955869367265596e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,odd,C=A (odd: model independent) [wave],10.0,,0.18065623386448312,-0.35695312201600327,M2 shooting (complex-ray DOP853),3.722586709023668e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],10.0,,0.3582126447665203,-0.24237896280817023,M1 transfer matrix + continued fraction,8.227734437949657e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,odd,C=A (odd: model independent) [wave],10.0,,0.3582126447654086,-0.24237896280930446,M2 shooting (complex-ray DOP853),1.5882086558755259e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],10.0,,0.6805022328818141,-0.2649275054453174,M1 transfer matrix + continued fraction,1.5124827733357535e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,odd,C=A (odd: model independent) [wave],10.0,,0.6805022328836161,-0.26492750544429,M2 shooting (complex-ray DOP853),2.0743110508614885e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],10.0,,0.9798568956520115,-0.2616388594057091,M1 transfer matrix + continued fraction,9.728015201124244e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,odd,C=A (odd: model independent) [wave],10.0,,0.9798568956521905,-0.2616388594037618,M2 shooting (complex-ray DOP853),1.9554825691889927e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,odd,C=A (odd: model independent) [wave],10.0,,1.2752819988475408,-0.2644134580238729,M1 transfer matrix + continued fraction,6.084211908874808e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,odd,C=A (odd: model independent) [wave],10.0,,1.2752819988471633,-0.2644134580222505,M2 shooting (complex-ray DOP853),1.6657037154870003e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,odd,C=A (odd: model independent) [wave],10.0,,1.5662396284977205,-0.26909349544523015,M1 transfer matrix + continued fraction,8.069767427129681e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,odd,C=A (odd: model independent) [wave],10.0,,1.5662396284968398,-0.26909349544258593,M2 shooting (complex-ray DOP853),2.787005029879707e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,6,odd,C=A (odd: model independent) [wave],10.0,,1.8543618570979499,-0.27405647650838355,M1 transfer matrix + continued fraction,5.628368156204044e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,6,odd,C=A (odd: model independent) [wave],10.0,,1.8543618570973932,-0.2740564765065086,M2 shooting (complex-ray DOP853),1.9558359487017452e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,7,odd,C=A (odd: model independent) [wave],10.0,,2.140682730237253,-0.2788433018249772,M1 transfer matrix + continued fraction,0.0,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,7,odd,C=A (odd: model independent) [wave],10.0,,2.1406827302364477,-0.27884330182230355,M2 shooting (complex-ray DOP853),2.792236792887094e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,8,odd,C=A (odd: model independent) [wave],10.0,,2.4258036982371554,-0.28333146348615607,M1 transfer matrix + continued fraction,3.0759228529826404e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,8,odd,C=A (odd: model independent) [wave],10.0,,2.4258036982365287,-0.2833314634838222,M2 shooting (complex-ray DOP853),2.4165100129350107e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [wave],2.2,2.0,0.7931293340691679,-0.0071259713672371435,M1 transfer matrix + continued fraction,4.6928453115683255e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [wave],2.2,2.0,0.7931293340702088,-0.007125971367478738,M2 shooting (complex-ray DOP853),1.068613313058524e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],2.2,2.0,0.9544542996633975,-0.10853323215915621,M1 transfer matrix + continued fraction,1.0687458526724012e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],2.2,2.0,0.9544543068892699,-0.1085332297587667,M2 shooting (complex-ray DOP853),7.61413833336365e-09,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],2.2,2.0,1.2545727852667827,-0.26967149902582066,M1 transfer matrix + continued fraction,4.9471448894860335e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],2.2,2.0,1.2545727851185857,-0.269671499196373,M2 shooting (complex-ray DOP853),2.259434839410589e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],2.2,2.0,1.7282097470805058,-0.2672833423753746,M1 transfer matrix + continued fraction,5.859770450786784e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],2.2,2.0,1.72820974694336,-0.2672833422464696,M2 shooting (complex-ray DOP853),1.8821658452518285e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],2.2,2.0,2.1782412489282277,-0.2759421053189869,M1 transfer matrix + continued fraction,2.833490918251163e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],2.2,2.0,2.1782412487499077,-0.27594210533833985,M2 shooting (complex-ray DOP853),1.7936713374006716e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [matter-imag-damped],2.2,2.0,1.2780620061605448,-0.7238401068192852,M1 transfer matrix + continued fraction,2.0164872684448494e-12,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],2.2,2.0,1.2780623608556374,-0.7238399921727657,M2 shooting (complex-ray DOP853),3.7276324009954507e-07,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [wave],2.5,2.0,0.8987620427603298,-0.09461800121924317,M1 transfer matrix + continued fraction,6.488451150110217e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [wave],2.5,2.0,0.8987620427652051,-0.09461800122398918,M2 shooting (complex-ray DOP853),6.803923203640741e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],2.5,2.0,1.0089435163571547,-1.0380857230859166,M1 transfer matrix + continued fraction,7.372857885445524e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],2.5,2.0,1.008943054944213,-1.0380856496275548,M2 shooting (complex-ray DOP853),4.6722375114054365e-07,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],2.5,2.0,1.0473839648221943,-0.33845068442698323,M1 transfer matrix + continued fraction,3.1795611433742777e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],2.5,2.0,1.0473839647333991,-0.33845068457018357,M2 shooting (complex-ray DOP853),1.684960648992872e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],2.5,2.0,1.6477471706755855,-0.36001506329603666,M1 transfer matrix + continued fraction,2.6239500117287756e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],2.5,2.0,1.6477471708533857,-0.36001506321064275,M2 shooting (complex-ray DOP853),1.9724360179640682e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],2.5,2.0,2.254895118423742,-0.368724166724584,M1 transfer matrix + continued fraction,1.3667109918938605e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],2.5,2.0,2.254895118474824,-0.36872416655979867,M2 shooting (complex-ray DOP853),1.7252132755685187e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [matter-unstable],2.5,2.0,-1.5893759160004383e-18,0.39063409463065546,M1 transfer matrix + continued fraction,1.2515003749989973e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-unstable],2.5,2.0,-3.3454781701406576e-18,0.39063409463069665,M2 shooting (complex-ray DOP853),4.118927425102897e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],2.5,2.0,-8.225399041414473e-15,-0.3906340884043766,M1 transfer matrix + continued fraction,8.630328038199427e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],2.5,2.0,-1.1893773641052677e-09,-0.390634090322615,M2 shooting (complex-ray DOP853),2.257041761448597e-09,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [wave],3.0,2.0,0.6277278414220666,-1.1256489672025223,M1 transfer matrix + continued fraction,1.1798163274981578e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [wave],3.0,2.0,0.6277278441986633,-1.125648955819453,M2 shooting (complex-ray DOP853),1.171681517397897e-08,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],3.0,2.0,0.817947831596032,-0.7139560483401655,M1 transfer matrix + continued fraction,2.104436995481363e-14,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],3.0,2.0,0.8179478317142961,-0.7139560493846377,M2 shooting (complex-ray DOP853),1.0511463962055806e-09,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],3.0,2.0,0.8786934816082722,-0.22137021338866952,M1 transfer matrix + continued fraction,6.200136585499814e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],3.0,2.0,0.8786934815999284,-0.2213702133984663,M2 shooting (complex-ray DOP853),1.2868383366252479e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],3.0,2.0,1.054718808784812,-0.49666808031044773,M1 transfer matrix + continued fraction,9.690813908905808e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],3.0,2.0,1.0547188090630557,-0.4966680800825513,M2 shooting (complex-ray DOP853),3.596613810336429e-10,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],3.0,2.0,1.7723607761397,-0.4137100175167965,M1 transfer matrix + continued fraction,1.3354856497823002e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],3.0,2.0,1.7723607761050524,-0.4137100174254839,M2 shooting (complex-ray DOP853),9.76649508681373e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,even,C static fluid shell [wave],3.0,2.0,2.4257491055056906,-0.4228468425019696,M1 transfer matrix + continued fraction,1.508045879280333e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,even,C static fluid shell [wave],3.0,2.0,2.4257491055635483,-0.422846842452904,M2 shooting (complex-ray DOP853),7.586136848107122e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [matter-stable],3.0,2.0,0.4211267980505125,-4.209244892876361e-06,M1 transfer matrix + continued fraction,1.5029130309960352e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-stable],3.0,2.0,0.4211267980503019,-4.209244924745257e-06,M2 shooting (complex-ray DOP853),2.130068240102335e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-unstable],3.0,2.0,4.6410890932676595e-19,0.30830064975968613,M1 transfer matrix + continued fraction,1.3467705838837747e-16,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-unstable],3.0,2.0,-3.933746402740075e-18,0.30830064975962607,M2 shooting (complex-ray DOP853),6.006306579322783e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],3.0,2.0,6.873178036896708e-16,-0.3083006324378975,M1 transfer matrix + continued fraction,9.323711028231012e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],3.0,2.0,-1.7560879009150856e-08,-0.308300636947887,M2 shooting (complex-ray DOP853),1.8130761179293494e-08,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [wave],4.0,2.0,0.22653512903491624,-0.996022738486571,M1 transfer matrix + continued fraction,3.5148366841990877e-13,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [wave],4.0,2.0,0.2265351290575311,-0.996022738461279,M2 shooting (complex-ray DOP853),3.392810687075095e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],4.0,2.0,0.497698366355879,-0.6965491821213687,M1 transfer matrix + continued fraction,5.695507436964822e-15,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],4.0,2.0,0.4976983663597251,-0.6965491821100485,M2 shooting (complex-ray DOP853),1.1955797934404467e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],4.0,2.0,0.7335881807231253,-0.3360109643375181,M1 transfer matrix + continued fraction,8.139136119022161e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],4.0,2.0,0.7335881807178857,-0.33601096434022837,M2 shooting (complex-ray DOP853),5.899056327795552e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],4.0,2.0,0.9500259190423413,-0.4966575942616477,M1 transfer matrix + continued fraction,6.741068589040908e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],4.0,2.0,0.9500259190182054,-0.4966575942667156,M2 shooting (complex-ray DOP853),2.4662236944544766e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],4.0,2.0,1.6285754643626602,-0.4147499952609243,M1 transfer matrix + continued fraction,5.39016977010482e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],4.0,2.0,1.6285754643861463,-0.41474999525371203,M2 shooting (complex-ray DOP853),2.4568558340309662e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,even,C static fluid shell [wave],4.0,2.0,2.2281811360102695,-0.4220465562463486,M1 transfer matrix + continued fraction,1.8975916680764832e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,even,C static fluid shell [wave],4.0,2.0,2.228181136011936,-0.4220465562297964,M2 shooting (complex-ray DOP853),1.6635902055824813e-11,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [matter-stable],4.0,2.0,0.3045383729305624,-2.3080053081274195e-06,M1 transfer matrix + continued fraction,7.668527166190792e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-stable],4.0,2.0,0.3045383729305019,-2.308005328337418e-06,M2 shooting (complex-ray DOP853),6.379310174642958e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],4.0,2.0,-3.3656432010960266e-25,-0.20384767535415352,M1 transfer matrix + continued fraction,8.280932157298136e-17,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],4.0,2.0,-3.0471760241438125e-08,-0.20384788459654615,M2 shooting (complex-ray DOP853),2.1144953782812875e-07,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [wave],6.0,2.0,0.24096865569361858,-0.5531155950738555,M1 transfer matrix + continued fraction,4.540101834384283e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [wave],6.0,2.0,0.24096865569364828,-0.5531155950723428,M2 shooting (complex-ray DOP853),1.513081379276098e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],6.0,2.0,0.5034199097204807,-0.35229537913692704,M1 transfer matrix + continued fraction,2.8580281456037434e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],6.0,2.0,0.5034199097188008,-0.3522953791369927,M2 shooting (complex-ray DOP853),1.6811615460657303e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],6.0,2.0,0.7418996306305501,-0.40585957912117526,M1 transfer matrix + continued fraction,3.3853865584906556e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],6.0,2.0,0.7418996306238854,-0.4058595791210524,M2 shooting (complex-ray DOP853),6.665800898716251e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],6.0,2.0,1.254325286877178,-0.3540168611973739,M1 transfer matrix + continued fraction,6.383478156472054e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],6.0,2.0,1.2543252868782724,-0.35401686120056247,M2 shooting (complex-ray DOP853),3.371165411961644e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],6.0,2.0,1.7151659429801387,-0.3582471706720232,M1 transfer matrix + continued fraction,1.1410248232219175e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],6.0,2.0,1.7151659429828228,-0.3582471706759251,M2 shooting (complex-ray DOP853),4.7359178541728364e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,even,C static fluid shell [wave],6.0,2.0,2.162214688831788,-0.3661092656505988,M1 transfer matrix + continued fraction,1.0518581250462003e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,even,C static fluid shell [wave],6.0,2.0,2.162214688833573,-0.3661092656536968,M2 shooting (complex-ray DOP853),3.5753163354965282e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [matter-stable],6.0,2.0,0.17772014209003376,-4.264251817248831e-07,M1 transfer matrix + continued fraction,2.5661749276171403e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-stable],6.0,2.0,0.1777201420900678,-4.264251905230369e-07,M2 shooting (complex-ray DOP853),3.517420736966462e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-unstable],6.0,2.0,-1.7968525670226233e-18,0.11152609722557119,M1 transfer matrix + continued fraction,1.363324334367213e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-unstable],6.0,2.0,1.534479657511007e-22,0.11152609722531688,M2 shooting (complex-ray DOP853),2.543104615845489e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],6.0,2.0,-1.1021573737662462e-18,-0.11152615785229728,M1 transfer matrix + continued fraction,2.6286931616944097e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],6.0,2.0,-7.320795003713303e-09,-0.11152610530713253,M2 shooting (complex-ray DOP853),5.30526943497348e-08,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [wave],10.0,2.0,0.09506960142032297,-0.37186432881753445,M1 transfer matrix + continued fraction,6.763830638076874e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [wave],10.0,2.0,0.09506960142292498,-0.3718643288165019,M2 shooting (complex-ray DOP853),2.7993928494515282e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],10.0,2.0,0.30021731372950944,-0.2795615313107051,M1 transfer matrix + continued fraction,2.3258820980301406e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,1,even,C static fluid shell [wave],10.0,2.0,0.30021731372845506,-0.27956153130845185,M2 shooting (complex-ray DOP853),2.48774282810971e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],10.0,2.0,0.49865358776488783,-0.29120094327145407,M1 transfer matrix + continued fraction,3.155860068556936e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,2,even,C static fluid shell [wave],10.0,2.0,0.4986535877590236,-0.29120094326602414,M2 shooting (complex-ray DOP853),7.992099581243704e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],10.0,2.0,0.8249039395809774,-0.25981286627576045,M1 transfer matrix + continued fraction,1.0275372577328744e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,3,even,C static fluid shell [wave],10.0,2.0,0.8249039395800548,-0.2598128662769091,M2 shooting (complex-ray DOP853),1.4732781518574527e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],10.0,2.0,1.1271768492864633,-0.26148756514130805,M1 transfer matrix + continued fraction,1.6336334216071117e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,4,even,C static fluid shell [wave],10.0,2.0,1.1271768492866663,-0.2614875651431487,M2 shooting (complex-ray DOP853),1.85179351443385e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,even,C static fluid shell [wave],10.0,2.0,1.420881907275751,-0.2661886631429131,M1 transfer matrix + continued fraction,4.735062928913379e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,5,even,C static fluid shell [wave],10.0,2.0,1.4208819072762322,-0.26618866314468836,M2 shooting (complex-ray DOP853),1.839300343041599e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,6,even,C static fluid shell [wave],10.0,2.0,1.7104514198424985,-0.27134932536810524,M1 transfer matrix + continued fraction,1.0565453855773401e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,6,even,C static fluid shell [wave],10.0,2.0,1.7104514198431457,-0.2713493253701953,M2 shooting (complex-ray DOP853),2.1879798957725477e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,7,even,C static fluid shell [wave],10.0,2.0,1.9976445883325105,-0.27635726944822986,M1 transfer matrix + continued fraction,3.3617002591494247e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,7,even,C static fluid shell [wave],10.0,2.0,1.9976445883331484,-0.276357269450387,M2 shooting (complex-ray DOP853),2.2495140900886655e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,8,even,C static fluid shell [wave],10.0,2.0,2.283336554738331,-0.2810525347140067,M1 transfer matrix + continued fraction,8.956077960218357e-17,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,8,even,C static fluid shell [wave],10.0,2.0,2.2833365547388835,-0.281052534716076,M2 shooting (complex-ray DOP853),2.141764550861586e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,9,even,C static fluid shell [wave],10.0,2.0,2.5680170845514785,-0.2854097417765087,M1 transfer matrix + continued fraction,1.1355974780772464e-16,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,9,even,C static fluid shell [wave],10.0,2.0,2.568017084552319,-0.2854097417796218,M2 shooting (complex-ray DOP853),3.2246290128349153e-12,"same system as Pitre et al. 2026 (figures only, Figs.3-4,11-12)"
+4,0,even,C static fluid shell [matter-stable],10.0,2.0,0.08608795911575763,-3.3606466586560965e-08,M1 transfer matrix + continued fraction,6.053323031480641e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-stable],10.0,2.0,0.08608795911577452,-3.360647178462541e-08,M2 shooting (complex-ray DOP853),1.7671084842709247e-14,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-unstable],10.0,2.0,-1.4241207415767469e-18,0.051804518680851584,M1 transfer matrix + continued fraction,9.827178576628324e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-unstable],10.0,2.0,-2.807277468484765e-19,0.051804518680669466,M2 shooting (complex-ray DOP853),1.821182094055384e-13,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],10.0,2.0,-3.1259693198273363e-19,-0.05180452699541188,M1 transfer matrix + continued fraction,6.237324815930754e-15,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,C static fluid shell [matter-imag-damped],10.0,2.0,-3.8359334867237057e-10,-0.0518045197894451,M2 shooting (complex-ray DOP853),7.216169421137724e-09,"Pitre, Schneider & Poisson 2026 (arXiv:2604.05980) Figs.1-2, Eq.(7.8)"
+4,0,even,A frozen domain wall [wave],2.2,,0.840206243021,-0.02540282363817676,M1 transfer matrix + continued fraction,5.997774000144513e-16,none found
+4,0,even,A frozen domain wall [wave],2.2,,0.8402062430217099,-0.025402823638402055,M2 shooting (complex-ray DOP853),7.447703282351468e-13,none found
+4,1,even,A frozen domain wall [wave],2.2,,1.018048454881012,-0.2701553070619921,M1 transfer matrix + continued fraction,3.1591827067239874e-15,none found
+4,1,even,A frozen domain wall [wave],2.2,,1.0180484549314859,-0.2701553071542915,M2 shooting (complex-ray DOP853),1.0519879620605285e-10,none found
+4,2,even,A frozen domain wall [wave],2.2,,1.0236352148685077,-0.06397919606112334,M1 transfer matrix + continued fraction,1.611673335016616e-15,none found
+4,2,even,A frozen domain wall [wave],2.2,,1.0236352148699397,-0.06397919605977238,M2 shooting (complex-ray DOP853),1.968659770781505e-12,none found
+4,3,even,A frozen domain wall [wave],2.2,,1.9576906798228966,-0.11145909479752134,M1 transfer matrix + continued fraction,9.004870523550808e-16,none found
+4,3,even,A frozen domain wall [wave],2.2,,1.9576906798216451,-0.11145909479590733,M2 shooting (complex-ray DOP853),2.0423291857707646e-12,none found
+4,4,even,A frozen domain wall [wave],2.2,,2.4039938770495244,-0.12465139592168885,M1 transfer matrix + continued fraction,2.5230409958467546e-16,none found
+4,4,even,A frozen domain wall [wave],2.2,,2.4039938770484537,-0.12465139592150738,M2 shooting (complex-ray DOP853),1.0859679658000269e-12,none found
+4,0,even,A frozen domain wall [wave],2.5,,0.8890348505508737,-0.12480167029973259,M1 transfer matrix + continued fraction,1.3321260026938834e-14,none found
+4,0,even,A frozen domain wall [wave],2.5,,0.8890348505526775,-0.12480167031146491,M2 shooting (complex-ray DOP853),1.1870174109099255e-11,none found
+4,1,even,A frozen domain wall [wave],2.5,,0.9180211195914046,-0.8640158637526422,M1 transfer matrix + continued fraction,4.2811626594245253e-13,none found
+4,1,even,A frozen domain wall [wave],2.5,,0.9180211138169931,-0.8640158819617499,M2 shooting (complex-ray DOP853),1.910275985987171e-08,none found
+4,2,even,A frozen domain wall [wave],2.5,,0.9366668524720047,-0.4674442227402128,M1 transfer matrix + continued fraction,2.8539001447645994e-14,none found
+4,2,even,A frozen domain wall [wave],2.5,,0.93666685263345,-0.4674442229895045,M2 shooting (complex-ray DOP853),2.970032597270627e-10,none found
+4,3,even,A frozen domain wall [wave],2.5,,1.3168647552076047,-0.14194942677902944,M1 transfer matrix + continued fraction,9.333292190867045e-15,none found
+4,3,even,A frozen domain wall [wave],2.5,,1.31686475520632,-0.1419494267748535,M2 shooting (complex-ray DOP853),4.369100104990864e-12,none found
+4,4,even,A frozen domain wall [wave],2.5,,1.952090633717576,-0.16701521726037472,M1 transfer matrix + continued fraction,5.279832489681732e-15,none found
+4,4,even,A frozen domain wall [wave],2.5,,1.9520906337195132,-0.16701521725613705,M2 shooting (complex-ray DOP853),4.659424213267163e-12,none found
+4,5,even,A frozen domain wall [wave],2.5,,2.54976554941087,-0.18739331215876498,M1 transfer matrix + continued fraction,4.706562453368848e-15,none found
+4,5,even,A frozen domain wall [wave],2.5,,2.549765549411723,-0.187393312155543,M2 shooting (complex-ray DOP853),3.333003974112984e-12,none found
+4,0,even,A frozen domain wall [wave],3.0,,0.7623644633114189,-0.5780862691099079,M1 transfer matrix + continued fraction,1.1076482194216324e-14,none found
+4,0,even,A frozen domain wall [wave],3.0,,0.7623644633692301,-0.5780862690951897,M2 shooting (complex-ray DOP853),5.965535241844102e-11,none found
+4,1,even,A frozen domain wall [wave],3.0,,0.836777209818299,-0.22130369178112472,M1 transfer matrix + continued fraction,2.444405344049598e-15,none found
+4,1,even,A frozen domain wall [wave],3.0,,0.8367772098119792,-0.22130369178327003,M2 shooting (complex-ray DOP853),6.673923515054615e-12,none found
+4,2,even,A frozen domain wall [wave],3.0,,1.4064068803855319,-0.19860638003767836,M1 transfer matrix + continued fraction,4.730233312680116e-16,none found
+4,2,even,A frozen domain wall [wave],3.0,,1.406406880387078,-0.1986063800361763,M2 shooting (complex-ray DOP853),2.155589084313197e-12,none found
+4,3,even,A frozen domain wall [wave],3.0,,2.094503742197698,-0.2203129979222823,M1 transfer matrix + continued fraction,8.61297470798964e-16,none found
+4,3,even,A frozen domain wall [wave],3.0,,2.0945037421980626,-0.2203129979193495,M2 shooting (complex-ray DOP853),2.9553688987236538e-12,none found
+4,0,even,A frozen domain wall [wave],4.0,,0.04089761457673776,-1.1202290984482186,M1 transfer matrix + continued fraction,2.605496576040295e-11,none found
+4,0,even,A frozen domain wall [wave],4.0,,0.04089761460621723,-1.1202290983658643,M2 shooting (complex-ray DOP853),8.747157959177431e-11,none found
+4,1,even,A frozen domain wall [wave],4.0,,0.5251459631853705,-0.582918464080707,M1 transfer matrix + continued fraction,4.9086934260356725e-15,none found
+4,1,even,A frozen domain wall [wave],4.0,,0.5251459631826096,-0.5829184640741347,M2 shooting (complex-ray DOP853),7.12865258642449e-12,none found
+4,2,even,A frozen domain wall [wave],4.0,,0.6972155260538554,-0.2847985890800143,M1 transfer matrix + continued fraction,2.3807017419460476e-15,none found
+4,2,even,A frozen domain wall [wave],4.0,,0.6972155260527239,-0.2847985890796284,M2 shooting (complex-ray DOP853),1.1955377242539862e-12,none found
+4,3,even,A frozen domain wall [wave],4.0,,1.2849682356819796,-0.23208156057428203,M1 transfer matrix + continued fraction,1.6951063787178629e-15,none found
+4,3,even,A frozen domain wall [wave],4.0,,1.2849682356798444,-0.23208156057468018,M2 shooting (complex-ray DOP853),2.171986178523583e-12,none found
+4,4,even,A frozen domain wall [wave],4.0,,1.9194026838793095,-0.24597072220111058,M1 transfer matrix + continued fraction,6.325531717106903e-16,none found
+4,4,even,A frozen domain wall [wave],4.0,,1.919402683879086,-0.24597072220339605,M2 shooting (complex-ray DOP853),2.2963675671811896e-12,none found
+4,5,even,A frozen domain wall [wave],4.0,,2.512592843055994,-0.2629979265594815,M1 transfer matrix + continued fraction,1.138958831893243e-16,none found
+4,5,even,A frozen domain wall [wave],4.0,,2.512592843057223,-0.262997926560323,M2 shooting (complex-ray DOP853),1.4893112999652778e-12,none found
+4,0,even,A frozen domain wall [wave],6.0,,0.08922092176320956,-0.6275622171905757,M1 transfer matrix + continued fraction,2.829864299937133e-15,none found
+4,0,even,A frozen domain wall [wave],6.0,,0.08922092176461757,-0.6275622171892635,M2 shooting (complex-ray DOP853),1.924654873510316e-12,none found
+4,1,even,A frozen domain wall [wave],6.0,,0.3078820466294012,-0.4799206650965252,M1 transfer matrix + continued fraction,9.395627333862396e-16,none found
+4,1,even,A frozen domain wall [wave],6.0,,0.3078820466290983,-0.47992066509638315,M2 shooting (complex-ray DOP853),3.3457768639677517e-13,none found
+4,2,even,A frozen domain wall [wave],6.0,,0.5076319476772749,-0.2811189014425559,M1 transfer matrix + continued fraction,2.009264547940088e-15,none found
+4,2,even,A frozen domain wall [wave],6.0,,0.5076319476770265,-0.2811189014426057,M2 shooting (complex-ray DOP853),2.53408162167284e-13,none found
+4,3,even,A frozen domain wall [wave],6.0,,0.9861834716644957,-0.22295982103563444,M1 transfer matrix + continued fraction,5.507706324615142e-16,none found
+4,3,even,A frozen domain wall [wave],6.0,,0.9861834716647678,-0.22295982103534506,M2 shooting (complex-ray DOP853),3.972247541173433e-13,none found
+4,4,even,A frozen domain wall [wave],6.0,,1.4747062740125325,-0.22828346405783442,M1 transfer matrix + continued fraction,2.4255248568869037e-16,none found
+4,4,even,A frozen domain wall [wave],6.0,,1.474706274012219,-0.2282834640570933,M2 shooting (complex-ray DOP853),8.047185387258603e-13,none found
+4,5,even,A frozen domain wall [wave],6.0,,1.931909026962788,-0.23982691079638943,M1 transfer matrix + continued fraction,2.3324509654208353e-16,none found
+4,5,even,A frozen domain wall [wave],6.0,,1.9319090269624908,-0.23982691079569432,M2 shooting (complex-ray DOP853),7.5602686862216e-13,none found
+4,6,even,A frozen domain wall [wave],6.0,,2.3774970270021054,-0.2506445525430747,M1 transfer matrix + continued fraction,1.1391680574359012e-16,none found
+4,6,even,A frozen domain wall [wave],6.0,,2.377497027001792,-0.2506445525422817,M2 shooting (complex-ray DOP853),8.527598769144434e-13,none found
+4,0,even,A frozen domain wall [wave],10.0,,0.16133830686746323,-0.3337907612157807,M1 transfer matrix + continued fraction,9.018678589039833e-16,none found
+4,0,even,A frozen domain wall [wave],10.0,,0.16133830686754871,-0.33379076121488466,M2 shooting (complex-ray DOP853),9.001296451849015e-13,none found
+4,1,even,A frozen domain wall [wave],10.0,,0.32745302984976876,-0.2239637798857423,M1 transfer matrix + continued fraction,4.211853047667446e-16,none found
+4,1,even,A frozen domain wall [wave],10.0,,0.32745302984925295,-0.22396377988573954,M2 shooting (complex-ray DOP853),5.158169361836656e-13,none found
+4,2,even,A frozen domain wall [wave],10.0,,0.6477911093149582,-0.17880007890449576,M1 transfer matrix + continued fraction,3.4991465492981943e-16,none found
+4,2,even,A frozen domain wall [wave],10.0,,0.6477911093153815,-0.17880007890478256,M2 shooting (complex-ray DOP853),5.113315262863536e-13,none found
+4,3,even,A frozen domain wall [wave],10.0,,0.9678834448925234,-0.17873611612846999,M1 transfer matrix + continued fraction,8.341041491187296e-16,none found
+4,3,even,A frozen domain wall [wave],10.0,,0.9678834448926152,-0.17873611612819246,M2 shooting (complex-ray DOP853),2.9232151287287966e-13,none found
+4,4,even,A frozen domain wall [wave],10.0,,1.268542671741143,-0.18519527097236407,M1 transfer matrix + continued fraction,1.620667862204933e-16,none found
+4,4,even,A frozen domain wall [wave],10.0,,1.2685426717411137,-0.18519527097205266,M2 shooting (complex-ray DOP853),3.127938062209431e-13,none found
+4,5,even,A frozen domain wall [wave],10.0,,1.5615859463336612,-0.1917929138421168,M1 transfer matrix + continued fraction,1.8003733134820667e-16,none found
+4,5,even,A frozen domain wall [wave],10.0,,1.5615859463336028,-0.19179291384176164,M2 shooting (complex-ray DOP853),3.5992939039187735e-13,none found
+4,6,even,A frozen domain wall [wave],10.0,,1.8507992580802508,-0.19784523912250082,M1 transfer matrix + continued fraction,1.0327194292873445e-16,none found
+4,6,even,A frozen domain wall [wave],10.0,,1.850799258080184,-0.19784523912212482,M2 shooting (complex-ray DOP853),3.818986395850604e-13,none found
+4,7,even,A frozen domain wall [wave],10.0,,2.1377872733370884,-0.20330772364331778,M1 transfer matrix + continued fraction,4.71747921025182e-17,none found
+4,7,even,A frozen domain wall [wave],10.0,,2.1377872733370173,-0.2033077236429066,M2 shooting (complex-ray DOP853),4.1726536034199604e-13,none found
+4,8,even,A frozen domain wall [wave],10.0,,2.4233583269802823,-0.2082438615125088,M1 transfer matrix + continued fraction,5.582142120980118e-17,none found
+4,8,even,A frozen domain wall [wave],10.0,,2.423358326980174,-0.20824386151191646,M2 shooting (complex-ray DOP853),6.021613529549774e-13,none found
+2,0,even,C static fluid shell [matter-unstable],3.3333333333333335,2.0,4.088109406463536e-18,0.10987743541274739,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 0.5147i
+2,0,even,C static fluid shell [matter-stable],3.3333333333333335,2.0,0.18007521055170042,-0.00027946236151037786,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 1.505
+2,0,even,C static fluid shell [matter-unstable],4.0,2.0,-4.627340740614097e-19,0.07957925654585665,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 0.5147i
+2,0,even,C static fluid shell [matter-stable],4.0,2.0,0.1485110562925563,-0.00018837598020446004,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 1.505
+2,0,even,C static fluid shell [matter-unstable],5.0,2.0,9.647351540700622e-18,0.05435516465938391,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 0.5147i
+2,0,even,C static fluid shell [matter-stable],5.0,2.0,0.11332992601221206,-9.816341094970885e-05,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 1.505
+2,0,even,C static fluid shell [matter-unstable],6.666666666666667,2.0,3.6810182631193946e-17,0.03377615620266317,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 0.5147i
+2,0,even,C static fluid shell [matter-stable],6.666666666666667,2.0,0.0776356177126589,-3.760688779176082e-05,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 1.505
+2,0,even,C static fluid shell [matter-unstable],10.0,2.0,-5.249112757425484e-19,0.017623791498792188,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 0.5147i
+2,0,even,C static fluid shell [matter-stable],10.0,2.0,0.044214868171479335,-8.784029116938108e-06,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 1.505
+2,0,even,C static fluid shell [matter-unstable],20.0,2.0,-2.9187551885651067e-18,0.005983244157811842,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 0.5147i
+2,0,even,C static fluid shell [matter-stable],20.0,2.0,0.016256850159307924,-6.468760302663024e-07,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 1.505
+2,0,even,C static fluid shell [matter-unstable],50.0,2.0,1.180510007104656e-18,0.0014783903551631617,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 0.5147i
+2,0,even,C static fluid shell [matter-stable],50.0,2.0,0.004200621714717194,-1.8446610230120886e-08,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 1.505
+2,0,even,C static fluid shell [matter-unstable],100.0,2.0,-5.264010179953405e-21,0.0005186617827312792,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 0.5147i
+2,0,even,C static fluid shell [matter-stable],100.0,2.0,0.0014951403029559596,-1.200482273526623e-09,M1 transfer matrix + continued fraction,,Pitre et al. 2026 Fig.1/2; PN limit w(R^3/M)^1/2 -> 1.505

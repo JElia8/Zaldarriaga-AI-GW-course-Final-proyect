@@ -1,0 +1,8 @@
+=== stage validate
+    done in 37 s
+total 37 s
+
+real	0m38.394s
+user	0m0.000s
+sys	0m0.015s
+done

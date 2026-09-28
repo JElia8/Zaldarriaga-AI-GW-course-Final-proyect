@@ -1,0 +1,155 @@
+VOLUME 24, NUMBER 13          PHYSICAL REVIEW I ETTERS                                           $0 MARcH 1970
+
+                     EFFECTIVE POTENTIAL FOR EVEN-PARITY
+       REGGE-WHEEI ER GRAVITATIONAL PERTURBATION EQUATIONS*
+
+       Physics Department,               Frank J. Zerilli
+
+                              University of North Carolina, Chapel Hill, North Carolina 27514
+                                        (Received 29 January 1970)
+
+         The Schrodinger-type equation for odd-parity perturbations on a background geometry
+
+       has been extended to the even-parity perturbations. This should greatly simplify the
+       analysis for calculations of gravitational radiation from stars and from objects falling
+
+       into black holes.
+
+  In examining the stability of the Schwarzschild geometry, Regge and Wheeler' first described a de-
+composition of perturbations on a spherically symmetric background geometry into tensor harmonics
+and wrote the perturbation equations in terms of these harmonics. There are two parity types of har-
+
+monics which have been called "odd" and "even. " Regge and Wheeler found it possible to put the equa-
+
+tions for the odd-parity harmonics into the form of a single second-order Schrodinger-type differen-
+
+tial equation with an effective potential. Up until now, however, the even-parity equations have not
+been put into such a form although such a form would simplify the solution of these equations enor-
+mously. There has been considerable recent interest in these equations. Vishveshwara' has reexam-
+
+ined the stability problem for the Schwarzschild metric which Regge and Wheeler originally examined.
+Edelstein' and Zerilli have looked at the problem of gravitational radiation from a particle falling in
+a Schwarzschild geometry, while Thorne and colleagues' have looked at pulsating relativistic stellar
+models and the gravitational radiation emitted therefrom.
+
+  We have found that the even-parity perturbation equations can also be put into the Schrodinger form
+
+described above. Using the notation of Regge and Wheeler, ' the even-parity harmonics have coeffi-
+cient functions Hz~(r, &u), H, IM(r, &u), and Kl~(r, &u). HJ~ can be given in terms of H, I~ and Kl~ as
+described by Regge and Wheeler. H, LM and &I~ then satisfy a coupled system of two first order lin-
+
+ear differential equations.
+
+rect equations have been given by Vishveshwara' and also the author. There are some minor errors in the even-parity equations given by' Briefly, the functions HIM, Regge and Wheeler. The cor-
+
+KI~, and HyL~ satisfy the equations
+
+dKI. dr ~ r--Sm r(r-2m) K 1r    1 L(L+1)
+                                2 i ~r'
+
+dH I&   r-Sm             r-4m         i~r  1 L(L + 1)
+ dr    r(r-2m)         r(r-2m)       r-2m
+                                           2 i ~r'
+~ LM   r-2m K           t(dy'      5g
+                                r(r-2m)
+  Cr                  r-2m
+
+and also satisfy the algebraic identity
+
+6m                                        2&v'r' 2m(r-Sm)        . L(L + 1)m
+y +(L-1)(L+2) Hz~+ (L-1)(L+2)-r-2m + r(r-2m) KJ~ + 2i~r+ i.coz2, H, @~=0.
+
+The consistency of these equations is straightforwardly verified and so we may solve the algebraic
+
+identity for, say, Hl~ and substitute this in the differential equations for H, z~ and Kl~. I et A~~
+
+=(I/~)H, JM. Then the equations take the form
+
+    dKI~/«= [o'0(r) +&,(r)~']KIM+ [P o(r) +02(r)& JIM'
+    dRg~/dr = [y (r) +y, (r)~')Kz~+ [5,(r) +5,(r)&u'+~M,
+
+where o., P, y, 5 are functions only of r, L, and M, and not m.
+
+  Now perform the transformation
+
+   Klu =f(r)KI ~+g(r)RI ~, RIM = h(r)K Lv +k(r)RzM dr/dr* = n(r).
+Then to obtain a Schrodinger-type equation we must find f, g, k, k, and n so that dKLM/dr* =RIM and
+
+                                                                                                      737
+Voz.vME 24, RUMBLER 13         PHYSICAL RKVIK%" LKYYKRS                                              30 MPH 1970
+
+dR~~/dr*= [VJ~(r) --&u']K@~. Fortunately, the problem has a solution (many, in fact,           since it turns
+
+out that one of the functions f, g, k, k, or n may be chosen arbitrarily).                                       (2)
+
+  If we let n(r) = 1-2m/r where m is the mass of the Schwarzschild field we find that
+
+   f(r) = [A(A. +1)r'+ BAmr +6m']/r'(xr + Bm), g(r) = 1,
+
+    h(r) =i[--Ax'+ BXmr+ 3m']/(r --2m)(Ar + 3m), k(r) = ir2/--(r-2m), A = a(L-1)(L+2),
+
+and that
+
+     r* = r + 2m ln(r/2m- 1),                                                                                 (B)
+
+so that
+
+     dKz~/dr* =RI&, dRIM/dr*= [V1(r*)-~']ALAI,                                                                (4)
+
+where       -(". 1-2m 2A.'(A. + 1)r'+ 6k.'mr'+ 18Am'r+ 18m'  equation  assumes  formally       the Schrodinger
+                                        B-)
+Note that
+form       the system (4) written as a single second-order
+
+     d'&LM/«*'+ [&'-VI(&) ]&LM = 0.
+
+  Thanks are due to John A. Wheeler for conversations in which he suggested the approach to use in
+finding an effective-potential form for the even-parity equations.
+
+  *Work supported by the National Science Foundation.                                          Astrophys  J. 155. ,
+
+  T. Begge and J. A. Wheeler, Phys. Rev. 108, 1063 (1957).
+
+  'C. V. Vishveshwara, thesis, University of Maryland, 1967 (unpublished).
+
+  3L. Edelstein, thesis, University of Maryland, 1969 (unpublished).
+
+  F. Zerilli, thesis, Princeton University, 1969 (unpublished).
+
+ ~K. S. Thorne and A. Campolattaro, Astrophys. J. 149, 591 (1967); B. Price and K. S. Thorne,
+
+163 (1969).
+
+ac-JOSEPHSON-EFFECT DETERMINATION OF e/k WITH SUB--PART-PER-MILLION ACCURACY*
+
+Department  of Physics  T. F. Finnegan, A. Denenstein, and D. N. Langenberg                 of Pennsylvania,
+
+                        and Laboratory for Research on the Structure of Matter, University
+                                          Philadelphia, Pennsylvania 19104
+                                              (Received 18 February 1970)
+
+              An ac-Joshphson-effect determination of e/k has been made using a new method. The
+
+            accuracy of the result referred to the local voltage standard is 0.13 ppm. The accuracy
+            referred to the National Bureau of Standards as-maintained volt is 0.46 ppm. The final
+            value is 2e/h=488. 59865+0.00022 MHz/pV69NBs (0.46 ppm).
+
+  The work of Parker, Taylor, and Langenberg"      constant 2e/k. High-accuracy determinations of
+has established the ac Josephson effect in sys-    the Josephson frequency-voltage ratio have been
+
+tems of weakly coupled superconductors as an       reported by Parker et al. ' and by Petley and Mor-
+important factor contributing to our knowledge of  ris. ' The former has recently been reassessed
+the fundamental physical constants' and as a po-   and revised by Denenstein et al.' Both now have
+tential dc voltage standard. Both of these appli-
+cations are based upon the fact that in a Joseph-  quoted one-standard-deviation uncertainties of
+son-junction device biased at a dc potential dif-
+ference V, there exists a supercurrent oscillat-   2.2 ppm and are in excellent agreement. A sig-
+ing at a frequency v= 2eV/k; the frequency-volt-   nificant increase in the accuracy with which the
+age ratio is thus simply the fundamental physical  frequency-voltage ratio could be determined
+
+                                                   would have important implications for our know-
+
+                                                   ledge of the fundamental physical constants and
+
+738
+

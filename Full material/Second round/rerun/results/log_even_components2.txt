@@ -1,0 +1,5 @@
+﻿side + K0 = [[-M/(R**(3/2)*sqrt(-2*M + R)), 0, 0], [0, sqrt(R)*sqrt(-2*M + R), 0], [0, 0, 4*sqrt(R)*u_tanhalf**2*sqrt(-2*M + R)/(u_tanhalf**4 + 2*u_tanhalf**2 + 1)]]
+  dh tt (2*H*M*R - H*R**2 + 2*M*xip_a)/(R*(2*M - R))
+  dh tA 0
+  dh tr R*(K*R + 2*xip_a)
+  dh tf 0

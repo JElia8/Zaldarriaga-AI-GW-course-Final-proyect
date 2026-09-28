@@ -1,0 +1,24 @@
+sigma = (sqrt(Rdot**2 + 1) - sqrt(-2*M/R + Rdot**2 + 1))/(4*pi*R)
+p     = (-M*sqrt(Rdot**2 + 1) + R**2*Rddot*sqrt(Rdot**2 + 1) - R**2*Rddot*sqrt(-2*M/R + Rdot**2 + 1) + R*Rdot**2*sqrt(Rdot**2 + 1) - R*sqrt(Rdot**2 + 1)*sqrt(-2*M*Rdot**2/R - 2*M/R + Rdot**4 + 2*Rdot**2 + 1) + R*sqrt(Rdot**2 + 1))/(8*pi*R**2*sqrt(Rdot**2 + 1)*sqrt(-2*M/R + Rdot**2 + 1))
+I&S (3.7a) residual with Israel sigma,p (numeric): -4.99796758689895e-17
+I&S (3.7b) residual with Israel sigma,p (numeric): 0
+I&S (3.8) M - formula at random point: -1.11022302462516e-16
+Rdot=0: 4 pi sigma R = 1 - sqrt(-(2*M - R)/R)
+I&S (3.9) M = 4 pi sigma R^2 (1 - 2 pi sigma R) residual: 0
+static: sigma = (1 - s)/(4*pi*R)  p = (s**2 - 2*s + 1)/(16*pi*R*s)  kappa = p/sigma = -(s - 1)/(4*s)
+Poisson (3.81) residual: 0
+kappa - (1-s)/(4s) = 0 ;  kappa - M/(2Rs(1+s)) = 0
+kappa=1 at s = [1/5] -> R/M = 25/12
+Gamma=2: v_s^2 = 1 at s = [1/5]
+dust: p(static) = 0  =>  s in [1] (only s = 1, i.e. M = 0)
+p=0, static:  [K^tau_tau] = M/(R**2*sqrt((-2*M + R)/R))  = 4 pi sigma  ->  M = 4 pi sigma R^2 sqrt(f)
+   i.e. the task formula is the p=0 (tau-tau/pressure) equation; combined with the angular one 4 pi sigma R = 1 - sqrt f it forces s = 1.
+dust at turning point: Rddot = (s - 1)/(2*R)  vs claimed -M/(R^2(1+s)): 0
+wall: Rddot = (-3*s - 1)/(2*R) ;  - (1+3s)/(2R) difference: 0
+      IS 3.7a form -M/(R^2(1+s)) - 2s/R difference: 0
+
+R/M  sigma  p  kappa  vs2  Rdd_wall  w_dyn  sqrt(M/R^3)
+  2.2 0.02527 1.463e-02 0.5792 0.7335 -0.4328 0.1337 0.3065
+  3.0 0.01121 2.052e-03 0.1830 0.3094 -0.4553 0.2249 0.1925
+  6.0 0.00243 1.367e-04 0.0562 0.1064 -0.2875 0.1787 0.0680
+ 10.0 0.00084 2.479e-05 0.0295 0.0573 -0.1842 0.1214 0.0316

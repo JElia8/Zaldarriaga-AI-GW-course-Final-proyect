@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thin-Shell Gravitational Waves</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+:root{
+  --bg:#f4f3ef; --slide:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#8a8984; --rule:#dedcd6;
+  --blue:#2a78d6; --orange:#eb6834; --aqua:#1baf7a; --yellow:#eda100; --red:#c43b3a; --violet:#4a3aa7;
+  --card:#ffffff; --good:#1f8a4c; --warn:#b86e00; --bad:#c43b3a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+  font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:center center;
+  background:var(--slide);box-shadow:0 10px 40px rgba(0,0,0,.12);border-radius:6px;overflow:hidden}
+.slide{position:absolute;inset:0;padding:44px 60px 50px 60px;display:none;flex-direction:column}
+.slide.active{display:flex}
+h1{font-size:44px;margin:0 0 10px 0;letter-spacing:-.5px}
+h2{font-size:32px;margin:0 0 14px 0;letter-spacing:-.3px}
+h2 .tag{font-size:15px;font-weight:600;color:var(--muted);margin-left:10px;vertical-align:middle}
+p,li{font-size:20px;line-height:1.42;color:var(--ink)}
+ul{margin:6px 0 0 0;padding-left:24px}
+li{margin:4px 0}
+.small{font-size:16px;color:var(--ink2)}
+.tiny{font-size:13px;color:var(--muted)}
+.cols{display:flex;gap:28px;flex:1;min-height:0}
+.col{flex:1;min-width:0;display:flex;flex-direction:column}
+.fig{background:#fff;border:1px solid var(--rule);border-radius:6px;padding:6px;display:flex;align-items:center;justify-content:center}
+.fig img{max-width:100%;max-height:100%;display:block}
+.eq{background:#f7f6f2;border-left:4px solid var(--blue);padding:8px 14px;margin:8px 0;font-size:20px;border-radius:0 4px 4px 0}
+.eq.orange{border-color:var(--orange)} .eq.aqua{border-color:var(--aqua)}
+.box{border:1px solid var(--rule);border-radius:8px;padding:10px 14px;background:#fff}
+.kicker{font-size:15px;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue);font-weight:700;margin-bottom:4px}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:14px;font-weight:600;border:1px solid}
+.ok{color:var(--good);border-color:var(--good)} .warn{color:var(--warn);border-color:var(--warn)} .bad{color:var(--bad);border-color:var(--bad)}
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:15px;color:var(--ink2);margin:6px 0}
+.controls button,.controls select{font:inherit;padding:4px 12px;border:1px solid var(--rule);border-radius:5px;background:#fff;cursor:pointer}
+.controls button:hover{border-color:var(--blue)}
+.controls input[type=range]{width:150px}
+canvas{background:#fff;border:1px solid var(--rule);border-radius:6px;display:block}
+#bar{position:absolute;left:0;bottom:0;height:4px;background:var(--blue);transition:width .25s}
+#num{position:absolute;right:18px;bottom:12px;font-size:13px;color:var(--muted)}
+#hint{position:absolute;left:18px;bottom:12px;font-size:13px;color:var(--muted)}
+.notes{display:none}
+#notes{position:fixed;left:0;right:0;bottom:0;max-height:30vh;overflow:auto;background:#1f1f1d;color:#f3f2ee;
+  font-size:15px;line-height:1.45;padding:12px 20px;display:none;z-index:10}
+table.t{border-collapse:collapse;font-size:16px}
+table.t td,table.t th{border-bottom:1px solid var(--rule);padding:5px 10px;text-align:left}
+table.t th{color:var(--ink2);font-weight:600}
+.legend{display:flex;gap:16px;font-size:14px;color:var(--ink2);flex-wrap:wrap}
+.legend span::before{content:"";display:inline-block;width:18px;height:3px;margin-right:6px;vertical-align:middle;background:var(--c)}
+.navbtn{position:absolute;top:50%;width:34px;height:60px;margin-top:-30px;border:none;background:transparent;font-size:30px;color:var(--muted);cursor:pointer}
+#prev{left:2px}#next{right:2px}
+</style>
+</head>
+<body>
+<div id="stage">
+
+<!-- @@SLIDE Title -->
+<section class="slide" data-title="Title">
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+    <div class="kicker">GW&amp;AI Course · final project</div>
+    <h1 style="font-size:52px;max-width:1080px">Gravitational waves meet a thin spherical shell</h1>
+    <p style="font-size:24px;color:var(--ink2);max-width:1000px;margin-top:6px">
+      Flat space inside, Schwarzschild outside. How much of a wave the shell sends back, how it rings, how it changes
+      the polarization, and why it does not want to stay still.</p>
+    <p style="font-size:22px;margin:14px 0 0 0"><b>Juan Pablo Elia</b></p>
+    <div style="display:flex;gap:24px;margin-top:30px">
+      <div class="box" style="flex:1"><div class="kicker">Question</div>
+        <p class="small" style="margin:0">Reflection and transmission $\mathcal R(\omega),\mathcal T(\omega)$, quasinormal modes and
+        polarization ($h_+$, $h_\times$) for odd and even gravitational perturbations of the simplest horizonless compact object.</p></div>
+      <div class="box" style="flex:1"><div class="kicker">Obstacle</div>
+        <p class="small" style="margin:0">A domain-wall shell always collapses. Which shell can be static, and is it stable?</p></div>
+      <div class="box" style="flex:1"><div class="kicker">Answer in one line</div>
+        <p class="small" style="margin:0">A pressure-supported shell: a δ-barrier for axial waves, black-hole-like when compact, ringing with
+        echoes, acting as a polarizing mirror, and slowly unstable.</p></div>
+    </div>
+  </div>
+  <div class="notes">~30 s. The simplest black-hole mimicker: a membrane of matter with nothing inside. Units G = c = 1;
+  frequencies in units of 1/M. The talk follows a single line of thought: background, junction, scattering,
+  ringing, stability, back to the background, and finally what the two polarizations see.</div>
+</section>
+
+<!-- @@SLIDE Line of thought -->
+<section class="slide" data-title="Line of thought">
+  <h2>The line of thought <span class="tag">each answer raises the next question</span></h2>
+  <div class="cols">
+    <div class="col">
+      <table class="t" style="font-size:18px">
+        <tr><th>#</th><th>question</th><th>answer</th></tr>
+        <tr><td>1</td><td>Can the shell be static?</td><td>Only with pressure $p=\kappa(R)\sigma$ (fluid shell)</td></tr>
+        <tr><td>2</td><td>What do waves obey on each side?</td><td>RW / Zerilli outside, flat inside, $\nu=\omega/\sqrt{f_R}$</td></tr>
+        <tr><td>3</td><td>How does the shell enter?</td><td>odd: δ-barrier; even: 2×2 transfer matrix</td></tr>
+        <tr><td>4</td><td>How much does it reflect?</td><td>all at low $\omega$, none at high $\omega$, BH-like as $R\to2M$</td></tr>
+        <tr><td>5</td><td>How does it ring?</td><td>cavity, trapped (echo) and matter modes</td></tr>
+        <tr><td>6</td><td>Is the static shell stable?</td><td>No: one matter mode grows</td></tr>
+        <tr><td>7</td><td>So is step 1 consistent?</td><td>fluid shell: yes (slow growth); frozen wall: no</td></tr>
+        <tr><td>8</td><td>What happens to $h_+$ and $h_\times$?</td><td>parity is conserved, polarization is not: a birefringent mirror</td></tr>
+        <tr><td>9</td><td>Is one parity more important?</td><td>equal in energy; even carries the matter physics</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="notes">~30 s. This is the map of the talk. Step 7 closes the loop: the frequency-domain calculation
+  assumes a static background, and we check whether that was legitimate. Steps 8 and 9 translate everything into what a
+  detector measures, the two polarizations.</div>
+</section>
+
+<!-- @@SLIDE Toolbox -->
+<section class="slide" data-title="Toolbox">
+  <h2>Toolbox: perturbing a spherical spacetime <span class="tag">the ideas used throughout</span></h2>
+  <div class="cols">
+    <div class="col">
+      <ul style="margin-top:0">
+        <li style="font-size:18px"><b>Split the metric</b>: $g=g^{(0)}+h$, with $h$ small. On a spherical background every
+        perturbation is a sum of spherical-harmonic multipoles $(\ell,m)$; waves need $\ell\ge2$.</li>
+        <li style="font-size:18px"><b>Two parities.</b> Under inversion $\vec x\to-\vec x$, <i>even</i> (polar) pieces pick up $(-1)^\ell$,
+        <i>odd</i> (axial) pieces $(-1)^{\ell+1}$. On a spherical background they never mix.</li>
+        <li style="font-size:18px"><b>Master functions.</b> For each $(\ell,m,{\rm parity})$ all metric components combine into one
+        gauge-invariant scalar $\Psi(t,r)$ that obeys a 1D wave equation with an effective potential $V(r)$.</li>
+        <li style="font-size:18px"><b>Tortoise coordinate</b> $r_*$: light moves as $dr_*=\pm dt$, and the horizon sits at $r_*\to-\infty$.</li>
+        <li style="font-size:18px"><b>Frequency domain</b>: $\Psi\propto e^{-i\omega t}$; frequencies in units of $1/M$, $G=c=1$.</li>
+      </ul>
+    </div>
+    <div class="col" style="flex:0.95">
+      <div class="box"><div class="kicker">Scattering</div>
+        <p class="small" style="margin:0">Real $\omega$. Send in $e^{-i\omega r_*}$ from infinity and measure what comes back:
+        $\Psi\to B_{\rm in}e^{-i\omega r_*}+B_{\rm out}e^{+i\omega r_*}$. Reflection amplitude $S=B_{\rm out}/B_{\rm in}$, reflectivity
+        $\mathcal R=|S|^2$.</p></div>
+      <div class="box" style="margin-top:12px"><div class="kicker">Quasinormal modes (QNMs)</div>
+        <p class="small" style="margin:0">Complex $\omega$ at which a solution is purely outgoing ($B_{\rm in}=0$): the free ringing
+        of the object. ${\rm Re}\,\omega$ is the frequency, $-{\rm Im}\,\omega$ the damping rate. ${\rm Im}\,\omega>0$ would mean a
+        growing mode, an <b>instability</b>. QNMs are the poles of $S(\omega)$.</p></div>
+      <div class="box" style="margin-top:12px"><div class="kicker">Black-hole reference</div>
+        <p class="small" style="margin:0">Schwarzschild, $\ell=2$: $\omega M=0.3737-0.0890i$. Waves are reflected by the potential
+        barrier near the photon sphere ($r=3M$) and absorbed by the horizon.</p></div>
+    </div>
+  </div>
+  <div class="notes">~1.5 min. Everything later uses these words: multipole, parity, master function, tortoise coordinate,
+  reflection amplitude, QNM. Stress that parity is a symmetry of any spherical object, so the two parities are two
+  independent problems. The black-hole numbers are the benchmark we compare to.</div>
+</section>
+
+<!-- @@SLIDE The setup -->
+<section class="slide" data-title="The setup">
+  <h2>The setup <span class="tag">one shell, two spacetimes</span></h2>
+  <div class="cols">
+    <div class="col" style="flex:1.05">
+      <svg viewBox="0 0 560 470" width="100%" height="100%" aria-label="Setup diagram">
+        <defs>
+          <radialGradient id="gin" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#eef5fd"/><stop offset="1" stop-color="#dbe9fa"/></radialGradient>
+          <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#eb6834"/></marker>
+          <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#2a78d6"/></marker>
+        </defs>
+        <rect x="0" y="0" width="560" height="470" fill="#fbfaf7"/>
+        <text x="20" y="32" font-size="17" fill="#52514e">exterior: Schwarzschild, mass M</text>
+        <text x="20" y="54" font-size="15" fill="#8a8984">ds² = −f dt² + dr²/f + r² dΩ²,  f = 1 − 2M/r</text>
+        <circle cx="280" cy="255" r="150" fill="url(#gin)" stroke="#0b0b0b" stroke-width="5"/>
+        <circle cx="280" cy="255" r="58" fill="none" stroke="#8a8984" stroke-dasharray="5 6" stroke-width="1.5"/>
+        <text x="280" y="250" font-size="15" text-anchor="middle" fill="#8a8984">r = 2M</text>
+        <text x="280" y="268" font-size="13" text-anchor="middle" fill="#8a8984">(no horizon: R &gt; 2M)</text>
+        <text x="280" y="175" font-size="17" text-anchor="middle" fill="#2a78d6">interior: flat</text>
+        <text x="280" y="196" font-size="14" text-anchor="middle" fill="#52514e">ds² = −dT² + dr² + r²dΩ²</text>
+        <text x="440" y="130" font-size="16" fill="#0b0b0b">shell at r = R</text>
+        <text x="440" y="150" font-size="14" fill="#52514e">surface energy σ,</text>
+        <text x="440" y="168" font-size="14" fill="#52514e">surface pressure p</text>
+        <path d="M445,160 L405,185" stroke="#0b0b0b" stroke-width="1.2"/>
+        <path d="M540,300 C 505,292 470,300 440,292" stroke="#eb6834" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+        <path d="M545,330 q-10,-12 -20,0 q-10,12 -20,0 q-10,-12 -20,0 q-10,12 -20,0" stroke="#eb6834" stroke-width="2" fill="none"/>
+        <text x="455" y="365" font-size="15" fill="#eb6834">incoming GW</text>
+        <path d="M430,215 C 470,205 500,210 540,200" stroke="#2a78d6" stroke-width="3" fill="none" marker-end="url(#ab)"/>
+        <text x="470" y="190" font-size="15" fill="#2a78d6">reflected</text>
+        <path d="M280,395 L280,445" stroke="#2a78d6" stroke-width="2" stroke-dasharray="4 4"/>
+        <text x="290" y="440" font-size="14" fill="#52514e">time dilation at the shell:  dT = √f(R) dt</text>
+      </svg>
+    </div>
+    <div class="col">
+      <p style="margin-top:0">Questions:</p>
+      <ul>
+        <li><b>Scattering</b>: reflection $\mathcal R(\omega)$ and transmission $\mathcal T(\omega)$ of a gravitational
+        wave, for odd (axial) and even (polar) parity.</li>
+        <li><b>Ringing</b>: the quasinormal modes (QNMs), complex frequencies with outgoing waves only.</li>
+      </ul>
+      <p>Ingredients:</p>
+      <ul>
+        <li>Birkhoff's theorem (every spherical vacuum region is a piece of Schwarzschild) plus regularity at the centre
+        (interior mass $=0$) force a <b>flat interior</b>.</li>
+        <li>Perturbations obey Regge–Wheeler / Zerilli equations outside and the flat wave equation inside.</li>
+        <li>The shell glues the two with <b>junction conditions</b>. That is the hard part.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="notes">~1 min. The picture: the shell is a membrane with energy density and pressure. Outside it looks
+  like a black hole of mass M; inside it is empty flat space. Emphasize the time-dilation factor: the same wave has
+  a higher frequency inside, nu = omega/sqrt(f(R)).</div>
+</section>
+
+<!-- @@SLIDE Thin shells in GR -->
+<section class="slide" data-title="Thin shells in GR">
+  <h2>Thin shells in general relativity <span class="tag">Israel junction conditions</span></h2>
+  <div class="cols">
+    <div class="col">
+      <p style="margin-top:0">A shell is a hypersurface $\Sigma$ carrying a surface stress tensor $S_{ab}$. Across it:</p>
+      <div class="eq">$$[h_{ab}]=0,\qquad [K_{ab}]-h_{ab}[K]=-8\pi S_{ab}$$</div>
+      <p class="small">$h_{ab}$: induced metric; $K_{ab}$: extrinsic curvature (how $\Sigma$ bends in each side);
+      $[X]=X_+-X_-$ (Israel 1966; Poisson 2004).</p>
+      <p>For a spherical shell $r=R(\tau)$ with $\alpha=\sqrt{1+\dot R^2}$, $\beta=\sqrt{f(R)+\dot R^2}$
+      (Ipser &amp; Sikivie 1984):</p>
+      <div class="eq orange">$$\sigma=\frac{\alpha-\beta}{4\pi R},\qquad
+      (\alpha+\beta)\ddot R=-\frac{\alpha M}{R^2}+\frac{2p}{\sigma}\frac{\alpha\beta(\alpha+\beta)}{R}$$</div>
+      <p class="small">The first equation is the mass formula $M=\tfrac12(\alpha+\beta)\,4\pi\sigma R^2$. The second is the
+      shell's equation of motion (tension $\tau=-p$).</p>
+    </div>
+    <div class="col">
+      <div class="box">
+        <div class="kicker">Reading the equation of motion</div>
+        <ul style="margin-top:0">
+          <li style="font-size:18px">Gravity always pulls inward: $-\alpha M/R^2$.</li>
+          <li style="font-size:18px">Positive pressure pushes outward; tension (negative pressure) pulls inward.</li>
+          <li style="font-size:18px">Static shell ($\dot R=\ddot R=0$): needs
+          $$\frac{p}{\sigma}=\kappa=\frac{1-\sqrt{f_R}}{4\sqrt{f_R}}>0 .$$</li>
+        </ul>
+      </div>
+      <p style="margin-top:14px">So a static shell needs <b>positive surface pressure</b>, fixed by $R/M$. Dust ($p=0$) and a
+      domain wall ($p=-\sigma$) cannot be static.</p>
+    </div>
+  </div>
+  <div class="notes">~1 min. No need to derive; just the logic: two junction conditions, then the equation of motion. The
+  punchline is the sign: gravity + tension both pull inward.</div>
+</section>
+
+<!-- @@SLIDE The collapse problem -->
+<section class="slide" data-title="The collapse problem">
+  <h2>The collapse problem <span class="tag">model A (domain wall) vs model C (fluid shell)</span></h2>
+  <div class="controls">
+    <button id="aPlay">▶ play</button><button id="aReset">↺ reset</button>
+    <label>turning point / static radius $R/M$ <input id="aR" type="range" min="3" max="12" step="0.5" value="6"> <span id="aRv">6.0</span></label>
+    <label>model-C mode <select id="aMode"><option value="u">unstable matter mode</option><option value="s">stable matter mode</option></select></label>
+    <label>speed <input id="aSpeed" type="range" min="0.2" max="4" step="0.1" value="1"></label>
+  </div>
+  <canvas id="cvA" width="1160" height="430"></canvas>
+  <p class="small" style="margin:8px 0 0 0">Left: a domain wall ($S_{ab}=-\sigma h_{ab}$) released from rest at its turning
+  point. It collapses on the light-crossing time, $\omega_{\rm dyn}\approx\sqrt2/R$, and forms a black hole. Right: the static
+  fluid shell ($p=\kappa\sigma$). It is in exact equilibrium, but an even-parity $\ell=2$ perturbation grows as
+  $e^{\gamma t}$ with $\gamma\simeq0.6\,(M/R^3)^{1/2}$ (deformation exaggerated).</p>
+  <div class="notes">~1.5 min. Run the animation. Point out the two clocks: the wall's own clock reaches the centre in
+  finite proper time; a distant observer sees it freeze at r = 2M. Then switch to the fluid shell: static, but the
+  l = 2 deformation grows, which is the instability found by Pitre, Schneider &amp; Poisson (2026). Compare the growth time with
+  the wall's collapse time.</div>
+</section>
+
+<!-- @@SLIDE Four options -->
+<section class="slide" data-title="Four options">
+  <h2>Which shell? <span class="tag">the options for a static background</span></h2>
+  <div class="cols">
+    <div class="col" style="flex:1.1">
+      <table class="t">
+        <tr><th>option</th><th>shell</th><th>verdict</th></tr>
+        <tr><td><b>A</b></td><td>domain wall frozen at its turning point, $\dot R=0$, $\ddot R=-\frac{1+3\sqrt{f_R}}{2R}$</td><td><span class="pill warn">adiabatic only</span></td></tr>
+        <tr><td><b>B</b></td><td>static dust, $p=0$</td><td><span class="pill bad">does not exist</span></td></tr>
+        <tr><td><b>C</b></td><td>static perfect fluid, $p=\kappa\sigma$, $\kappa$ fixed by $R/M$</td><td><span class="pill ok">exact (but unstable)</span></td></tr>
+        <tr><td><b>D</b></td><td>de Sitter / Schwarzschild interior (gravastar)</td><td><span class="tiny">not treated here</span></td></tr>
+      </table>
+      <ul style="margin-top:14px">
+        <li style="font-size:18px">Model C is valid for $R\ge 25M/12$ (energy condition $p\le\sigma$, causality $v_s^2\le1$).</li>
+        <li style="font-size:18px">The perturbed shell needs an equation of state: $\delta p=\Gamma\frac{p}{\sigma+p}\delta\sigma$, with $\Gamma=2$.</li>
+        <li style="font-size:18px">Inside, frequencies are blueshifted: $\nu=\omega/\sqrt{f_R}$.</li>
+      </ul>
+    </div>
+    <div class="col">
+      <canvas id="cvT" width="520" height="330"></canvas>
+      <p class="small" style="margin:6px 0 0 0">The frozen snapshot of model A is sensible only if a wave period is much shorter
+      than the collapse time. The curve is the wall's radius (exterior time); the bars are the periods of its lowest QNMs.
+      They are comparable, so model A is at best marginal.</p>
+    </div>
+  </div>
+  <div class="notes">~1 min. B is impossible. C is the primary model: truly static, one-parameter family (compactness).
+  A is kept as a frozen snapshot, and the timeline shows why that is dangerous: the collapse is not slow compared with
+  the waves.</div>
+</section>
+
+<!-- @@SLIDE Master equations -->
+<section class="slide" data-title="Master equations">
+  <h2>Waves on each side: one wave equation per parity</h2>
+  <div class="cols">
+    <div class="col">
+      <div class="eq">$$\frac{d^2\Psi}{dr_*^2}+\big[\omega^2-V(r)\big]\Psi=0,\qquad r_*=r+2M\ln\!\Big(\frac{r}{2M}-1\Big)$$</div>
+      <p class="small">Gauge-invariant master functions (Martel &amp; Poisson 2005): $\Psi_{\rm odd}$ is built from the axial
+      metric components, $\Psi_{\rm even}$ from the polar ones.</p>
+      <ul>
+        <li><b>odd</b> (Cunningham–Price–Moncrief), Regge–Wheeler potential: $V_{\rm RW}=f\,[\ell(\ell+1)/r^2-6M/r^3]$</li>
+        <li><b>even</b> (Zerilli–Moncrief): Zerilli potential $V_{\rm Z}$ (Zerilli 1970). For a black hole both give the same QNMs and reflectivity (<i>isospectrality</i>).</li>
+        <li><b>inside</b>: $\Psi''+[\nu^2-\ell(\ell+1)/r^2]\Psi=0$, so $\Psi=\hat\jmath_\ell(\nu r)$ (Riccati–Bessel)</li>
+      </ul>
+      <div class="box" style="margin-top:6px"><div class="kicker">The interior clock runs slow</div>
+      <p class="small" style="margin:0">$dT=\sqrt{f_R}\,dt$ on the shell, so the same wave has frequency $\nu=\omega/\sqrt{f_R}$ inside:
+      it is blueshifted.</p></div>
+    </div>
+    <div class="col fig" style="flex:1.1"><img src="{{IMG:r3_f01_potential}}" alt="Effective potential"></div>
+  </div>
+  <div class="notes">~1 min. In a global tortoise coordinate the whole problem is a 1D wave equation: the flat centrifugal
+  barrier inside, the Schwarzschild barrier outside, and the shell between them. Dotted: what a black hole would have instead.
+  Everything about the shell is in the junction conditions.</div>
+</section>
+
+<!-- @@SLIDE Junction conditions -->
+<section class="slide" data-title="Junction conditions">
+  <h2>How the shell enters the wave equation <span class="tag">linearized Israel conditions</span></h2>
+  <div class="cols" style="flex:0 0 auto">
+    <div class="col">
+      <div class="kicker">Odd parity: a δ-function barrier</div>
+      <div class="eq" style="font-size:15px">$$\Psi_+=\Psi_-,\quad \Big[\frac{d\Psi}{dx}\Big]=\Delta\,\Psi,\quad
+      \Delta=\frac{\sqrt{f_R}\,(1-\sqrt{f_R})}{R}=4\pi\sigma\sqrt{f_R}$$</div>
+      <p class="small" style="margin:0">The same for wall and fluid, and independent of $\omega$ and of the equation of state. The
+      background term $[K]^{(0)}$ cancels against the pressure, and odd waves do not move the matter.</p>
+    </div>
+    <div class="col">
+      <div class="kicker">Even parity: a 2×2 transfer matrix</div>
+      <div class="eq orange" style="font-size:17px">$$\begin{pmatrix}\Psi_+\\ \Psi_+'\end{pmatrix}=\mathsf T(\omega)\begin{pmatrix}\Psi_-\\ \Psi_-'\end{pmatrix},\qquad \det\mathsf T=f_R^{-1/2}$$</div>
+      <p class="small" style="margin:0">Even waves move the shell. Unknowns: radial displacement $\xi_\pm$, surface-density change
+      $\delta\sigma$ (with $\delta p=v_s^2\delta\sigma$) and tangential flow $U$. They are solved together with the wave from 4 metric-continuity
+      and 4 Israel equations. So $\Psi$ jumps, and $\mathsf T$ depends on $\omega,\ell,R/M,\Gamma$. $\det\mathsf T$ is exactly the
+      flux-conservation condition.</p>
+    </div>
+  </div>
+  <div class="cols" style="margin-top:10px;min-height:0">
+    <div class="col fig" style="flex:1.1"><img src="{{IMG:r3_f09_thick_shell}}" alt="Thick shell limit"></div>
+    <div class="col" style="justify-content:center">
+      <p style="font-size:18px;margin:0">Independent test: take a <b>smooth</b> shell of thickness ε (anisotropic fluid,
+      $V\supset4\pi\rho\,e^{2\Phi}$) and let $\varepsilon\to0$.</p>
+      <p style="font-size:18px">It converges linearly to the derived $\Delta$, and to no alternative.</p>
+    </div>
+  </div>
+  <div class="notes">~1.5 min. Method: expand the Israel conditions to first order around the static background. Each side is
+  described in its own Regge–Wheeler gauge, so the shell sits at different perturbed positions seen from inside and outside;
+  a perturbed embedding with displacements xi+ and xi- takes care of this. Symbolic algebra throughout. Odd parity is very simple: a repulsive delta potential
+  whose strength is the surface density times the redshift. Even parity is a genuine 2x2 matching.</div>
+</section>
+
+<!-- @@SLIDE Reflection and transmission -->
+<section class="slide" data-title="Reflection and transmission">
+  <h2>How much does the shell reflect?</h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.1"><img src="{{IMG:r3_f02_reflectivity_odd}}" alt="Reflectivity"></div>
+    <div class="col">
+      <p style="margin-top:0;font-size:18px">With a regular interior nothing is absorbed, so everything comes back: $|S|=1$ and only
+      the phase of $S$ carries information. To measure how much the <b>object</b> reflects, we <b>open the interior</b>: whatever
+      crosses the shell is let go, as a horizon would.</p>
+      <div class="eq" style="font-size:17px">$$\mathcal R=\Big|\frac{B_{\rm out}}{B_{\rm in}}\Big|^2,\quad \mathcal T=\frac{1}{|B_{\rm in}|^2},\quad \mathcal R+\mathcal T=1$$</div>
+      <ul>
+        <li style="font-size:17px">$\omega\to0$: $\mathcal R\to1$. Long waves are reflected.</li>
+        <li style="font-size:17px">Compact shells: the transition sits at the barrier top, as for a black hole.</li>
+        <li style="font-size:17px">Dilute shells: the transition sits at $\omega R\sim\ell$ (flat centrifugal barrier).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="notes">~1 min. Emphasize the definition: with the interior opened, the black hole becomes a limit of the same
+  problem. Energy conservation R + T = 1 holds to 1e-10 and is a real test of the junction matrix.</div>
+</section>
+
+<!-- @@SLIDE Two limits -->
+<section class="slide" data-title="Two limits">
+  <h2>Two limits <span class="tag">transparent at high frequency · black-hole-like when compact</span></h2>
+  <div class="cols">
+    <div class="col fig"><img src="{{IMG:r3_f03_highfreq_law}}" alt="High frequency law"></div>
+    <div class="col fig"><img src="{{IMG:r3_f04_bh_limit}}" alt="Black-hole limit"></div>
+  </div>
+  <div class="cols" style="flex:0 0 auto;margin-top:8px">
+    <div class="col"><div class="eq" style="font-size:17px">$$\omega\to\infty:\quad \mathcal R\simeq\frac{\Delta^2}{4\omega^2+\Delta^2}\ \to0$$</div>
+      <p class="small" style="margin:0">Only the δ-barrier survives. Even parity follows the same law: the fluid's inertia no longer matters.</p></div>
+    <div class="col"><div class="eq" style="font-size:17px">$$R\to2M:\quad \Delta\to0,\quad \mathcal R\to\mathcal R_{\rm BH}\ \text{(Vishveshwara 1970)}$$</div>
+      <p class="small" style="margin:0">The shell sinks into the redshifted throat. The approach is slow, $\propto(R-2M)^{1/2}$.</p></div>
+  </div>
+  <div class="notes">~1 min. Left: log-log, both parities collapse onto the delta-barrier law; the dip in the odd curve is an
+  interference between the barrier and the shell reflections. Right: the reflectivity tends to the black-hole one. Keep this
+  in mind: the reflectivity has a black-hole limit, but the ringing does not.</div>
+</section>
+
+<!-- @@SLIDE Quasinormal modes -->
+<section class="slide" data-title="Quasinormal modes">
+  <h2>How the shell rings <span class="tag">quasinormal modes</span></h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.2"><img src="{{IMG:r3_f05_qnm_plane}}" alt="QNMs"></div>
+    <div class="col">
+      <p style="margin-top:0;font-size:18px">QNMs: the regular interior solution, carried through the shell, is purely outgoing at infinity.</p>
+      <ul>
+        <li style="font-size:17px"><b>Cavity modes</b>, $\omega\sim1/R$. For dilute shells, $\omega R\approx n\pi-\tfrac{i}{2}\ln[2\ell(\ell+1)R/M]$: a leaky box.</li>
+        <li style="font-size:17px"><b>Trapped modes</b> for $R<3M$: caught between the interior and the photon-sphere barrier.
+        ${\rm Im}\,\omega M\approx-10^{-6}$ at $R=2.01M$. These are the <b>echoes</b>.</li>
+        <li style="font-size:17px"><b>Matter modes</b> (even): oscillations of the shell itself, $\omega\sim(M/R^3)^{1/2}$.</li>
+      </ul>
+      <div class="box"><p class="small" style="margin:0"><b>None</b> of them tends to the black-hole QNMs (stars) as $R\to2M$. The
+      black hole rings because waves leak into the horizon; the shell sends them back.</p></div>
+    </div>
+  </div>
+  <div class="notes">~1 min. Contrast with the previous slide: the reflectivity is continuous in the black-hole limit, the
+  spectrum is not. Trapped modes become exponentially long-lived as the shell approaches 2M.</div>
+</section>
+
+<!-- @@SLIDE Echoes in the time domain -->
+<section class="slide" data-title="Echoes in the time domain">
+  <h2>The same pulse on a black hole and on a shell <span class="tag">time-domain simulation</span></h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.15"><img src="{{IMG:r3_f11_timedomain}}" alt="Time domain"></div>
+    <div class="col">
+      <div class="fig" style="flex:0 0 auto"><img src="{{IMG:r3_f12_waveform}}" alt="Waveform"></div>
+      <table class="t" style="margin-top:10px;font-size:16px">
+        <tr><th>object</th><th>late-time fit</th><th>QNM (frequency domain)</th></tr>
+        <tr><td>black hole</td><td>$0.3731-0.0885i$</td><td>$0.3737-0.0890i$</td></tr>
+        <tr><td>shell $R=2.2M$</td><td>$0.4215-0.0352i$</td><td>$0.4211-0.0350i$</td></tr>
+      </table>
+      <p class="small" style="margin:6px 0 0 0">The black hole rings down in $\sim30M$. The compact shell keeps ringing at its trapped mode.
+      All three share the exterior power-law tail.</p>
+    </div>
+  </div>
+  <div class="notes">~1 min. Leapfrog evolution of the odd l = 2 equation with the delta barrier, independent of the
+  frequency-domain code. The fitted frequencies agree to about 1e-3, a direct confirmation of the spectrum. Next slide:
+  run it live.</div>
+</section>
+
+<!-- @@SLIDE Live scattering -->
+<section class="slide" data-title="Live scattering">
+  <h2>A wave packet hits the shell <span class="tag">live simulation, odd parity, ℓ = 2</span></h2>
+  <div class="controls">
+    <button id="wPlay">▶ play</button><button id="wReset">↺ reset</button>
+    <label>shell radius <select id="wR"><option value="2.2" selected>R = 2.2M (ultracompact)</option><option value="3">R = 3M</option><option value="6">R = 6M</option></select></label>
+    <label>central frequency ωM <input id="wW" type="range" min="0.15" max="1.2" step="0.05" value="0.35"> <span id="wWv">0.35</span></label>
+    <label><input id="wD" type="checkbox" checked> δ-shell</label>
+    <label>speed <input id="wSp" type="range" min="1" max="12" step="1" value="5"></label>
+  </div>
+  <canvas id="cvW" width="1160" height="290"></canvas>
+  <canvas id="cvS" width="1160" height="170" style="margin-top:8px"></canvas>
+  <p class="tiny" style="margin:6px 0 0 0">$\partial_t^2\Psi=\partial_x^2\Psi-V(x)\Psi-\Delta_{\rm odd}\delta(x-x_R)\Psi$ in the global tortoise coordinate
+  (leapfrog, absorbing outer boundary). Top: $\Psi(x)$ with the potential (gray) and the flat interior (blue band).
+  Bottom: $\log_{10}|\Psi|$ recorded far away, showing the direct reflection, then trapped-mode ringing and echoes.</p>
+  <div class="notes">~1.5 min. Try R = 3M at omega ~ 0.45: part of the packet is reflected by the barrier, part enters
+  the flat interior, bounces off the centrifugal barrier near the centre and leaks out in a train of echoes. At
+  R = 2.2M the leakage is slower (long-lived trapped modes). Turning the delta-shell off shows that its effect is small
+  at high frequency (the shell becomes transparent). For R = 2.2M the late signal decays like exp(-0.035 t), the imaginary part of the trapped QNM 0.4211 - 0.0350i.</div>
+</section>
+
+<!-- @@SLIDE The instability -->
+<section class="slide" data-title="The instability">
+  <h2>The static shell is unstable <span class="tag">even-parity matter modes</span></h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.15"><img src="{{IMG:r3_f06_matter_modes}}" alt="Matter modes"></div>
+    <div class="col">
+      <p style="margin-top:0">Four matter modes per $\ell$. One is purely imaginary with ${\rm Im}\,\omega>0$:</p>
+      <div class="eq orange" style="font-size:18px">$$\omega\,(R^3/M)^{1/2}=0.608\,i\qquad(M/R=0.2,\ \Gamma=2,\ \ell=2)$$</div>
+      <ul>
+        <li style="font-size:17px">It agrees with Pitre, Schneider &amp; Poisson (2026), who used a completely different method, at every compactness.</li>
+        <li style="font-size:17px"><b>Newtonian origin</b>: a pressure-supported self-gravitating membrane buckles.
+        $\varsigma^4-S\varsigma^2+P=0$ gives $1.505$ and $0.515\,i$ (stars).</li>
+        <li style="font-size:17px">The growth time is $\simeq1.6\,(R^3/M)^{1/2}$: slow compared with the waves.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="notes">~1 min. The shell is held up by tangential pressure against its own gravity; l >= 2 deformations run away.
+  This is ordinary Newtonian physics, and GR shifts the numbers by O(M/R). A by-product: the constant term of PSP26's quartic
+  (7.6) contains a misprint; their closed form (7.8) is right.</div>
+</section>
+
+<!-- @@SLIDE Back to the background -->
+<section class="slide" data-title="Back to the background">
+  <h2>Back to step 1: is the background slow enough?</h2>
+  <div class="cols">
+    <div class="col fig"><img src="{{IMG:r3_f07_timescales}}" alt="Timescales"></div>
+    <div class="col fig"><img src="{{IMG:r3_f10_modelA_ambiguity}}" alt="Model A ambiguity"></div>
+  </div>
+  <div class="cols" style="flex:0 0 auto;margin-top:8px">
+    <div class="col"><p style="font-size:17px;margin:0"><span class="pill ok">fluid shell</span> Instability rate
+      $0.6(M/R^3)^{1/2}\ll$ wave frequencies. Scattering and QNMs are a good adiabatic idealization.</p></div>
+    <div class="col"><p style="font-size:17px;margin:0"><span class="pill bad">frozen wall</span> Collapses on $R/\sqrt2$, as fast
+      as the waves. Its even junction is inconsistent (8 equations, 6 unknowns). Which 2 equations you drop changes $\mathcal R$ at $O(1)$.</p></div>
+  </div>
+  <div class="notes">~1 min. This closes the loop. For the frozen wall the odd sector is identical to the fluid shell (the
+  delta barrier), but the even sector is undetermined by the approximation: from total reflection to the delta law
+  depending on the prescription. It would need a genuinely time-dependent treatment.</div>
+</section>
+
+<!-- @@SLIDE Polarizations -->
+<section class="slide" data-title="Polarizations">
+  <h2>From $\Psi_{\rm even}$, $\Psi_{\rm odd}$ to $h_+$, $h_\times$ <span class="tag">what a detector measures</span></h2>
+  <div class="cols">
+    <div class="col">
+      <p style="margin-top:0;font-size:18px">Far away (Martel &amp; Poisson 2005, Eqs. 6.13–6.16):</p>
+      <div class="eq" style="font-size:17px">$$h_+-ih_\times=\frac{1}{2r}\sum_{\ell m}\sqrt{\tfrac{(\ell+2)!}{(\ell-2)!}}\,\big(\Psi^{\ell m}_{\rm even}-i\,\Psi^{\ell m}_{\rm odd}\big)\;{}_{-2}Y^{\ell m}(\theta,\phi)$$</div>
+      <div class="eq orange" style="font-size:17px">$$\dot E=\frac{1}{64\pi}\sum_{\ell m}\tfrac{(\ell+2)!}{(\ell-2)!}\Big(|\dot\Psi^{\ell m}_{\rm even}|^2+|\dot\Psi^{\ell m}_{\rm odd}|^2\Big)$$</div>
+      <ul>
+        <li style="font-size:17px"><b>Parity is not polarization</b>: each parity produces both $h_+$ and $h_\times$.</li>
+        <li style="font-size:17px"><b>Duality</b>: the factor $-i$ means the odd field is the even one with the polarization rotated by
+        $45^\circ$. They are $E$- and $B$-type patterns (gradient and curl).</li>
+        <li style="font-size:17px">Only for $m=0$ is even $=h_+$ and odd $=h_\times$ literally.</li>
+        <li style="font-size:17px">Both parities carry energy with the <b>same weight</b>.</li>
+      </ul>
+    </div>
+    <div class="col fig" style="flex:0.95"><img src="{{IMG:r4_f01_patterns}}" alt="Polarization patterns"></div>
+  </div>
+  <div class="notes">~1 min. ${}_{-2}Y$ are the spin-weighted spherical harmonics, the natural basis for a spin-2 field on
+  the sky. For the l = 2, m = 2 mode of a binary, the even mode gives the familiar (1 + cos^2 theta) h+ and 2 cos theta hx; the odd
+  mode has them swapped. At the equator even is pure plus and odd is pure cross.</div>
+</section>
+
+<!-- @@SLIDE Birefringent mirror -->
+<section class="slide" data-title="Birefringent mirror">
+  <h2>Can reflection turn $h_\times$ into $h_+$? <span class="tag">a selection rule and a birefringent mirror</span></h2>
+  <div class="cols">
+    <div class="col">
+      <div class="box"><div class="kicker">Selection rule</div>
+        <p class="small" style="margin:0">The object is spherical and parity invariant, so even and odd <b>never mix</b>. An axisymmetric
+        pure-$h_\times$ (odd) wave always comes back as pure $h_\times$, for a shell, a star or a black hole.</p></div>
+      <p style="font-size:17px;margin:12px 0 4px 0">For one $(\ell,m)$, reflection acts on the $(E,B)$ components as a Jones matrix:</p>
+      <div class="eq" style="font-size:17px">$$\begin{pmatrix}\Psi_{\rm even}\\ \Psi_{\rm odd}\end{pmatrix}_{\rm out}=\begin{pmatrix}S_{\rm even}&0\\0&S_{\rm odd}\end{pmatrix}\begin{pmatrix}\Psi_{\rm even}\\ \Psi_{\rm odd}\end{pmatrix}_{\rm in},\qquad \Phi=\arg\frac{S_{\rm even}}{S_{\rm odd}}$$</div>
+      <p style="font-size:17px;margin:4px 0">A wave with equal $E$ and $B$ content (e.g. $h_+=h_\times$ at $m=0$) comes back with a fraction
+      $\sin^2(\Phi/2)$ of its power in the orthogonal polarization. The same fraction flips the helicity.</p>
+      <div class="eq orange" style="font-size:17px">$$\text{black hole:}\quad \frac{S_{\rm even}}{S_{\rm odd}}=\frac{\lambda+12iM\omega}{\lambda-12iM\omega},\qquad \lambda=(\ell-1)\ell(\ell+1)(\ell+2)$$</div>
+    </div>
+    <div class="col fig" style="flex:0.9"><img src="{{IMG:r4_f02_bh_retardance}}" alt="Black-hole retardance"></div>
+  </div>
+  <div class="notes">~1.5 min. Parity is conserved, polarization is not. The object acts on the two parities like a
+  birefringent crystal: same or different amplitude, different phase. For the black hole the ratio follows exactly from the
+  Chandrasekhar transformation, which maps Regge–Wheeler solutions into Zerilli solutions. Isospectrality means equal
+  moduli, not equal phases: about 21 degrees of retardance at the l = 2 QNM frequency. Numerically verified to 5e-8.</div>
+</section>
+
+<!-- @@SLIDE Polarization explorer -->
+<section class="slide" data-title="Polarization explorer">
+  <h2>Polarization of the reflected wave <span class="tag">interactive, $\ell=2$, $m=0$</span></h2>
+  <div class="controls">
+    <label>object <select id="pObj"><option value="bh">black hole</option><option value="6">shell R = 6M</option>
+      <option value="3" selected>shell R = 3M</option><option value="2.2">shell R = 2.2M</option></select></label>
+    <label>ωM <input id="pW" type="range" min="0.004" max="1.2" step="0.0005" value="0.30" style="width:260px"> <span id="pWv"></span></label>
+    <label>fine <input id="pF" type="range" min="-0.002" max="0.002" step="0.000002" value="0" style="width:150px"></label>
+    <button id="pRes">jump to the matter resonance</button><button id="pPlay">▶ animate</button>
+  </div>
+  <div class="cols" style="gap:14px">
+    <canvas id="cvP1" width="640" height="420"></canvas>
+    <canvas id="cvP2" width="500" height="420"></canvas>
+  </div>
+  <p class="small" style="margin:8px 0 0 0">Incident: linear polarization with $h_+=h_\times$ (equal even and odd content; dashed line). Reflected:
+  $h_+\propto\cos(\omega t-\Phi)$, $h_\times\propto\cos\omega t$, an ellipse. Left: the retardance $\Phi(\omega)$ from the computed $S_{\rm even}$ and
+  $S_{\rm odd}$. Shells return all the energy; the black hole returns only the fraction $\mathcal R$.</p>
+  <div class="notes">~1.5 min. Move the slider. At low frequency all objects give the same small ellipse (the universal
+  black-hole value). For the shells the phase of S_even winds by 2 pi at the even-only matter resonance: the ellipse opens
+  into a circle and then into the orthogonal line, i.e. complete conversion h+ = hx -> h+ = -hx. Use the fine slider:
+  the resonance is only ~1e-4 wide.</div>
+</section>
+
+<!-- @@SLIDE Conversion and helicity flip -->
+<section class="slide" data-title="Conversion and helicity flip">
+  <h2>How much polarization changes <span class="tag">shells vs black hole</span></h2>
+  <div class="cols">
+    <div class="col fig"><img src="{{IMG:r4_f04_conversion}}" alt="Conversion"></div>
+    <div class="col fig"><img src="{{IMG:r4_f05_sigma_flip}}" alt="Helicity flip cross section"></div>
+  </div>
+  <div class="cols" style="flex:0 0 auto;margin-top:8px">
+    <div class="col"><p style="font-size:17px;margin:0"><b>Low frequency: universal.</b> Long waves only see the exterior field, so every
+      object has the black-hole retardance. At the <b>even-only matter resonance</b> conversion is complete; elsewhere a few per cent
+      (up to 19% at $R=2.2M$).</p></div>
+    <div class="col"><div class="eq" style="font-size:15px">$$\sigma_{\rm flip}=\frac{\pi}{\omega^2}\sum_{\ell}(2\ell+1)\frac{|S_{\rm even}-S_{\rm odd}|^2}{4}$$
+      $$\xrightarrow{\ \omega\to0\ }\ 144\pi M^2\sum_{\ell\ge2}\frac{2\ell+1}{\lambda_\ell^2}=\frac{4\pi}{3}M^2$$</div>
+      <p class="small" style="margin:0">Helicity-reversing cross section of a circularly polarized plane wave: the same for any spherical
+      object at long wavelengths, and equal to the classic Schwarzschild result.</p></div>
+  </div>
+  <div class="notes">~1 min. The sum over multipoles is exactly 1/108, which gives 4 pi M^2 / 3, the helicity-reversing part
+  of the long-wavelength cross section M^2 [cos^8 + sin^8](theta/2) / sin^4(theta/2). Numerically: 4.188 M^2 for all objects at omega M = 0.02.</div>
+</section>
+
+<!-- @@SLIDE Same pulse, two parities -->
+<section class="slide" data-title="Same pulse, two parities">
+  <h2>The same incident $h$ pulse, carried by $\Psi_{\rm even}$ or by $\Psi_{\rm odd}$</h2>
+  <div class="cols">
+    <div class="col fig"><img src="{{IMG:r4_f08_time_R22}}" alt="Waveform R=2.2M"></div>
+    <div class="col fig"><img src="{{IMG:r4_f09_time_log}}" alt="Late times"></div>
+  </div>
+  <div class="cols" style="flex:0 0 auto;margin-top:8px">
+    <div class="col"><p style="font-size:17px;margin:0">For one $(\ell,m)$, $h_+(t)$ and $h_\times(t)$ in any direction are a fixed angular factor
+      times $\Psi(u)$. So these curves <i>are</i> the reflected $h$. The prompt reflections almost coincide; the trapped modes differ
+      ($0.421-0.035i$ odd, $0.447-0.044i$ even) and dephase.</p></div>
+    <div class="col"><p style="font-size:17px;margin:0">Only the even channel keeps ringing at the matter frequency (decay time
+      $\sim3000M$ for $R=3M$) and excites the unstable mode, added causally from the pole of $S_{\rm even}$. It is weakly
+      excited but takes over after $\sim74$–$440M$.</p></div>
+  </div>
+  <div class="notes">~1 min. Waveforms are built by Fourier synthesis of S(omega) times the pulse spectrum, on adaptive frequency
+  grids that resolve the narrow resonances. The odd channel agrees with an independent time-domain evolution to better than 1%.
+  The growing mode requires moving the Fourier contour above its pole at omega = i gamma.</div>
+</section>
+
+<!-- @@SLIDE Which parity matters -->
+<section class="slide" data-title="Which parity matters">
+  <h2>Is one parity more important?</h2>
+  <div class="cols">
+    <div class="col">
+      <div class="box"><div class="kicker">Energy: neither</div>
+        <p class="small" style="margin:0">Equal weights in the flux; a plane wave contains both equally; a non-absorbing object
+        returns all the energy in both ($|S_{\rm even}|=|S_{\rm odd}|=1$).</p></div>
+      <div class="box" style="margin-top:12px"><div class="kicker">Physics: even is richer</div>
+        <p class="small" style="margin:0">Only even waves move the shell and compress its matter: matter resonances, the instability,
+        and the dependence on the equation of state. Odd waves see a universal δ-barrier.</p></div>
+      <div class="box" style="margin-top:12px"><div class="kicker">Sources: even dominates</div>
+        <p class="small" style="margin:0">For slow sources even $\ell=2$ is the mass quadrupole. The odd current quadrupole carries
+        $\frac{1}{36}\big(\frac{m_1-m_2}{m}\big)^2v^2$ of the power for a binary; radial infall excites only even modes.</p></div>
+    </div>
+    <div class="col fig"><img src="{{IMG:r4_f12_open_ratio}}" alt="Even vs odd reflectivity"></div>
+  </div>
+  <div class="notes">~1 min. With an absorbing interior the two parities also differ in strength: near the barrier top the
+  even one is reflected up to about 18 times more (R = 6M). Practical rule: keep both for scattering of external waves; for
+  slow sources even dominates; the odd sector is the simple and universal one, a good first test of any code.</div>
+</section>
+
+<!-- @@SLIDE Validation -->
+<section class="slide" data-title="Validation">
+  <h2>Why we trust the numbers</h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.1"><img src="{{IMG:r3_f08_validation}}" alt="Validation"></div>
+    <div class="col">
+      <table class="t">
+        <tr><th>check</th><th>result</th></tr>
+        <tr><td>energy $|\mathcal R+\mathcal T-1|$</td><td>$\lesssim6\times10^{-10}$</td></tr>
+        <tr><td>transfer matrix vs shooting, $\mathcal R,\mathcal T$</td><td>$\lesssim10^{-9}$</td></tr>
+        <tr><td>same, 397 QNMs</td><td>median $4\times10^{-12}$, worst $6\times10^{-5}$</td></tr>
+        <tr><td>Schwarzschild $\ell=2,n=0$</td><td>$0.3736716844-0.0889623157i$</td></tr>
+        <tr><td>BH reflectivity (Vishveshwara)</td><td>$1.55\times10^{-2}$ at $(2M\omega)^2=1$</td></tr>
+        <tr><td>WKB orders 1, 3, 6</td><td>rel. error $7\%$, $0.15\%$, $0.02\%$</td></tr>
+        <tr><td>even junction $\det\mathsf T\sqrt{f_R}$</td><td>$1\pm10^{-12}$</td></tr>
+        <tr><td>matter modes vs Pitre et al. 2026 · Newtonian limit</td><td>agree</td></tr>
+        <tr><td>BH $S_{\rm even}/S_{\rm odd}$ vs Chandrasekhar</td><td>$5\times10^{-8}$</td></tr>
+        <tr><td>$\sigma_{\rm flip}(\omega\to0)$ vs $4\pi M^2/3$</td><td>$4.188$ vs $4.1888\,M^2$</td></tr>
+        <tr><td>Fourier synthesis vs time-domain evolution</td><td>$<1\%$ of the peak</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="notes">~45 s. Two independent methods: continued-fraction exterior plus transfer matrix, and direct shooting.
+  Black-hole benchmarks from Leaver and Berti et al. Every limit is reproduced.</div>
+</section>
+
+<!-- @@SLIDE Take-home -->
+<section class="slide" data-title="Take-home">
+  <h2>Take-home messages</h2>
+  <div class="cols">
+    <div class="col">
+      <ol style="padding-left:26px">
+        <li>A thin shell with flat interior is static only with <b>positive pressure</b> $p=\sigma(1-\sqrt{f_R})/4\sqrt{f_R}$. Domain walls and dust collapse.</li>
+        <li>For odd waves the shell is a <b>repulsive δ-potential</b>, $\Delta=\sqrt{f_R}(1-\sqrt{f_R})/R$. For even waves it is a
+        flux-conserving 2×2 matrix that carries the shell's own dynamics.</li>
+        <li>$\mathcal R(\omega)$: opaque at low frequency, transparent at high ($\propto\omega^{-2}$), black-hole-like as $R\to2M$.</li>
+        <li>The ringing is <b>not</b> black-hole-like: cavity modes, long-lived trapped modes (echoes), and matter modes.</li>
+        <li>The static shell is <b>unstable</b> (a Newtonian buckling mode) but slowly, so the results stand. The frozen domain wall is not a controlled model.</li>
+        <li>Parity is conserved, <b>polarization is not</b>: any spherical object is a birefringent mirror. Universal at long
+        wavelengths ($\sigma_{\rm flip}=4\pi M^2/3$), complete at the shell's matter resonance.</li>
+        <li>Neither parity dominates the energy; the <b>even</b> one carries all the matter physics and dominates slow sources.</li>
+      </ol>
+    </div>
+    <div class="col" style="flex:0.75">
+      <div class="box">
+        <div class="kicker">Methods</div>
+        <p class="small" style="margin:0">Linearized Israel junction conditions derived symbolically; transfer-matrix and shooting
+        solvers (continued fraction, DOP853); Leaver and WKB benchmarks; time-domain leapfrog evolution; Fourier synthesis with
+        causal treatment of the unstable mode.</p>
+      </div>
+      <div class="box" style="margin-top:14px">
+        <div class="kicker">Key references</div>
+        <p class="tiny" style="margin:0">Regge &amp; Wheeler 1957 · Zerilli 1970 · Vishveshwara 1970 · Israel 1966 · Ipser &amp; Sikivie 1984 ·
+        Poisson 2004 · Martel &amp; Poisson 2005 · Leaver 1985 · Iyer &amp; Will 1987 · Pani et al. 2009 ·
+        Boyanov et al. 2025 · Yang, Bonga &amp; Pan 2023 · Pitre, Schneider &amp; Poisson 2026 · Chandrasekhar 1983 ·
+        Peters 1976 · Dolan 2008 · Blanchet 2014</p>
+      </div>
+    </div>
+  </div>
+  <div class="notes">~30 s. Wrap up.</div>
+</section>
+
+<!-- @@SLIDE Backup: multipoles and EOS -->
+<section class="slide" data-title="Backup: multipoles and EOS">
+  <h2>Backup: multipoles, parity and equation of state</h2>
+  <div class="cols">
+    <div class="col fig"><img src="{{IMG:r3_f13_multipoles}}" alt="Multipoles"></div>
+    <div class="col fig"><img src="{{IMG:r3_f14_eos}}" alt="EOS"></div>
+  </div>
+  <p class="small" style="margin:8px 0 0 0">Higher $\ell$ see a higher barrier. Even and odd differ at intermediate frequencies, so the
+  shell breaks the isospectrality of Schwarzschild. $\Gamma$ matters only near the narrow matter resonances.</p>
+  <div class="notes">Backup slide for questions.</div>
+</section>
+
+<!-- @@SLIDE Backup: polarization in time -->
+<section class="slide" data-title="Backup: polarization in time">
+  <h2>Backup: rotated polarization in the time domain, and a check</h2>
+  <div class="cols">
+    <div class="col fig"><img src="{{IMG:r4_f10_converted_time}}" alt="Converted polarization"></div>
+    <div class="col fig"><img src="{{IMG:r4_f11_leapfrog_check}}" alt="Leapfrog check"></div>
+  </div>
+  <p class="small" style="margin:8px 0 0 0">Left: for a pulse with equal $E$ and $B$ content, the part returning in the orthogonal polarization,
+  $(\Psi^{\rm even}_{\rm out}-\Psi^{\rm odd}_{\rm out})/2$: 3.7% of the reflected energy for the black hole, 1% for $R=3M$. Right: the
+  frequency-domain synthesis agrees with a direct time-domain evolution.</p>
+  <div class="notes">Backup slide for questions.</div>
+</section>
+
+<div id="bar"></div><div id="num"></div><div id="hint">← → keys · N notes · O overview</div>
+<button class="navbtn" id="prev" aria-label="previous">‹</button><button class="navbtn" id="next" aria-label="next">›</button>
+</div>
+<div id="notes"></div>
+
+<script>
+/* ------------------------------------------------------------------ deck */
+const slides=[...document.querySelectorAll('.slide')];let cur=0;
+function fit(){const s=Math.min(innerWidth/1300,innerHeight/740);document.getElementById('stage').style.transform=`translate(-50%,-50%) scale(${s})`;}
+addEventListener('resize',fit);fit();
+function show(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle('active',k===cur));
+  document.getElementById('bar').style.width=((cur+1)/slides.length*100)+'%';
+  document.getElementById('num').textContent=(cur+1)+' / '+slides.length+' · '+slides[cur].dataset.title;
+  const n=slides[cur].querySelector('.notes');document.getElementById('notes').innerHTML=n?('<b>Notes:</b> '+n.innerHTML):'';
+  try{location.hash=cur+1}catch(e){}
+  onSlide(cur);}
+addEventListener('keydown',e=>{if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT')return;
+  if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(cur+1)}
+  if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(cur-1)}
+  if(e.key==='n'||e.key==='N'){const el=document.getElementById('notes');el.style.display=el.style.display==='block'?'none':'block'}
+  if(e.key==='o'||e.key==='O'){overview()}
+  if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1);});
+document.getElementById('prev').onclick=()=>show(cur-1);document.getElementById('next').onclick=()=>show(cur+1);
+let tx=null;addEventListener('touchstart',e=>{tx=e.touches[0].clientX});addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(cur+(d<0?1:-1));tx=null});
+function overview(){const t=slides.map((s,k)=>`${k+1}. ${s.dataset.title}`).join('\n');const k=prompt('Go to slide:\n'+t,cur+1);if(k)show(parseInt(k)-1);}
+document.addEventListener('DOMContentLoaded',()=>{if(window.renderMathInElement)renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});});
+window.addEventListener('load',()=>{if(window.renderMathInElement)renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});});
+
+const C={blue:'#2a78d6',orange:'#eb6834',aqua:'#1baf7a',yellow:'#eda100',ink:'#0b0b0b',ink2:'#52514e',muted:'#8a8984',rule:'#dedcd6',red:'#c43b3a'};
+function hidpi(cv){const r=window.devicePixelRatio||1;if(cv._s)return cv.getContext('2d');const w=cv.width,h=cv.height;cv.style.width=w+'px';cv.style.height=h+'px';cv.width=w*r;cv.height=h*r;const g=cv.getContext('2d');g.scale(r,r);cv._s=1;cv._w=w;cv._h=h;return g;}
+
+/* ------------------------------------------------------------------ physics helpers (M = 1) */
+function wallTrajectory(Rm){           // domain wall from rest at Rm; returns arrays of (tau, t, R)
+  const M=1, sm=Math.sqrt(1-2*M/Rm), a0=(1-sm)/Rm;        // a(R) = 4 pi sigma R = a0 R
+  const rate=R=>{const a=a0*R, al=(2*M/(a*R)+a)/2; return Math.sqrt(Math.max(al*al-1,0));};
+  const beta=R=>{const a=a0*R, al=(2*M/(a*R)+a)/2; return al-a;};
+  const Rend=0.03, umax=Math.sqrt(Rm-Rend), N=4000;
+  const T=[0],Tt=[0],RR=[Rm]; let tau=0,t=0,frozen=false;
+  for(let i=0;i<N;i++){const u0=umax*i/N,u1=umax*(i+1)/N,um=(u0+u1)/2,R=Rm-um*um;
+    const d=2*um*(u1-u0)/Math.max(rate(R),1e-12); tau+=d;
+    const f=1-2*M/R; if(!frozen&&f>1e-9){t+=d*beta(R)/f;} else frozen=true;
+    T.push(tau);Tt.push(frozen?Infinity:t);RR.push(Rm-u1*u1);}
+  return {tau:T,t:Tt,R:RR};
+}
+function ringMode(R){                   // model-C matter-mode frequencies (l=2, Gamma=2), fits to the computed modes
+  const x=1/R, sc=Math.pow(R,-1.5);
+  return {gamma:(0.5147+0.41*x+0.36*x*x)*sc, wst:(1.505-0.95*x-1.2*x*x)*sc};
+}
+
+/* ------------------------------------------------------------------ slide 4: collapse animation */
+const A={play:false,t:0,Rm:6,traj:null,last:null};
+function aInit(){A.Rm=parseFloat(document.getElementById('aR').value);document.getElementById('aRv').textContent=A.Rm.toFixed(1);
+  A.traj=wallTrajectory(A.Rm);A.t=0;aDraw();}
+function interp(xs,ys,x){if(x<=xs[0])return ys[0];for(let i=1;i<xs.length;i++){if(xs[i]>=x){const s=(x-xs[i-1])/(xs[i]-xs[i-1]);return ys[i-1]+s*(ys[i]-ys[i-1]);}}return ys[ys.length-1];}
+function arrow(g,x0,y0,x1,y1,col){g.strokeStyle=col;g.fillStyle=col;g.lineWidth=2;g.beginPath();g.moveTo(x0,y0);g.lineTo(x1,y1);g.stroke();
+  const a=Math.atan2(y1-y0,x1-x0);g.beginPath();g.moveTo(x1,y1);g.lineTo(x1-8*Math.cos(a-0.4),y1-8*Math.sin(a-0.4));g.lineTo(x1-8*Math.cos(a+0.4),y1-8*Math.sin(a+0.4));g.closePath();g.fill();}
+function aDraw(){const cv=document.getElementById('cvA'),g=hidpi(cv),W=cv._w,H=cv._h;g.clearRect(0,0,W,H);
+  const Rm=A.Rm,tr=A.traj,tauEnd=tr.tau[tr.tau.length-1];
+  // ---- left: wall, drawn in its own proper time tau
+  const tau=Math.min(A.t,tauEnd), Rw=interp(tr.tau,tr.R,tau);
+  const cx=175,cy=205,scale=150/Rm;
+  g.fillStyle='#f7f6f2';g.fillRect(0,0,560,H);
+  g.fillStyle=C.ink;g.font='600 17px Segoe UI, sans-serif';g.fillText('Model A: domain wall, released at its turning point',16,26);
+  // horizon
+  if(Rw<2){g.fillStyle='#111';g.globalAlpha=0.85;g.beginPath();g.arc(cx,cy,2*scale,0,7);g.fill();g.globalAlpha=1;
+    g.fillStyle='#fff';g.font='13px Segoe UI';g.textAlign='center';g.fillText('black hole',cx,cy+4);g.textAlign='left';}
+  g.setLineDash([5,5]);g.strokeStyle=C.muted;g.lineWidth=1.2;g.beginPath();g.arc(cx,cy,2*scale,0,7);g.stroke();g.setLineDash([]);
+  g.fillStyle='rgba(42,120,214,0.10)';g.beginPath();g.arc(cx,cy,Rw*scale,0,7);g.fill();
+  g.strokeStyle=C.ink;g.lineWidth=4;g.beginPath();g.arc(cx,cy,Math.max(Rw*scale,1),0,7);g.stroke();
+  if(Rw>2.2){for(let k=0;k<8;k++){const th=k*Math.PI/4+0.2,x0=cx+(Rw*scale+22)*Math.cos(th),y0=cy+(Rw*scale+22)*Math.sin(th);
+      arrow(g,x0,y0,cx+(Rw*scale+4)*Math.cos(th),cy+(Rw*scale+4)*Math.sin(th),C.orange);}}
+  g.fillStyle=C.ink2;g.font='14px Segoe UI';
+  g.fillText('R = '+Rw.toFixed(2)+' M',16,H-62);g.fillText('proper time of the wall  τ = '+tau.toFixed(1)+' M',16,H-42);
+  const tFar=interp(tr.tau,tr.t,tau);g.fillText('distant clock  t = '+(isFinite(tFar)?tFar.toFixed(1)+' M':'∞ (frozen at r = 2M)'),16,H-22);
+  g.fillStyle=C.orange;g.fillText('tension + gravity pull inward',330,H-22);
+  // mini plot R(tau)
+  const px=350,py=50,pw=190,ph=120;g.strokeStyle=C.rule;g.strokeRect(px,py,pw,ph);
+  g.strokeStyle=C.blue;g.lineWidth=2;g.beginPath();for(let i=0;i<tr.tau.length;i+=20){const x=px+pw*tr.tau[i]/tauEnd,y=py+ph*(1-tr.R[i]/Rm);i?g.lineTo(x,y):g.moveTo(x,y);}g.stroke();
+  g.setLineDash([3,3]);g.strokeStyle=C.muted;g.beginPath();g.moveTo(px,py+ph*(1-2/Rm));g.lineTo(px+pw,py+ph*(1-2/Rm));g.stroke();g.setLineDash([]);
+  g.fillStyle=C.red;g.beginPath();g.arc(px+pw*tau/tauEnd,py+ph*(1-Rw/Rm),4,0,7);g.fill();
+  g.fillStyle=C.muted;g.font='12px Segoe UI';g.fillText('R(τ)/R_m',px+4,py+14);g.fillText('r = 2M',px+pw-44,py+ph*(1-2/Rm)-4);
+  g.fillText('collapse in τ = '+tauEnd.toFixed(1)+' M',px,py+ph+16);
+  // ---- right: model C, exterior time
+  const ox=580;g.fillStyle=C.ink;g.font='600 17px Segoe UI';g.fillText('Model C: static fluid shell, same radius, perturbed (ℓ = 2)',ox+16,26);
+  const md=ringMode(Rm),mode=document.getElementById('aMode').value,tc=A.t;
+  let eps; if(mode==='u'){eps=Math.min(0.004*Math.exp(md.gamma*tc),0.45);} else {eps=0.12*Math.cos(md.wst*tc)*Math.exp(-0.001*tc);}
+  const cx2=ox+200,cy2=205,Rpx=150;
+  g.setLineDash([5,5]);g.strokeStyle=C.muted;g.lineWidth=1.2;g.beginPath();g.arc(cx2,cy2,Rpx,0,7);g.stroke();g.setLineDash([]);
+  g.fillStyle='rgba(42,120,214,0.10)';g.strokeStyle=C.ink;g.lineWidth=4;g.beginPath();
+  for(let k=0;k<=240;k++){const th=2*Math.PI*k/240,P2=0.5*(3*Math.cos(th)**2-1),r=Rpx*(1+eps*P2);const x=cx2+r*Math.sin(th),y=cy2-r*Math.cos(th);k?g.lineTo(x,y):g.moveTo(x,y);}
+  g.closePath();g.fill();g.stroke();
+  for(let k=0;k<6;k++){const th=k*Math.PI/3+0.5,x0=cx2+(Rpx-6)*Math.cos(th),y0=cy2+(Rpx-6)*Math.sin(th);
+    arrow(g,x0,y0,cx2+(Rpx+22)*Math.cos(th),cy2+(Rpx+22)*Math.sin(th),C.aqua);
+    arrow(g,cx2+(Rpx+44)*Math.cos(th+0.25),cy2+(Rpx+44)*Math.sin(th+0.25),cx2+(Rpx+24)*Math.cos(th+0.25),cy2+(Rpx+24)*Math.sin(th+0.25),C.orange);}
+  g.fillStyle=C.ink2;g.font='14px Segoe UI';
+  g.fillText('exterior time t = '+tc.toFixed(1)+' M',ox+16,H-42);
+  if(mode==='u'){g.fillText('unstable mode: ω = i·'+md.gamma.toFixed(4)+'/M   growth time 1/γ = '+(1/md.gamma).toFixed(1)+' M',ox+16,H-22);}
+  else{g.fillText('stable matter mode: ω ≈ '+md.wst.toFixed(4)+'/M   period '+(2*Math.PI/md.wst).toFixed(1)+' M',ox+16,H-22);}
+  g.fillStyle=C.aqua;g.fillText('pressure pushes out',ox+420,70);g.fillStyle=C.orange;g.fillText('gravity pulls in',ox+420,90);
+  g.fillStyle=C.muted;g.font='12px Segoe UI';g.fillText('dashed: unperturbed shell · amplitude exaggerated',ox+16,H-62);
+}
+function aLoop(ts){if(!A.play){A.last=null;return;}if(A.last===null)A.last=ts;const dt=(ts-A.last)/1000;A.last=ts;
+  A.t+=dt*4*parseFloat(document.getElementById('aSpeed').value);aDraw();requestAnimationFrame(aLoop);}
+document.getElementById('aPlay').onclick=()=>{A.play=!A.play;document.getElementById('aPlay').textContent=A.play?'❚❚ pause':'▶ play';if(A.play)requestAnimationFrame(aLoop);};
+document.getElementById('aReset').onclick=()=>{A.t=0;aDraw();};
+document.getElementById('aR').oninput=aInit;document.getElementById('aMode').onchange=()=>{A.t=0;aDraw();};
+
+/* ------------------------------------------------------------------ slide 5: timeline */
+function tDraw(){const cv=document.getElementById('cvT'),g=hidpi(cv),W=cv._w,H=cv._h;g.clearRect(0,0,W,H);
+  const Rm=6,tr=wallTrajectory(Rm);const L=56,B=H-44,Tw=W-L-20,Th=B-24;
+  let tmax=0;for(let i=0;i<tr.t.length;i++)if(isFinite(tr.t[i]))tmax=tr.t[i];const tshow=Math.min(tmax,40);
+  g.strokeStyle=C.rule;g.lineWidth=1;g.beginPath();g.moveTo(L,24);g.lineTo(L,B);g.lineTo(L+Tw,B);g.stroke();
+  g.fillStyle=C.ink2;g.font='13px Segoe UI';g.fillText('R/M',8,30);g.fillText('exterior time t / M',L+Tw-120,B+34);
+  for(let v=0;v<=6;v+=2){const y=B-Th*v/Rm;g.fillText(v,L-18,y+4);}
+  for(let v=0;v<=40;v+=10){const x=L+Tw*v/40;g.fillText(v,x-6,B+16);}
+  g.setLineDash([4,4]);g.strokeStyle=C.muted;g.beginPath();g.moveTo(L,B-Th*2/Rm);g.lineTo(L+Tw,B-Th*2/Rm);g.stroke();g.setLineDash([]);
+  g.fillStyle=C.muted;g.fillText('r = 2M (reached only as t → ∞)',L+Tw-205,B-Th*2/Rm-6);
+  g.strokeStyle=C.blue;g.lineWidth=2.5;g.beginPath();let first=true;
+  for(let i=0;i<tr.t.length;i+=5){if(!isFinite(tr.t[i])||tr.t[i]>40)break;const x=L+Tw*tr.t[i]/40,y=B-Th*tr.R[i]/Rm;first?g.moveTo(x,y):g.lineTo(x,y);first=false;}g.stroke();
+  g.fillStyle=C.blue;g.font='600 13px Segoe UI';g.fillText('domain wall, R_m = 6M',L+10,40);
+  // QNM periods of model A at R=6 (lowest modes of the QNM catalogue): 0.18120-0.22393i, 0.66401-0.17021i
+  const per=[[2*Math.PI/0.18120,'period of the lowest model-A QNM'],[2*Math.PI/0.66401,'period of the next QNM']];
+  per.forEach((p,k)=>{const y=B-Th*(4.6-k*1.0)/Rm;g.strokeStyle=C.orange;g.lineWidth=5;g.beginPath();g.moveTo(L+4,y);g.lineTo(L+4+Tw*Math.min(p[0],40)/40,y);g.stroke();
+    g.fillStyle=C.orange;g.font='12px Segoe UI';g.fillText(p[1]+': '+p[0].toFixed(1)+' M',L+Tw*0.30,y-7);});
+  const tdyn=1/(Math.sqrt(1-2/6)*Math.sqrt((1+3*Math.sqrt(1-2/6))/(2*6)/6)),xd=L+Tw*tdyn/40;
+  g.strokeStyle=C.ink2;g.lineWidth=1.5;g.beginPath();g.moveTo(xd,B);g.lineTo(xd,B-10);g.stroke();
+  g.fillStyle=C.ink2;g.font='12px Segoe UI';g.fillText('1/ω_dyn = '+tdyn.toFixed(1)+' M',xd-30,B-14);
+}
+
+/* ------------------------------------------------------------------ slide 8: wave simulation */
+function lambertW(z){let w=z<3?Math.log(1+z)*0.8:Math.log(z)-Math.log(Math.log(z));for(let i=0;i<60;i++){const ew=Math.exp(w),f=w*ew-z;const dw=f/(ew*(w+1)-(w+2)*f/(2*w+2));w-=dw;if(Math.abs(dw)<1e-13*(1+Math.abs(w)))break;}return w;}
+const Wv={play:false};
+function wInit(){
+  const R=parseFloat(document.getElementById('wR').value),w0=parseFloat(document.getElementById('wW').value),l=2,lam=6;
+  document.getElementById('wWv').textContent=w0.toFixed(2);
+  const s=Math.sqrt(1-2/R),xR=R+2*Math.log(R/2-1),rmin=0.06*R,xL=xR-(R-rmin)/s,xMax=620,h=0.05;
+  const N=Math.round((xMax-xL)/h)+1;const x=new Float64Array(N),V=new Float64Array(N),r=new Float64Array(N);
+  let iR=0;for(let i=0;i<N;i++){x[i]=xL+i*h;if(x[i]<xR){r[i]=R+s*(x[i]-xR);V[i]=s*s*lam/(r[i]*r[i]);iR=i;}else{r[i]=2*(1+lambertW(Math.exp(x[i]/2-1)));const f=1-2/r[i];V[i]=f*(lam/(r[i]*r[i])-6/(r[i]**3));}}
+  iR=iR+1; const Delta=s*(1-s)/R;
+  const dt=0.5*h,x0=115,wid=Math.min(Math.max(1.2*2*Math.PI/w0,8),22);
+  const F=xi=>Math.exp(-xi*xi/(2*wid*wid))*Math.cos(w0*xi);
+  const u=new Float64Array(N),um=new Float64Array(N);for(let i=0;i<N;i++){u[i]=F(x[i]-x0);um[i]=F(x[i]-x0-dt);}
+  u[0]=0;um[0]=0;
+  Object.assign(Wv,{R,w0,s,xR,xL,xMax,h,N,x,V,r,iR,Delta,dt,u,um,un:null,k:0,t:0,obs:[],iObs:Math.round((75-xL)/h),delta:document.getElementById('wD').checked});
+  wDraw();}
+function wStep(n){const {N,h,dt,V,iR}=Wv;const c=dt*dt/(h*h),d2=dt*dt;const dlt=Wv.delta?Wv.Delta/h:0;
+  if(!Wv.un||Wv.un.length!==N)Wv.un=new Float64Array(N);
+  for(let k=0;k<n;k++){const u=Wv.u,um=Wv.um,un=Wv.un;
+    for(let i=1;i<N-1;i++){const v=(i===iR)?V[i]+dlt:V[i];un[i]=2*u[i]-um[i]+c*(u[i+1]-2*u[i]+u[i-1])-d2*v*u[i];}
+    un[0]=0;un[N-1]=u[N-1]-(dt/h)*(u[N-1]-u[N-2]);
+    Wv.um=u;Wv.u=un;Wv.un=um;                     // rotate buffers (no allocation)
+    Wv.t+=dt;Wv.k=(Wv.k||0)+1;if(Wv.k%4===0)Wv.obs.push([Wv.t,Wv.u[Wv.iObs]]);}}
+function wDraw(){const cv=document.getElementById('cvW'),g=hidpi(cv),W=cv._w,H=cv._h;g.clearRect(0,0,W,H);
+  const {x,V,u,N,xR,xL}=Wv;const X0=xL-2,X1=150,L=50,Rr=W-16,T=16,B=H-30;const X=v=>L+(Rr-L)*(v-X0)/(X1-X0);const Yu=v=>T+(B-T)*(0.5-0.42*v);
+  let Vmax=0;for(let i=0;i<N;i++){if(x[i]>X1)break;if(x[i]>xR-0.2*(xR-xL)&&V[i]>Vmax)Vmax=V[i];}Vmax=Math.max(Vmax,Wv.w0*Wv.w0*1.2);
+  g.fillStyle='rgba(42,120,214,0.10)';g.fillRect(X(xL),T,X(xR)-X(xL),B-T);
+  g.fillStyle='rgba(138,137,132,0.22)';g.beginPath();g.moveTo(X(X0),B);for(let i=0;i<N;i++){if(x[i]>X1)break;g.lineTo(X(x[i]),B-(B-T)*0.9*Math.min(V[i]/Vmax,1.05));}g.lineTo(X(X1),B);g.closePath();g.fill();
+  g.strokeStyle=C.muted;g.setLineDash([4,4]);g.beginPath();const yw=B-(B-T)*0.9*Wv.w0*Wv.w0/Vmax;g.moveTo(L,yw);g.lineTo(Rr,yw);g.stroke();g.setLineDash([]);
+  g.fillStyle=C.muted;g.font='12px Segoe UI';g.fillText('ω₀² (packet energy)',Rr-120,yw-4);
+  g.strokeStyle=C.ink;g.lineWidth=3;g.beginPath();g.moveTo(X(xR),T);g.lineTo(X(xR),B);g.stroke();
+  g.strokeStyle=C.orange;g.lineWidth=1.6;g.beginPath();let st=false;for(let i=0;i<N;i+=2){if(x[i]>X1)break;const y=Yu(u[i]);st?g.lineTo(X(x[i]),y):g.moveTo(X(x[i]),y);st=true;}g.stroke();
+  g.strokeStyle=C.rule;g.lineWidth=1;g.beginPath();g.moveTo(L,B);g.lineTo(Rr,B);g.stroke();
+  g.fillStyle=C.ink2;g.font='13px Segoe UI';for(let v=-20;v<=150;v+=10){if(v<X0)continue;g.fillText(v,X(v)-8,B+16);}
+  g.fillText('x / M  (tortoise coordinate)',Rr-190,B+28);
+  g.fillStyle=C.blue;g.fillText('flat interior',X(xL)+4,T+16);g.fillStyle=C.ink;g.fillText('shell',X(xR)+6,T+32);
+  g.fillStyle=C.ink2;g.font='600 14px Segoe UI';g.fillText('t = '+Wv.t.toFixed(0)+' M',Rr-90,T+18);g.font='13px Segoe UI';
+  g.strokeStyle=C.aqua;g.lineWidth=1;g.setLineDash([2,3]);g.beginPath();g.moveTo(X(75),T);g.lineTo(X(75),B);g.stroke();g.setLineDash([]);
+  g.fillStyle=C.aqua;g.fillText('detector',X(75)+4,T+48);
+  // time series
+  const cs=document.getElementById('cvS'),q=hidpi(cs),W2=cs._w,H2=cs._h;q.clearRect(0,0,W2,H2);
+  const L2=50,R2=W2-16,T2=12,B2=H2-26,tMax=800;const Xt=v=>L2+(R2-L2)*v/tMax,Yl=v=>T2+(B2-T2)*(0-v)/8;
+  q.strokeStyle=C.rule;q.beginPath();q.moveTo(L2,T2);q.lineTo(L2,B2);q.lineTo(R2,B2);q.stroke();
+  q.fillStyle=C.ink2;q.font='12px Segoe UI';for(let e=0;e>=-8;e-=2)q.fillText('1e'+e,8,Yl(e)+4);for(let v=0;v<=tMax;v+=100)q.fillText(v,Xt(v)-8,B2+14);
+  q.fillText('t / M at the detector',R2-130,B2+24);
+  q.strokeStyle=C.aqua;q.lineWidth=1.3;q.beginPath();Wv.obs.forEach((p,k)=>{const y=Yl(Math.max(Math.log10(Math.abs(p[1])+1e-12),-8));k?q.lineTo(Xt(p[0]),y):q.moveTo(Xt(p[0]),y);});q.stroke();
+}
+function wLoop(){if(!Wv.play)return;const n=parseInt(document.getElementById('wSp').value)*8;wStep(n);wDraw();if(Wv.t<800)requestAnimationFrame(wLoop);else{Wv.play=false;document.getElementById('wPlay').textContent='▶ play';}}
+document.getElementById('wPlay').onclick=()=>{Wv.play=!Wv.play;document.getElementById('wPlay').textContent=Wv.play?'❚❚ pause':'▶ play';if(Wv.play)requestAnimationFrame(wLoop);};
+document.getElementById('wReset').onclick=()=>{Wv.play=false;document.getElementById('wPlay').textContent='▶ play';wInit();};
+['wR','wW','wD'].forEach(id=>document.getElementById(id).onchange=()=>{Wv.play=false;document.getElementById('wPlay').textContent='▶ play';wInit();});
+document.getElementById('wW').oninput=()=>{document.getElementById('wWv').textContent=parseFloat(document.getElementById('wW').value).toFixed(2);};
+
+/* ------------------------------------------------------------------ polarization explorer */
+const POL={{DATA:pol}};
+const PRES={'6':0.0894169,'3':0.1970945,'2.2':0.1859167,'bh':0.3737};   // frequencies of maximal conversion
+const P={play:false,ph:0,last:null};
+function pOmega(){return Math.max(0.004,Math.min(1.2,parseFloat(document.getElementById('pW').value)+parseFloat(document.getElementById('pF').value)));}
+function pPhi(obj,w){
+  if(obj==='bh')return 2*Math.atan(12*w/24);
+  const d=POL[obj],W=d.w,Ph=d.p;let lo=0,hi=W.length-1;
+  if(w<=W[0])return Ph[0]; if(w>=W[hi])return Ph[hi];
+  while(hi-lo>1){const m=(lo+hi)>>1;if(W[m]>w)hi=m;else lo=m;}
+  const s=(w-W[lo])/(W[hi]-W[lo]);const c=(1-s)*Math.cos(Ph[lo])+s*Math.cos(Ph[hi]),sn=(1-s)*Math.sin(Ph[lo])+s*Math.sin(Ph[hi]);
+  return Math.atan2(sn,c);}
+function pRbh(w){const d=POL.bh;for(let i=1;i<d.w.length;i++){if(d.w[i]>=w){const s=(w-d.w[i-1])/(d.w[i]-d.w[i-1]);return d.R[i-1]+s*(d.R[i]-d.R[i-1]);}}return d.R[d.R.length-1];}
+function pCurve(g,obj,x0,y0,w,h,wa,wb,n){                     // draw Phi(omega) on [wa,wb] in the box
+  const X=v=>x0+w*(v-wa)/(wb-wa),Y=v=>y0+h*(0.5-v/(2*Math.PI));
+  g.strokeStyle=C.rule;g.lineWidth=1;g.strokeRect(x0,y0,w,h);
+  g.setLineDash([3,3]);g.beginPath();g.moveTo(x0,Y(0));g.lineTo(x0+w,Y(0));g.stroke();g.setLineDash([]);
+  const col={'bh':C.muted,'6':C.aqua,'3':C.blue,'2.2':C.orange}[obj];
+  g.strokeStyle=col;g.lineWidth=2;g.beginPath();let prev=null;
+  for(let k=0;k<=n;k++){const v=wa+(wb-wa)*k/n,p=pPhi(obj,v);
+    if(prev!==null&&Math.abs(p-prev)>Math.PI){g.stroke();g.beginPath();g.moveTo(X(v),Y(p));} else if(k===0)g.moveTo(X(v),Y(p)); else g.lineTo(X(v),Y(p));prev=p;}
+  g.stroke();
+  g.fillStyle=C.ink2;g.font='12px Segoe UI';g.fillText('+180°',x0-40,y0+10);g.fillText('0°',x0-22,Y(0)+4);g.fillText('−180°',x0-40,y0+h);
+  return {X,Y};}
+function pDraw(){
+  const obj=document.getElementById('pObj').value,w=pOmega();
+  document.getElementById('pWv').textContent=w.toFixed(6);
+  const phi=pPhi(obj,w),conv=Math.pow(Math.sin(phi/2),2),Rin=(obj==='bh')?pRbh(w):1;
+  // left: retardance, full range and zoom
+  const c1=document.getElementById('cvP1'),g=hidpi(c1),W=c1._w,H=c1._h;g.clearRect(0,0,W,H);
+  g.fillStyle=C.ink;g.font='600 14px Segoe UI';g.fillText('retardance Φ = arg(S_even / S_odd)',50,18);
+  const A=pCurve(g,obj,50,28,W-70,200,0.004,1.2,900);
+  g.strokeStyle=C.red;g.lineWidth=1.2;g.beginPath();g.moveTo(A.X(w),28);g.lineTo(A.X(w),228);g.stroke();
+  g.fillStyle=C.ink2;g.font='12px Segoe UI';for(let v=0;v<=1.2;v+=0.2)g.fillText(v.toFixed(1),A.X(v)-8,244);g.fillText('ωM',W-44,258);
+  const dz=0.003,B=pCurve(g,obj,50,268,W-70,120,w-dz,w+dz,400);
+  g.strokeStyle=C.red;g.beginPath();g.moveTo(B.X(w),268);g.lineTo(B.X(w),388);g.stroke();
+  g.fillStyle=C.ink2;g.fillText('zoom: ωM = '+(w-dz).toFixed(4)+' … '+(w+dz).toFixed(4),50,406);
+  g.fillStyle=C.red;g.beginPath();g.arc(B.X(w),B.Y(phi),4,0,7);g.fill();g.beginPath();g.arc(A.X(w),A.Y(phi),4,0,7);g.fill();
+  // right: polarization figure in the (h+, hx) plane
+  const c2=document.getElementById('cvP2'),q=hidpi(c2),W2=c2._w,H2=c2._h;q.clearRect(0,0,W2,H2);
+  const cx=W2/2,cy=200,S=130;
+  q.strokeStyle=C.rule;q.lineWidth=1;q.beginPath();q.moveTo(cx-S-20,cy);q.lineTo(cx+S+20,cy);q.moveTo(cx,cy-S-20);q.lineTo(cx,cy+S+20);q.stroke();
+  q.fillStyle=C.ink2;q.font='13px Segoe UI';q.fillText('h+',cx+S+6,cy-6);q.fillText('h×',cx+6,cy-S-8);
+  q.setLineDash([6,5]);q.strokeStyle=C.muted;q.lineWidth=2;q.beginPath();q.moveTo(cx-S*0.72,cy+S*0.72);q.lineTo(cx+S*0.72,cy-S*0.72);q.stroke();q.setLineDash([]);
+  q.strokeStyle=C.orange;q.lineWidth=3;q.beginPath();
+  for(let k=0;k<=200;k++){const t=2*Math.PI*k/200,hp=Math.cos(t-phi),hx=Math.cos(t);const x=cx+S*0.72*hp,y=cy-S*0.72*hx;k?q.lineTo(x,y):q.moveTo(x,y);}q.stroke();
+  const hp=Math.cos(P.ph-phi),hx=Math.cos(P.ph);q.fillStyle=C.orange;q.beginPath();q.arc(cx+S*0.72*hp,cy-S*0.72*hx,6,0,7);q.fill();
+  q.fillStyle=C.ink;q.font='600 14px Segoe UI';q.fillText('incident (dashed) and reflected (orange) polarization',14,18);
+  q.font='14px Segoe UI';q.fillStyle=C.ink2;
+  q.fillText('Φ = '+(phi*180/Math.PI).toFixed(1)+'°',20,H2-62);
+  q.fillText('power in the orthogonal polarization: '+(100*conv).toFixed(conv<0.01?3:1)+' %',20,H2-40);
+  q.fillText('fraction of the incident power reflected: '+(obj==='bh'?(100*Rin).toPrecision(3)+' %':'100 % (no absorption)'),20,H2-18);
+}
+function pLoop(ts){if(!P.play){P.last=null;return;}if(P.last===null)P.last=ts;P.ph+=(ts-P.last)/1000*3;P.last=ts;pDraw();requestAnimationFrame(pLoop);}
+function pInit(){
+  ['pObj','pW','pF'].forEach(id=>document.getElementById(id).oninput=pDraw);
+  document.getElementById('pObj').onchange=pDraw;
+  document.getElementById('pRes').onclick=()=>{const o=document.getElementById('pObj').value,sw=document.getElementById('pW');
+    sw.value=PRES[o];document.getElementById('pF').value=PRES[o]-parseFloat(sw.value);pDraw();};
+  document.getElementById('pPlay').onclick=()=>{P.play=!P.play;document.getElementById('pPlay').textContent=P.play?'❚❚ pause':'▶ animate';if(P.play)requestAnimationFrame(pLoop);};
+  pDraw();}
+
+/* ------------------------------------------------------------------ init */
+let inited={};
+function onSlide(i){const t=slides[i].dataset.title;
+  if(t==='The collapse problem'&&!inited.a){aInit();inited.a=1;}
+  if(t==='Four options'&&!inited.t){tDraw();inited.t=1;}
+  if(t==='Live scattering'&&!inited.w){wInit();inited.w=1;}
+  if(t==='Polarization explorer'&&!inited.p){pInit();inited.p=1;}
+  if(/autoplay/.test(location.search)){                      // optional: start the simulations automatically
+    if(t==='The collapse problem'&&!A.play)document.getElementById('aPlay').click();
+    if(t==='Live scattering'&&!Wv.play)document.getElementById('wPlay').click();}}
+const h0=parseInt((location.hash||'#1').slice(1));show(isFinite(h0)?h0-1:0);
+</script>
+</body>
+</html>

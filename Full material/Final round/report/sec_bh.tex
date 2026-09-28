@@ -1,0 +1,42 @@
+%==========================================================================================
+\section{Reference case: a black hole is a pure retarder}\label{sec:bh}
+\begin{question}
+The Regge--Wheeler and Zerilli potentials are different, yet a Schwarzschild black hole has the same QNMs and the same
+reflectivity for both parities (isospectrality). Does that mean it treats $h_+$ and $h_\times$ identically?
+\end{question}
+Isospectrality follows from the Chandrasekhar transformation \cite{Chandrasekhar83}, which maps every solution of the
+Regge--Wheeler equation into a solution of the Zerilli equation:
+\begin{equation}
+\Psi_{\rm even}=\Big[\lambda_\ell+\frac{72M^2f}{r(\mu r+6M)}\Big]\Psi_{\rm odd}+12M\frac{\dd\Psi_{\rm odd}}{\dd r_*},\qquad
+\lambda_\ell=\mu(\mu+2)=(\ell-1)\ell(\ell+1)(\ell+2),
+\end{equation}
+with $\mu=(\ell-1)(\ell+2)$. Take the black-hole scattering solution, which is purely ingoing at the horizon. On the
+horizon side $f\to0$, so the map multiplies the ingoing wave by $\lambda_\ell-12iM\omega$ and keeps the boundary condition.
+At infinity the extra term vanishes, and the map multiplies $e^{-i\omega r_*}$ by $\lambda_\ell-12iM\omega$ and $e^{+i\omega r_*}$ by
+$\lambda_\ell+12iM\omega$. Hence
+\begin{equation}
+\boxed{\ \frac{S_{\rm even}}{S_{\rm odd}}=\frac{\lambda_\ell+12iM\omega}{\lambda_\ell-12iM\omega}\quad\Longrightarrow\quad
+\rho=1,\qquad \Phi_{\rm BH}(\omega)=2\arctan\frac{12M\omega}{(\ell-1)\ell(\ell+1)(\ell+2)}\ }
+\label{eq:bhphase}
+\end{equation}
+The black hole reflects the two parities with the same amplitude (isospectrality) but \emph{not} with the same phase.
+It is a pure retarder. We computed $S_{\rm even}$ and $S_{\rm odd}$ independently, by integrating the Zerilli and
+Regge--Wheeler equations from the horizon, and recover Eq.~\eqref{eq:bhphase} to better than $5\times10^{-8}$ for
+$\ell=2,3,4$ (Fig.~\ref{fig:bhphase}). This also confirms that the numerical normalization of the two parities is
+consistent.
+
+For $\ell=2$ ($\lambda_2=24$) the retardance is $21^\circ$ at the fundamental QNM frequency $\omega M=0.374$ and grows to
+$90^\circ$ at $\omega M=2$. It is much smaller for higher $\ell$ ($\lambda_3=120$, $\lambda_4=360$). The effect comes entirely
+from the exterior Schwarzschild field: it would be the same for \emph{any} compact object at frequencies where the wave does
+not reach its surface.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.62\textwidth]{r4_f02_bh_retardance.pdf}
+\caption{Black hole: retardance between the two parities. Lines: Eq.~\eqref{eq:bhphase}. Circles: independent numerical
+integration of the two master equations (shown where the reflectivity exceeds $10^{-6}$).}\label{fig:bhphase}
+\end{figure}
+
+\begin{learned}
+Even a black hole is birefringent. Isospectrality means equal \emph{moduli}, not equal \emph{phases}. A wave that reflects
+off the potential barrier comes back with its $E$ and $B$ parts shifted by $\Phi_{\rm BH}$, so its polarization changes.
+\end{learned}

@@ -1,0 +1,12 @@
+(a) R=6: poles of T_even in units sqrt(M/R^3): [(-0.0, 0.9847), (1.5386, 0.0)]
+(a) R=10: poles of T_even in units sqrt(M/R^3): [(0.0, 0.9922), (1.6246, 0.0)]
+    matter QNMs in the same units: R=6: 1.3147-0.0008i, 0.590i ; R=10: 1.398, 0.557i
+(b) stable matter pair, l=2, continued from the first-round track (R=2.529M: 0.212872-0.000221i):
+    R=2.50  0.212774-0.000206i
+    R=2.40  0.210260-0.000147i
+    R=2.30  0.202664-0.000083i
+    R=2.20  0.185919-0.000030i
+    R=3.00  0.197121-0.000310i
+    unstable matter mode l=2, R=2.2M: (9.643142668749684e-14+0.2442920687935753j)
+    unstable matter mode l=3, R=2.2M: (1.0743760433354348e-13+0.33714601112586823j)
+    unstable matter mode l=4, R=2.2M: (1.1709633289327623e-13+0.43726209206901434j)

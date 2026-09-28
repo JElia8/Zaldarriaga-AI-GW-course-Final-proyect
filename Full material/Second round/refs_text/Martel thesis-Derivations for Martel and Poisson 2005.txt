@@ -1,0 +1,2780 @@
+SIGNAL DETECTION OF GRAVITATIONAL WAVES FROM
+                         ECCENTRIC BINARSES
+
+                                       -4 Thesis
+                                      Presented to
+                        The Faculty of Graduate Studies
+
+                                             of
+
+                           The University of Guelph
+
+                                            b~
+
+                                KARL MARTEL
+
+                     In partial fuifilment of requirements
+                                  for the degree of
+                                 Master of Science
+                                  September, 1999
+
+                              @Karl Martel. 1999
+I*INational Library                       Bibliothèque nationale     Your Iile Votre relerence
+             of Canada                    du Canada                  Our fi@ Notre reitirence
+
+               Acquisitions and           Acquisitions et
+               Bibliographie Services     services bibliographiques
+
+                   395 Wellington Street  395, rue Wellington
+                                          Ottawa ON K iA ON4
+               Ottawa ON K IA ON4         Canada
+                Canada
+
+The author has granted a non-             L'auteur a accordé une licence non
+exclusive licence allowing the            exclusive permettant à la
+National Library of Canada to             Bibliothèque nationale du Canada de
+reproduce, loan, distribute or sell       reproduire, prêter, distribuer ou
+copies of this thesis in microform,       vendre des copies de cette thèse sous
+paper or electronic formats.              la forme de microfiche/film, de
+                                          reproduction sur papier ou sur format
+                                          électronique.
+
+The author retains ownership of the       L'auteur conserve la propriété du
+copyright in this thesis. Neither the     droit d'auteur qui protège cette thèse.
+thesis nor substantial extracts from it   Ni la thèse ni des extraits substantiels
+may be printed or othenvise               de celle-ci ne doivent être imprimés
+reproduced without the author's           ou autrement reproduits sans son
+permission.                               autorisation.
+                            ABSTRACT
+
+SIGNAL DETECTION OF GRAVITATIONAL W A n S FROM
+                          ECCENTRIC BINARIES
+
+Karl Martel                           Advisor:
+University of Guelph, 1999
+                                      Professor E.Poisson
+
+    Coalescirig compact binaries have been pointed out as the most promising source
+of gravitational waves for kilometer-size interferometers such as the Laser Interferorn-
+eters Gravitational-Wave Observatory Gravitational m v e signals are estracted from
+the noise in the detectors by matched filtering. This technique performs really weil if
+an a priori theoretical knowledge of the signal is available. The information known
+about the possible sources is used to construct a niodel of the expected waveforms
+(templates). .A common i~ssiirnptionmade when constructing ternplates for coalescing
+compact binaries is that the cornpanions rnove in a quasi-circular orbit. Some scenar-
+ios. hoaever. predict the esisterice of eccentric binaries. In this thesis. we calculate
+the loss in signal-to-noise ratio induced by non-optirrial filtering of eccentric signals.
+Remerciements
+
+Il y a deux ans déjà que je commencai a travailler A ce projet. Aujourd'hui. tout
+
+est écrit. tout est dit. Et pourtant.. . Ce projet a changé ma vie à jarnais. de ne
+crois pas bien saisir à quel point l'homme qui écrit ces lignes aujourd'hui est différent
+de celui qui qiiitta Montréal il y a deux ans. L'homme ne vit pas que clc travail.
+il se nourrit aussi d'inspiration. Ce sont les gens qui m'inspirèrent que joainierais
+remercier aujoiircIyhui. Tout d'abord. je dois remercier les membres de mon comité
+sans qui je rie serais pas ici: Dr Éric Poisson. Dr Bernie Nickel et .John .J. Simpson.
+Je voudrais souligner l'inimense gratitude que j'eprouve envers mon superviseur Éric.
+Son éthique du travail. sa persévérance. sa soif du savoir m'ont poussé toujours plus
+loin. toujours plus fort. Son intuition du monde physique est incomparable. Je ne
+pus faire autrement que d'apprendre de lui. Merci Éric de la merveilleuse opportunité
+que tu m'as offerte!
+
+    Je m'en voudrais beaucoup de laisser de côté les gens qui m'ont marqué au pian
+personel. Je voudrais remercier les gens de Guelph qui m'ont si bien accueillis et m'ont
+fait sentir chez moi en un rien de temps: Bill Laarakkers. Jererny Pencer. Karim Jaffer,
+Sheldon Opps et tous les autres que j'oublie. Je m'en voudrais beaucoup de ne pas
+mentionner m a famille. !don père. Gilles, qui a fait de moi l'homme que je suis. Je
+l'honore et le respecte énormément. Ma mère, Diane: qui modela le côté sentimental
+de ma personne. Je la vénère et l'aime immensément. Mes deux soeurs, Karine et
+Virginie, sur qui je peux toujours compter pour rire. pleurer ou seulement parler. Ces
+personnes sont tout pour moi, elles sont ma famille.
+
+    Bon et bien, jYtire. j'allonge et vous n'avez pas toute une vie devant vous. Après
+tout. vous avez une thèse a lire.. .
+Contents
+
+Remerciements
+
+Synopsis of gravitational waves and their detection  1
+
+1.1 Opening reniarks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+1.2 Gravitational waves: overview of the theory . . . . . . . . . . . . . . 3-
+    1.2.1 Generatiori of gravitationCI 1 waves . . . . . . . . . . . . . . . . 3-
+
+     1.2.2 Interaction of the waves with rnatter . . . . . . . . . . . . . . 4
+
+                                                              -
+
+1.3 Gravitational wave detectiori . . . . . . . . . . . . . . . . . . . . . . . i
+
+1.3.1 Laser interferometers as gravitational wave detectors . . . . . 1-.
+
+1.3.2 hlatched filtering as a detectiori method . . . . . . . . . . . . 10
+
+1.3.3 Astrophysical sources of gravitational waves . . . . . . . . . . 12
+
+1.4 Scope of the thesis . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1-4
+
+1.4.1 LIGO and eccentric compact binaries . . . . . . . . . . . . . . 14
+
+1 . 4 Outline . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+
+2 Signal Detection:
+
+Elements of the Theory                               17
+
+2.1 Introduction.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+
+2.2 Detection of signals of known shape . . . . . . . . . . . . . . . . . . . 18
+2.2.1 Signal processing with linear filters . . . . . . . . . . . . . . . 18
+2.9.2 The noise in the initial LIGO . . . . . . . . . . . . . . . . . . 20
+
+2.9.3 The signal-to-noise ratio and the fitting factor . . . . . . . . . 9-9-
+
+3 Gravitationally Bound Systems                   27
+
+3.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+
+3.2 Liriearizccl Tbeury of Gerierül Relativity . . . . . . . . . . . . . . . . 28
+
+3.2.1 The weak field approsimatiori . . . . . . . . . . . . . . . . . . 28
+
+3.2.2 Gauge invariance . . . . . . . . . . . . . . . . . . . . . . . . . 29
+
+3.3 Quadrupole Approximation . . . . . . . . . . . . . . . . . . . . . . . 31
+
+3.3.1 Solving the wave equation . . . . . . . . . . . . . . . . . . . . 3 1
+
+3.3.2 The loss of energy and angular momentum . . . . . . . . . . . 34
+
+4 Inspiraling Compact Binaries: The Last Minutes  41
+
+4.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+
+4 The twu-body problerri in Classical hIechanics . . . . . . . . . . . . . 42
+
+2 . 1 The equntions of motion . . . . . . . . . . . . . . . . . . . . . 42
+
+4.2.2 The turning points . . . . . . . . . . . . . . . . . . . . . . . . 45
+
+4.3 The quadrupole approximation . . . . . . . . . . . . . . . . . . . . . 46
+
+4.3.1 The reduced quadrupole moment and its derivatives . . . . . . 46
+
+-4.3.2 Thewaveforms . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+
+4 4 Radiation Reaction . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+
+4.41 Energy and angular mornentum carried away . . . . . . . . . . 5%
+
+4.1.2 Integration of the ODE'S . . . . . . . . . . . . . . . . . . . . . 55
+
+-1.4.3 Numerical Results for the waveforms . . . . . . . . . . . . . . 59
+Circular Waveforms as Search Templates
+5.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.2 The Fourier transforms of the waveforms . . . . . . . . . . . . . . . .
+
+      5 2 . 1 The stationary phase approximation . . . . . . . . . . . . . .
+      5 . 2 . 2 Fast Fourier transform . . . . . . . . . . . . . . . . . . . . . .
+5.3 The Ambiguity Function . . . . . . . . . . . . . . . . . . . . . . . . .
+     5.3.1 Constructing the Anibiguity function . . . . . . . . . . . . . .
+      5 . 3 . bla?<irniaingover the parameters . . . . . . . . . . . . . . . . .
+54 Nunierical result s . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      4 1 The signal-ro-noise ratio . . . . . . . . . . . . . . . . . . . . .
+     5- 4 2 The Fitting Factor . . . . . . . . . . . . . . . . . . . . . . . .
+
+6 Conclusion                                                                        79
+
+6.1 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+
+6.2 FutureOutlook . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+
+6.2.1 Post-Yewtonian corrections to the eccentric waveforms . . . . 80
+
+6.2.2 Advanced LIGO . . . . . . . . . . . . . . . . . . . . . . . . . . SI
+
+6 . 2 . 3 Time-frequency detection of gravitational waves . . . . . . . . 52
+
+Bibliography
+
+A The Phase of the Tsmplate and the Signal in the Time Domain
+
+B Orbital Parameters: Effect of the Interpolation
+List of Tables
+
+4.1 Time spent in the initial LIGO band for various binary systerns. Shown
+      is the time as a function of the initiai e~cent~riciety40 of the binary. . 39
+
+5.1 The phenomenological parameter t, obtained by maximizing the ambi-
+
+guity function for various binary systems and and initial eccentricities
+
+e40..........-...........................                                          Il
+
+5.2 Ratio of the effective cliirp mass :MefI to the real chirp niass iM, for
+
+various binary systems and various initial eccentricities . . . . . . . . 73
+
+5.3 The fitting factor as a function of the initial eccentricity e.10 for various
+
+binary systerns. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+List of Figures
+
+    1.1 The two polarizations of a gravitational wave and their effect on test
+
+         masses* . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+    1.2 Schematic representation of a Fabry-Perot interferonleter. . . . . . . .
+
+   4.1 Center of mass coordinates for the ?-body problem . . . . . . . . . .
+
+    4.2 Central potential in Newtonian mechanics: illustration of the turning
+          points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+   -4.3 The direction of' the observer rvith respect to the binary . . . . . . . .
+   4.4 The time evolution of p for varioiis binary systems. . . . . . . . . . .
+   4.3 The evolution of the eccentricity for various binary systems. . . . . .
+
+  -1.6 The time evolution of the phase 9 for l.-l.\Io + 1.4& binary systems
+
+         with eccentricities e.10 = 0.0.0.3: 0.6. . . . . . . . . . . . . . . . . . . .
+
+   -4.7 Time evolution of an eccentric binary (eJo = 0.75) with the two com-
+
+         panions having niasses of 1.4.& and 2.5& . . . . . . . . . . . . . .
+
+   5.1 The Fourier transforrn of the circular waveform h + ( ~o)btained by fast
+
+      Fourier transfmm. The case displayed is for a 1.4 ;CI3 + 1.4 Macircular
+
+         binary system (e4,-, = 0) . . . . . . . . . . . . . - . . . . . - . . . . .
+
+                                                    vii
+5.2 Cornparison of the erivelope of the Fourier transforrns of the gravita-
+
+tional waveforms with initial eccentricities edo = O and e ~ o= 0.1. The
+
+two cornpanions have a mass of 1.4 Ma each . . . . . . . . . . . . . .
+
+5.3 The ratio of the SYR for an eccentric binary, (p(e)). to the S'TR of a
+
+circular binary, ( p ( 0 ) ) as a function of the initial eccentricity e40. . . .
+
+5.4 T h e ambiguity function for a binary system consisting of a 1.4 MG
+
+neutron star orbiting a 10 :\.13 black hole for various initial eccentricities 76
+
+- -                                                               for various
+
+3.3 The fitting factor as a function of the initial eccentricity
+
+binary systems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+-4.1 Comparison of the phase in the time domain of the signal from a
+
+    I.-LM, + l.4.l-L3 binary nitli edo = 0.6 mith the circular ternplate. . .
+
+A.2 Comparison of the phase in the time domain of the signal from a
+
+    6.0& + 6.0XLT. bina- with e . =~ 0~.4 with the circular ternplate. . .
+
+B. 1 The difference between the analytical solution and the numerical re-
+
+    sults for 9 for a l.O-\fc,+ 1.OdLz,binary. . . . . . . . . . . . . . . . .
+
+8.2 The ciifference between the analytical solution and the numerical result
+
+    for p for a l.OAIa + l . O M G b i n a . . . . . . . . . . . . . . . . . . . . -
+
+B.3 The difference between the analytical solution and the numerical re-
+
+    sults for 9 for a 1.4& + 10.O~C1.b~ina- . . . . . . . . . . . . . . . .
+
+BA The difference between the analytical solution and the numerical re-
+
+    sults for p for a l.4& + 10.0& b i n a r - . . . . . . . . . . . . . . . .
+B.5 The difference 1Kinilia-i Kn,,,~,i 1 for a 8.0MQ + 8.0& binary with
+
+     initial eccentricity e40 = 0.2. . . . . . . . . . . . . . . . . . . . . . . .
+
+viii
+B.6 The difference Ih',nit-iaKinum.orim1 flor a S.0!& + 8.0&L3 binary with
+
+     initial e c e n i c i t e = 0.5. . . . . . . . . . . . . . . . . . . . . . . . 94
+Chapter 1
+
+Synopsis of gravitational waves and
+
+their detection
+
+1.1 Opening remarks
+
+This chapter is intended to esplain the basics of gravitational waves and their de-
+tection. It is not destined to be a complete and rigorous treatment of the different
+t heoretical aspects. The first topic discussed is gravitational lvvaves: t heir generation
+and their interaction with matter (subsections 1.2.1 and 1 2 . 2 respectively). Once we
+are a little more familiar with this type of radiation. the kilometer-size interferometers
+presently under construction will be examined.
+
+    .A detector is not complete without a technique of extraction of the signals from
+the noise. In the case of gravitational waves of knomn shape, the most promising
+extraction rnethod is matched Bitering. The basic ideas of matched filtering are dis-
+cussed in subsection 1.3.2. Once these different aspects of tvave generation and wave
+detection are established. various sources of gravitational waves will be described in
+subsection 1.3.3. One of the most promising sources are inspiraling compact binaries;
+these are described in subsection 1.3.3.
+    The final portion of this chapter (section 1.4) contains justifications for the present
+
+work. as well as an outline of the thesis.
+
+1.2 Gravitational waves: overview of the theory
+
+1.2.1 Generation of gravitational waves
+
+The starting point of any discussion on general relativity is the me11 known Einstein
+equation[l, 21:
+
+This equation relates the rriatter stress-energu tensor (T,,) to the spacetime curvature
+( R p uand R ) in a dynarnical W . Essentially it implies that niatter and energy interact
+via grwitation arid the manifestation of this interaction appears in the spacetirne
+curvature. Gravitation is a geornetric phenornenon.
+
+    Ir1 sorne situations Einstein's equation can be solvcd esactly. but the arialyti-
+cal solutions do not. typically, represent physical gravitational fields. To surmount
+this difficulty one often has recourse to an approximation. either in the form of
+an expansion in the characteristic velocity of the system or by perturbing a back-
+ground spacetime[3, 41. For the present work, the background spacetime is chosen
+to be flat. Thus the background geometry is described by the 41inkowski metric
+C~= diag(- 1,1,1,1). Gravitational waves enter the picture when this flat back-
+ground spacetime is perturbed. The perturbation h,,, is expressed as the difference
+between the perturbed and the unperturbed metric:
+where g, is the true metric of the spacetime. Linearizing Einstein's equation with
+
+respect to the auxiliary field h,, = h,, - iil,,ha a results in the wave equation[5]
+
+where = $ - V' is the wave operator in Bat spacetime. This wave equation is
+
+valid when h,, satisfies the Lorentz gauge condition (hpY, = 0)[6].
+
+    The gravitational field can be shown to have two radiative degrees of freedoni.
+The formal solution of equation (1.3) reduced to the physical degrees of freedom is
+most conveniently expressed in the transverse-traceless gauge (TT). In this gauge.
+
+the radiation is traceiess (hYy = 0) and transverse to the direction of propagation
+
+of the wave. i.e. if n points in thiç direction. then hijnj = O. The TT gauge is
+introduced formally in subsection 3.2.2. For now it suffice to state the solution of the
+wave equation[5]:
+
+where R is the distance between the source and the observer, G is ilewton's constant,
+c is the speed of light, the superscript TT means that a traceless-transverse projection
+
+has been taken, the overbar on h,, has been dropped since in the TT gauge h,, = h,,,
+
+and fij is the reduced quadrupole moment of the source defined in term of the usual
+
+quadrupole moment (Iij)
+
+For a source with characteristic size 7 and mass A l , the quadrupole moment is approx-
+imately MF*.If the system evolves on a time scale f, the time derivatives in equation
+(1.4) can be replaced by f. The quadrupole formula gives an order-of-magnitude
+estimate of the gravitational-wave strength as
+
+where  ü  =  F  is a characteristic velocity of the source.  A  source with  characteristic
+
+             7
+
+parameters hf = 1AI, and û = 0 . 1 2 emits gravitational waves with amplitude
+
+                10-lS  for a source located at R = lkpc                         (1- 7 )
+                10--l  for a source located at R = I l l p c .
+
+If the gravitational waves are traveling in the 2 direction. al1 the coniponents hi=
+
+ranish in the TT gauge. In this case the only non-wnishing radiative parts are
+
+                       h+ = h,, = -hPI
+                       h , = hX8= hir
+
+h+ (h,) is the plus- (cross-) polarization mode of gravitational waves. The origin of
+the name will be made clear at the end of subsection (1.22).
+
+1.2.2 Interaction of the waves with matter
+
+In order to detect gravitatio~altvaves? ive have to know in which way they affect
+matter. Consider for example two test masses .\ and B. Both masses follow a space-
+
+time geodesic. .issume that A is located üt x:. and B at x i = xU, + ta. Hence
+
+    is the separation vector between the two masses. Choose a coordinates system
+centered at -4 and comoving with -4. i.e. coordinates in which -4 is at rest. With this
+choice of coordinates, the vector describes the motion of B with respect to A, i.e.
+
+5" = 2%. An observer Iocated at A will feel no gravitational force, but will see B
+
+move according to the geodesic deviation equation[6]
+mhere r is the proper time along the geodesic followed by -4, R',,Ü is the Riemann
+
+curvature tensor, and
+
+for any vector v p ;r" is the affine connection.
+
+    Specializing to the case of a perturbed flat spacetime (equation (12 ) ) t,he geodesic
+deviation equation c m be simplified by using the following approsimate relations:
+
+   1. A's four-velocity only has a tirne coniponent. = d t ;
+   2. to first order in the perturbation field.
+
+   3. spatial indices are raised and lowered freely. since Tlij = di,.
+The geodesic deviation equation (equation (1.9)) then simplifies to[5]
+
+In the linearized theory of general reiativity, the Riemann tensor can be shown to
+be proportional to the second time derivative of the perturbation field h,,. The end
+result for the motion of B with respect to A is
+
+If the two masses are at rest with respect to each other before the arriva1 of the
+gravitational wave: equation (1.11)yields: to leading order,
+                 of the wave
+
+Figure 1.1: The effect of a gravitational wave passing trough a circular a r r q of test
+masses. The ring is located in the plane transverse to the direction of propagation
+of the wave. Both polarizations produce the same type of effect. but are at 4û0 from
+each other. The gravitational wave is assurned to be traveling in the 2 direction (out
+of the sheet). The phase describes the oscillating part of the wave.
+
+where 4 ( O ) is the position of B before the radiation reaclies it. This describes the
+
+motion of B as seen by A. The wave affects only the transverse component of the
+separation between h and B.
+
+    Now that ive know how to dcscribe the interaction betmeen gravitational waves and
+mat ter. Ive can understand the effect of the two polarizatioris mentioned previously.
+Take three masses and put theni in the x o y plane transverse to the wave's direction
+
+of propagation. with mass -4 at the origin, mass B on the y avis and mass C on the the
+z axis. If the only polarization present in the wave is the plus-polarization ( h , = 0):
+B and C move with respect to A according to
+Thus if B moves toward A, then C moves away and vice-versa. .\ schematic repre-
+sentation of the effect of the plus- and cross-polarization on a ring of test masses is
+shown in figure (1.1).
+
+1.3 Gravitational wave detection
+
+1.3.1 Laser interferometers as gravitational wave detectors
+
+Quite generally, physical phenornena are detected through cheir effect on the sur-
+rounding environment. Electromagnetic waves. fgr esampie. are detected t hrough
+their interaction with charged particles. The specifics of the interaction give informa-
+tion about the type of waves. the possible sources. the physical processes involved.
+
+etc . . .The detection of gravitational waves is not different: the goal is to measure
+
+the strain produced by the passing gravitational wave as it interacts mith niatter
+(equation (1.11)) ancl to estract knowledge about the source from this strain. Be-
+cause gravitational waves interact with niatter weakly. the effects are tiny, and the
+esperimental challenge is enormous.
+
+    Presently, many groups are working on gravitational-\vase detectors. The projects
+undenvay. such as LIGO, VIRGO. TAMA. and GEO, use laser interferometry to mea-
+sure the strain produced by gravitational waves. The kilometer-size interferometers
+seem to be the most efficient detectors at measuring this strain. They are adapted to
+the quadrupolar nature of the wave (equation (1A)). They essentially are interferorn-
+eters similar to the Michelson-SIorley apparatus with the single corner mass replaced
+by two masses (see figure (1.2)). The motion of the two end niasses is measured in the
+reference frame of the fixed corner masses. A laser is used to monitor the motion of
+the end masses. The laser beams travel in both arms, they bounce off the end masses
+MASS
+
+     CORNER
+
+..'-. 0,,MASSES'
+- I
+     0
+
+                 END
+                  MASS
+
+                 n
+
+Figure 1.2: The LIGO interferometers under construction are Fabry-Perot type beam
+detectors. Represented is a top view of this type of detectors. Both arms have length
+L. The passing of gravitational wave causes the end end masses to oscillate with the
+wave. The interference pattern produce is then converted to an electrical current by
+the photodiode.
+
+and the resulting interference is converted to an electrical signal by the photodiode.
+If no gravitational wave is passing through the detector. both arms have the same
+lerigth L and there is no interference between the beams.
+
+    Xow suppose there is a plus-polarized gravitational wave passing through the
+detector. Furthermore suppose that the detector is oriented in such a r w y that both
+arms Iay in the plane transverse to the direction of propagation of the wave; one
+along the x axis and one along the y a i s . The effect of the gravitational wave is then
+given by equation (1.14). The interference between the two beams depends on the
+difference in path length (61). This difference is given by subtracting the length of
+both arms when the wave is present. This is given by
+where 62 (Sy) is the change in position of the mass on the x (y) a i s . These are
+given by equation (1.14) with the initial position of the two masses set to L. Thus
+the detector will measure a path difference
+
+or a strain
+
+                                    dl( t ) = h+(t).
+
+                                          L
+    In general. the signal will be a linear superposition of both polarization niodes
+
+where F, and F , are the beam factors which depend on the relative orientation of
+the detector and the direction of propagation of the gravitational wave. For realistic
+
+gravitational wavcs equation ( 1.17) must be replaced by[Ï]
+
+This is the strain that rnust be monitored by the laser interferorneters. Note that
+the sensitivity of the detector increases when the length of each arni is increased.
+However. there is a limit on how long the arms of the detector can be: the arnis must
+be smaller than the characteristic wavelength A, of the radiation. For most sources
+
+the radiation will have A, 2 50 km, but the wavelength could be as srnall as 5 km.
+
+The arms of the interferometers under construction are srnalier than this: the LIGO
+interferometers have an arm length L = 4 km.
+
+   Gravitational waves are expected to produce a strain f in the interferometers of
+
+the order of 10-l8 for sources in our own Gdâuy and 10-*l for sources a few blpc
+away (including nearby clusters)[8, 91. These correspond to the estimates displayed
+in equation (1.7). The noise in the interferometers is roughly of the same order of
+magnitude; a typical signal-to-noise ratio of 10 is expected. The initial LIGO inter-
+
+ferometers are lirnited at low frequencies (f < 40 Hz) by seismic noise and at high
+
+frequencies (f 2 1000Hz) by photon shot noise. The initial LIGO will therefore be
+sensitive to signals having a frequency between 40 Hz and 1000Hz. The advanced
+LIGO will have a good sensitivity between 10 HI and 1000 Hz due to a better sus-
+
+pension of the masses that will elirninate seisrnic noise more thoroughl. The laser
+interferorneters are broad-band dctectors.
+
+1.3.2 Matched filtering as a detection method
+
+The comparable strcngths of the expectecl signal and the noise motivates the gerieral
+belief that matched filtering will be rieeded to estract the signals froni the output
+of the detectors['i]. When the signals are of known shape. this technique produces
+the highest signal-to-noise ratio[lO]. Suppose a gravitational wave h (t ) reaches the
+detector. The output of the detector o ( t ) is then a superposition of the useful sig-
+nal h ( t ) and the noise n ( t ) . For matched filtering. the signal is extracted by using
+a theoretical template (theoretical niodel) that mimics the signal as completely as
+possible; we shall cal1 this template m(t.SI). The vector 0 represents the parameters
+that characterize the template. If the template were a perfect copy of the signal these
+would be the real parameters of the source, such as its mass and distance from earth.
+
+If the templates are not a perfect copy of the reai signal, the parameters R are just
+
+phenomenological parameters.
+    The natural way to do signal detection is to work in frequency space. The Fourier
+transforrn of a real function F ( t ) is
+
+                                                                                                      a3
+
+                             ( f ) = /_df~(t)e'"'~~.
+
+Working in frequency space allows the introduction of the inner product for matched
+
+filtering. For two functions a ( / ) and 6 ( / ) ! the inner product is defined as
+
+mhere a '' * '' denotes complex conjugation and Sr,f() is the one-sided spectral density
+
+of the detector's noise. In terms of this inner product, the average signal-to-noise
+(SXR) ratio cari be expressed as[ll]
+
+The average is taken over al1 possible realizations of the noise n ( t ) .which is assumed
+
+to have stationary and Gaussian statistical properties. The sigrid-to-rioise ratio can
+
+be shown to be a Gaussian random variable. whose rnean value is given by equation
+
+( 1 . 2 ) .and whose variance is equal to one. IF ( p ) » 1. than the actual signal-to-noise
+
+ratio is never very different from the mean. Throughout this thesis me will work
+
+esclusively in terms of ( p ) .
+
+In practice. the parameters 0 are varied until the signal-to-noise ratio is mau-
+
+imized. Of course this is the maximum signal-to-noise ratio achievable given the
+
+choice of template m(f.R). The signal-to-noise ratio of equation (12 2 ) does not
+
+give any information about the quality of the templates! or equivalently about how
+
+well the template models the signal. The Schwartz inequality provides an answer to
+
+this question[ll]. The absolute maximum value the signal-to noise ratio can take is
+
+achieved when the template is a perfect match of the signal and the parameters
+
+correspond to the parameters of the source ( m ( t ,O ) h(f)). The optimal SNR is
+
+                                 P = JO-  (1.23)
+By dividing the signal-to-noise ratio (equation (1.22)) with the value achieved by
+optimal filtering (equation (l.23)), tve construct the ambiguity function A(Q):
+
+This function takes values between O and 1. It is equal to 1 when the optimal template
+is used.
+
+    The value of the parameters fl are varied until A(R) is rnauirnized. The maximum
+
+value of the ambiguity function is the fitting factor:
+
+The fitting factor is a direct nieasure of the ternplate's cluality since it can be related
+to the loss of event rate. i.e. the riuniber of events rnissed by using an inappropriate
+set of templates. This loss is calculated according to 1 - F F " E ] . For esample. for a
+given set of teniplates. if the fitting factor is O.S. then 48.8% of the events would be
+mistaken for noise.
+
+1.3.3 Astrophysical sources of gravitational waves
+
+In order to construct accurate ternplates, as required by rnatched filtering, Ive mmust
+
+have some idea of the important sources of gravitational waves. h great deal of work
+
+went into evahating the possible sources and the construction of adequate templates.
+    .in interesting source of gravitational waves are rotating neutron stars. Such stars
+
+emit gravit ational waves if their shape is not avially symmetric. Deviations from axial
+symmetry could arise in various ways. The process that led to the formation of the
+star might have left some large deformation on the solid crust; or if the neutron
+stars have a strong interna1 magnetic field, t.he magnetic pressure could support such
+deformations. The faster the star rotates and the larger the deformations are! the
+stronger the emitted radiation will be. Of course, the emission of gravitational waves
+will cause the star eventually to become auisymmetric, and it will slow down the
+rotation. Unfortunately, most known pulsars have an extrernely low slowdown rate.
+iniplying that they emit very weak gravitational waves[7].
+
+    The most promising source of gravitational waves for the laser interferometers
+is without any doubt coalescing compact binaries[8? 9. T l . These binaries are made
+of neutron star and/or black holes. Those are expected to be hirly abundant since
+they constitute an end result of stellar evolution. As the companions travel around
+each other, the emission of gravitational wvaves drives thern cioser together. The
+binarfs orbital frequency sweeps upward until the two companions rnerge. For a
+binary system niade of two neutron stars. the gravitational rvave's frequency just
+prior to merger is just below 1000 Hz, placing thcm in the right frequency range for
+the LIGO interferometers.
+
+    Compact binaries are probabiy one of the sirnplest astrophysical systerns to rnodel.
+In a first approximation the waveforms can be calculated by considering the two
+stars to be point masses. Spin-orbit. spin-spin. and tidal couplings are higher order
+phenomena[l3, 141. The coalescence consists of three stages. The first stage is an adi-
+abatic inspirai well modeled by a post-Yewtonian espansion of the general-relativistic
+equations. The second stage is the free-fa11 of the two companions toward each other
+after the orbit has passed beyond the innermost stable circular orbit. The last stage
+is the merger. The gravitational waveforms emitted during the last two stages need
+to be obtained by numerically evolving the full general-relativistic equations; this is
+especially true of the merger.
+    The complete knowledge of the waveforms associated with coalescing binaries
+will allow accurate rneasurements of their masses, their distance and their spin.
+These precise measurements mil1 constitute the strongest tests of general relativity[l5]
+and make possible the measurements of astrophysical quantities such as the Hubble
+constant j8, 71.
+
+1.4 Scope of the thesis
+
+1.4.1 LIGO and eccentric compact binaries
+
+Coalescing compact binaries have been pointed out as one of the most promising
+source of gravitational wave as long as accurate templates can be constructed for
+matched filtering. Orle strong assumption made mhen constructing t hese templates
+is that the binaries are old enough to have radiated niost of their eccentricity away,
+i.e. the cornpanions move in a quasi-circular orbit. As a result of the radiation
+reaction, t lie eccentricity e decreases 114th the semi-major avis a according to the
+
+approsimate relation (e/e,) z (ala,) lC3/ 12. wtiere e, (a,) is the eccentrlcity (serni-
+
+major âuis) at some prior tinie[l6]. Thiis. a reduction of the semi-major avis by a
+factor of 2 is accompanied by a reduction of the eccentricity by a factor of 3. The
+radiation reaction therefore quickly circularizes the orbit. Csing this assurnption, the
+
+circular waveforms have been calculated up to order (3' (2.5PN order) beyond the
+
+leading-order result obtained from the quadrupole brmula[l-4, 13, 3, -11. For most
+compact binaries the assumption of circularity is valid, but exceptions can occur.
+
+    It came as a surprise to many when AGX's (Active Galactic Xuclei) were first
+observed. MX'Sare optically active and are the site of star formation. They have
+strong .Y- and y-ray spectra, which are thought to originate from high power plasma
+jets. One of the possible explanations for the jets is the presence of a superrnassive
+black hole (106- 1 0 ~ ~a t ~the~ce~nte,r )of the cluster, combined with an accreting
+disc[l7]. The question remains as to what processes led to the formation of those
+superrnassive black holes.
+
+    One possible scenario was pointed out by Shapiro and Teukolsky[lB]. They con-
+sidered a dense Newtonian cliister whose evolution is dominated by star-star collisiori
+and secular collapse. The central density increases until it creates a dynamical insta-
+bility that causes the cluster to collapse catastrophically to a supermassive black hole.
+Quinlan and Shapiro looked at the same scenario. but followed the formation of bi-
+naries in greater detail[l9]. In such a cluster. binarics form according to two different
+schemes: tmo- and three-body encounters. In two-body encounters. the clissipative
+force conies from the ernission of gravitational waves. while in three-body encounters.
+some of the kinetic energy is removed from the system by the tliird star. In both cases
+the binaries harden. once forrned. by emitting gravitations1 waves. This ensures that
+they will not be disrupted by other encouriters and that they d l coalesce. Hence.
+the collapse of a cluster to a supermassive black hole might lead to a copious number
+of eccentric binary systems.
+
+    Whether or not radiation coming from these eccentric binaries c m be detected is
+the question that ive wish to examine in this work. One rvay to address this issue
+would be to incorporate eccentric templates in the bank of templates available to the
+LIGO interferometers. This solution cornes with problems. It would give rise to an
+extra computational burden that might forbid real time detection. The computer
+burden is already fairly heavy because of the number of templates involved; the bank
+of circular templates is huge even though techniques to maximize the template spacing
+and minimize the number of templates are starting to be developed[20, 211.
+    Another drawback is the need to increase the threshold on the signal-to-noise ratio
+when the number of ternplates is increased, because the probability of false detection
+increases when the number of templates is increased. In order to counterbalance this
+effect, the minimum value the signal-to-noise ratio must take before a signal can be
+concluded to be present hûs to be increased. This could lead to the dismissal of
+circular signals that were really present in the cletector.
+
+    In this thesis ive choose to opt for another strategv: search for eccentric signals
+using circular templates. Our main goal is to assess the loss in signal-to-noise ratio
+induced by non-optimal filtering of the eccentric signals.
+
+This thesis is divided as follow. Chapter 2 presents the basic elernents of detection
+theory that was discussed briefly in subsectiori 1.3.2. This includes ü derivatiori
+of the signal-to-noise ratio and the fitting factor. .A derivation of the quadrupole
+moment approximation for gravitational waves and the radiation reaction is provided
+in chapter 3. CVe then niove on to present arid explain our results. Chapter 4 contains
+a derivation of the wavefornis for eccentric binaries. These are needed to construct the
+ambiguity function. the corner Stone of the present work. In chapter 5 we calculate
+the Fourier transform of the various waveforms. In this chapter. we describe a method
+for constructing and rnttuimizing the ambiguity function, and results are presented
+for the optimal signal-to-noise ratio and the fitting factor. Finallx chapter 6 contains
+a brief summary of our results and conclusions. It also contains suggestions for future
+improvernents of the work presented here.
+
+    Throughout this thesis, we assume summation over repeated indices and that G = c = 1.
+Latin indices run from 1 to 3: Greek indices fiom O to 3 with {xO,xi 1 2 , x3} =+ {t,x,y,z } .
+Chapter 2
+
+Signal Detection:
+
+Elements of the Theory
+
+2.1 Introduction
+
+Signal processing involves two very different steps. The first one is signal detection. At this
+stage. the goal is to assess wliether a signal is present or not in the output of the detector.
+Once it is known that a signal is present. signal extraction begins. Both processes involve
+separating the useful signal from the noise as cleanly as possible. To accooiplish this, a filter
+is passed t hrough the output of the detector to eliminate the noise as much as possible.
+
+    The LIGO interferometers are expected to be collecting data at al1 times. giving access
+to the entire signal during the detection process. This property can be used to eliminate the
+noise as thoroughly as possible. Consequently, the filter should achieve two things: mimic
+the useful signal as accurately as possible and discard the regions of the spectrum where the
+noise is comparable in size to, or larger than, the useful signal. The template is the crude
+mode1 of the gravitationd waves used to construct the filter. It is thus an approximation
+of the waveforms expected to be emitted by a given astrophysicd source. When such a
+template is used, the extraction process is called matched filtering. This technique has been
+identified as the most promising one for the extraction of radiation emitted by known and
+well modeled astroptiysical sources. Coalescing compact binaries are among such sources[7].
+
+     The chapter is divided as follows. Subsection 2.2.1 introduces linear filters and provides
+a definition of their action on a signal. In order to make a full treatrnent of the detection
+process. some properties of the noise must be known. The noise is a statistical process and
+as such it needs a special treatment to determine Iiow it is affected by the filter. This is the
+purpose of subsection 2.2.2. Because the noise is a random variable. the various quantities
+to be measured are random variables as well. The presence (absence) of a signal is decided
+through the use of the signal-to-noise ratio introduced in subsection 2.3.3. Even tough this
+quantity is suEcient to decide if a signal is present or not, it is irisufficient to assess the
+quality of a given template. Subsection 2.2.3 introduces the fitting Factor. It is a direct
+mesure of the qtiality of the terriplates. i.e. it rrieasures how well the teniplates (theoretical
+models of the radiation) mode1 the signal.
+
+2.2 Detection of signals of known shape
+
+2.2.1 Signal processing with linear filters
+
+In this section linear filters are defined and some of their basic properties are established.
+Suppose that a violent astrophysical event takes place, emitting gravitational waves in the
+process. The gravitational waves emitted will depend on the source's parameters. Thus, we
+
+denote the useful sigiial by h(t,a),where 9 denotes the set of unknown parameters char-
+acterizing the source. If the source is described by N, parameters, then 19 = {di,...,rdNs}.
+
+These are the parameters one is ultimately interested in measuring.
+    Upon reception, the signal h(t,9) wiil get mixed up with the noise n(t)in the detector.
+This means that before filtering, the input signal i(t, 6) is of the form
+
+Beforehand it is unknown if a signal is redly present. In order to decide if a signal is present.
+
+a filter T ( t ,a) is adopted, where Cl is the set of parameters characteriïing the filter. The
+
+filtered signal O(t.fl,O) is obtained by acting on i(t,6) wit h the filter. For linear filters the
+
+action is defined as[22]
+
+                          O ( t .0.29)=  1-_'00~ ( t+' t. n)i(tl_6)d t'.   (2.2)
+
+This equation justifies the name "linear filter". It is obvious that O(t, $2.6)is a linear
+
+combination of the signal i(t. 9) at d l ti~neswith each contribution weighted by the filter
+
+T ( t .Q)[iil. It is also linex in the usual sense: filtering thf?sum of two signals results in
+
+the suni of two filtered signals. We denote the action of a linear filter on a signal s ( t ) by
+
+D [ s ( t ) ]t;hen D[si( t )+ s2(t)]= D[si(t)]+ D [ s ? ( t ) ] .
+
+    Thus: it is meaningful to ask what the effect of the filter is on the useful signal h(t, 19).
+
+This is trivially seen by using the property mentioned above. Filtering the output of the
+
+detector results in
+
+    The signal and the set of templates can be decomposed in t heir spectral components by
+means of a Fourier transforrn. For a function F ( t ) ,the inverse Fourier transform is
+
+where a tilde "*" denotes the Fourier transform. Remembering that
+
+and that for a real function F ( t ) ,F* ( f )= &f),  the effect of filtering on the useful signal
+
+can be expressed as
+where a " '' denotes cornplex conjugation.
+
+2.2.2 The noise in the initial
+
+Because the noise is a random process, its Fourier transform is undefined. It does not
+seem to matter since, in the time domain. the effect of the filter on the noise is clear.
+Unfortunateiy, the calculations are rnost efficiently carried out in the frequency domairi.
+It is the goal of this section to define the effect of the filter on the noise in the frequency
+domain and to establish some of the noise's properties.
+
+    Because the noise is a random process, some assumptions rnust be made about its
+behavior: we assume that the noise in the LIGO interferorneters is stationary, i.e. that its
+statistical properties are time-independent. and we assume t hat it is a random process wit h
+Gsussian statistics. The various realizations of the noise in the interferometers follow a
+Gaussian distribution.
+
+    A specific realization n ( t ) of the noise is drawn from an ensemble. Al1 the statistical
+quantities should thus be caicuiated by ensemble averaging. Fortunately, the ergodic hy-
+pothesis allows us to replace the erisemble averages by tirne averages. Iri this spirit. the
+mean value of the noise is defined as
+
+By monitoring the noise over a long period OF tirne, we can get rid of its mean by first
+
+calcuiating it (using equation (2.7)) and then subtracting it on. This is possible because
+
+                                      -  -
+the noise is stationary and has a constant mean value n ( t ) .This rneans that n ( t )is not an
+
+important statistical quantity. The quantity in terms of which the noise can be described
+
+is the autocorrelation function[ll],
+where the last line is valid for any stationary random process. For t = 0, the autocorrelation
+
+function is just the rnean squared value of the noise before filtering, 2. Note t hat since the
+
+mean is zero. this quantity corresponds to the variance of the Gaussian distribution.
+    Contrary to the noise itself. the autocorrelation is not a random function and it admits
+
+a spectral decomposition. Its Fourier representation is defined by
+
+Note that equation (2.9) combined with equation (2.8) implies that &(f ) = R n ( - f ) .
+Because of this identity. it is conventional to define the power spectral density of the noise
+for positive frequencies only. In terrns of R,( f ). the power spectral density is defined as
+
+wherc the Factor of 2 in the definition of S,,(J)is conventional. The inverse of equation
+
+where wc used the fact that &(j)is even to change the limits of integration to [O'm]. It
+is clear from equation (2.11) that the variance of the noise is given as
+
+    The power spectral density of the noise in the initial LIGO interferometers is not totally
+known, since they are still under construction, but it is estimated that at low fiequemies
+
+(f < 40 Hz) the dominant contribution is due to seismic noise and at high frequencies, it
+
+is due to photon shot noise (fluctuations in the number of photons). Between these two
+
+frequencies, the noise will be caused by various sources (see L.S. Finn and D.F.Chernoff[23]
+
+for a description of the different sources). For the present purpose, we adopt an andytic fit
+to the one-sided power spectral density Sn(f ) [NI:
+
+where f,,, is the kequency at which the noise reaches its minimum value (f, = 200 Hz
+for the initial LIGO) and S, is a constant amplitude left unspecified (the actual d u e is
+
+irrelevant for our calculations). This is not the only possible arialytic fit to the power
+spectrurn[lO], but it is sufficient for the present work.
+
+     We now are in a position to evaluate how the noise is affected by the filtering process
+in the frequericy domairi. After filtering, the noise becomes (equation 2.2)
+
+where we chariged variable of integration form t' to T = t' + t . Because n(r - t ) = O. we
+have N (t . Cl) = O. On the other Land the niean sqiiared average of N ( t. a) is
+
+The terni n(r - t ) n ( t t- t ) is jiist the autocorrelation of the noise R,(T - t') which in turn
+
+is related to the power spectral density (equation (2.11)) of the noise. Iriserting equation
+(2.1 1) yields
+
+2.2.3 The signal-to-noise ratio and the fitting factor
+
+Quite generally, the probability of a signal being present or absent in the noisy output of
+the detectors can be linked to the signal-to-noise ratio (SNR)[23]. The SNR is defined as
+the ratio of the strength of the useful signal to the strength of the noise after filtering.
+The standard theory of detection relates the probability that a signal has been detected to
+the signal-to-noise ratio. The higher the signal-to-noise ratio is? the more confident we can
+be that a signal is present in the detector. The threshold value the signal-to-noise ratio
+has to achieve before a signal can be concluded to be present is fked by the observer. The
+threshold is chosen so that a signal will be concluded to be present with a certain confidence
+Ievel, j udged sacisfactory by tlie observer. Furriially, we defirie tlie squared average SXR
+
+((P)-)
+
+In ternis of H ( t . @19) and N(t)' defined in cquations (2.6) and (2.16) respectively, the
+squared SNR is written as
+
+The question now arises as to which filter T*( f . a) rnaximizes (p). To clarify this issue, it
+
+is worthwhile to introduce the riotion of Wiener's optimal filter.
+    Consider the expression
+
+where A ( f ) and B(f) are two arbitrary functions of f and 1A(f)l2 = A(j)j*(f). The
+
+inequality is satisfied because the term on the Mt-hand side is positive definite and the
+
+equality is achieved only when)!(A = @/). Expanding the left hand side results in a sum
+
+of two different terrns
+This is the Schwartz inequality[ll]. If we set
+
+aiid divide equation (2.20) by J F d f ~ , ( f ) P ( f . n ) T * ( f , n )we pet
+
+where we used h(1~1.9=) h v ( - f , s ) to change the limits of integration to [ 0 , ~ j . The
+
+maximum value of (p)' is achieved for the filter
+
+                                                   -
+
+                                                                                  (2.23)
+
+This defines Wiener's optimal filter. Two choices need to be niade to produce this filter.
+The first one is to choosc a template that perfectly models the signal. and the second one is
+
+to weigh the template by Sn(f) - in order to eliminate the regions of the spectrum where
+the noise is very loud. For thc initial LIGO. thc regions beiow 40 Hz and above 1000 Hz
+
+will be eliminated (equation (2.13)). Because we have some inforrriation about the noise.
+the template can always be weighted by the power spectral de~isityof the noise. JO that
+the second choice is always made. On the other hand. it is reasoriable to assume that the
+template will not be an exact representation of ttie true signal. At best. it will be obtained
+
+by some approximation scheme (perturbatiori theory, post-Newtonian expansion, etc. ..).
+
+Accordingly, the parameter space of the template does not have to be of the same dimension
+
+as the signal's parameter space. i.e if fi has Npcomponents. then in general Np # N,. For
+
+exaniple, a signal built using a post-Newtonian expansion will not have the same number
+of parameters as the waveforms built using the quadrupole formula. The post-Newtonian
+signal can be detected by the Newtonian template, but the extraction of the parameters is
+impossible, i.e. the parameters extracted do not match the parameters used to prepare the
+signd[25]. Consequently, we take the filter to be
+where m(/Q,) is the Fourier transform of the tempiate useci to mode1 the gravitational
+
+waveforms. Wiener's theorem then states that p(j , 0) rnaximizes the signal- to-noise ratio
+
+if m(f . il) is an accurate representation of the true signal h ( j ,6)?and if the template's
+parameters are matched to the source's parameters. Ri = and Np = Ns.
+
+     If the template ih(f) is not a perfectly accurate version of the true signal the product
+
+6(f)'h( f) rnight not be real. To get around th&, we introduce a scalar product in the
+
+ternpiate space as
+
+where a(f.0)and b(f.n') are two arbitrary functiow atid c.c. denotes the cornplex conju-
+
+gate. In terms of this sçnlar product the squared mean average SNR is expressed as
+
+or if we divide (p)%b its maximum value (equation (2.22))and take the square root
+
+The left hand side of equatioii (2.27) is the ambiguity function
+
+and it takes values between O and 1. It will achieve a value of 1 if and only if:
+
+   1. the template m(f, n) is an accurate representation of the true signal h(f,6)'
+
+   2. the parameters Cl are the same as the parameters of the source, Q = di.
+
+    Even if the template is not an exact copy of the true signal, it is possible to find a
+maximum of the ambiguity function. This is achieved by varying the parameters f2 until a
+
+global maximum is found. Once the ambiguity function is maximized over il, it is called
+
+the fitting factor:
+The fitting factor is a direct measure of the quality of the template, i.e. the way in which it
+mirnics the true signal. A Btting factor close to unity implies a high quality template, since
+in this case the filter is close to Wiener's optimal filter. The fitting factor can d s o be related
+to the number of events missed by the detection process when an inadequate template is
+
+used. The number of signal missed by non-optimal filtering is given by 1 - ~ ~ " 1 2 1F.or
+
+example, if we fix the minimum value the fitting factor can take to 0.9, then 27% of the
+signals a t the output of the detectors will be missed. The value FF = O.9 is the threshold we
+adopt in this work: below FF = 0.9 the circular templates are iuadequate for the detection
+of ecceritric signals.
+Chapter 3
+
+Gravitationally Bound Systems
+
+3.1 Introduction
+
+The Einstein equations (1.1) are difficult to deal with in their full non-linear form. It is
+better to adopt some approximation scheme appropriste to the problem at hand. This is
+reinforced by the fact timt most exact solutioris are physically unlikely. It is the purpose of
+ttiis chapter to develop a formalism adequate to the problem of bound gravitational systems
+in the WC& fieid limit. The results obtained will be used for the case of interest in this
+thesis: eccentric coalescing compact binaries.
+
+    The weak field approximation is introduced in section 3.2. This approximation allows
+the Einstein equations to be linearized with respect to the Hat spacetime rnetric. Like in
+electromagnetism, the gravitational field is determined up to a gauge choicc. The Lorentz
+gauge is imposed in subsection 3.2.2. This gauge choice results in a flat spacetime wave
+equation for the perturbation field. Subsection 3.3.2 contains the solution to the wave
+equation: the leading-order solution is the well known quadrupole formula. The energy and
+angular momentum carried away by the radiation are also calculated to leading-order. The
+derivation is sketched in subsection 3.3.2. The results of the f i s t two sections (3.2 and 3.3)
+are valid for any system satisking the weak field approximation. These results will be used
+in chapter 4 to calculate the waveforms emitted by binary systems.
+
+3.2 Linearized Theory of General Relativity
+
+3.2.1 The weak field approximation
+
+In the weak field approximation, a perturbation is applied to a background spacetime.
+
+The background spacetime is described by the rnetric gFu, while the perturbed spacetime
+
+is described by g$ If the perturbation is small enoiigh. the new nietric will differ fkom
+the background by a small amount. The perturbation is then expressed as the difference
+between the reference and the perturbed spaceti~ne[l-l]:
+
+    In the case nt hand the background geometry is assurneci to be flat. Thus. it is sufficient
+to define the perturbation field as
+
+where rl,, = diag(-l.1.1.1) is the Minkowski metric. This closely follows the definition of
+C.W. Misner, K.S. Thorne and J.A. Wheeler for the weak field approximation[5].
+
+    Using the definition for the potential h,,, the Einstein equations can be re-casted in
+a convenient form. In order to do this. we first note thst since q,, has constant diagonal
+elements?al1 its derivatives are zero. Thus, taking derivatives of the metric g,, to evaluate
+the Christoffel symbols and the Riemann tensor (see B.F. Schutz [2] for a definition of t hese
+quantities) is equivalent to taking derivatives of the perturbation field and if no derivatives of
+the perturbed metric elements are taken, they are replaced by their flat spacetime equivdent:
+     This way of linearizing the equations implies that al1 indices on linear quantities in the
+perturbation field must be raised and lowered using the Hat space time metric qpY. Inserting
+the relations (3.3) in Einstein's equation (1.1)leaves one with[6]
+
+where Gpvis the exact Einstein tensor. G~!Jis the Einstein tensor forrned from tlie first
+
+order ternis in the perturbation field and .i?"is the wave operator in Hat spacetinie. In
+
+this Form equation (3.4) is still exact and is not an approximation[5. 141. This cumbersome
+
+expression can be simplified by introducing the a i ~ ~ i l i a rfyield hpu= h,, - 7-1 qpuhanto
+
+express equation (3.4) as[5]
+
+where only the second order ternis were kept on the right hand side (CL: = Gpu- G,(,1).
+
+3.2.2 Gauge invariance
+
+In electromagnet ism. the wave equat ion is typically solved by niaking a specific gauge
+choice (for example the Coulomb or the Lorentz gauge)[26]. The gauge choice. even though
+restrictive. does not d e c t the physics of the problem and simplifies the solution. In a
+similx way, the gravitational wave field possesses extra degrees of freedom associated with
+arbitrary coordinate transformations; adopting specific coordinates is analogous to a choice
+of gauge. The solution to equation (3.5) can be simplified by adopting the Lorentz gauge.
+In this gauge, the field is divergence free:
+
+These are four conditions on A, and they correspond to four choices of coordinates zQ.
+
+This choice of gauge is equivalent to the Lorentz gauge of electrodynamics where the vector
+potential is chosen to be divergence free[26].
+
+                                                 29
+    To see that it is always possible to choose a divergence-free field. perform the infinites-
+imal coordinate transformation[ô]
+
+The EP are functions of the oId coordinates and are at most of the same order of magnitude
+as the field &pu: they are otherwise arbitrary. Under a general coordinates transformation,
+the metric in the new coordinates ( g ' P Y ) is giwn by
+
+Inserting the inverse of equation (3.2). y," zz q@"- hpu - $vpvhaa, we obtain
+
+The transformation is infinitesimai and leaves equation (3.5) invariarit. i.e. if hu'"s a
+
+solution of equation (3.5), so is hnrw. This can be used to fix the gauge.
+
+    Performing the previous coordinate transformation and imposing the generators of the
+transformation (equation 3.9) to satisfy
+
+we obtain a new fieid that is divergence-hee. This was obtained by taking the divergence of
+equation (3.9) and by imposing h(new)po,Y = O. If the field is already in the Lorentz gauge.
+this type of infinitesimal transformation will leave it in the Lorentz gauge if the generators
+
+satisfy the harmonic equation OEP= 0.
+
+    In general 8 constraints need to be imposed to fix the gauge completely. This reduces
+the degrees of fieedorn of the gravitational field to two, the right number since it can be
+
+shown t hat h,, has only two degrees of Ereedom[G]. For the time being, the only gauge
+
+choice we make is the Lorentz gauge.
+    This gauge does not exhaust the gauge Ereedorn associated with the gravitational field (4
+
+constraints out of a), but it is sufficient for the present purpose. Of course, some restrictions
+must be imposed on the final result to keep only the physical components of h,,, but this
+
+poses no problem at al1 since the remaining gauge fixing freedom can then be used. The
+Lorentz gauge is convenient to calculate the solution to equation (3.5), since in tliis gauge
+it becomes a simple wave equation(51:
+
+where the tensor S,, = Tpu- & G L ~ was introduced. The tensor S, represents the
+
+total energy and niomentuin present in the spacetime. The contribution Tpuis the energy-
+
+rnornenturn of the rnatter. while -&G$ is the energy rnornenturn of the gravitational
+
+waves. which is quadratic in h,,. As it stands equation (3.11) is non-linear in h,,: if h,, is
+
+sufficiently srnall. then G;: c m be ignored and equation (3.11) reduces to
+
+3.3 Quadrupole Approximation
+
+3.3.1 Solving the wave equation
+
+The wave equat ion (3.12) obtained in the previous section is very similar to the wave equa-
+tion of electrodynamics. The main difference is that in the gravitational case. the radiation
+acts as its own source. This a consequence of the non-linear terms in Einstein's equation. As
+is the case for electrodynamics, the sohtion is found through the use of a Green's function.
+The complete solution involves the advanced and the retarded Green's functions. Because
+we are concerned with systems decaying thrnugh the emission of gravitational waves, and
+because the advanced Green's function corr~spondsto radiation coming in from infinity,
+only the retarded Green's function is included in the solution:
+where u = t - lx- dl is the retarded time and R r 1x1 >> lx'l because the source is assumed
+
+to be spatially bounded and the field is evaluated at a point x far away from it.
+
+    Before pursuing, it is worth recalling that not al1 the components of k,, represent radia-
+tive degrees of fieedom. The components h o p are time-independent and are not associated
+
+wit h radiation, The time-tirne component is associated with the total mass of the spacetime
+(the Coulomb field) and the tirne-space components are associated with the total momentum
+in the spacetime. They are expressed as
+
+where the total m a s (1W) arid the total rnonientiini ( P Lo)f the spacetirne are defined as
+
+and
+
+These quantities are conserved: = = O. This means that the only radiative compo-
+neuts of equation (3.13) are the hl;. Gravitat ional waves are thus included in the space-space
+components of the perturbation field:
+
+This equation describes the emission of gravitational waves by a rnatter source.
+    The solution is not in a very useful form yet. To sirnplify equation (3.15), we note that
+
+in the Lorentz gauge the left hand side of equation (3.12) obeys (CJ&pY),, = 0' because
+ordinary derivatives cornmute. This in turn implies that the right hand side of equation
+
+(3.12) obeys, to leading order. the conservation equation T'" = O [5]. Mathematically,
+
+this can be written as
+and
+
+These identities can be used to simplify the expression obtained for the gravitational wave
+field. Consider the folowing expression:
+
+                           . .
+
+Solving for Ta' in the previous expression yields:
+
+Upon insertion in equation (3.15) al1 the terms containing pure spatial derivat ives can be
+elirninated by converting the volume integrals to surface integrals. Because the source is
+bounded. t hese terms vanish upori integratiori on a surface at infinity. For exarnple
+
+where dSi is the oriented surface element. The final expression for the gravitational field in
+
+the quadrupole approximation is
+
+ --/ d2
+
+= 1 / di? (T00zii,rtj ) d"'
+
+    R spoee
+= 2 d'                                        T002~iZtjd321
+
+                                 R dt2 spoee
+
+where Iijis the quadrupole moment of the matter source.
+
+    The solution can be reduced to its two relevant radiat ive degrees of fieedom by switching
+to the transverse-traceless gauge. In this gauge, the gavitational waves are traceless and
+
+                                                 33
+transverse to their direction of propagation:
+
+where fi is the vector pointing in the direction of propagation. Its compoaents are ni= $
+
+in Cartesian coordinates. In this gauge h,, = h,, since the trace-fiee condition implies
+
+-,
+
+h: = -hi. Hence. the overbar can be dropped from the equations involving hi,. The
+
+conditions (3.22) and (3.23) can be imposed by considering the infinitesimal coordinate
+transforniation defined in equation (3.9). Since we wish to stay in the Lorentz gauge. the
+generators of the transformation must satisfy = O. At a distance R far away from the
+source, the generators are of the form
+
+           I                                   (3.24)
+
+CL = -.-Ip(t - R ) .
+          R
+
+Ixiserting this in equation (9.9) aiid ir~iposiugthe two gauge corditions (3.22) and (3.23)
+allows us to impose constraints on -4' that rediice the field to its TT form. The result is
+
+where Pi,= U i j - nin,. This leads to the final expression for the field in the TT gauge[5]:
+
+where the reduced quadrupole moment (fij = Iij - i d i j ~ k kw) as introduced.
+
+3.3.2 The loss of energy and angular momentum
+
+The quadrupole formula for the gravitational wave field was obtained by keeping the Ieading
+order terms in the solution to the wave equation (equation (3.12)):i.e. to leading order the
+radiation is generated by a change in the source's quadrupole moment. The source's energy
+and angular momentum are expected to decrease due to the emission of gravitational waves
+and consequently, we expect the radiation reaction to be described in terms of the field
+( h p Y ) introduced in the previous sections.
+
+     In electromagnetisrn, the energy and angular momentum carried away by the fields E
+and H can be calculated in many different ways. Al1 t hese methods agree when the energy
+emitted, on average, is considered. The radiation of energy by electromagnet ic waves is most
+conveniently calculated through the Poynting vector[26]. This corresponds to calculating
+the net flow of energy crossirig a closed surface. In the weak field approximation, it is
+possible to obtaiu the energy and aiigular niornentum loss by a sirnilar technique. As For
+the gauge choice, it is found that the eriergy and angular momentum carried away by the
+radiation are most conveniently calculated in the Lorentz gauge. The TT gauge is dropped
+for the moment. This subsection closely follows P.C. Peters[lG] in the derivation of the
+radiation reaction.
+
+    The starting point in deriving the energy and angular momentum loss is to note that
+for an arbitrary stress-energy tensor Puthat is divergence free (see equation (3.16)) and
+symmetrical. the existence of global conservation laws is guaranteed[l6.27]. Two of the con-
+served quantities can be identified as the total energy (E)and the total angular momentum
+
+(L). They are defined as
+
+where E i j k is the Levi-Civita tensor equal to one if (r.y, z ) appear in this order or in an even
+number of permutations, -1 if the number of permutations is odd, and zero if two indices
+are the same.
+
+    We have already seen that -&G$ represents the stress-energy of the radiation. The
+
+energy and anguiar momentum of gravitational waves can be expressed as
+             / _ --axE"k    d32 ~ ( 2 ) o Q .
+
+                        space
+
+By taking a time derivative of both equation and using the conservation law
+
+G ( ~ ) ,w = O? the expressions in equation (3.29) can be rewritten as
+
+The energy and angular momentum carried away by the radiation must be coming from the
+
+mat ter source. Tlius. on physical grounds. we can conclude that
+
+     source               G C.V
+     (5) = -(g)
+
+and
+
+where the volume integrals were converted to surface integral. dS, is the oriented surface
+
+element. and we took a t h e average (. ..), to ensure t hat the various niethods to calculate
+
+the energy and angular momentum loss agree.
+    To calculate the energy and angular momentum lost to gravitational waves. an explicit
+
+expression for GIZ) is needed. It can be found by extracting the second-order terrns in hpU
+
+from the Ricci tensor. Using the method described in subsection 3.2.1 and discarding the
+terms proportional to a divergence of the field (hpY = O ) , one gets
+This expression for the stress-energy tensor contains terrils that are not needed for the
+
+present calculations; the expression for G$.!c m be simplified to R ~ Y .The energy carried
+
+away is proportiorial to ~ t ; i ) ) ,but qoiBaJ R:$ = O since qp, is diagonal. In the case of the
+
+angular nion~enturnt~he term ,$ 'mga ~ ~ (inYser)ted in equation (3.33) resiilts in a term of
+the form
+
+The oriented surface element dSj is equal to S ~ Swh.ere dS is the regular surface elernent.
+
+Upon insertion in equation (3.36), this yields a term synimetric in j and k (dx", but
+
+because the Levi-Civita tensor is antisyrnmetric in t hese two indices, t his term vanishes.
+Thus for the present çaiculations R$ is the only terrn needed in the stress-energy tensor
+of the radiation.
+
+    The same argument can be used to get rid of the term
+
+in the expression for ~ f ,(e,quation (3.35)). We include al1 the remaining terms in the
+
+restricted s tress-energy tensor (G?;):
+    Since we are averaging over time and integrating over the bounding surface? some iden-
+tities c m be used to greatly simplify the final expressions:
+
+   1. Any term in the integrand of the form hOh (indices were dropped for notational
+
+       simplicity) is ~ ( h "and can be discarded since they represent third order effect. To
+       see this, recall that on the boundary at irifinity the total stress energy is of the form
+      S, = -J-YGR$! x 0(X2T)h.e matter contribution does not appear since the source
+       is spat ially bounded. Using cquation (3.12) yields
+
+   2. Spatial derivatives c m be expressed, to leadirig order. iri terms of tinie derivatives in
+       the following way (from equat ion (3.15)):
+
+      where the O(R-') term can be neglected, since upon multiplication by the field (h. is
+
+      O ( R - ~f)rom equation ( 3 . 1 5 ) ) it becomes a o ( R - ~ t)erm. Al1 spatial derivatives are
+
+    therefore proportional to ni = 2.
+
+   3. If equation (3.40) is combined with the gauge condition ( h p U ,), any derivative in the
+
+     average can be integrated by parts with respect to time. For exarnple (h,, agha^), =
+     - (Apu ,ahad J ) = (hpVhaB_ad) rr O is true because the field satisfies the Lorentz
+
+       gauge condition. The boundary terms vanish because WC are considering the average
+       over one period of the motion of a periodic source.
+    By taking G$), imerting it back in equation (3.32) and keeping only the leading order
+terms. we obtain the energy loss of the matter source,
+
+The analogous result for the angular rnonientum is obtained by inserting GY; in equation
+
+(3.33):
+
+The previous expressions (equations (3.41) and (3.4%)c) an be siniplified quite easily if we
+take the surface of integration to be a large sphere endosing the system and use the Lorentz
+gauge condition to express thern in terms of the spatial components of h p u . The energy loss
+can be expressed in terms of the quadrupole moments of the source ~ ( e q u a t i o r i(3.26))[16]
+
+                                                                                 r
+
+where d S is the surface elemerit of a sphere of radius R, 8 ' is the ilh t ime derivative
+
+and the factor of -IR-'cornes frorri inserting equation (3.21) in equation (3.41) whenever a
+
+spatial coniponent of the field hi, appeared. The only angular dependence in the previous
+
+equation is throiigh the vector n:
+
+f i = sin 8(cos~ 3 2 +. sin qy)+ cos 82.  (3.44)
+
+Taking the differential element on the sphere to be d S = R~sin 0 dedp, the integation is
+easily accomplished, leaving onIy the time average to be calculated. In order to do this,
+information about the source is needed. This will be done in chapter 4 for coalescing
+
+compact binaries.
+
+   Expressing the result for the energy in terms of the reduced quadrupole moment tj =
+     To simplify the expression for the angular momentum loss requires some more thinking.
+Because the integrand is proportional to xj we have to be careful when disrnissing terms
+
+proportional to h3. They could be of order h' upon multiplication by XI. For example,
+
+zjh~'fipy lk = -nk h ~ "[ZJhPY + dipY(f]rorn the first line of equation (3.40)) eontains two
+
+terms of order 0 ( h 2 )that cannot be discarded. Once al1 the relevant terms are included,
+
+the ones proportional to zJxk can be dropped since their product with the Levi-Civita
+tensor results in nul1 contributions. The gauge condition can be used once more to express
+the angular momenturn l o s in terms of the quadrupole moment of the system. The end
+result is an expression where al1 the angulitr dependence is in the vector fi. Upon angular
+integration (using equatiori (3.44)),the angular momentum loss beconies[l6]
+
+Equations (3.45) and (3.46) are sufficient to describe the cniission of gravitational waves
+and their effect on the source. They will be iised in chapter 4 to calculate the emission of
+energy and angulCumomentum by compact binary systerns.
+Chapter 4
+
+Inspiraling Compact Binaries: The
+Last Minutes
+
+4.1 Introduction
+
+In this section, we calculate the gravitational waves emitted by a binary systern composed
+of two bodies of mass ni (position vector ri) and m- (position vector r2). The origiri of
+our coordiriate system is located at the center of mms. so that
+
+is satisfied[27]. In this coordinate system. the positions of the two bodies can be expressed
+in terms of the relative separation vector, r = ri - T * , as[28]
+
+where M = ( m ii mz)is the total mass of the binary.
+    Section 4.2 is dedicated to solving the two-body problem in classical mechanics. Sub-
+
+section 4.3.1 contains a calculation of the transverse-traceless (TT) quadrupo!e moment
+tensor (jTT ) and of its second and third time derivatives. The energy and angular mo-
+menturn carried away by the radiation are most conveniently calculated in the center of
+mass coordinates (see equations (3.45) and (3.46)); we present a calculation of the second
+and third time derivatives in this coordinate system (figure (4.1)). On the other hand,
+the waveforms are needed in the TT gauge and are most conveniently calculated by taking
+a transverse- traceless projection of t lie reduced quadrupole moment before calculating the
+time derivatives. In section 4.4. the reacciou of the sysceru tu the ernissiori uf gravitcttiorial
+waves is calculated iising the results of sections 4.2 and 4.3. This determines the ordinary
+differential equations (ODE) that govern the evolution of conipact binary systems. An
+analytical result to these equatioris will be presented for binaries in a circular orbit. A
+nurnerical met hod of iritegration for elliptic orbits will be described. Subsection 4.4.3 con-
+tains the waveforms as a hnction of time and a discussion of the differences between the
+radiation froni circular and eccentric binary systcnis.
+
+    In this chapter. sunimation over repeated indices is assumed. Latin indices run from
+
+1 to 3 with the identification (x.y . r } * (xL.s'.xJ}.Greek indices run froni O to 3 with
+
+t + r o . Unit vectors are denoted by bold characters with a hat (say 2) and second rank
+
+tensor by bold characters wit h an over-bar (say XI). Throughout the chapter. geometrized
+
+units are used (G = c = 1).
+
+4.2 The two-body problem in Classical Mechanics
+
+4.2.1 The equations of motion
+
+In classical mechanics, the two-body problem is governed by the Lagrangian[PS]
+
+where a " ' " denotes differentiation with respect to time. By taking the center of mass to
+
+be the origin of our coordinate system, the problem can be transformed into that of a body
+Figure 1.1: In the center of m a s . the two-body probleni is described by a particle
+of mass p orbiting a compact object of mass JI. The coordinate r is the distance
+between the two objects and p is the position of the m u s p on the orbit. The 2 avis
+is pointing out of the page.
+
+of mass p = m rn.i orbiting a compact object of mass M = mi + m- (see figure (4.1)).
+
+    In terms of the coordinates introduced previously (equation (4.2)) the Lagrangian is
+
+Since the motion takes place in a plane. û can be set to $ without loss of generality. This
+
+choice leaves two independent variables (r and p) and two constants of the motion provide
+enough first order differential equations to describe the systern completely (one for r and
+one for q). To obtain the two constants of the motion, we first note ttiat the Lagrangian
+
+is of the form L = L($,? , r ) , i.e. is a cyclic variable[27]. This provides one of the
+
+constants needed: the angular momentum. The second one is obtained by noting that we
+
+are dealing with a Hamiltonian system. which implies E = fi = O * E = const [27]. The
+
+second constant is therefore provided by energy conservation. These are the two constants
+required. In terms of these, the equations describing the motion axe
+        5 C           C
+
+where  L  =  L   and  E  =  are the angular mornentum and the energy per unit m a s ,
+
+             Cr
+
+respectively. These two equations can be solved immediately and exactly, since the orbit
+
+is considered to be Newtonian (no gravitational radiation emitted). To get the solutions
+
+to equations (4.5) and (4.6) in the simplest possible form, we introduce the dimensioriless
+
+parameters e and p:
+
+The ODE'S are then writteri as
+
+                                r : = - L '2 e sin p.
+
+Note that e = O implies that i = O and the orbit is circular. In the gerieral case. we are
+dealing with a set of two coupled differential equations. They can be solved by dividing
+equation (1.8) by equation (4.9). which results in a differential equation for r that depends
+solely on p. Solving this equation provides one with r = r(<p):
+
+This result can then be inserted back in equation (4.9) to obtain an implicit relation for q
+
+of the forrn t = t(9).The integration for ip is long and tedious. but because it presents no
+
+essential difficulties, only the final result is stated:
+
+                                ( ) e+cosv                eJCZsinp
+             t = M ( 1 - ep 2 "') [EEccos 1+ ecoscp - 1 +ecoscp     (4.11)
+
+The period of the binary is then simply given by
+Figure 4.2: The central potent i d Ifr)-o(f 'Tewtonian mechanics. The turning points
+r* are the roots of equation (4.13). They define the eccentricity e and the size of the
+ellipse p.
+
+    The solution for r (equation (4.10)) holds even wheri the emission of radiation is included
+in the calculation. because even though e and p are theii functions of tirne. they remain
+independent of p. Equations (4.10) and (4.11) are the complete solution to the two-body
+problem in classical rnechanics.
+
+4.2.2 The turning points
+
+A geometrical meaning can be assigned to the parameters defined in equation (4.7) by
+looking at the turning points of the orbit. Those are the points where the radial velocity
+vanishes: i = O. Inserting this in equation (4.6) yields
+
+ Equation (4.13) is quadratic in and the two roots are the turning points of the orbit.
+Rewriting the solution in terms of e and p by using equation (4.7) reveals that
+These two equat ions can be seen as defining the two parameters e and p in terms of the
+turning points shown on figure (4.2). This equation assigns a direct physical meaning to
+the parameters e and p. As can be seen from figure (4.2),when e = O both roots are equal.
+the orbit is circular, and p is the radius of the orbit per unit mass. Tlius e is a measure of
+the deviation from a circular orbit, i.e. of the ellipticity. In this case. p is related to the
+semi-major axis a of the ellipse by[28]
+
+4.3 The quadrupole approximation
+
+4.3.1 The reduced quadrupole moment and its derivatives
+
+We are now in a position to calculate the quaclrupole niornent and its time derivatives for an
+arbitrary binary system. They are rieeded to calculate the waveforrns in the approximation
+developed in section 3.3 (see equation 3.26). The quadrupole moment is defined as[271
+
+where Toois the tirne-tirne component of the stress-energy tensor (this corresponds to the
+energy density of the system) and'7 is a spatial vector. Terms of the forni vw are second rank
+tensors and their operation on a vector u is defined as (vw).u =(w.,u)v. For definiteness
+we place the binary in the rmj plane of the center of m a s coordinates. This choice of
+origin does not restrict the generdity of Our calculations. If we choose another origin for
+our coordinate system, the difference between the quadrupole moments calculated in both
+coordinate systems is a constant. CVe are interested in time derivatives of the quadrupole
+moment and the constant will vanish upon derivation. This constant term does not play an
+essential role.
+
+    The energy density of a binary system is made of the contributions from the two masses.
+Since the two cornpanions are considered to be point masses, ail their energy is concentrated
+at their position. In the quadrupole approximation, it is sufficient to write the time-time
+cornponent of the stress-energy tensor as
+
+where r--iis the position of the Ath mass with respect to the center of mass. This states that
+all the energy cornes from the rest m a s of the two bodies. This is obvioiisly false for highly
+relativist ic systemq but for corisistcncy, the addit ion of higher order terms would require
+the waveforms to be calculated using post-Newtonian schemes[3]. lnserting equation (4.17)
+into equation (4.16) reduces it to
+
+    In order to use the equations obtained in subsection 42.1. the quadrupole moment
+niust be rewrit teri in terms of the coordinates defined by equation (4.2). This is easily done.
+Direct substitution yields
+
+    Just like electromagnetic waves, gravitational waves have only two independent degrees
+of freedom[5]. The two independent polarizations are chosen to 1ay in the plane transverse
+to the unit vector fi pointing kom the center of rnass to the observer. This vector can be
+described by the two angles rp, and O*, where the former is the azimuthal angle between the
+
+5 axis and the projection of f i in the 2 q plane and the later is the angle between L and f i
+
+(see figure (4.3)):
+
+fi = sin O, (costp,5 + sin + cos 0 , î .  (4.20)
+
+This corresponds to two successive rotations. The first one rotates the coordinates around
+the r axis by an angle <p, while the second one rotates the new coordinates around the new
+y axis by an angle 9.. The plane perpendicular to A is spanned by the two unit vectors â
+Figure 4.3: The binary is located in the rw plaie. The transverse-traceless part of
+
+the gravitational waves tensor is the projection of the field obtained in subsection
+
+4.3.1 into the plane perpendicular to ~ (see equation (3.25)). The vector A points
+
+from the binary to the observer.
+
+and p. The three vectors { f i . â and f i } form an orthonormal basis. They are related to
+
+the previous b a i s by the transformation[29]
+
+                                                                                                                                                                                                                                                                                                                                                 A
+
+                 5 = - sin ip,â - cos 9, cos 1),P+ cos p, sin @,A.
+
+                                     -
+                g = cos cp,â - sin cpo cos Bop+ sin cp, sin 8,fi.
+
+The transverse part of the quadrupole moment is obtained by projecting the tensor displayed
+in equation (4.19) onto the aop plane. The projection operator P is defined by
+
+where 1is the identity matrix It is easy to see that P satisfies i W = P f i = 0.
+    The transverse projection of the quadrupole moment is given by PÏP. The result is
+a second rank tensor perpendicular to fi. Its trace can be subtracted to get the transverse-
+traceless quadrupole moment. Because P is a projector, it obeys the identity PZ= P.
+
+Accordingly, the trace can be sirnplified to ~ ( P Ï P=)T~(P'Ï) = T r ( ~ f )P. utting every-
+
+thing together, the transverse-traceless quacirupole moment tensor is given by
+
+where the superscript TT means transverse- traceless. The vector r = r cos 95 +$-srin cpjj has
+
+components dong the three vectors of the rotated kame. Upori projection, only the a and
+
+p components survive:
+
+Pr = r [sin(p - po)â- cos(ip - ip,) cos o,c~] .                                 (4.24)
+
+   Inserting equation (4.22) dong wit h equation (-4.24) in the definition of ITT (eqiiatiori
+
+(4.23)),we obtain, alter sonie siniplification.
+
+where fTT and fTT are the two polarization modes of t he tensor. In this sense. ë+ = b Q - f i @
+and ë, s &fi + ,dâ are the two polarization tensors[29].
+
+The next order of business is to calculate the derivatives of the reduced quadrupole
+
+moment. At this point the system is still considered to obey Newton's law and the effect
+
+of the radiation on the orbit is not taken into account. We assume that the cornpanions
+
+travel on the path dictated by classical mechanics, and that e and p are constants. The
+
+only dependent variabies in equation ( 4 2 5 ) are r and 9. We use the c h a h rule to take
+
+derivatives; we calculate the first time derivative using T T , and the second time derivative
+
+using f TT instead of In. The c h i n rule gives the first derivative of PT as
+
+- dzTT =-d-r8rTT d p a f r r
+    dt dr  +-- .
+dt         d t a(p
+The time derivatives of r and q~are obtained fiom equations (4.8) and (1.9). Upon substi-
+
+tution, one obtains an expression for ITT which again depends on time through T and <p.
+
+The scheme described above can be used again to obtain the second time derivative. The
+process is long and requires many verifications. but is quite straightforward. The results
+are:
+
+    1 +e [5sin(rp - 2 9 , ) + sin(3ip - 2p0)]- 2e2 sin 2 9 , ,
+
+wliere 8; denotes the ith tinie derivative. This result was obtained by H. Wahlquist in
+1987[29]. The terms containing sin@, niust be rnultiplied by a minus sign in order for the
+
+results to agree. because of a difference of 5- in the definition of the angles.
+
+    The second and the third time derivatives of the rediiced quadrupole moment (see
+equations (3.45) and (3.46)) are rieeded to calculate the energy and the angular momentum
+carried away by the radiation. The calculations of tliese quantities are simplified if one
+adopts the center of mass coordinates. This is done by starting with equation (4.19).
+subtracting off its trace and taking the time derivatives in the fashion described above. A
+short calculation reveals that the trace is just 1'5;= p r . r . The reduced qiiadrupole is then
+given by
+
+The procedure to calculate the time derivatives is the same as before. The final results for
+the second and third derivatives are:
+The second time derivatives:
+
+             = - 2~ [- sin + e (-2 sin ip + sin")] ,
+
+                        P
+
+a The third time derivrttives:                         + 3 COS' p)] .
+
+      a&x = *-)- J,. p5/2 p (1+ ecosp)? 2sin2q+esincp
+
+Al1 the other coinponents are null.
+
+4.3.2 The waveforms
+
+The gravitat ional waveforms in the quadrupole approximation are derived in section 3.3.
+Inserting equations (4.28) and (4.28) in equation (3.26). we get the two polarizations of the
+gravitat ionai-wave tensor:
+
++e2(1+ cos' 0.) cos 2p, + sin2Bo                                       (4.32)
+where R is the distance separating the binary frorn the observer.
+
+     Even though the time dependence of the wavefornis is unknown a t this point (p, e and p
+are functions of time and will be calculated in section 4.4): two observations can be made.
+First note that in the case e = O only the term proportional to cos29 (sin29) survives
+in hi (h, ). This shows that for a circular orbit, gravitational waves oscillate at tvice the
+orbital frequency. For an eccentric orbit, the gravitational waves oscillate at once. twice and
+three times the orbital Gequency. The eflect of the eccentricitg is to rntroduce additional
+harmonies of the orbital jrequency in the grauitationul uiaues[29].
+
+    The second observation to make is that when the observer is iooking at the binary frorn
+
+the top (O, = 0) both fields are equal in amplitude but out of phase by 9- .The polarization
+is circular. In the case where the observer is looking at the binary sideways (0, = $- )? only
+
+hi is non-zero (h, -x cos 0, = 0) because a11 the motion takes place frein left to right.
+
+4.4 Radiation Reaction
+
+4.4.1 Energy and angular momentum carried away
+
+Our goal in this section is to derive the effect of the radiation on the evolution of the two
+orbital parameters e and p: we still use the quadrupole approximation. Their tirne evoiution
+describes the inspira1 of the two companions towards each other. In order to accomplish
+this, we start by evaluating the aniount of energy and angular momentum carried away by
+the radiation. This is the same problem. since e and p are related to E and L through
+equat ion (4.7).
+
+    We start by calculating the loss of energy and angular momentum as defined by equations
+(3.45) and (3.46). To do this, we need to average these quantities over one period of the
+rnotion. The average over time can be replaced by an average over p. Consider a function
+F = F ( p ( t ) ) .Its average over one period is given by
+
+             = (1- e2)'/' ( ~ ( ~+)e(cols lp)-')9 .
+
+where the third equality follows from substituting rj, (equation (4.5))and T (equation (4.12))
+into the second line.
+
+    In the center of rnass coordinates, the energy carried away by the radiation is equal to
+
+Squaririg the components of the t hird derivatives of the reduced quadrupole niornent (equa-
+
+tion (4.31)) and dividing by (1 + ecos y~)' yields. for each squared element. a sum of even
+
+and odd powers of sin p and cos p. By carrying the calculation through. one finds that the
+odd powers appear with odd powers of e. Since the average over one period of an odd power
+of a trigonornetric function vanishes. the only contributing terms contain even powers of e.
+Grouping the different even powers of e together results in (see P.C. Peters[lG])
+
+ w here
+
+Our final expression for the energy carried away by the radiation is[16]
+where we used equation (4.34) and the identities (cos"), = 4,and (cos4q), = i.
+
+     The angular momentum loss is calculated in the same fashion as the energy loss. The
+difference is in the ternis to be summed. In the center of mass coordinates, the binary is
+in the zol~plane and the only non-vanishing component of the angular momentum is the z
+
+component . Using equation (3.46) gives this component as
+
+For the same reasons as mentioncd above. the odd powers of the eccentricity are discarded.
+Using the sanie trigonometric identities and grouping the terms of the sarne order in e. we
+get[lti]
+
+Equations (4.36) and (4.38) provides the differential equations describing the radiation
+reaction.
+
+    The ODE'S for e and p are easily obtained From the differential equations for E and
+
+L:. From the equations for e and p it is directly seen that p = p ( L , ) and e = e(E.L,).
+
+Accordingly, their time derivatives can be calculated by applying the chain ruie and using
+equations (4.36) and (4.38). It must be remembered that the energy and angular momentum
+emitted as gravitational waves correspond to a decrease in the energy and the angular
+
+momenturn of the binary, i.e. Ebin= -ECtVand L!"' = -L?'~("bin" stands for %inary*').
+
+Execut ing this yields:
+    0 one differentiai equation for pt
+
+                                        = --64- p ( l - e )
+
+                             5 M 2 p3 2'3 (1 + i e 2 ) ,
+     0 and one for e,
+
+where the superscript bin has been dropped. These results are equivalent to the results
+presented by P.C. Peters in 1964[16].
+
+     Equations (1.39) and (4.40) coupled with (4.9) constitute the set of first order differential
+equations that rnust be solved to obtain the evolution of the system and the wsveforms
+(equations (4.32) and (4.33)).
+
+4.4.2 Integration of the ODE'S
+
+In this part of the thesis. the integration of the differential equatioris (4.9)' (4.39) and
+(4.40) will be accomplished. Whereas a11 analytiç solution can be found for the circulas
+
+case (e = O), ~iiirnericalmethods of integratiori riiust be used in the gerieral case ( e # 0).
+
+The analyticd solution for circular orbits is used to biiiId tcrnpiates, while the numerical
+soiiition serves to construct the signals (see chapter 2).
+
+    For the specific case where e = O. we are left with a system of two differential equations
+to solve, since equation (4.40) for the eccentricity reduces to e = O. This implies that a
+circular orbit has a constant ecccntricity: throughout the evolution e = O. The remaining
+two equations are very easy to solve. The differential equation for p is
+
+with immediate solution
+
+where t , is the constaut of integration defined such that t = t, at the instant of coalescence
+Figure 4.4: The time evolution of p is shown for various mass combinations. The
+various binaries are labeled by the masses. in units of solar mass. of the two compan-
+ions. .As the total m a s of the binary increases. the two cornpanions start their motion
+closer together in order to keep the initial orbital frequency constant. The increased
+proximity of the companions results in a Faster evdution. The initial eccentricity e.1"
+in al1 cases is 0.55.
+
+(just prior to merger). This result can be inserted back in equation (4.9) to yield
+
+with solution
+
+where again the integration constant is chosen such t hat <p = 9, at the instant of coalescence.
+
+The chirp mass of the binary M = p3/5M215was introduced. The result stated in the paper
+by L.S. Finn and D.F.Chernoff[23] differs by a factor of two from the present resuit since
+
+they considered the phase of the radiation, i.e. twice the orbital phase (see subsection
+(4.3.2)).
+
+    The ODE'Sfor an eccentric binary system cannot be solved analytically. The equations
+O  20  40  60  80  100       120  140  160  180
+
+                   time (s)
+
+Figure 4.5: The eccentricity e40 when the wave's frequency is 40 Hz is chosen to be
+0.1. The eccentricity at t = O is higher than 0.1 because we start the evolution when
+the wave's frequency is 35 Hz. Even though al1 the binaries start with the same
+eccentricity the more massive binaries evolves faster because the two companions are
+placed closer together. This ensures that the initial wave's frequency is constant. The
+binaries are labeled bu the masses. in solar m a s . of the two companions.
+
+are solved using the fourth order Runge-Kutta numerical integration routine from Numerical
+Recipes in C[3O], combined with t heir adaptive step-size driver. The integrat ion scheme
+works as follow. The driver (0deint.c) calls the integration routine ( r k q s . ~ )T. he point
+
+Located at t + At is evaluated using the known point at t and intermediate points. The
+
+number of points chosen between t and t + A t determines the order of the integation.
+
+The relative error on the integration is evaluated using the sixth order terms ( r k c k c ) . If
+the error is bigger than the relative accuracy, a smaller step-size is provided by oc feint.^.
+The adaptative step-size algorithm (odeint. c) ensures that the numerical solution converges.
+The original 0deznt.c routine has been modified to end the integration at a final value of
+p instead of ending at a final specified time. We take p = 6 as the final value. For a test
+mass orbiting a Schwarzschild black hole, this value of p corresponds to the i ~ e r m o ssttable
+orbit.
+     The initial value of the parameters is set as foilows. The focus of interest being the
+
+initial LIGO detector, the signals are chosen to start when the orbital frequency is equal to
+a third of the wave's frequency when it is first detectable by the initial LIGO interferometers
+
+(kr=v40 HZ):
+
+This requirement ensures that we capture the entire signal. If the signal were started at a
+higher frequency some of t lie harmonies of the wilve's initial frequencies ( 13.3 Hz, 27 Hz and
+40 Hz) present in the gravitational signal (see equations (4.32) and (4.33)) would be rriissed.
+The initial value of p is then found by substituting the value of the initial eccentricity e.ia
+at jcrv= 40 Hz in equation (4.12). For an initial eccentricity e ~ a nd the initial period T
+mentioned above. the initial value of p, is given by the relation
+
+This means that by increasing the eccentricity. or the total m u s , the companions in the
+binary are pushed closer together. It is expected that tfiey will experience a stronger
+interaction and thus decay laster. This is clearly apparent iri figures (4.4) and (4.5).
+
+    The total tirne the binaries spend in the LIGO frequency band before coalescence is
+displayed in table (4.1) for the various combinations of masses considered. We see that
+the duration indeed decreases with increasing eccentricity. h o ther feature to notice is
+the decrease in durstion as the total mass increases. This is due to the decrease in the
+initial separâtion with a mass increase, while ali other factors are fixed. The proximib of
+the cornpanion increases the interaction, leading to a faster coalescence. Both trends can
+be understood by combining equation (4.46) with equation (4.39). These two equations
+combined together show that i n i t i d y p decays as
+Table 4.1: The total time (in seconds) spent in the LIGO band before coalescence.
+The companions are labeled by the masses of the companions, in units of solar mass.
+
+e40 1.0+1.0 1.4+1.4 1.4+2.5 1.4+5.0 1.4+10 3.0+6.0 6.0+6.0 8.0+8.0
+
+0.00 137.97 78.75 49.24 29.04 17.60 11.63 6.96 4.31
+
+0.05 136.71 77.94 48.81 '28.78 7 . 4 12.53 6.90  4.26
+
+0.10 133.02 75.90 47.48 28.01 16.95 12.19 6.70   4.15
+
+O  126.99 72.49 4 5 . 3 26.13 16.19 11.64 6.41   3.96
+
+0.20 118.91 67.89 42.44 25.04 15.16 10.90 6.00   3.71
+
+0.25 110.15 62.31 38.95 22.98 13.92 10.00 5.50 3.40
+
+0.30 98.03 5.5-95 34.99 20.63 1 . 8.99 4.94 3.06
+
+0.35 86.06 19.10 30.11 18.12 10.97 7.89   4.34   '2.68
+
+0.40 13.65 42.05 16.29 1 5 . 0 9.38 6.75  3-71   9-.9-9
+
+0.45 61.28 34.97 21.51 12.59 7.81 5.62 3.05      -
+
+0.50 49.37 28.18 17.63 10.39 6.28 4.52    2-49   -
+
+O . 38.31 21.56 13.67 8.06 4.88 3.51      -      -
+
+0.60 25.41 16.21 10.15 5.97 3.61- -       -      -
+
+0.65 19.95 11.38 i .12  -  -      -       -      -
+
+It is clear from this equation that an increase in the n i a s or the initial eccentricity results
+in a faster initial decay rate and thus a füster evolution.
+
+    The initial value cf cp is chosen to be zero. Because the two coriqxmioris start their
+evolution closer together when the ecceritricity iricreases. the duratiori of the signal is shorter.
+This rneans that the phase at coalescence will have a srnaller numerical value for high
+eccentricities than for low ones (see figure (4.6)). For example. two compact objects of rnass
+1.41ç1-, each and in an orbit with e = O will go through 1959 oscillatiotis before coalescerice,
+while the sarne binary with e = 0.73 will go through 174 oscillations. As c m be seen from
+figure (4.6) the evolution of the phase proceeds by steps, i.e. the orbital phase changes
+rapidly when the two companions approach the periastron. Kepler!s law is approximately
+valid in the quadrupole approximation.
+
+4.4.3 Numerical Results for the waveforms
+
+The integrated parameters can now be inserted back in equations (4.32) and (4.33) to get
+the waveforms. The parameters 6, and cp, appearing in the waveforms are set to and 0,
+Figure 4.6: The evolution of the phase p of a l.-Ll\I.,+ 1.4.\1G binary as a Function of
+
+time. When the eccentricity increases, the evolution of the systeni happens on a much
+shorter time scale because of the increasing proximity of the companions. Because
+of this Pister evolution. the phase at coalescence 9,will be smaller for an eccentric
+binary. Shown are the three cases e.10 = 0.0.0.3.0.6.
+
+respec tively.
+    The evolution of an eccentric binary system is similar to the evolution of a circular
+
+binary, but eccentric binary systems emit radiation rnostly at the periastron. This is because
+the two companions feel a much stronger interaction when they approach t his point. Earlier
+in the evolution, the radiation is emitted in short bursts, resulting in sharp peaks in the
+waveforms, but as the system evolves the eccentricity decreases. The orbit is a little more
+circular. the peaks are broader and the radiation is emitted more evenly over one period of
+the motion. An eccentric binary never becomes completely circular, but at the end of the
+inspirai, most of the eccentricity has been radiated away and the gravitational waveforms
+resemble the waveforms h m a circular binary system. This is illustrated in fi,gure (4.7) for
+
+a 1.4 Ma + 2.5 Ma binary system.
+Figure 4.7: Plot of the rvaveforni of an eccentric binary. The upper frame shows the
+entire signal. The lower frarnes show various portions of the signal. Initially, the
+binaries have an eccentricity of 0.75. As the gravitational saves remove energy and
+angular momentuni from the system. the eccentricity decreases. At the end of the
+evolution ( just before coalescence) the companions travel in an almost circular orbit.
+The tmo companions have masses 1.-43[, and d 2 . 3 M w
+
+    The eccentric signal is sirnilar to a circular signal in the sense that the evolution of the
+eccentric waveforrns results in chirp signals. It sweeps upward in the frequency band until
+the two cornpanions rnerge.
+Chapter 5
+
+Circular Waveforms as Search
+
+Templates
+
+5.1 Introduction
+
+In the previous chapter we obtairied the explicit tinit-deperidence of the gravitational wave-
+forms. This, combined with the theoretical results of chapter 2. provides enough tools to
+evaluate the efficicncy of the circular templates at capturing the radiation emitted by an
+eccentric binary systeni. Iri order to do this. we first need the spectral representation of
+both the circular and the eccentric waveforms. In subsection 5.2.1. the Fourier transforms
+of the circular waveforms are calculated using the stationary phase approximation. This a p
+proximation has no equivalent for the radiation emitted by eccentric binary systems. which
+forces their Fourier transforms to be calculated numerically (subsection 5.22 ) .
+
+    Once the Fourier transforms are available. it is quite straightforward to construct the
+ambiguity function A(n,t9) defined in chapter 2. The ambiguity function is evaluated nu-
+rnerically. A method for maximizing A(Q 8)over the parameters characterizing the
+circular templates is explained in subsection 5.3.2. Two quantities are obtained by calculat-
+ing the ambiguity function: the signal-to-noise ratio and the fitting factor. While the first
+one provides information about the detection probability (provided a threshold is fked on
+the signal-to-noise-ratio), the second gives information about the quality of the template
+used to mode1 the signal. These two quantities are obtained in subsections 5.4.1 arid 5.4.2,
+respect ively.
+
+5.2 The Fourier transforms of the waveforms
+
+5.2.1 The stationary phase approximation
+
+The Fourier transforms of the waveforms produced by a circular biriary are obtained t hrough
+the stationary phase approximation (SPA). We take these waveforms to be our templates.
+The SPA is based on the steepest-descent niet hod and can be applied to any function for
+which the amplitude and the phase are monotonic functions of tirne[31]. For a furiction
+F ( t ) written as
+
+wit h Fourier transform
+
+the s t a t i o n q phase approximation can be used as long as the two conditions
+
+                         -i ain,-r(t)  4
+                         6 at          <<1 and -<<1
+                                       11*
+
+axe satisfied.
+
+When the two conditions in equation (5.2) are redized, the maximum contribution to
+
+the Fourier transform arises when the phase of the integrand in equation (5.1) reaches an
+
+extremum. In other words, we are looking to solve the equation
+with the trivial solution
+
+This equation should be seen as defining a one-to-one correspondence between the frequency
+
+domain and the time domain. A single time t, corresponds to a fixed frequency f,. Once
+$ ( t ) is explicitly known as a function of tirne and provided it has an inverse 6-l. equation
+
+(5.4) cari be sulved to give 1 ( / ) = 4-1(27rf). At tliis poiut, time is defiuecl as a function
+
+of frequency. Provided the root of equation (5.4) is unique. the Fourier transform in the
+stationary phase approximation is[23]
+
+For signal detection with tcmplates based on circular binary systeois. we are interested
+
+in calciilating the Fourier transforms of h + ( t )          with e = O. The only terms left are
+
+the ones proport ional to cos( 2 ~ )  (see equations (4.32) and (4.33). respectively).
+
+We write these two functions in ternis of exponentials aiid discard the terrns containing e l ' ~
+
+( these correspond to negative frequencies contribut ions): cos(2cp) = ie-"' and sin(2cp) =
+
+$-1e-"'. For the waveforms rnentioned above. $ ( t ) = 2ip(t). Using the expression for $ ( t )
+
+(equation ( 4 . 4 3 ) ) ,we see that equation (5.4) becomes
+
+    The stationary phase approximation requires cp, @ and p as functions of the Erequency
+instead of functions of time. We first get Ijj(f ) by taking another time derivative of @
+(equation (4.43)) and then substituting equation (5.7) in the resulting expression. The
+expressions for i p ( t ) and p ( t ) are given in equations (4.42) and (4.44). Direct substitution
+of equation (5.7) yields
+
+                         d f ) = v c - 7 - 1 k1 { T ~ w j ) - 5 ' 3
+
+                                                          32 CL
+
+    Substituting these in the expressions for the waveforms (equations (4.32) and (4.43))
+yields the Fourier transforms of the templates[2J, 321. Adopting the notation of chapter 2
+for the ternplate. we get
+
+where
+
+       ( 4 cos O0  for h , .
+
+and the other symbols were defined in cliapter 4. Inspection of equation (2.28) rcveals that
+the amplitude of the teniplate plays no role in assessing its quality. since the ambiguity
+function is a dimensionless ratio. The template will be of good quality if it is able to track
+the phase of the signal accurately. Thus, the exact form of the parameters appearing in
+equation (5.11) is irrelevant. The three parameters {t,? i. J M ) appearing in the phase will
+be varied to mavimize the overlap between the eccentric signal and the circular template.
+Consequently, they are phenomenological parameters and cannot be expected to match the
+real parameters of the signal.
+
+    For detection of gravitational waves by the LIGO interferometers. it is very important
+to monitor the phase accurately to maximize the signal-tenoise ratio. The stationary phase
+approximation has been shown to be accurate enough for matched filtering[32].
+5.2.2 Fast Fourier transform
+
+We now turn to the calculation of the Fourier transforms of the eccentric waveforms. which
+will serve as the signals. For eccentric binary systems, the waveforms are the sum of three
+different terms, which oscillate at once, twice and three times the orbital frequency. If we try
+to caIculate the Fourier transform of each term by using the stationüry phase approximation.
+we would be trying to invert
+
+with + now given by equation (4.9) as
+
+The constant a equals 2. 1or 3 if $(t) = p ( t ) ;2 9 ( t )or3q~(t)r?espectively. For a given
+
+frequency, this equation has more than one root. bccause the angular velocity is not constant
+dong the orbit. In other words, the eccentric waveforms do not satisfy the inequalities (5.2)
+
+because of the appearance of cos(p(t))in +.
+
+     Instead, the Fourier transforms üre obtained by using the fast Fourier transform routine
+jour1 .c from Numerical Recipes in C [30]. In order to get a constant step-size in the time
+domain. required by the fast Fourier transform algorithm. we use the results of chapter 4
+(subsection 4.4.2) for the waveforms and interpolate between the points already available
+by using a cubic spline interpolation (splint.c ) .
+
+   The Fourier transform of the gravitational waveform h+(f) is displayed in figure (5.1).
+
+It clearly shows that a binary system spends most of its life in the low frequency regime.
+because this is where the amplitude is largest. Even though the binary system is chosen
+to have two equal mass cornpanions (1.4 hla each), the Fourier transform would have the
+same general form for other mass combinations.
+
+    The Fourier transform of an eccentric signal is qualitatively the same, but shows more
+structure than the Fourier transform of a circuiar waveform. This is due to the presence of
+500  600
+
+frequency (Hz)
+
+Figure 5.1: The Fourier transform of the gravitational waveform is obtained through a
+FFT algorithm Form ~VurrrerieaRl ecipes in C [30]. The shape of the Fourier transform
+shows that the binary systern spends more time at low freq~ienciesthaii at high
+ones. The amplitude of the waveforms d e c q s as J S - ' / ~ .The case displayed is for a
+
+1.4 .\la + 1.4 Mo binary system with zero eccentricity
+
+terms contributing at once: twice and t hree times the orbital frequency. and t heir subsequent
+harrnonics. The structure of the eccentric signal is thus richer than the one of the circular
+template (see figure (5.2)). At high frcquencies, the eccentricity of the system decreased
+significant ly and the Fourier transforms approach the circular oncs.
+
+    Figure (5.2) displays the envelope of the Fourier transform of an eccentric waveforrn.
+The figure shows the emergence of the three contributions arising at once, twice and thrice
+the orbital frequency. The eccentric waveforms constitute the signais we are trying to detect
+by matched filtering.
+Figure 5.2: The envelope for a binary system with eccentricity eAio= 0.1 is shown.
+Both companions have a triass of 1.4 dl,'. The coniponents a t once. twice and tlirice
+the orbital frequency are clearly apparent. The component a t once the orbital fre-
+quency appears at 13.3 Hz. the one a twice the orbital frequency appears a t 26.6 Hz
+and the one a t tlirice the orbital frequency starts a t 4OHz. The interference between
+the three components is obvious between 40 Hz and 150 Hz. For comparison, the
+inset shows the envelope of the same binary. but with e40 = O. The only componerit
+present in this case is the one a t tmice the orbital frequency
+
+5.3 The Ambiguity F'unction
+
+5.3.1 Constructing the Ambiguity function
+
+The ambiguity function il(Q19)defined in chapter 2, subsection 2.2.3. is built using the
+natural scalar product for matched filtering (equation (2.25)). We denote the Fourier trans-
+
+f o m of the eccentric signal by h(f,6),where ô is the set of parameters describing the signal.
+
+For this work, we choose the detector to be located at 0, = and ip, = O. For each signal,
+the masses of the two companions have to be specified. We are looking at different mass
+
+combinations below. The template is chosen to be fi+(f ,O), where il= {t,, k , M } for a
+circular ternplate obtaiiied using the quadrupole formula (see equation (5.11)).
+     From the definition of A(n,6) (equation (2.28)), we see that three ingredients are needed
+
+to do the rnaximization: The imer product of the signal h (f,19)with itself, the inner product
+of h(f ,19) with f i + ( /O, ), and the inner product of ~ h +f,(0) with itself. For a given signal
+h(f,dl), (h(d))(h(19))is unaffected by the rnaximization procedure. since it only depends on
+
+the real parameters of the source. Thus we need to maximize
+
+The numerator and the denominator will be treated sepaïateIy to obtain the final expression.
+By using equation (2.25) with the stationary phase approximation (equation (5.11) the
+denorninator can be written as
+
+where Su is the amplitude of the noise in equatiou (2.13) and
+
+The last equality follows from the definition of the power spectral density of the noise in
+the initial LIGO (equation (2.13)). Because t his integral is the same for al1 the templates,
+it needs to be evaluated only once.
+
+    On the other hand. the numerator of equation (5.16) has to be calculated for every
+eccentric signal we wish to study, since we do not have an aualytical representation of the
+signals. With the stationary phase approximation for ?il+ and leaving h ( j ?ô) as an unknown
+function? this can be written as
+where B(t,, M) is given by
+
+For any choice of parameters {t,. ii,M } in the template, the signal-to-noise ratio is obtained
+
+by dividing (5.19) by equation (5.17). The result is
+
+with 1 defined in equation (5.18).
+    It is clear Erom equation (5.21) that the amplitude of the template does not play any
+
+roIe in our calculation, siricc it does not appear in the final expression for ( p ) . Equation
+
+(5.21) also shows that if we had chosen m. ( j .n)as our template instead of &(j. Ci)? the
+
+result would have been the same. The only difference is iri the definition of M. Since it is a
+phenomenological parsrneter to be adjusted in the rnauirnizatioii procedure. tliis difference
+is irrelevant.
+
+5.3.2 Maximizing over the parameters
+
+The signal-to-noise ratio (equation (5.21)) has to be rnaximized over the three parameters
+(t,, k ?M } of the circular template (equation (5.5)). First note that the maximization over
+2 is trivially achieved by taking the magnitude of equation (5.21):
+
+                            ( p ) = 2 1 - ' / ~ 1 ~ ( tM, , )I .  (5.22)
+
+Because of this property, the value of 2 maxirnizing the ambiguity function A@,,i? iti) is
+
+not explicitly searched for in this work.
+    The maximization over the two parameters left is not as easily achieved because the
+
+function B(t,, M ) has to be constructed numerically. In order to maximize this discrete
+function we note that it is naturally evaluated by fast Fourier transform. This procedure
+carries the integration over the frequency to return a function of t,. Concretely, we proceed
+as follows. First we choose a chirp ruass .A4 for the ternplate and evaluate the integral
+of equation (5.20) by fast Fourier transform. The function returned depends only on the
+teniplate's parameter t,. The maximization over t, is then achieved by searching for the
+
+maximum value of B(t,, M [ ) returned by the code. Once this is accomplished, another chirp
+
+m a s M 2 is chosen for the same eccentric signal h ( / ,8).Another fast Fourier transform is
+
+taken to get B(t,?M 2). The same procedure of rnaxirnization over t, is then carried out.
+By doing this for a range of diirp masses we coristruct a functioii G ( M ) = ~iiaul,B(L,, k t )
+t hat depends solely on the chirp mass. At this poirit. the function B ( M ) is maximized over
+M by golden-section search (Numerical Recipes in C [3O]).
+Table 5.1: The paranieter t, obtained by maximizing the furiction B(t,,iM). The
+values extracted are in good agreement with the reai time of coalescence of the binaries
+(see test for detail). The binaries are labeled by the masses of each cornpanion in
+units of solar mass.
+ e ~ n 1.0-t-1.0 4 + 4 1.4-t.L.S l.4+5.O 1.4+10 3.0+6.0 6.0i-6.0 S.O+S.O
+
+    Table (5.1) contains the values of t, which maximize the ambiguity function for the
+binary systems under study. Even though the circular templates are not a perfect match
+for the eccentric signals, the maximization procedure retu n s values of t , t hat reproduce
+the real time of coalescence of the binaxies (see table (4.1), page 59). On the other hand,
+the value of the chirp mass obtained by maximizing B ( M ) ( M e f ) does not reproduce
+Table 5.2: The ratio of the chirp mass extracted by the masimization procedure M e f
+
+to the real chirp mass JM, of the eccentric signal. The various binaries are labeled
+by the masses of the two companions, in units of solar m a s . iMeff increases as the
+initial eccentricity e40 increases to mimic the signal (see text for details).
+ eLla 1.0+1.0 1.4fl.4 4 + l.4+5.O l.-L+lO 3.0+6.0 6.0+6.0 8.0f8.0
+ 0.00 1.0000 0.9999 0.9999 0.9999 0.9997 0.9997 0.9994 0.9992
+
+the real chirp niass of the signals ( M , ) . Table (5.2) displays the value of the chirp rnass
+
+returned by the maximization procedure compared to the actual chirp mass of the binaries.
+As the initial eccentricity of the signal is increased. the value of the parameter increases as
+well. The explanation is simple. A larger eccentricity rcsults iri a faster evolution and the
+circula template tries to compensate for this by increasing M: I, f. This corresponds to a
+faster evolution as can be seen from equations (4.39) and (4.40).
+
+5.4 Numerical results
+
+5.4.1 The signal-to-noise ratio
+
+To construct the ambiguity function we still need to evaluate the signal-to-noise ratio one
+would achieve by optimal filtering (equation (2.23)). Once the Fourier transforrns of the
+eccentric signals are known, it is trivial to construct the optimal SNR (right-hand side of
+Figure 5.3: The retio of the sigrial-to-noise ratio for eccentric binary systenis. (p(e.&
+to the signal-to-noise retio expected if the same binary were circular. ( p ( 0 ) ) . The in-
+crease in the signal-to-noise ratio as the initial eccentricity increases is due to the
+presence of tliree terms in the eccentric signal: at once. twice and thrice the orbital
+frequency. The various binaries studied are labeled by the two masses of the com-
+panionso in units of solar niass.
+
+eqiiatiori (2.22)) . The optirrial signal-to-noise ratio is
+
+The integral is evaluated numerically by usirig a discrete integration algorithm. The results
+are displayed in figure (5.3).
+
+    The increase in the SNR with initial eccentricity e4o is due to the presence of three
+terms in the eccentric signal. i.e. the Fourier transform of an eccentric signal is of the form
+
+where (/, jp) is the cornponent of the gravitational waveform which oscillates at j times
+
+the orbital frequency. For a circular binary, hl(f,2rp) is the o d y term preseot.
+   To calculate the optimal SNRI we need to evaluate h(f)h*(f)(equation (5.23)). This
+
+gives terms of the form ;,Si( f ) . When j = k; the integral is nonzero because we are
+
+integrating the magnitude of a function, i.e. the phase of this type of term is O. On the
+
+other hand. when j # k the function is oscillating and vanishes upon integation between
+
+[-oc,sa]. Accordingly, the maximum SNR can be written as
+
+where
+
+The SNR of a circular binary contains only the terni       the SNR in this case is expected
+
+to be lower t han for an ecçentric binary. When e.io = 0. the SNR achieved by using Wiener's
+
+optinial filter is calculated from equation (5.17) and is
+
+where we used S, = 0.5 x 10-.16 HÏ-"/"[~.I]? and 0, = 0.
+    The result displayed in figure (5.3) iniplies that for two identical binary systems located
+
+at the same distance R, with the first binary circular and the second one eccentric, the signal
+
+Gom the second one is stronger. Thus, it should be easier to detect gravitational waves from
+eccentric binary systems, if such signals were explicitly searched for in the output of the
+interferometers. This would require the inclusion of eccentric templates in the bank of
+templates available to the LIGO interferorneters. When the number of templates increases.
+the probability of false detection (mistaking the noise for a signal) increases as well. To
+compensate, the threshold on the SNR must be fked higher[21]. It is not clear at this
+point if the additional computational burden and the possible loss of circula signals is
+an important obstacle. To answer this question requires information about the number of
+eccentric binaries expected to coalesce in the course of a year.
+     Combining the results for the optimal SNR with the non-optimal SNR (equation (5.21))
+allows one to build the ambiguity function (equation (2.28). page 25). The ambiguity func-
+tion is affected by two processes: the first one is the net decrease in the overlap between the
+eccentric signal and the circular template when the initial eccentricity increases: this afïects
+the SNR achieved by non-optimal filtering. The second is the increase of the optimal SNR
+with increased initial eccentricity e ~ Bo oth effects contribute to reduce the mavimum value
+of A&, 2 . M j. Figure (5.4) displays the ambiguity iunct ion &M j = niaul,, A(t,, 2' iM)
+as a function of the effective chirp mass for various initial eccentricities eqc The binary is
+taken to be a neutron star orbiting a 10 solar mus black hole. The riet decrease induced by
+a higher eccentricity is clearly evident. When the signal is taken to have edo = 0. the m u -
+imum value the ambiguity function takes is one. This was expected: the circular template
+rncidels accurately the radiation coming frorn a circular binary.
+
+5.4.2 The Fitting Factor
+
+The fitting factor is the niaximuni value of the anibiguity function. For example. this
+extremum can be read off the function displayed in figure (5.4). Numerically. the niaximurn
+is found by golden-section search[30]. The results are displayed in table (5.3) and in figure
+(5.5). The results show two trends. First. for a given choice of input masses. the fittirig
+factor decreases as the initial eccentricity is increased, because the signals possess additional
+features distinguishing them from the circular templates. The circular template is not a
+good mode1 for signals corning from highly eccentric binaries. Secondly, as the total mass
+of the system increases, the circular templates can be used to detect binaries with higher
+initial eccentricities. This is mostly due to the fact that the more massive the binary gets,
+the shorter is its evolution. In t his case, the circular template has less of an opportunity to
+get out of phase with the eccentric signal.
+
+    For example, 19.4% of coalescing neutron star binaries ( m a s of each cornpanion: 1.4
+                                                                 (effedive chirp rnass)/(realchirp mass)
+
+Figure 5.4: The ambiguity function mavimized over G and t, for a binary system
+made of a Neutron star (1.4 .IIa) and a biack hole (10.0 JIq).The effect of increasing
+the initial eccentricity is to reduce the maximum value of the arnbiguity function. As
+expected. the circiilar template is not rnodeiing the radiation Froni highly eccentric
+binaries ver- well.
+
+MG) would be missed by the detectors if the initial eccentricity were 0.1. sirice in this
+case FF = 0.9306 (recall tliat the loss in event rate is given by 1 - F F 3 ) . If one of the
+companions is replaced by a 10 itI(3black tiole, the loss in event rate goes down to 7.0%, and
+if the binary is made of two black holes of 6 Mg cach. the percentage of signals rnissed, for
+the same eccentricity of 0.1. is only 2.1%. When we go to higlier eccentricities. the fitting
+factor decreases even more dramatically. For an initial eccentricity e4o = 0.5, 93.5% of the
+signals from neutron star binaries will be missed, 71.8% of the signals emitted by binaries
+made of a neutron star and a 10 Mo black hole will be missed, and 61.4% of the signals
+
+emitted by 6.0 Mablack holes binaries will go unnoticed. This loss of events is huge and
+
+unacceptable. We adopt a threshold of 0.9 on the fitting factor such that a maximum of
+27% of the signals will be missed. For the three binaries mentioned above, this correspond
+Figure 5.5: The fitting factor as a function of the initial eccentricity for various binary
+systems. Two trends are apparent. The first one is the net decrease in the fitting
+Factor as the initial eccentricity is increased. while the total mass of the binary is held
+fix. The second one is the increase in the detection probability when the total mass
+of the binary system is increased.
+
+to maximum initial eccentricities of 0.13 (1.4 LM, neutron star-1.4 neutron star), 0.22
+
+(1.4 MO neutron star40 rçl., black hole). and 0.3 (6.0 black hole-6.0 black hole).
+The fitting factor for other combinations of masses are displayed in table (5.3). The trends
+
+described above are clearly apparent.
+    Our main conclusions are the FoUowing:
+
+    1. Eccentric binaries can be detected by the initial LIGO detector even if they are not
+       explicitly searched for with eccentric templates:
+
+   2. Inspiraling compact binaries made up of 10 solar m a s black holes are easier to detect
+       than neutron stars binaries, because the circular templates have less of a chance to
+       go out of phase with the signal;
+Table 5.3: The fitting factor for various binaries as a function of the initial eccentricity.
+The eccentric binaries are more easily detected when the total mass of the sy-stem is
+large, and mhen the eccentricity is low. As the total mass of the system is increased,
+the eccentricity up to which a eccentric coalescing binary can be observed increases.
+
+e-lo l.O+l.O  l+l      1.4-t-2.5  1.4+5.O  1.4+10   3.0+6.0  6.0+6.0  5.0+8.0
+0.00 0.9978   0.9969   0.9990     0.9975   0.9976   0.9982   0.9984   0.9996
+0.05 0.9604   0.9'763  0.9850     0.9923   0.9916   0.9977   0.9964   0.9959
+0.10 0.8980   0.9306   0.9468     0.9645   0.9763   0.9841   0.9929   0.9929
+O . 0.8363    0.5792   0.9025     0.9296   0.9465   0.9606   0.9754   0.9873
+0.20 0.7617'  0.3224   0.8544     0.8926   0.9182   0.9335   0.9550   0.9731
+0.25 0.6950   0.7608   0.5032     0.8518   0.5850   0.9033   0.9295   0.951'7
+0.30 0.6304   0.6366   0.7491     0.8051   0.8501   0,8684   0.9004   0.9246
+0.35 0.5692   0.5801   0.6921     0.7534   0.8110   0.8288   0.8611   0.8933
+0.40 0.5128   0.5198   0.6348     C.6953   0.1649   0.7830   0.8268   0.8545
+0.45 0.4537   0.4604   0.5743     0.6373   0.7143   0.1316   0.7806
+0.50 0.3967   0.4018   0.5126     0.5764   0.6*560  0.6750   0.7'281     -
+0.55 0.34'17  0.3496   0.4523     0.5133   0.5949   0.6135
+0.60 0.2971   0.3019   0.3955     0.424    0.5341               -        -
+0.65 0.1568   0.2309   0.3445                          -                 -
+                                     -        -        -        -
+                                                                          -
+                                                                -
+                                                                         -
+
+3. If the threshold on the fitting factor is set to 0.9. then the initial eccentricity of a
+
+   massive binary system ( A I 5 20 i&) riiust be less t han 0.35 for a successful detection
+
+   of its gravitational waves.
+Chapter 6
+
+Conclusion
+
+6.1 Summary
+
+The work preserited in this thesis is not al1 original. Part of it was done before and al1
+we did in this case was to verify the existing results. CVe gave a derivation for the various
+quantities of interest in the detection process such as the sigriül-to-noise ratio. the anibi-
+guity function. and the fitting factor (see chapter 2 and the relevant sections within). The
+quadrupole formula and the radiation react ion for gravitat ionally bound systems were de-
+rived in chapter 3. We verified the results of H. k h l q i i i s t for the eccentric wnveforms['29]
+
+and of P.C.Peters[l6] for the radiation reaction.
+
+    Part of the work presented here was original. We obtained the time evolution of the
+parameters describing eccentric b i n q systems. the explicit time evolution of the waveforms.
+and we showed that the waveforms associated with eccentric binaries possess more features
+than the waveforms of circular binary systems (see figure (5.2)). This made the calculations
+for eccentric binaries more arduous. Among other things, these features forbid the use
+of the stationary phase approximation to calculate the Fourier transforms of the eccentric
+waveforms. Instead they were obtained by using a fast Fourier transform algorithm. The
+fact that the gravitational waves oscillate a t once, twice and thrice the orbital frequency
+plays an essential role: and special attention must be paid to this effect when constructing
+adequate signals b r the LIGO interferometers. The presence of these different terms forced
+us to start the orbital evolution of the eccentric binaries much earlier than is necessary
+for circulas binaries. Once the Fourier transforms were calculated, the optimal SNR for
+eccentric binaries was calculated (see figure (5.3)), the ambiguity function was constructed,
+
+and the fitting factor was obtained by rnaximizing the ambiguity function. Our results show
+
+that massive eccentric binaries should be detected by the initial LIGO interferometers as
+long as the initial eccentricity is Iower than 0.35. We finci that the fitting factor increases as
+the total niass of the system increases (figure (5.5)). This is good news, since as the n i a s of
+the binary increases the radiation it enlits is stronger. making the detection easier. It will
+be easier, for the initial LIGO, to detect massive binaries whether t hey ase circulu or riot.
+
+6.2 Future Outlook
+
+6.2.1 Post-Newtonian corrections t o the eccentric waveforms
+
+A crucial simplification we made in this work was to assume the validity of the quadrupole
+approximation? t hus neglect ing al1 post-Newtonian correct ions. This is an oversimplifica-
+tion, becausc the r d waveforrns have a slightly different behavior due to these corrections.
+Shough it is doubtful that the results will be qualitatively affected by inciudirig these post-
+Newtonian corrections, to include them would be desirable if a fully quantitative analysis
+
+were necessary. The eccentric waveforms have been calculated to order (C) 4 beyond the
+
+leading-order expression by A. Gopakumar and R. Iyer[l3]. Their paper contains the basis
+for an improved version of the present work. By including post-Newtonian corrections into
+the eccentric signal and the templates, we c m expect the fitting factor to increase slightly
+because the templates are characterized by a larger number of parameters. The new pa-
+rameten might make it possible to foiiow the phase of the eccentric signals more accurately.
+On the other hand, we cannot expect a perfect match (FF= 1) between eccentric signals
+and circular templates. There should be a quantitative difference in the fitting factor, but
+qualitatively, we expect the same type of c u v e as shown in figure (5.5).
+
+6.2.2 Advanced LIGO
+
+The present work was carried out for the initial LIGO detectors. These are sensitive to
+signals with frequencies between 40 Hz and 1000 Hz. It would be interesting to do the cai-
+culations for the advanced version of LIGO. This is the detector we are ultiniately interested
+in, since it is far more sensitive than the initial LIGO. The frequency range for this detector
+will be between 10 Hz and 1000 Hz. Since coalescing compact binaries spend most of their
+life in the low frequency regime. the inclusion of the frequency band between 10 Hz and 40
+Hz will ruore than double the duration of the signais. To obtain a good frequency resolution,
+we would have to use a huge riumber of points and the computing facilities presently at Our
+disposition are not sufficient. Nevertheless we can reach some intuitive conclusions froni the
+knowledge accurnulated while working in the context of the initial LIGO. kVe know that the
+fitting factor increases when the total rnass of the eccentric binary increases due to a shorter
+duration of the signal. Le. the less tinie the eccentric signals last. the more accurately the
+circular templates cari follow them. Thus, it is alrnost certain that the circulw templates
+
+would not perform as weil for the advanced LIGO as foc the initial LIGO since the duration
+
+of the signal will be longer than the ones displayed in table (4.1). On the other hand,
+we can expect the same trends to appear in the fitting factor: For a given binary system,
+the fitt ing factor should decreasc as the initial eccentricity increases; and for binaries with
+different masses and the same initial eccentricity, the fitting factor should be higher for the
+more massive binaries, since its signal will have to be foUowed for a shorter period of time.
+
+    We can also predict an increase in the optimal SNR for eccentric binaries. The increase
+observed for the initial LIGO is due to the presence of the three hindamental components
+a t once: twice and thrice the orbital frequency. The advanced LIGO will see more of the
+eccentric contributions at low frequencies leading to a higher signal-to-noise ratio: The three
+components are stronger at Iow frequencies than at high frequencies (see figure (5.2)) and
+this should be reflected in the optimal SNR.
+
+6.2.3 Time-frequency detection of gravitational waves
+
+We have seen that non-optimal filtering results in a net loss in signal-to-noise ratio. This
+is likely to occur for a variety of sources. It rnight be worth exploring alternative detection
+methods that do not rely on a prior knowledge of the sources and their evolution. Such
+methods exist, but very little is known about their properties and how they can efficiently be
+applied ta the detection of gravitational waves in kilometer-size iriterferometers. One such
+method is time-frequency detectiori[33]. Thc detcction process in this case is carried out
+in the time-frequency domain. using a filter that does not requirc ariy detailed information
+about the sources. This method will not result in the optirnai signal-to-noise ratio, but since
+non-optimal filtering results in a, Ioss of signal-to-noise ratio. it might be worth exploring
+whether time-frequency methods do better than matched filteririg in the absence of optimal
+fil t ers.
+Bibliography
+
+ [l] R.M. Wald, Generd Relativity. The University of Chicago Press. Chicago (1984).
+ [2] B.F. Schutz, .-4 first course in general relatiuity, Cambridge University Press. New
+
+      York (1990).
+
+ [JI L. Blanchet. B.R. Iyer. C.M. Will. and A G . Wiseman. Class. Quantum Grav. 13!575
+
+      (1996).
+ [-II T. Tanaka. H. Tagoslii. and M. Sasaki. Prog. Theor. Ptiys. 96. 1087 (1996).
+ [5] C.W. Misner. K.S. Thorne. and .J.A*Wheeler. Gravitation. Freemann. San Fransico
+
+      (1973).
+ [6] S. Weinberg. Gr~uitationund Cosrnclogy! John Wiley and Sons. New York (1972).
+ [7] K.S. Thorne, Three hundred gears of yruvitation, Cambridge University Press. New
+
+     York, 330 (1987).
+ [8] B.F. Schutz, Nuclear Physics B35. Proc. Suppl.. 44 (1994).
+ [9] B.C. Barish, http://xxu.lanl.gov/archive/gr-qc, 9905026 (1999).
+
+[IO] É. É and Flanagan and S. A. Hugues. Phys.Rev. D57' 4535 (1998).
+[Il] L.A. Wainstein and V.D. Zubakov, Extraction of Signals from Noise, P r e n t i c e H d ,
+
+     Englewood Cliffs (1962).
+[12] T.A. Apostolatos, Phys. Rev. D54. 2421 (1996).
+[13] A. Gopakumar and B.R. Iyer, Phys. Rev. D56.7708 (1997).
+[14] C.M. Will and A. Wiseman, Phys. Rev. D54, 4813 (1996).
+[15] C.M. Will, Confrontation between Geneml Relatzuity and eqeriment: a 1998 updute,
+
+      Lecture notes from the 1998 Slac Summer Institute on Particle Physics(l998).
+[16] P.C. Peters. Phys. Rev. 136, vol. AB. B1224 (1964).
+[17] K. Mannheim, rlGN mode1s:Hiyh-Energy Emission. XXXII Rencontres de Morioiid.
+
+      Les Arcs. France (1997).
+[la] S.L. Shapiro and S.A. Teukolsky. Astrophys. J. 292. L4l (1985).
+il91 S.L. Shapiro and G.D. Quinlaii. .Astrophys. .J. 321. 199 (1987).
+[20] B..J. Owen, Phys. Rev. D53. 6719 (1996).
+[21] B.J. Owen and B.S. Sathyaprakash. Phys. Rev. D60. 022002 (1999).
+[22] B.S. Sathyaprakash. http://~~.lanl.gov/archive/gr-qc9.612009 (1996).
+
+[23] L.S. Firin and D.F. Chernoff, Phys. Rev. D47,2198 (1993).
+
+[24] S. Droÿ. Phys. Rev. D59, 064030 (1999).
+1251 R. Balasubramanian and S.V. Dhurandar, Phys. Rev. D50.6080 (1994).
+
+[26] J.D. Jackson, Classical Electrodynamics, Pdedition, John Wiley and sons, New York
+
+      (1962).
+[27] H. Goldstein, Classical ~llechanics, Addison-Wesley Publishing Company, Reading
+
+      (1980).
+
+[28] J.B. Marion and S.T. Thornton, Classicd Dynamics of particles and systerns, 3rd
+     edition, Harcourt Brace J a ~ n o v i c hColIege Publishers, New York (1988).
+                                                     84
+[29] H . Wahlquist, General Relatzvity and Grauitation~vo1.19. No.11: 1101 (1987).
+[30] W.H. Press, S.A. Teukolsky, and W.T. Vetterling, iVumerica1 Recipes in C. Cambridge
+
+     University Press, New York (1997).
+[31] C.M. Bender and S.A. Orzag, Advanced ?/lathernaticul Methods for Scientists and
+
+      Engineers. McGraw Hill, New York (1978).
+[32] S. Droz. D. Knapp? and E. Poisson' Phys. Rev. D59. 124016 (1999).
+[33] W.G. Anderson and R. Balasubrarnanian. ht tp://,~,~.~.lanl.gov/archive/gr-9qc9,05023
+
+      (1999).
+Appendix A
+
+The Phase of the Template and the
+
+Signal in the Time Domain
+
+In order for the circular template to mirnic the ecceritric signal. we have seen that the chirp
+mass of the teniplate ( M e I I )had to be liigher t han the real chirp niass of the signal ( , U r ) .
+In this appendix. we want to show that the increase in the chirp mass actually ailows the
+circular template to follow the eccentric signal more closely around 'LOO Hz than it would
+if the real chirp mass was used. We know that the massive binaries evolve faster than the
+less massive binaries. Accordingly, the frequency around 200 Hz for the massive binaries
+changes faster. This allows the template to follow the signal closely for a wider frequency
+range. centered around 200 Hz, than less massive binaries (one made of two neutron stars,
+
+S~Y
+
+    We show these effects in figure A.1 and figure A.2. We chose two binaries: one made of
+two 1.4& neutron stars ( M , = 1.219i2.10 and M e I f = 1.0946Mr),and one made of two
+
+6.0& black holes ( M , = 5.223Ma and Mef = I.0418Mr). The initial eccentricities are
+
+chosen to be 0.6 for the former and 0.4 for the later. We are only looking at highly eccentric
+system because at low eccentricities, the signal and the templates are very similar and the
+effects we wish to dernonstrate are harder to see. The other problem with low eccentricity
+
+binaries is that M e f f is very close to M,. i.e. the ternplate built using Merl is very close
+to the template built using M r . This does not make for an easy cornparison of the two
+
+templates.
+    The top portion of figure A.1 shows the eccentric signal and the template obtained
+
+using M,, while the bottoni portion shows the same signal with the template obtained
+using M , f / The 1.411fQil.-hbf,,binary is a low mass system and its evolution happens
+
+on a large tirne scale. This means that the frequency does not change rapidly around 200
+
+Ha (f=200 Hz at t = 15.88s). The template witli M e I I is in phase with the signal for 7-8
+cycles, while the one with M , is in phase for only 3-4 cycles. Thus the increased chirp mass
+allows the teniplate to follow the eccentric signal more closely than when M, is used.
+
+   For the 6.01& + 6.0MG binary, the same phenoniena is seen, but here the effect is
+
+sharper. The frequency of the signal reaches 200 Ha at t = 3.66s. The template with M , is
+in phase with the signal for 2-3 cycles. while the template with M e I I rernains in pliase with
+
+the signal for 6-7 cycle. During the short time interval where the terriplate and the signal
+are iri phase. the frequency sweeps lrom 185 Hz to 317 Hz. The signal and the teniplate are
+in phase for a wider frequency interval when the rnass is large (two black holes) than wheri
+it is low (two neutron stars).
+
+    This shows that an increase in the chirp mass in the system tends to compensate for
+the eccentricity of the signal. It also shows that for massive binaries. the template follows
+the signal for a wider frequency interval.
+Figure A.1: Comparison of the phase in t hc t ime domain of the signal from a 1.-Li& +
+
+l.-lMabinary with e.10 = 0.6 mith the circular template. The top portion shows the
+
+template built using M , and the signai. while the bottoni portion shows the template
+built using M r l f and thc same signal. The teniplate with M e f Ifollows the eccentric
+signal diiring more cycles than the template with M,.
+
+         2.4      h(t.real biirp mass)
+
+- 12              1  9                  1  1  I  1  1             1  I  I
+
+-                 3.6 3.61 3.62 3.63 3.64 3.65 3.66               3.67 3.68 3.69
+
+fo                                                      lime (s)
+
+        -1 2
+
+        -2.4
+            3.59
+
+Figure -1.2: Comparison of the phase in the time domain of the signal from a 6.0& +
+
+6.0& binary with edo = 0.4 with the circular template. The top portion shows the
+
+template built using M r and the signal, while the bottom portion shows the template
+built using M e / and the same signal. The template with M e l follows the eccentric
+signal during more cycles than the template with M,.
+Appendix B
+
+Orbital Parameters: Effect of the
+
+Interpolation
+
+In order to obtain accurate results for the fittirig factor. it was important to monitor accu-
+rately the evolution of the orbital parameters. The nunierical integration schenie for p. e.
+and ip is robust, but because we used a cubic spline interpolation algorithm to get a constant
+step-size in the time domain. oscillations were introduced around the real time dependence
+of the parameters. The purpose of this appendix is to show that these oscillations are never
+large enough to significantly affect the results presented previously.
+
+    The effect of the interpolation can be evduated in two difkrent ways. The first test we
+make is to compare the numerical results with the analytical solution for circular binary
+systems. This allows us to evaluate how important the oscillations in the parameters p and
+
+cp are, when e ~ =o O. This method can not be appiied when edo # O: because in this case, no
+
+analytical solution is available. We test our algorithm by using an equation that constrains
+the value e can take for a given value of p. This constraint equation will be derived below.
+
+We do not explicitly evaluate the quality of the phase when e.40 # 0. but if the interpolation
+
+is done properly for p and <p in the circular case, and if the interpolation is done properly
+for e and p in the general case, it is reasonable to assume that the phase is accurate.
+
+    For the circulai. case, we present the difference between the numerical results and the
+
+analytical solutions for a l . O M Q + l.OMa binary and a l.4hl3+ 10.01bf,3 binary. For the
+
+first binary, the maximum difference is A p = Iipanaigtiml - <p,,,,,~,a~( = 0.1 radians (see
+
+figue (B.1) and Ap Ipanoiyricai - pnurnrrienll = 0.00047 (see figure B.2). These values are
+
+reached at the end of the orbital evolution where the signal is heavily weighted by the power
+
+spectral density of the noise. For this rcason. this part of the signal does not contribute
+
+Iargely to our results. For tlie phase. a difference of 0.1 corresponds to a relative error of
+
+4.6 x IO-"%)? since the phase at this point is 21570.62 radians. The final value of p üt the
+
+end of the evolution for this system is 7.6. leading to an error of 0.006%. The same reniarks
+
+can be made about the 1.4ikIa + 10.0- binary. because in this case. A 9 = 0.0025 radialis
+
+(see figure B.3) and Ap = 0.00014 (see figure B.4). These lead to a maxiniuni relative error
+
+019.1 x 1oF5% for 9. and 2.4 x IO-% for p.
+
+We now examine the error iritroduced in the evolution of the parameters when e.10 # 0.
+
+The coostraint equation mentioned previously is obtairied by taking the ratio of e to p
+
+(equations (1.39)and (4.40)):
+
+d Ine                              121
+
+d Inp                          12
+
+Once the differential equation is solved. we are Ieft with a constraint equation that must be
+
+satisfied during the whole orbital evolution. The parameters p and e are constrained by
+
+                          121               - ATU
+       p = K(L+-~')
+                                            2299 12
+                          304
+                                                m.
+
+where the constant of integration K is fked once initid values for p and e are provided.
+
+We test the interpolation scheme by verifying that K keeps the same value throughout the
+
+numerical evolution. In other words, we evaluate K initially (using the initial values of p
+
+and e we chose) and we compare i with the value of K obtained fkom the numerical values
+
+of p and e, i.e. we evaluate A K = IKinitio-l KnumericaiIlf. the difference between the two
+
+values is srnail at al1 times, we can be confident that the algorithm is working properly.
+    We consider A K for two values of edo for a 8.0M0 +8.0n/I, binary. The two eccentricities
+considered are edo = 0.2 and edo = 0.5. For edo = 0.2 we have Kinitia=i 76.33, whereas for
+
+edo = 0.5. KiniLia=l 32.15. In the first case, the maximum difference IKinitia-l Knumerie1ai
+
+is 0.0012 (see figure B.5), corresponding to a relative error of 1.6 x 10-%. In the second
+case, the maximum difference is 0.00018? corresponding to a maximum relative error of
+
+5.5 x W4%T.hus. we are confident that the algorithm is working properly when edo # 0.
+                            " O IO 20 30 40 50 60 70 80 90 100 110 120 130 140 150 160 170 ~ 8 0
+                                                                               time (s)
+
+Figure B.1: The difference between the analytical solution and the numerical results
+
+for p for a l.OAIG+ LOJI,, binary. The masimum vaiue the difference takes is 0.1.
+
+This is a small error compare to the large value of the phase at this stage in the
+evolution: the relative error is 4.6 x 10-"%.
+
+                                  O 10 20 30 40 50 60 70 BO 90 100 110 120 130 140 150 160 170 180
+                                                                                  time (s)
+
+Figure 8.2: The difference between the analytical solution and the numerical results
+
+for p for a 1.O& +1.01& binary. The maximum value the difference takes is 0.00047.
+
+This leads to an error of 0.006% in the value of p.
+                               - O 1.5 3 4.5 6 7.5 9 10.5 12 13.5 15 16.5 18 19.5 21 22.5
+                                                                                     tirne (s)
+
+Figure 8.3: The difference betmeen the analytical solution and the numerical results
+
+for p for a 1 . 4 ~ \ / [+~ 10.0.11,2 binary. The rnuimum value the difference takes is
+
+l p = 0.0025. This corresponds to a relative error of 9.1 x 10-"70.
+
+Figure B.4: The difference between the analytical solution and the numerical results
+
+for p for a 1.4iWQ + 10.0M& binary. The maximum value the difference reacbes is
+
+Ap = 0.00014. This leads to a maximum relative error of 2.1 x 10-~%at the end of
+the inspiral.
+Figure B.5:
+r.10 = 0.2. The maximum value the difference takes is 0.0012. The initial value of K
+is 46.33.
+
+Figure B.6: The difference IK'iniria-i Knumerimlflor a 8.01bb + 8.01\.Ia binary with
+
+e40 = 0.5. The maximum value the difference takes is 0.00018. The initial value of K
+
+is 32.45.
+

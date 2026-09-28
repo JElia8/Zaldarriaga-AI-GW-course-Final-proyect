@@ -1,0 +1,111 @@
+%==========================================================================================
+\section{From the master functions to $h_+$ and $h_\times$}\label{sec:pol}
+\begin{question}
+The perturbation theory is written for two master functions, $\Psi_{\rm even}$ and $\Psi_{\rm odd}$. A detector measures two
+polarizations, $h_+$ and $h_\times$. How are the two pairs related? Is ``even'' the same as ``plus''?
+\end{question}
+
+\subsection{The radiative field}
+Far from the object, in an outgoing radiation gauge, the transverse--traceless field is \cite{MP05} (Eqs.~6.13--6.15)
+\begin{align}
+h_+&\equiv\frac{p_{\theta\theta}}{r^2}=\frac1r\sum_{\ell m}\Big\{\Psi^{\ell m}_{\rm even}\,W^{\ell m}-\Psi^{\ell m}_{\rm odd}\,X^{\ell m}\Big\},
+\label{eq:hplus}\\
+h_\times&\equiv\frac{p_{\theta\phi}}{r^2\sin\theta}=\frac1r\sum_{\ell m}\Big\{\Psi^{\ell m}_{\rm even}\,X^{\ell m}+\Psi^{\ell m}_{\rm odd}\,W^{\ell m}\Big\},
+\label{eq:hcross}
+\end{align}
+with the two angular functions
+\begin{equation}
+W^{\ell m}=\Big[\partial_\theta^2+\tfrac12\ell(\ell+1)\Big]Y^{\ell m},\qquad
+X^{\ell m}=\frac{im}{\sin\theta}\Big[\partial_\theta-\cot\theta\Big]Y^{\ell m}.
+\end{equation}
+Here $\Psi_{\rm even}$ is the Zerilli--Moncrief function and $\Psi_{\rm odd}$ the Cunningham--Price--Moncrief function,
+both evaluated at $r\to\infty$ as functions of retarded time $u=t-r_*$. Combining the two equations,
+\begin{equation}
+\boxed{\ h_+-i\,h_\times=\frac1{2r}\sum_{\ell m}\sqrt{\frac{(\ell+2)!}{(\ell-2)!}}\;\Big(\Psi^{\ell m}_{\rm even}-i\,\Psi^{\ell m}_{\rm odd}\Big)\;{}_{-2}Y^{\ell m}(\theta,\phi)\ }
+\label{eq:spin}
+\end{equation}
+where ${}_{-2}Y^{\ell m}$ are the spin-weighted harmonics of weight $-2$ \cite{Goldberg67}. We checked the identity
+$W^{\ell m}-iX^{\ell m}=\tfrac12\sqrt{(\ell+2)!/(\ell-2)!}\;{}_{-2}Y^{\ell m}$ symbolically for several $(\ell,m)$.
+The energy and angular-momentum fluxes are \cite{MP05} (Eq.~6.16)
+\begin{equation}
+\Big\langle\frac{\dd E}{\dd u}\Big\rangle=\frac1{64\pi}\sum_{\ell m}\frac{(\ell+2)!}{(\ell-2)!}\Big\langle|\dot\Psi^{\ell m}_{\rm even}|^2+|\dot\Psi^{\ell m}_{\rm odd}|^2\Big\rangle .
+\label{eq:flux}
+\end{equation}
+
+\subsection{Four consequences}
+\begin{enumerate}
+\item \textbf{Parity is not polarization.} Every $(\ell,m)$ mode of either parity produces, in general, \emph{both} $h_+$ and
+$h_\times$.
+\item \textbf{Duality: odd is even rotated by $45^\circ$.} Equations~\eqref{eq:hplus}--\eqref{eq:hcross} show that
+an odd mode with the same $\Psi$ as an even mode gives $(h_+,h_\times)^{\rm odd}=(-h_\times,h_+)^{\rm even}$. In
+Eq.~\eqref{eq:spin} this is the factor $-i$, i.e.\ a rotation of the polarization frame by $45^\circ$. In CMB
+language the even field is an $E$-mode (gradient pattern) and the odd field a $B$-mode (curl pattern).
+\item \textbf{Axisymmetric modes ($m=0$) have $X^{\ell0}=0$}: the even mode is \emph{pure $h_+$} and the odd mode \emph{pure
+$h_\times$}. Only in this case, and on the equator for $m=\pm\ell$, does ``even $=$ plus, odd $=$ cross'' hold literally.
+\item \textbf{Same weight in the energy.} The two parities enter the flux~\eqref{eq:flux} with identical weights and no
+cross term. Neither is ``more important'' by construction.
+\end{enumerate}
+Figure~\ref{fig:patterns} shows the $\ell=2$, $m=\pm2$ case, the dominant mode of a binary. For the even mode,
+$h_+\propto(1+\cos^2\theta)\cos\Phi$ and $h_\times\propto2\cos\theta\sin\Phi$ with $\Phi=\omega u-2\phi$: the familiar
+binary pattern. The odd mode has the two amplitudes exchanged. At the poles both are circularly polarized; at the
+equator the even mode is pure $+$ and the odd mode pure $\times$.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.62\textwidth]{r4_f01_patterns.pdf}
+\caption{Fraction of the radiated power carried by $h_+$ as a function of the polar angle, for an $\ell=2$, $m=\pm2$ wave
+of either parity.}\label{fig:patterns}
+\end{figure}
+
+\begin{learned}
+$h_+$ and $h_\times$ are both built from both parities. The two parities are related by a $45^\circ$ rotation of the
+polarization, and they carry energy with equal weight. The natural invariant basis is $(\Psi_{\rm even},\Psi_{\rm odd})$, the
+$E/B$ basis, not $(h_+,h_\times)$.
+\end{learned}
+
+%==========================================================================================
+\section{Can reflection turn $h_\times$ into $h_+$? A selection rule}\label{sec:rule}
+\begin{question}
+A wave hits the object and comes back. Can a wave that arrives as pure $h_\times$ come back with some $h_+$?
+\end{question}
+
+\subsection{Parity is conserved}
+\begin{keyidea}
+The background (flat interior, shell, Schwarzschild exterior) is spherically symmetric \emph{and} invariant under
+parity. The linearized equations therefore commute with rotations and with parity. Modes with different $(\ell,m)$ or
+different parity cannot be coupled, to all orders in linear theory and for any spherically symmetric object: black
+hole, shell, star.
+\end{keyidea}
+In the language of the junction conditions, the even and odd systems separate completely: the odd sector involves only
+$\Psi_{\rm odd}$, and the even sector only $\Psi_{\rm even}$ and the shell's even degrees of freedom. The response of the
+object to each $(\ell,m,{\rm parity})$ channel is a single complex number per frequency, the \emph{reflection amplitude}
+\begin{equation}
+S_P(\omega)=\frac{B^{P}_{\rm out}}{B^{P}_{\rm in}},\qquad P\in\{{\rm even},{\rm odd}\},
+\end{equation}
+where $\Psi_P\to B^P_{\rm in}e^{-i\omega r_*}+B^P_{\rm out}e^{+i\omega r_*}$. Both master functions are normalized in the same way
+relative to $h$ by Eqs.~\eqref{eq:hplus}--\eqref{eq:hcross}, so the \emph{ratio} $S_{\rm even}/S_{\rm odd}$ is physical.
+
+\subsection{The object as a polarizing mirror}
+For one $(\ell,m)$, write the incident wave as a vector in the $E/B$ basis. Reflection acts as a diagonal Jones matrix:
+\begin{equation}
+\begin{pmatrix}\Psi_{\rm even}\\ \Psi_{\rm odd}\end{pmatrix}_{\rm out}=
+\begin{pmatrix}S_{\rm even}&0\\0&S_{\rm odd}\end{pmatrix}\begin{pmatrix}\Psi_{\rm even}\\ \Psi_{\rm odd}\end{pmatrix}_{\rm in}
+=S_{\rm odd}\begin{pmatrix}\rho\,e^{i\Phi}&0\\0&1\end{pmatrix}\begin{pmatrix}\Psi_{\rm even}\\ \Psi_{\rm odd}\end{pmatrix}_{\rm in},
+\end{equation}
+with the \textbf{retardance} $\Phi=\arg(S_{\rm even}/S_{\rm odd})$ and the \textbf{diattenuation} $\rho=|S_{\rm even}/S_{\rm odd}|$.
+This is exactly the optics of a birefringent mirror. It gives a precise answer to the question:
+\begin{itemize}
+\item A wave of \emph{pure parity} keeps its parity. In particular, an axisymmetric ($m=0$) pure-$h_\times$ wave is odd and
+\textbf{always comes back as pure $h_\times$}, with a different waveform. No object with spherical symmetry can convert
+it into $h_+$.
+\item A wave containing \emph{both} parities changes its polarization state, because the two components are reflected
+with different phases (and, if the object absorbs, different amplitudes). For a wave incident with equal $E$ and $B$
+content ($45^\circ$ linear polarization in the $E/B$ plane, e.g.\ an $m=0$ wave with $h_+=h_\times$), the fraction of the
+reflected power found in the orthogonal polarization is, for $\rho=1$,
+\begin{equation}
+f_{\rm conv}=\sin^2(\Phi/2).
+\label{eq:conv}
+\end{equation}
+The same expression gives the probability that a circularly polarized (helicity) mode comes back with the opposite
+helicity, because a helicity state is $\Psi_{\rm even}\pm i\Psi_{\rm odd}$.
+\end{itemize}
+The rest of the report computes $\Phi(\omega)$ for a black hole and for shells, and shows what it does to waveforms.

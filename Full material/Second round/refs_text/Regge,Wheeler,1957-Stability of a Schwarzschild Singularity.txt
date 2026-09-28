@@ -1,0 +1,554 @@
+PHYSICAL REVIEW  VOLUME 108, NUMBER 4                                                       NOVEM B ER 15, 195'l
+
+                      Stability of a Schwarzschild Singularity
+
+                 TULLIo RKGGK Istitlto Ci Fisica della University di Torino, Torino, Italy
+
+         JoHN A. WHKKLKR, Palmer Physical Laboratory, Princeton University, Princeton, Nm Jersey
+                                                      (Received July 15, 1957)
+
+  It is shown that a Schwarzschild singularity, spherically symmetrical and endowed with mass, will
+
+undergo small vibrations about the spherical form and will therefore remain stable if subjected to a small
+nonspherical perturbation.
+
+I. INTRODUCTION AND SUMMARY                                        held in the usual way of writing these equations.
+
+    CHWARZSCHILD found long ago the solution of                    However, the equations can be rearranged' in such a
+     the Einstein equations for the metric around a                way as to bring into evidence an additional production
+6xed spherically symmetrical center-of-mass:                       of gravitational field by the stress energy tensor of the
+                                                                   gravitational field. On this account the geometrized
+ds'= --(1--2m%)dT'+ (1--2rN*/r) 'dr'                               mass, m*, is not uniquely determined by the geome-
+                                                                   trized charge, q*; it only follows that m* is no less than
+                      +r'(d8'+sin'Hdy') =g dxsdx" (1)
+                                                                   -- q*. (5) One can therefore think of the field energy or
+" with x = T x =r, x2=0, x = p. Here the quantity                  -- the mass and stress that goes with it as in equilibrium
+
+       no~(cm) =Grl/c'= (0.74)&10 cm/g)m(g) (2)                    under its own gravitational attraction.
+                                                                     We have equilibrium, but is it stableP A sphere of
+denotes the value of the mass as expressed in the
+                                                                   water held together by gravitational forces is stable
+geometric units of length. A similar but more compli-              against small departures from sphericity. A sphere of
+                                                                   water surrounded by a spherical shell of liquid mercury
+cated expression was found by Reissner and Nordstrom'              is also an equilibrium cori6guration for gravitational
+for the case where the system appears at a distance not            forces, but a situation of unstable equilibrium. Initial
+                                                                   small departures from sphericity at the water-mercury
+only as a spherically symmetrical center of gravitational          interface will grow exponentially, and the mercury
+attraction but also as a spherically symmetrical center            will concentrate with a rush at the center of the sphere.
+of electric lines of force. Such a charge-like solution            Which situation will more closely correspond to the
+                                                                   behavior of a Schwarzschild singularity subjected to a
+permits interpretation in terms of a multiply connected            small initial perturbation P
+
+space. ' The lines of force can be considered to emerge              We have investigated this question here up to terms
+                                                                   of the 6rst order in the departures from sphericity.
+from one mouth of a wormhole, the other end of which               In this approximation, as in every other kind of stability
+                                                                   problem in physics, the equations are linear and it is
+is located somewhere else in space. This interpretation            possible to analyze the disturbance into proper modes
+has the following features: (1) There is no real charge            and find for each its frequency, real (stability) or
+present anywhere in space. Lines of force never end.               imaginary (instability). We have determined these
+                                                                   proper frequencies and find that the Schwarzschild
+The Maxwell 6eld is free of singularity. However, the              singularity is essentially stable because imaginary
+                                                                   frequencies would require a clearly unrealistic spatial
+lines of force are trapped in the topology of space so             behavior of the initial perturbation.
+that their number cannot change and the charge
+                                                                     We therefore conclude that the object in question,
+remains constant. (2) The other wormhole mouth can                 built out of the mass-free Einstein 6eld, is stable against
+be supposed as far away as one pleases. We shall                   small departures from sphericity. A typical disturbance
+assume it to be infinitely far away, so that it does not           from the equilibrium configuration will not grow with
+disturb the spherical symmetry and dynamics of the                 time but will oscillate around equilibrium.
+
+mouth under consideration. Then we can use the                       The analysis proceeds in the following way: In Sec.
+
+Reissner-Nordstrom solution as an idealized represen-              II we write down, following Komar and Eisenhart,
+
+tation of the metric down to the throat of the wormhole.           the linear differential equations for small 6rst-order
+
+(3) The electric field, being divergence-free, has a               departures from the Schwarzschild metric. These
+strength q/r' and an energy density q'/S~r4. Translated
+                                                                   equations ensure that the perturbed 6eld will satisfy
+to the units of length, the charge has the value
+                                                                   the Einstein equations and represent a mass-free space
+q~(cm) = (G&/c') q(electrostatic units).          (3)
+                                                                     ' S. N. Gupts, Phys. Rev. 96, 1683 (1954).
+(4) The stress energy density of this electric field acts
+as a source of gravitational 6eld in Einstein's 6eld
+equations. There is no other source of the gravitational
+
+  'H. Reissner, Ann. Physik 50, 106 (1916); G. Nordstrom,
+
+Proc. Acad. Sci. Amsterdam 20, 1238 (1918).
+
+  2 J. A. Wheeler, Phys. Rev. 9?, 511 (1955); C. W. Misner and
+J. A. Wheeler, Ann. Phys. (to be published); also A. Einstein and
+
+N. Rosen, Phys. Rev. 48, 73 (1935).
+
+                                                         1063
+f064                  T. REGGE AN D J. A. WHEELER
+
+of nearly spherical symmetry. We look for those solu-          of matter or distributed energy. These equations we
+                                                               shall analyze and separate in polar coordinates.
+tions of these difI'erential equations which can be
+expressed in the form of a product of four factors, each             Analysis into Spherical Harmonics
+depending upon a single one of the quantities T, r, 0, q.
+                                                                 We first undertake to separate the solution into a
+   We find mathematical expressions for a complete             product of four factors, each a function of a single
+set of functions of this kind, by superposition of which       coordinate. This separation is best achieved by general-
+one can represent any arbitrary small first-order pertur-      izing to tensors the well-known development in spherical
+bation that satisfies the appropriate boundary condi-
+tions.                                                         harmonics, already firmly established for vectors,
+                                                               scalars, and spinors. For all four cases the symmetry of
+   The typical mode of disturbance of the Einstein field       the metric allows angular momentum to be defined.
+has the circular frequency co. Here the quantity ~ is an       The angular momentum is investigated by studying
+eigenvalue parameter to be chosen so that the distur-
+                                                               rotations on the 2-dimensional manifold x'=T=con-
+bance satisfies the radial wave equation with the              stant, x'=r=constant. Under a rotation of the frame
+
+appropriate boundary conditions for small and large r.         around the origin, the ten components of the perturbing
+                                                               tensor transform like 3 scalars (hpp, hpl, hit), 2 vectors
+  In Sec. III we formulate the boundary conditions for         (/1pp, hpp ' klp, hip), and a second-order tensor, when con-
+                                                               sidered as covariant quantities on the sphere. For the
+this eigenvalue problem and analyze the radial de-             scalar and vector parts we know already how to develop
+                                                               into spherical harmonics. A typical scalar function has
+pendence of the functions involved in the problem by           the form
+
+way of the JWKB procedure. In this manner we can
+avoid the problem of securing an exact solution of the
+
+radial wave equation and still conclude that the proper
+frequencies are real.
+
+II. DIFFERENTIAL EQUATIONS IN POLAR CO-                               QL~ --const YL~(xp, xp) =const YL~ (8, q ) . (6)
+                                                               This term belongs to a wave of parity (--)L and of
+    ORDINATES FOR SMALL FIRST-ORDER
+            CHANGES AWAY FROM THE                              angular momentum L, whose projection on the s axis
+              SCHWARZSCHILD METRIC                             is M. For vectors we have two distinct types with
+
+              General Equations                                opposite parity:
+
+   We shall indicate here the background metric with                              8              pallty ( )
+
+g,,,,and the perturbation in it with h,,,,. The quantity       QL~ ,,=const YL~(xpxp),
+g,,,,will be later specialized to be the ordinary Schwarzs-
+                                                                                   Bx'"
+child metric. The perturbations h,,, are supposed to be
+very small as compared with g,,,,.The contracted Ricci         pL~, ~= COnStc,," YL~(X2Xp), parity (--)L+'. (8)
+
+tensor will be, as usual, called E,,,,if calculated from                                     l9xy
+g,,,,and 8,,,,+oE,,,,if calculated from g,,,,+h,,,,.It is not
+                                                               Here the labels p and v run over the values 2 and 3,.
+difficult to derive an expression for 8E,,,. The calculation         x'=0,  x'=
+                                                               when              q  ,  and  the  e,," represent  the quantities
+has been made by Eisenhart and independently by                epP=epP=O; epP= --1/sinx', epe=sinx'. Similarly we shall
+Komar. 4 We shall follow here Kisenhart's point of view        later introduce the quantities y~2 --1, p23 --0 =y32,.
+                                                               p»=sin'x'. Both types of vector carry an angular
+as being more suitable for our kind of calculation. His        momentum I.. For tensors similar properties hold. We
+
+result can be expressed in the form                            outline here only the results. There are three funda-
+
+             5E,,,,= 5Fp,,,,p+5Fp,,p,--,,, .                   mental types of tensor of angular momentum I.:
+
+where the semicolons indicate covariant differentiation        lf z ,,,,=const Yz, ,,,,,(covariant derivatives),
+and where we use the symbol                                                                     parity (--)L; (9)
+
+      &I'  p  =-', g  "(hp,, ,,+h,,,,p --hp  .  ,,).
+                                             ,
+                                                               QL &,,=const'»YL, parity (--)
+Although I' p~ is not a tensor, its variation is a tensor.                                                       (10)
+Putting (5) into (4), we get a second-order differential
+equation on the h,,,, from the condition 6R,,,,=O. This        QL pp= p const[ep+L ) v+eu+L xp]
+equation is a generalization in a curved space of the
+                                                                                           parity (--)~'. (11)
+known Schrodinger equation for a massless particle of
+                                                               Any one of these terms can obviously be multiplied by
+spin 2 in a Rat space. ' When the background metric is
+                                                               an arbitrary function of r and T, without changing its
+given by (1), then of course R,,,,=O.Then the equation
+8E,,,,=Gmeans that the perturbed space is also empty           transformation properties under a rotation. It is clear
+
+   L. P. Eisenhart, Riemannian Geometry (Princeton University  that term (10) is a simple combination of a scalar with
+Press, Princeton, j.926), Chap. VI; A. Komar, Ph. D. thesis,   the metric tensor on the sphere, y,,,,=g,,,,/r'. Term (8)
+                                                               can be considered as a "Pseudogradient" of YL (xpxp).
+Princeton, 1956 (unpublished).
+                                                               Similarly (9) and (11) can be obtained by operating
+  ' See for example T. Regge, Nuovo cimento 5, 325 (1%7l.      twice with gradients and pseudogradients. The trace
+                   STAB I L I TY OF A SCH WARZSCH IL 0 S I NGULARITY                                                           1065
+
+of (11) is identically 0. The trace of (9) has the value
+
+                               gu"iI r, ,,,= --1-(1+1)Yl~(8, q) Xconst.
+
+From the results that we have just outlined, it follows that the  most  general perturbation belonging to a given
+
+I., M, and parity  (--)~+' is of the form:                        Yz,   hp (T,r) (sin88/88) Yr~
+
+       00             hp(--T,r) (8/sin88 (p) Fr,~                       hi(T, r) (sin88/88) Yr,~
+       00
+                    --h, (T,r) (8/sin88&p) Yz,~                         ' Sym
+                                                                           hp(--T,r) (sin88'/888
+Sym hpy Sym h, (T,r) (8'/sin8888 p co--s88/sin'88') Fl~                                                     co--s88/8 &p) Yi ~
+     Sym Sym php(Tir) (8'/sin88pB q+cos88/88 --sin88'/8888)
+                                                                                                                           (12)
+
+Here the rows and columns are numbered in the order 0, 1, 2, 3 (T, r, 8, pp). The symbol "Syrn" indicates that
+the missing components of h,,,,are to be found from the symmetry h,,,,=h,,,,. We shall refer to (12) as the "odd"
+
+type of perturbation.
+
+                                                   Even Waves
+
+The grouping of the terms of even parity yields the "even" perturbation:
+
+(1--2m*/r)Hp(T, r) Yi~  H, (T,r) Yi~                       hp(T, r) (8/88) Yi,iud                      hp(T, r) (8/8 pu) Yr,~
+                                                           hi(T, r) (8/88) Yi,iLr                      hi(T, r) (8/8 p) Yr~
+H, (T,r) Yz,M           (1--2m~/r) --'Hp(T, r) Yr,~
+
+Sym                     Sym                                '[Z(T, r)                                   Sym
+                                                           +G(T,r) (8'/88') $ Yi ~
+
+Sym                     Sym                                cos88--/sin88 p) Yi, r'G(T, r) (8'/888 y ~  r'[E(T,r) sin'8
+
+                                                                                                         +G(Tr) (8'/8 p 8 p
+
+                                                                                                         +sin8 cos88/88) )Yi,
+
+                                                                                                                               (13)
+
+   Frequency Analysis; Specialization to M =0              advantage that p will completely disappear from the
+                                                           calculations. We are still left with a considerable
+   Owing to the spherical symmetry of the background
+metric, Eqs. (4) and (5) cannot mix terms belonging to     amount of labor. An odd wave contains three unknown
+
+diferent I. and parity. To apply quantum language to       functions of r. Worse, an even wave contains seven
+                                                           unknown functions. Here comes a fact which greatly
+a classical problem, we can say that I-, M, and the
+parity are constants of the motion. The existence of       simplifies and illuminates the calculation.
+still another constant follows from the circumstance
+that the background metric (1) is independent of the       Gauge or Coordinate Transformations and the
+                                                                     Simyli6cations They Can Bring
+cotime, T=ct. On this account we can consider a
+                                                            i' Con-. Digerertt waves car represent the same physical phe
+perturbation of a definite frequency, co=bc, so that
+every component of the perturbation h,,, will have a       rtomerta viewed digereet systems of coordinates
+
+time dependence of the form exp( --ip&t) =exp( --ihT).     sider an infinitesimal coordinate transformation:
+
+We therefore proceed to determine completely the form                   x' =x +p ($ «x ).                                      (14)
+
+of the individual solution of specified parity, I. and 3f  The infinitesimal displacements f" transform                        like a
+
+values, and frequency. The general solution will be a      vector. In the new frame we shall have:
+superposition of these individual solutions with coeK-
+                                                                      gu '+hu'=C"+4; +5;u+hu'
+cients adjusted to 6t the appropriate boundary condi-
+                                                           Now h,,,, is defined as the difference between the per-
+tions and initial values.
+                                                           turbed metric and the Schwarzschild metric written ie
+  In working out the typical individual solution, we
+                                                           spherical coordirtates. According to this definition, the
+need not occupy ourselves with the angular dependence,
+                                                           diGerence in the new frame will have the value
+which is completely specified by (12) and (13). More-
+over, there is no need to work with an arbitrary M.                     hu "=hu:"+hu;. +k.                                     (16)
+
+For any specified choice of I., k, and partly all values
+of M (M= I., 1.+1, I.) w--ill le--ad to the same
+
+radial equation. We prefer to take 2VI=O with the
+1066                         T. REGGE AND J. A. WHEELER
+
+This result can be interpreted by saying that for              taining the even wave in the canonical form
+infinitesimal changes in the coordinates the h,,, undergo
+a "gauge transformation" quite similar to the well-            h,,,,=exp( --ikT)Pz, (cosB)
+known gauge transformation for the electromagnetic                 Hp (1--2m*/r)
+field. We can now use this important circumstance in                              Hp(1 --2m*/r) ' 0
+order to simplify the description of the perturbation
+and to make it unique.                                                                                     0 r'E sin'8
+
+  The gauge transformation (16) can be performed on                                                                              (20)
+any individual partial wave. Obviously no real simplifi-
+cation will result unless the resulting wave still belongs     There are therefore two unknown functions of r in the
+to the original eigenvalues. This requirement limits the
+                                                               odd case (hp and hi) and four unknowns for the even
+possible choices for $ . This vector turns out to be a
+                                                               case (Hp, Hi, H p, and E).
+spherical harmonic of the same I and parity as the
+                                                                               Radial Wave Equations
+partial wave in consideration. Such a gauge transfor-
+mation allows us to impose additional simplifying                We now substitute the expressions (18) and (20) for
+conditions on the perturbation, h,,,,.We have therefore        the first-order perturbation into the first variation of
+chosen to eliminate those terms which contain the              the Einstein field equations,
+derivatives of the highest order with respect to the
+angles. Then the final radial equations simplify. More-                        ~l'pv~; p --~l"ppt'; v=0.         (21)
+over, the desired gauge transformation $ can then be
+found by the use of finite operations only, without            The resulting equations for the radial factors may be
+arbitrary constants and boundary conditions.                   derived and discussed separately for odd and even
+                                                               waves.
+  The gauge vector P that simplifies the general odd
+                                                                 For odd waves the variation bF,,p~ vanishes identi-
+wave (12) must have the form                                   cally. Out of the 10 Einstein equations only 3 nontrivial
+                                                               ones can be obtained:
+P=O, P=O, @=A(Tr) p""(8/Bx")Yl~(B,q),
+                                            (p, v=2, 3), (17)  (1--2m*/r) 'khp+ (d/dr) (1 2m%)--hi 0, --
+
+according to the foregoing arguments. Moreover, the                                                   from 68~3=0;
+radial function A can be adjusted to annul the radial
+factor hp(T, r) or that component of the perturbation          (1--2m%) 'k(dhp/dr --kh, --2hp/r)
+
+h,,,,which has the form (11).                                       + (I. 1) (I.+2)h /--r'=0, from 8Rip --0; (22)
+
+      Canonical Form of Odd and Even Waves                     (d/dr) (khi --dhp/dr)+ 2khi/r =r '(1 --2m*/r) '
+                                                                    X (4m*hp/r --I-(I.+1)hp), from tIEpp ----0.
+   The final canonical form for an odd wave of total
+                                                               The last equation is a consequence of the other two.
+angular momentum I. and projection M=0 is then
+                                                               Define          Q = (1 2m*/r) h,/r,               -- (23)
+
+      0  0  0 hp(r)                                                       hp, and find for Q the second-order
+                                                                                 dPQ/dr+P+k i P(r)Q=0
+h,,,, = 0 0 0 hi(r)                                            eliminate                                         wave
+                                                               equation,                                          (24)
+       0 0 00
+
+      Sym Sym 0 0                                              Here we have made the abbreviations
+
+              Xexp (--ikT) (sin88/88) Pi, (cosB) . (18)                       dr*= exp(-,'X ----' ,v)dr,
+
+In a similar way we write the gauge transformation             and                                                   (25)
+that simplifies even waves in the form                                                                           for the
+                                                                        k i '= k' --I.(2+1)e"/r'+6m*e "/r'
+                                                                                                                   (26a)
+/=M p(Tr) Yl~ (8,p); P=Mi(Tr) YI~(B,q);                        where X and     v are defined by the expression     (26b)
+                                                               metric,          e"dT'+e~dr'+r'(dB'--+ sin'Bdy')
+@=M(T,r) (8/88) Yr, ~(B,v);              (19)
+                                                                         ds'=    e"=e "=1 2m*/r--
+@=M(T)r)(8/sinP88 p)) Yi~(8 p))
+                                                               thus,
+
+  We adjust the factors Mp, My, and M to a»ul the                For even waves the 10 Einstein field equations give
+                                                               7 nontrivial conditions: one algebraic relation; 3 first-
+factors G, hp, and h, in expression (13), thereby ob-
+STAB ILITY OF A SCHWARZSCH ILD SI NGULARITY                                                              1067
+
+order differential equations; and 3 of the second order.    shown to satisfy the relations
+
+We use one relation,                                            (d/dr) (K+H)+ (2m*/r') (1--2m*/r) 'H =0
+
+                      H2=HO=H,                (27a)         (dH/dr)+ (2m*/r') (1 2m--*/r) 'H+2H/r        (30)
+
+to eliminate IIO from the other 6 equations:                           + (L--1)(L+2) (K+H)/2m*=0.
+
+dK/dr+ r '(K--+H) L(L--+1)Hi/2kr'                           For L=O the solution is trivial. We get the difference
+                   --(1--2m*/r) 'm*K/r'= 0, (27b)
+                                                            between the Schwarzschild metrics for the two reduced
+(d/dr) (1--2m%) Hi --k (K--H),
+                                                            masses m* and m*+5m*. For L=1 we expect to find a
+
+                                              (27c)         solution that corresponds to a displacement of the
+
+kH, --(1 2--m*/r) (d/dr) (K+H) --(2m*/r') H =0; (27d)       center of attraction by the amount bs:
+
+(d/dr) (1 2m~/--r) (2rH+ (d/dr) r'K) L(L+--1)K                         x»~x»+h»;      8--+8--si n8bs/r;
+             --2krHi+ k2r'(1 --2m~/r) 'E =0; (27e)
+                                                                       r~+cos8bs; ~q; T~T.               (31)
+
+2k (1--2m%) (dH, /dr)+ 2km*H i/r'+ k'H                      This transformation is not acceptable (1) because it
+  --(1--2m"/r)'[(d/r'dr) (r'dH/dr)                          assumes Euclidean rather than Schwarzschild geometry
+                                                            for the displacement and (2) because it leads to a
+ +2 (d/r'dr) (r'dK/dr) ) (1--2m*/--r) [L(L+1)H/r'           change h,,,, in the metric which does not have the
+                                                            diagonal form of (20). The correct infinitesimal coordi-
+         +4m*(d/r'dr) II+ 2m*(d/r'dr)K] =0; (27f)
+                                                            nate transformation has the form
+(1 2m*/r)'d--'H/dr'+ (2/r) (1 2m*/r) d--H/dr k'H-
+                                                                       r~+ cos8bs,    --                 (32)
+        L(L+1)--(1--2m*/r) (H/r') 2km*H, /r-'
+                                                                       8~8+ (sin8bs/2m*) ln (1 2m*/r),
+     --2k (1--2m%) (d/r'dr) r'H +2k'K
+             +2(1--2m*/r) (m*/r') dK/dr = 0. (27g)          and the two radial factors that satisfy (30) have the
+
+We are facing a system of 6 equations in 3 unknowns.        values
+One will expect that the 3 first-order Eqs. (27b, c,d)
+will sufIice to determine the solutions, apart from the             H2 --Ho --H = --(2m%') 8s/ (1--2m%);
+
+boundary conditions. Actually the second-order Eqs.                 K= (bs/m*)[(2m*/r)+ln(1 --2m*/r) j. (33)
+(27e,f,g) contain an additional nontrivial piece of infor-
+mation about the solution that is consistent with           For L)1 we eliminate (K+H) from Eqs. (30) and
+(27b, c,d). Specifically, a rather elaborate investigation
+shows that (27e,f,g) can all be deduced from (27b, c,d)     obtain an equation for the quantity M=r(r 2m*)H:--
+plus the algebraic relation
+                                                            (d'M/dr')  [r '+ (r --2m*) '3(dM/dr)
+[6m*/r+(L --1)(I.+2)]H+[2kr --L(L+1)m*/r' )kHi                           --(L--1)(L+2)M/r (r --2m*) =0. (34)
+
+      +[(2m%)+ (L--1)(L+2)                                  The general solution of this equation can be expressed
+      --2(1=2m*/r) '(m*'/r'+k'r')]K=--F=0 (28)              in terms of the associated Legendre functions:
+
+and conversely, (27b, c,d) and (28) follow from (27e,f,g),        M =nPi, &@ (1 r/m*)+PQ--I.&~ (1 r/m*), --(35)
+provided that the frequency k is nonzero. The static
+                                                            where
+case will be discussed separately.
+                                                            P2"'(*)=3(1--x') P3'"(*)=1»(1--*')
+  It is remarkable that (28) is an algebraic relation       Q '"(x) = (1--x') (d'/dx') P (3x'--1) arc tanhx --(3x/2)],
+consistent with (27b, c,d). It can properly be called a     Q '"(x)= (1--x')(d'/dx')P(5x' --3x) arc tanhx
+
+"first integral. " Thus, let Et, Ht, H&t be any solution                                  --(»'/2)+ (2/3) j,
+
+of (27b, c,d) and let Ft be the corresponding function        By way of comparison    with the solution  (32),
+
+constructed from (28). We have the following identity:      consider the expression,
+
+dFt/dr+ (m%') (1--2m*/r) 'Ft =0               (29)                  V =Q//r+Q(nl ~r +pier ') Yr~(8, (p), (36)
+
+-- If now Iit vanishes at one point as is possible by an    for electrostatic potential in Bat space. Here the o. terms
+-- appropriate choice of the arbitrary constants then       represent the asymmetries in the potential due to re-
+
+Ii t =0 everywhere.                                         mote sources and the p terms are due to asymmetries
+                                                            in the distribution of internal sources. The origin of
+    Static Case and Its Physical Interyretation             the two kinds of terms in (35) is a little more subtle.
+                                                            We interpret them both as asymmetries in the metric
+  In the static case where k=0 it follows from (27b, c)
+                                                            arising from remote masses, as follows: (1) masses in
+that H~ vanishes. The other two radial factors can be
+                                                            the present region of space, and (2) masses in the region
+T. RECCE AN D J. A. WHEELER
+
+of space which unfolds from the other end of the               It is simplest to analyze first the odd dynamic
+wormhole. Naturally motions of both kinds of sources
+will be demanded~by the field equations themselves.          disturbances, as they are governed by the single
+In contrast, the field equations of electrostatics are
+linear and are not sufhcient in and by themselves to         relatively simple differential Eq. (24). The general
+ give the equations of motion. On this account, in the       solution behaves so:
+expression (36) for the electrostatic potential one is
+content to consider the n's and p's as constants. In         Q c sip(r/2m4v   1)sikvvv"+c e i 4(r/--2m'    --siam*
+contrast, one might well ask how the n and P in (35)                                                     1)
+ can be constant if they represent the eGect of remote                                       for r--&2m*, (39)
+masses that will inevitably be set in motion. However,                                       for r--+~.
+ we deal always with the metric ieterior to these remote     Q cs sin(kr+ri)
+masses. Therefore there is no obvious reason for a
+ change with time in these coefFicients. Moreover, the       Between these two extreme values of r the behavior of
+ equations themselves say that the solution (35) is static.
+                                                             Q can be found by interpreting k,&P in (24) in terms of
+   Static solutions of odd type also exist. To analyze       an effective potential or effective refractive index
+ these solutions, we annul the frequency parameter k in
+Eqs. (22), note that the radial factor kr must vanish,       encountered by gravitational waves. There is little
+ and find for the other radial factor the second-order       di6erence in equations between the analysis here and
+
+ equation                                                    that given previously for electromagnetic waves' and
+
+d'kp/dr'+ (1--2m*/r) '(4m*/r'                                for neutrinos' moving under the inftuence of a spheri-
+                         --L(L+1)/r') kp --0. (37)
+                                                             cally symmetric metric of the form (26b):
+Here again the general solution is a linear combination
+of two terms which reduce at large r to the form r-~         k,iP(neutrinos) = k' --s'e "/r'& (sr 'e" l"                    (40a)
+
+and r +'. These terms are interpreted as before as the                                             44r--rcv(v --t)dcvv/dr)
+
+eBect of asymmetrically distributed masses which are         k,4P (light) =k' --L(L+1)e"/r'                                 (40b)
+very remote and located on the one side or the other
+of the wormhole. That solution which behaves asymp-          k,iP (gravitational waves)                                     (40c)
+totically as r~+' allows itself to be expressed as a
+hypergeometric function that reduces to a polynomial                        =k' L(L+1)e--/rv'+6m*e"/r'
+in z=r/2m*:
+                                                             The k' factor on the right-hand side of each expression
+kp --s'F(L+2, 1 L, 4, s)--                                   plays the part of the energy in the Schrodinger wave
+                                                             equation, and the quantity subtracted from k' can be
+  =&'+ L(L+2) (1--L)/4js'                                    given the name of effective potential.
+
+   +[(I.+2) (I+3)(1--I) (2 I)/2 l4X5--]s4+                      The eBective potential starts from 0 at the Schwarzs-
+                                                             child radius, rises to a maximum and then falls off
+    +[(L+2)(L+3) (2L) (1--L) (2--L)                          again to zero at very large r. Therefore there are three
+           X(--1)/(L --1) 4X5" (L+2)1 '. (38)                regimes to be considered. In case 1, the quantity k'
+
+   We shall not investigate further the behavior of          exceeds the height of the barrier and the solution is
+static perturbations. We interpret them as the effect of     everywhere oscillatory. In case 2, the quantity k' is
+distant masses, producing inhomogeneous external             still positive, but less than the height of the barrier.
+gravitational fields, and thereby deforming the mouth
+of the wormhole that would otherwise be spherically          The critical barrier height, k,,;&, is given by the
+symmetric. These perturbations have nothing directly
+to do with the dynamics or stability of the Schwarzs-        equation
+child metric itself.
+                                                             2m*r,,;,=-',+-,'(L+-') --'+
+  III. BOUNDARY CONDITIONS AND STABILITY OF
+                                                                k,,;4--(2.598X2m*) '[(L+-',)
+           THE SCHWARZSCHILD SINGULARITY
+                                                                                  --(9/g)(L+s) '+
+ Regularity Conditions; Odd Waves Analyzed Via
+           the Conceyt of Effective Potential                when I is large. This case 2 recalls the problem of
+
+   A physically acceptable dynamic variation away            binding photons in the gravitational 6eld of a geon.
+from the background metric must be represented by            The interesting wave either falls o6 or rises exponenti-
+                                                             ally in the barrier region. The one case, case 2a, corre-
+functions which have at the starting invstant a reason-      sponds to gravitational waves which never escape to
+ably regular behavior both at the point x=2m* and at
+                                                             large r. Such waves are of interest for the theory of
+infinity.
+                                                             gravitational geons: geons which derive all their mass
+                                                             and energy from gravitational waves trapped in the
+                                                             metric. Case 2b corresponds to waves which are large
+                                                             outside the barrier. These solutions like the case 1
+
+                                                             solutions represent freely running gravitational waves
+                                                             disturbed to a greater or lesser extent by the gravita-
+                                                             tional 6eld of the mass that they encounter.
+
+                                                               ' J. A. Wheeler, Phys'. Rev. 97, 511 (1955).
+                                                               r D. Brill snd J. A. Wheeler, Revs. Modern Phys. 29, 465(1957).
+STAB I L I TY OF A SCH KARZSCH I L D S I N GULARI TY       1069
+
+        Waves that Go through the Wormhole                 child radius. Therefore there is no possibility to join it
+                                                           smoothly to a solution "in the other half of the tunnel"
+   The behavior of the waves will be aRected by the
+                                                           which will be acceptable. Consequently we conclude
+conditions they encounter at small r. The metric acting    that there are no unstable solutions for odd waves.
+
+on the gravitational wave in the present problem is           There remains the discussion for the even waves.
+multiply connected, whereas the metric acting on the       Here we have to examine the system (27b, c,d) supple-
+neutrinos and electromagnetic waves in the published       mented by the condition (28). Unfortunately, owing to
+examples was topologically equivalent to Euclidean         the complication of the equations involved, we were
+                                                           not able to establish a convenient "eRective potential"
+space. In those examples there was a definite origin at
+which the wave amplitude had to go to zero. By that        picture. However, as far as stability is concerned there
+condition the phase of the wave was uniquely deter-
+mined, as showed up most readily in the JWKB               is no difhculty in recognizing that the same arguments
+approximate representation of the solution. The con-       used for odd waves are still valid.
+trary will be the case for the present metric. The phase
+is not determined as it was for electromagnetic and           YVe cannot avoid pointing out the essential impor-
+neutrino geons, and as it would be for a gravitational
+geon. The ambiguity in phase has a clear physical          tance of condition (28) in this analysis. It eliminates
+significance. The ingoing wave need not equal in
+strength the outgoing wave. The Schwarzschild space        spurious solutions which do not have the correct be-
+
+is to be visualized as not inwardly bounded. ' Instead,    havior on the singular sphere. This can be clearly
+
+it can be considered as one mouth of a wormhole, the       shown by a power series analysis near r=2m*. Indeed
+other mouth of which emerges elsewhere. Gravitational
+waves must be able to propagate through this tunnel        to have the correct "wave through the tunnel" behavior
+as they propagate anywhere in space. The undetermined
+                                                           it proves essential that the radial factor E be small for
+phase of this wave gives one the freedom that one can
+                                                           r 2m* as compared with the other unknowns. This is
+and must demand for a complete description of such         plainly a consequence of (28). Curiously enough the
+                                                           same equation (28) also demands that the same factor
+"waves through the wormhole. "
+                                                           E has to be negligible for large r, insuring the correct
+                                                           behavior at ~. The discussion is then the same as
+
+                                                           for the odd waves. Consequently we conclude that
+                                                           Schwarzschild's solution of the gravitational field
+
+                                                           equations is stable.
+
+       Syace Behavior Unacceptable for Waves                                      ACKNOWLEDGMENTS
+                  of Imaginary Frequency
+                                                             We wish to express our appreciation to Professor S.
+   Regime 3 corresponds to negative values of O'. The
+analysis of the space dependence of such solutions shows   de Groot for the hospitality of the I orentz Institute of
+that the radial part is uniquely determined by the
+                                                           the University of I-eiden, where we enjoyed a collabo-
+requirement that it shall not go to infinity at large r.
+The solution that is acceptable because it falls oR for    ration of ten days. Also one of us (T.R.) is indebted to
+large r proves, however, to fall oR also at the Schwarzs-
+                                                           the Friends of, Elementary Particle Physics of Princeton
+                                                           University for a travel grant. Finally, we are grateful
+                                                           to Mr. M. Wakano for checking our derivations and
+                                                           equations.
+

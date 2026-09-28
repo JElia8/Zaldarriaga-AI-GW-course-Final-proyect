@@ -1,0 +1,30 @@
+   k=3: coefficient of r^-5 minus claimed recursion = 0
+   k=4: coefficient of r^-6 minus claimed recursion = 0
+   k=5: coefficient of r^-7 minus claimed recursion = 0
+   first-round asymptotic recursion (derivation Eq. 5.2) reproduced: True
+
+(b) BH reflectivity, l = 2 (odd):  (2Mw)^2   R_mine   R+T-1   R_first_round
+   0.040  9.999969e-01  1.9e-13  9.999969e-01  (first-round even: 9.999969e-01)
+   0.250  9.922381e-01  -9.0e-12  9.922381e-01  (first-round even: 9.922381e-01)
+   0.500  7.001065e-01  4.5e-10  7.001065e-01  (first-round even: 7.001065e-01)
+   1.000  1.548455e-02  -6.6e-10  1.548455e-02  (first-round even: 1.548455e-02)
+   2.000  2.535714e-05  -6.9e-10  2.535714e-05  (first-round even: 2.535714e-05)
+   3.000  2.403375e-07  -1.5e-09  2.403374e-07  (first-round even: 2.403376e-07)
+   4.000  5.311747e-09  -2.8e-09  5.311702e-09  (first-round even: 5.311754e-09)
+
+(c) WKB 3rd order (explicit Iyer-Will formula) vs first round (hypervirial):
+   l=2 n=0  IW: 0.37316-0.08922i   first round: 0.37316-0.08922i   diff 0.0e+00 ;  rel.err vs Leaver: 1.5e-03
+   l=2 n=1  IW: 0.34602-0.27492i   first round: 0.34602-0.27492i   diff 5.6e-17 ;  rel.err vs Leaver: 2.8e-03
+   l=2 n=2  IW: 0.30293-0.47106i   first round: 0.30293-0.47106i   diff 1.6e-16 ;  rel.err vs Leaver: 1.3e-02
+   l=2 n=3  IW: 0.24746-0.67290i   first round: 0.24746-0.67290i   diff 5.1e-16 ;  rel.err vs Leaver: 4.3e-02
+   l=3 n=0  IW: 0.59927-0.09273i   first round: 0.59927-0.09273i   diff 0.0e+00 ;  rel.err vs Leaver: 3.0e-04
+   l=3 n=1  IW: 0.58235-0.28141i   first round: 0.58235-0.28141i   diff 1.1e-16 ;  rel.err vs Leaver: 4.8e-04
+   l=3 n=2  IW: 0.55320-0.47668i   first round: 0.55320-0.47668i   diff 1.1e-16 ;  rel.err vs Leaver: 3.9e-03
+   l=3 n=3  IW: 0.51575-0.67743i   first round: 0.51575-0.67743i   diff 1.6e-16 ;  rel.err vs Leaver: 1.6e-02
+   l=4 n=0  IW: 0.80910-0.09417i   first round: 0.80910-0.09417i   diff 0.0e+00 ;  rel.err vs Leaver: 9.9e-05
+   l=4 n=1  IW: 0.79650-0.28437i   first round: 0.79650-0.28437i   diff 0.0e+00 ;  rel.err vs Leaver: 1.6e-04
+   l=4 n=2  IW: 0.77364-0.47897i   first round: 0.77364-0.47897i   diff 0.0e+00 ;  rel.err vs Leaver: 1.4e-03
+   l=4 n=3  IW: 0.74331-0.67830i   first round: 0.74331-0.67830i   diff 1.6e-16 ;  rel.err vs Leaver: 6.6e-03
+   l=2,n=0 WKB1: absolute error 2.52e-02, relative error 6.56e-02
+   l=2,n=0 WKB3: absolute error 5.70e-04, relative error 1.48e-03
+   l=2,n=0 WKB6: absolute error 8.85e-05, relative error 2.30e-04

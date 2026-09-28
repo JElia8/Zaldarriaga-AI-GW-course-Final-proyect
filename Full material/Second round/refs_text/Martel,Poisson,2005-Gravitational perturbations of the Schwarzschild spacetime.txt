@@ -1,0 +1,1067 @@
+                        PHYSICAL REVIEW D 71, 104003 (2005)
+
+Gravitational perturbations of the Schwarzschild spacetime:
+    A practical covariant and gauge-invariant formalism
+
+                                        Karl Martel and Eric Poisson
+
+             Department of Physics, University of Guelph, Guelph, Ontario, Canada N1G 2W1
+   (Received 8 February 2005; revised manuscript received 28 March 2005; published 3 May 2005)
+
+   We present a formalism to study the metric perturbations of the Schwarzschild spacetime. The
+formalism is gauge invariant, and it is also covariant under two-dimensional coordinate transformations
+that leave the angular coordinates unchanged. The formalism is applied to the typical problem of
+calculating the gravitational waves produced by material sources moving in the Schwarzschild spacetime.
+We examine the radiation escaping to future null infinity as well as the radiation crossing the event
+horizon. The waveforms, the energy radiated, and the angular-momentum radiated can all be expressed in
+terms of two gauge-invariant scalar functions that satisfy one-dimensional wave equations. The first is the
+Zerilli-Moncrief function, which satisfies the Zerilli equation, and which represents the even-parity sector
+of the perturbation. The second is the Cunningham-Price-Moncrief function, which satisfies the Regge-
+Wheeler equation, and which represents the odd-parity sector of the perturbation. The covariant forms of
+these wave equations are presented here, complete with covariant source terms that are derived from the
+stress-energy tensor of the matter responsible for the perturbation.
+
+DOI: 10.1103/PhysRevD.71.104003                                 PACS numbers: 04.25.Nx, 04.30.Db, 04.70.Bw, 97.60.Lf
+
+                      I. INTRODUCTION                           recently revived by Gundlach and Martin-Garcia [12,13],
+                                                                Sarbach and Tiglio [14], Clarkson and Barrett [15], as well
+   Metric perturbations of the Schwarzschild spacetime          as Nagar and collaborators [16,17]. With this paper we
+have been studied for a long time, starting with the pioneer-   hope to deliver its final chapter. We aim to present the
+ing work of Regge and Wheeler [1], Vishveshwara [2], and        formalism of metric perturbations of the Schwarzschild
+Zerilli [3]. The theory was summarized in an influential        spacetime in its most mature and practical incarnation
+monograph by Chandrasekhar [4], and it has been applied         yet. Our formalism is covariant and gauge invariant, and
+to many different physical situations (see, for example,        it goes beyond the work listed above by the development of
+Chapter 4 of the book by Frolov and Novikov [5]). In            covariant master equations for the even-parity and odd-
+particular, a useful application has been the computation       parity sectors of the theory, complete with explicit source
+of gravitational waves produced by a point particle moving      terms that are derived from the stress-energy tensor of the
+in the field of a Schwarzschild black hole (see Ref. [6], the   matter which is responsible for the perturbation. We note
+review article of Ref. [7], and references therein). Another    that the Gerlach-Sengupta formalism was extended to
+has been the simulation of a collision of two black holes in    multidimensional black holes and brane-world models by
+a ``close-limit'' approximation (see the review article of      Kodama, Ishibashi, and Seto [18-21]. We note also that
+Ref. [8] and references therein).                               gauge-invariant perturbation formalisms are used widely in
+                                                                cosmology (see, for example, Ref. [22] and the review
+   Traditionally the perturbation formalism is developed in     article of Ref. [23]).
+the standard Schwarzschild coordinates (t, r, , ), and in
+a standard choice of gauge known as the ``Regge-Wheeler            We have in mind a typical application of the perturbation
+gauge.'' The tradition also makes use of Fourier-transform      formalism, the calculation of gravitational waves produced
+techniques and presents the perturbation equations in the       by material sources moving in the Schwarzschild space-
+frequency domain instead of the time domain. Moncrief [9]       time. We are interested in the radiation that escapes to
+was the first to present the formalism in a gauge-invariant     future null infinity and manifests itself as waveforms h
+package, recognizing the practical advantages that gauge        and h that are directly observable to gravitational-wave
+invariance provides: While the Regge-Wheeler gauge is           detectors, and we are interested in the radiation that crosses
+useful for many purposes, it is not useful for others, and the  the black-hole horizon. This application illustrates well the
+power to switch from one gauge to another within a gauge-       need for a covariant and gauge-invariant formalism, as the
+invariant framework is often required. Another refinement       two types of radiation admit different descriptions. The
+of the formalism was produced by Gerlach and Sengupta           radiation at future null infinity is best described by casting
+[10,11], who presented the gauge-invariant perturbation         the perturbation in an outgoing radiation gauge and ex-
+equations in an arbitrary coordinate system, thus liberating    pressing it in a retarded coordinate system (u, r, , )
+the formalism from the usual Schwarzschild coordinates          related to the usual Schwarzschild coordinates by the trans-
+and their poor behavior at the event horizon.                   formation u  t ÿ r ÿ 2M lnr=2M ÿ 1. The radiation at
+                                                                the horizon, on the other hand, is best described by adopt-
+   This program to translate the traditional perturbation       ing an incoming radiation gauge and expressing the per-
+formalism into a covariant, gauge-invariant language was
+
+1550-7998= 2005=71(10)=104003(13)$23.00  104003-1                2005 The American Physical Society
+KARL MARTEL AND ERIC POISSON                                                            PHYSICAL REVIEW D 71, 104003 (2005)
+
+turbation in an advanced coordinate system (v, r, , )               Because the topic of metric perturbations of the
+related to the usual Schwarzschild coordinates by the trans-     Schwarzschild spacetime is so venerable, we will allow
+formation v  t  r  2M lnr=2M ÿ 1. Our formalism                  ourselves in this paper to simply state our results and omit
+permits the use of any coordinate system xa  x0; x1 that         most lengthy derivations that lead to those results. We
+can be obtained from the usual Schwarzschild coordinates         hope, however, that the path to the results will always be
+(t, r); we do not, however, consider transformations of the      clearly delineated. We refer the reader to the literature
+angular coordinates A  ; .                                       reviewed in this Introduction for additional details; another
+                                                                 repository of relevant derivations is Martel's PhD disserta-
+   In the formalism developed in this paper, the radiation at    tion [26]. Throughout this paper we adopt the sign con-
+future null infinity and at the horizon are described in terms   ventions of Misner, Thorne, and Wheeler [27], and we set
+of scalar and gauge-invariant master functions, lemvenxa         c  G  1.
+and lm oddxa, which can be computed from the metric
+perturbations. These functions are labeled by spherical-         II. SCHWARZSCHILD SPACETIME
+harmonic indices l and m, and by their behavior under a
+parity transformation. The function lemvenxa is con-             The Schwarzschild metric is expressed as
+structed from the even-parity perturbations, and it is equal
+to the gauge-invariant function that was first introduced by     ds2  gabdxadxb  r2 ABdAdB;                (2.1)
+Moncrief [9]; it is a close cousin to Zerilli's original master
+function [3], and it satisfies a covariant version of Zerilli's  in a form that is covariant under two-dimensional coordi-
+differential equation. The complete covariant source term        nate transformations xa ! x0a. The coordinates xa span the
+for this equation is presented explicitly for the first time in  submanifold M2 of the Schwarzschild spacetime --the
+this paper. The function lm oddxa, on the other hand, is         ``(t, r) plane''--and lower-case Latin indices a, b, c, etc.
+constructed from the odd-parity perturbations, and it is         run over the values 0 and 1. The coordinates A  ; 
+equal to the gauge-invariant function that was first intro-      span the two-spheres xa  constant, and upper-case Latin
+duced by Cunningham, Price, and Moncrief [24] and re-
+cently revived by Jhingan and Tanaka [25]; it is essentially     indices A, B, C, etc. run over the values 2 and 3. The full
+the time integral of the original Regge-Wheeler master           spacetime manifold is M  M2  S2. The two-
+function [1], and it satisfies a covariant version of the        dimensional tensor gab and the scalar r are functions of
+Regge-Wheeler equation. The complete covariant source            the coordinates xa, and AB  diag1; sin2 is the metric
+term for this equation is presented explicitly for the first     on the unit two-sphere.
+time in this paper.
+                                                                    We shall use three different coordinate systems xa in the
+   The paper is organized as follows. In Sec. II we give a
+covariant description of the Schwarzschild spacetime and         applications of the perturbation formalism to be presented
+specify our notations and conventions. In Sec. III we
+introduce the scalar, vector, and tensor spherical harmonics     below. The first is (t, r), the usual Schwarzschild coordi-
+that are used in the decomposition of the metric perturba-
+tion. In Sec. IV we examine the even-parity sector of the        nates. The second is (u, r), where the retarded-time coor-
+perturbation, introduce the Zerilli-Moncrief master func-        dinate u is defined by u  t ÿ r ÿ 2M lnr=2M ÿ 1. The
+tion, and derive the one-dimensional wave equation that it
+satisfies. In Sec. V we examine the odd-parity sector of the     third is (v, r), where the advanced-time coordinate v is
+perturbation, introduce the Cunningham-Price-Moncrief            defined by v  t  r  2M lnr=2M ÿ 1. In these coor-
+master function, and derive the one-dimensional wave
+equation that it satisfies. In Sec. VI we describe the behav-    dinates the Schwarzschild metric takes the form
+ior of the perturbations near future null infinity, construct
+the radiative part of the perturbation field, extract the        gabdxadxb  fdt2  fÿ1dr2;                  (2.2)
+waveforms h and h, and compute the rates at which
+the radiation carries away energy and angular momentum.           fdu2 ÿ 2dudr;                            (2.3)
+In Sec. VII we describe the behavior of the perturbations
+near the black hole's event horizon, and calculate the rates      fdv2  2dvdr;                             (2.4)
+at which they transfer energy and angular momentum to
+the black hole.                                                  where f : 1 ÿ 2M=r and M is the mass of the black hole.
+                                                                 These systems share the property that the scalar r is
+   Various technical details are relegated to the                adopted as one of the coordinates. Our formalism is not,
+Appendices. In Appendix A we expand our discussion of            however, limited to these coordinate choices; one retains
+vectorial and tensorial spherical harmonics. And in              the freedom of using any coordinate system whatever, for
+Appendix B we present the perturbed Ricci tensor for a           example, harmonic coordinates, isotropic coordinates, or
+general spherically-symmetric background spacetime.              double-null coordinates.
+
+                                                                    We introduce the dual vector
+
+                                                                         @r                                (2.5)
+                                                                 ra : a ;
+                                                                 @x
+
+                                                                 which is normal to the surfaces of constant rxa; in the
+                                                                 coordinates of Eqs. (2.2), (2.3), and (2.4), ra  0; 1. We
+                                                                 use gab, the inverse to gab, to raise its index: ra  gabrb.
+
+104003-2
+GRAVITATIONAL PERTURBATIONS OF THE . . .                                        PHYSICAL REVIEW D 71, 104003 (2005)
+
+This allows us to give a covariant definition to the function   the metric perturbation. The tensorial nature of the spheri-
+f that appears in Eqs. (2.2), (2.3), and (2.4):
+                                                                cal harmonics refers to the unit two-sphere, and in this
+rara : f  1 ÿ 2M :                         (2.6)                section we use the metric AB and its inverse AB to lower
+             r                                                  and raise all upper-case Latin indices. All tensorial opera-
+
+We also introduce "ab, the (antisymmetric) Levi-Civita          tions (including covariant differentiation) shall refer to this
+tensor on M2; in the coordinates of Eqs. (2.2), (2.3), and
+(2.4), "tr  "ur  "vr  1. The timelike Killing vector of         metric.
+the Schwarzschild spacetime is tangent to M2 and is given
+                                                                   The scalar harmonics are the usual spherical-harmonic
+by                                                              functions YlmA. They satisfy the eigenvalue equation
+                                                                 ABDADB  ll  1Ylm  0.
+ta  ÿ"abrb;                                (2.7)
+                                                                   Vectorial spherical harmonics come in two types. The
+
+                                                                even-parity harmonics are defined by
+
+in the coordinates of Eqs. (2.2), (2.3), and (2.4), ta  1; 0.                   Ylm A : DAYlm;                   (3.1)
+We have tata  ÿf and tara  0, and the vectors ra, ta
+form a basis on M2. In terms of this basis we have gab          while the odd-parity harmonics are
+fÿ1ÿtatb  rarb and "ab  ÿfÿ1tarb ÿ ratb.
+                                                                                Xlm A : ÿ"ABDBYlm:               (3.2)
+   The covariant derivative operator compatible with gab is
+denoted ra; we thus have ragbc  0. It is easy to show           Their components are listed explicitly in Appendix A. The
+that for the Schwarzschild solution,
+                                                                vectorial harmonics satisfy the orthogonality relations
+
+            M                              (2.8)                      Z A l0m0     ll  1ll0 mm0                  (3.3)
+rarbr  2 gab;                                                            YlmYA d
+
+            r
+
+so that r  2M=r2, where  : gabrarb is the                       and
+Laplacian operator on M2. We also have ratb 
+M=r2"ab, which confirms that ta is a Killing vector.                  Z  A l0m0    ll  1ll0 mm0 ;                (3.4)
+The Riemann tensor on M2 is Rabcd  2M=r3gacgbd ÿ                         XlmXA d
+gadgbc.
+                                                                in which an overbar indicates complex conjugation and
+   We let AB be the inverse to AB, the metric on the unit
+two-sphere. The covariant derivative operator compatible        d : sindd is an element of solid angle. We also
+with AB is denoted DA; we thus have DA BC  0. The
+Levi-Civita tensor on the unit two-sphere is denoted "AB,       have
+and "  sin. The Riemann tensor on the unit-sphere is
+RABCD  AC BD ÿ AD BD.                                                           Z A l0m0     0;                  (3.5)
+                                                                                   YlmXA d
+   Covariant differentiation in the Schwarzschild space-
+                                                                which states that the even-parity and odd-parity harmonics
+time can be defined in terms of covariant differentiation
+in the submanifolds M2 and S2. If ÿabc is the connection        are always orthogonal. The definitions (3.1) and (3.2) for
+associated with ra, and if ÿABC is the connection associ-
+ated with DA, then it is easy to show that the nonvanishing     the vectorial spherical harmonics are identical to those
+components of the spacetime connection are given by
+4ÿabc  ÿabc, 4ÿaBC  ÿrra BC, 4ÿABc  rÿ1rcAB,                    provided by Regge and Wheeler [1].
+and 4ÿABC  ÿABC. Using these rules we find that the
+conservation identities for a stress-energy tensor T in        Tensorial spherical harmonics come in the same two
+
+the Schwarzschild spacetime take the form                       types. The even-parity harmonics are  ABYlm and  (3.6)
+                                                                                                        
+
+                                                                            Ylm AB : DADB  1 ll  1    AB Ylm;
+                                                                                                   2
+
+                                                                while the odd-parity harmonics are
+
+    rbTab  DBTaB  2 rbTab ÿ rra  ABTAB  0  (2.9)                      Xlm AB : ÿ 1 "ACDB  "BCDADCYlm:            (3.7)
+                            r                                                     2
+
+and                                                             Their components are listed explicitly in Appendix A. The
+
+                                                                tensorial harmonics satisfy the orthogonality relations
+
+raTaA  DBTAB  4 raTaA  0                   (2.10)               Z AB l0m0        1 l ÿ 1ll  1l  2ll0 mm0         (3.8)
+                        r                                          Ylm YAB d       2
+
+when expressed in terms of the submanifold connections.         and
+                                                                  Z  AB l0m0
+              III. SPHERICAL HARMONICS                               Xlm XAB d   1 l ÿ 1ll  1l  2ll0 mm0: (3.9)
+                                                                                   2
+   In this section we introduce the scalar, vector, and tensor
+spherical harmonics that are used in the decomposition of       We also have
+
+                                           104003-3
+KARL MARTEL AND ERIC POISSON                                                         PHYSICAL REVIEW D 71, 104003 (2005)
+
+                    Z AB l0m0       0                 (3.10)                                         X                             (4.4)
+                       Ylm XAB d                                                             a  lamYlm;
+
+                                                                                                    lm
+
+and                                                                                                  X                             (4.5)
+                                                                                             A  lmYlm A ;
+                    ABYlm AB  0  ABXlm AB:            (3.11)
+                                                                                                         lm
+
+                                                                   the  fields  lm   and     lm  depend  on  the  coordinates  xa  only.
+
+The definition (3.6) for the even-parity harmonics does not                       a
+
+agree with that of Regge and Wheeler [1], who work                 Under such a transformation the perturbation quantities
+instead with the set ABYlm and DADBYlm. We find it
+more convenient to form the tracefree combinations Ylm AB,         change according to (see Appendix B)
+which have the property of being (pointwise) orthogonal to
+                                                                                hab ! h0ab  hab ÿ rab ÿ rba;                       (4.6)
+  ABYlm. The definition (3.7) for the odd-parity harmonics
+also differs from Regge and Wheeler's, but only by an                                     0                          2
+                                                                                ja ! ja  ja ÿ a ÿ ra  ra;                          (4.7)
+overall minus sign, which we find convenient to introduce.                                                           r
+   The tensorial harmonics Ylm AB and Xlm AB can be related to
+                                                                                K ! K0  K  2 ll  1  ÿ 2 raa;r        r             (4.8)
+the spherical-harmonic functions of spin-weight s  2
+
+[28], and to the pure-spin harmonics used by Thorne [29].
+
+These relations are explored in Appendix A.
+
+              IV. EVEN-PARITY SECTOR                                                     G ! G0  G ÿ 22 ; (4.9)
+                                                                                                             r
+A. Perturbation fields and gauge transformations
+                                                                   where we have discarded the spherical-harmonic labels for
+The even-parity sector refers to those components of the           brevity (we shall continue with this practice until the end of
+                                                                   the section). It is easy to show that the combinations
+metric perturbation that can be expanded in terms of the
+
+even-parity spherical harmonics Ylm, Ylm A , ABYlm, and                              h~ ab : hab ÿ ra"b ÿ rb"a                 (4.10)
+Ylm AB. Introducing the notation 4gab  gab  pab, 4gaB 
+paB, and 4gAB  r2 AB  pAB for the perturbed metric,                and
+
+the even-parity sector of the metric perturbation is
+
+                                X                           (4.1)                    K~ : K  1 ll  1G ÿ 2 ra"a                 (4.11)
+                        pab  hlm abYlm;                                                          2                r
+
+                               lm
+
+                                X                                  are gauge invariant, where
+                        paB  jlamYlm B ;
+                                                            (4.2)                         "a : ja ÿ 1 r2raG:
+                                     lm                                                                 2
+                                                                                                                               (4.12)
+
+                    X          ABYlm  GlmYlm AB:            (4.3)  Eqs. (4.7) and (4.9) reveal that one can always choose a
+         pAB  r2 Klm                                               gauge in which ja  0  G; this is the Regge-Wheeler
+                                                                   gauge. Equations (4.10), (4.11), and (4.12) imply that
+                          lm                                       h~ab  hab and K~  K in the Regge-Wheeler gauge.
+
+In most of this section the sums over l are taken to begin at
+
+l  2; the low multipoles (l  0 and l  1) will be con-
+
+sidered separately in Sec. IV D. The fields hlm ab, jlam, Klm,                       B. Perturbation equations
+and Glm are defined on M2 and they depend on the
+coordinates xa only. They are closely related to the quan-            The Ricci tensor of the Schwarzschild spacetime van-
+                                                                   ishes, and as a consequence its perturbation is gauge
+tities first introduced by Regge and Wheeler [1], who              invariant. Its computation can therefore be carried out in
+                                                                   any convenient gauge, and the Regge-Wheeler gauge is
+worked exclusively in terms of the usual Schwarzschild             clearly convenient. The steps involved are as follows. We
+                                                                   substitute Eqs. (4.1), (4.2), and (4.3), having set ja  G 
+coordinates (t, r). In these coordinates (discarding for           0, into the Ricci tensor of Appendix B. We simplify the
+                                                                   result and find that Rab is expanded in terms of Ylm, RaB
+brevity the spherical-harmonic labels) we have htt                 in terms of Ylm B , and RAB in terms of both ABYlm and
+fH0, htr  H1, hrr  H2=f, jt  h0, and jr  h1. The                   Ylm AB. From the Ricci tensor we compute the Einstein tensor
+                                                                   and set the result equal to 8T, which describes the
+function G introduced in Eq. (4.3) is identical to the             material source for the gravitational perturbations. Each
+                                                                   spherical-harmonic component of the field equations can
+corresponding Regge-Wheeler quantity, but K is different:
+
+Khere    KRW  ÿ  1  ll    1G;  the  difference  originates  from
+                 2
+the fact that Regge and Wheeler work with ABYlm and
+DADBYlm instead of ABYlm and Ylm AB.
+
+Even-parity gauge transformations are generated by a
+
+dual vector field   a; A that is expanded as
+
+                                                            104003-4
+GRAVITATIONAL PERTURBATIONS OF THE . . .                                             PHYSICAL REVIEW D 71, 104003 (2005)
+
+then be extracted by involving the orthonormality relations   allows us to make the substitutions hab ! h~ab, K ! K~ and
+(3.3) and (3.8) satisfied by the spherical harmonics. At the  therefore to express the gauge-invariant Einstein tensor in
+end of this calculation we take advantage of the fact that    terms of gauge-invariant quantities.
+h~ab  hab and K~  K in the Regge-Wheeler gauge. This
+                                                                 Our final results are
+
+Qab  rcrah~cb ÿ 1 gabrcrdh~cd ÿ 1 h~ab ÿ gabh~ ÿ 1 rarbh~  2 rcrah~cb ÿ gabrdh~cd
+              2               2                               2 r 
+
+     1c ~               ~ ll  1 ~ 1                           ~cd 1 ll  1 2M ~     ~                      ~
+     ÿ r rchab ÿ gabh  2 hab ÿ 2 gabrcrdh ÿ                          2  3 gabh ÿ rarbK  gabK
+     r                     2r                    r                 2r     r
+
+     2      ~ 3 c ~ l ÿ 1l  2 ~
+     ÿ rarbK  gabr rcK ÿ                            gabK;                                                    (4.13)
+     r           r                          2r2
+
+     Qa  rch~ca ÿ rah~  1 rah~ ÿ raK~;              (4.14)    and
+                                r
+                                                              raQa  2 raQa ÿ 2 l ÿ 1l  2 Q]  Q[  0:
+                                                                       r       2r                            (4.22)
+
+Q[  h~ ÿ rarbh~ab ÿ 2 rarbh~ab  1 rarah~
+                     r           r
+                                                                          C. Master equation
+        ll  1 ~ ~ 2 a ~
+     ÿ 2 h  K  r raK;   r                           (4.15)    The Zerilli-Moncrief function is defined by
+        2r
+                                                                                                             
+                                                                   lemven : 2r ll  1 K~lm  2 rarbh~lamb ÿ rraraK~lm ;
+              Q]  ÿh~;                              (4.16)
+
+where h~ : gabh~ab and  : gabrarb. The source terms                                                          (4.23)
+are
+                                                              where
+
+                         Z                          (4.17)                 : l ÿ 1l  2  6M :                 (4.24)
+            Qab  8 TabYlmd ;                                                                           r
+
+            a 16r aB 2 Z lm                                   This is a covariant and gauge-invariant generalization of
+        Q   ll  1          T YB d ;                 (4.18)    the definition provided by Lousto and Price [30], who
+                                                    (4.19)    worked with the usual Schwarzschild coordinates and in
+                   Z                                          the Regge-Wheeler gauge. Their even-parity function
+     Q[  8r2 TAB ABYlmd ;                                     agrees, up to a normalization factor, with the gauge-
+                                                              invariant function first introduced by Moncrief [9].
+Q]      32r4               Z                        (4.20)    Moncrief's function, in turn, is a variant of Zerilli's origi-
+                              TABYlm ABd :                    nal even-parity function [3] (Zerilli worked in the fre-
+     l ÿ 1ll  1l  2                                           quency domain instead of the Schwarzschild time
+                                                              domain). Up to the same normalization factor the
+In Eqs. (4.17), (4.18), (4.19), and (4.20) the stress-energy  Moncrief and Fourier-transformed Zerilli functions are
+tensor is imagined to be given in fully contravariant form;   equal up to the presence of source terms; they are equal
+Tab, TaB, and TAB are then its components in the spacetime    only where there is no matter. (The plethora of even-parity
+coordinates (xa, A). In the event where the stress-energy     functions and normalization conventions is conveniently
+tensor would be given in covariant or mixed form, its         catalogued in the review article by Nagar and Rezzolla
+indices would have to be raised with (gab, rÿ2 AB)--the       [17].) The normalization adopted in Eq. (4.23) will be seen
+inverse Schwarzschild metric --before evaluating the          to be convenient when we discuss gravitational radiation at
+source terms. In Eqs. (4.13), (4.14), (4.15), and (4.16) all  future null infinity (Sec. VI) and at the horizon (Sec. VII);
+lower-case Latin indices are lowered and raised with gab      our definition of the even-parity master function is well
+and gab, respectively.                                        adapted to the description of radiation fields.
+
+   The perturbation equations are not all independent. By        The perturbation Eqs. (4.13), (4.14), (4.15), and (4.16)
+virtue of the Bianchi identities, or the conservation         give rise to a wave equation for the function even (we
+Eqs. (2.9) and (2.10), they are related by                    resume our practice of omitting the spherical-harmonic
+                                                              labels). The manipulations are long and tedious, and we
+rbQab  2 rbQab ÿ 2 ll  1 Qa ÿ 1 raQ[  0 (4.21)rr              shall not present them here (the reader may consult
+                 2r                                           Ref. [26] for details). We simply state the final result: As
+
+                                                    104003-5
+KARL MARTEL AND ERIC POISSON                                                    PHYSICAL REVIEW D 71, 104003 (2005)
+
+a consequence of the field equations, the even-parity mas-             perturbation, the monopole component of the metric per-
+ter function satisfies the Zerilli equation
+                                                                       turbation represents a shift in the mass parameter of the
+
+                 ÿ Veven even  Seven;      (4.25)                      Schwarzschild solution.
+
+                                                                       The even-parity spherical harmonics for l  1 are Y1m,
+
+with potential                                                         Y1m A , and ABY1m; Y1m AB vanishes. The metric perturbation is
+
+1 2    2 6M 36M2  2M                                                   then                     X
+
+Veven  2          2  3  4               r                                       pab  h1m ab Y1m;                       (4.31)
+                 r  r               r
+
+                                           (4.26)                                               m
+
+and source term                                                                 paB             X   j1amY1m;           (4.32)
+
+                                                                                                            B
+
+Seven  4 raQa ÿ 1r Q]  2   2                                                                    m
+              24M ab [
+                                                                                pAB  r2           X                    (4.33)
+           ÿ2r2raraQ   rarbQ  2rfQ                                                              AB K1mY1m;
+             r  M M2 
+                                                                                                     m
+             ÿ 2  12 ÿ 3 r  84 r2 Q ;
+                                                               (4.27)  and the fields G1m are nPot defined. Gauge tranPsformations
+                                                                       are generated by a        1mY1m   and      A    m A 1mY1m.
+
+                                                                                                ma
+
+                                                                       The perturbations change according to
+
+                                                                             hab ! h0ab  hab ÿ rab ÿ rba;              (4.34)
+
+where  : l ÿ 1l  2 and Q : gabQab. The validity                              0                                 2
+of Eqs. (4.25), (4.26), and (4.27) can be verified by brute-                 ja ! ja  ja ÿ a ÿ ra  ra;                 (4.35)
+force evaluation of both sides of Eqs. (4.25). The general                                                     r
+source term for the covariant Zerilli equation has never
+been presented in explicit form in the literature. We display                K ! K0  K  r22  ÿ 2r raa:                 (4.36)
+it here for the first time, but note that Eq. (A14) of Ref. [16]
+gives an implicit expression for the source term, while their          There is no analogue here of the gauge-invariant fields h~ab
+Eqs. (A15)-(A17) give it explicitly in Schwarzschild                   and K~ that were introduced in the general case. The rele-
+coordinates.                                                           vant field equations for hab, ja, and K are the Qab, Qa, Q[
+                                                                       equations of Eqs. (4.13), (4.14), and (4.15), in which
+                 D. Low multipoles                                     we set l  1, h~ab  hab ÿ rajb ÿ rbja, and K~ 
+                                                                       K ÿ 2rÿ1raja. The Q] equation of Eq. (4.16) is not defined
+   To conclude our presentation of the even-parity sector              for l  1. It is well known [3] that in the case of a vacuum
+we now handle the special cases l  0 and l  1.
+                                                                       perturbation, the dipole component of the even-parity met-
+Additional details can be found in Appendix G of the paper
+                                                                       ric perturbation is pure gauge: it can always be removed by
+by Zerilli [3].
+   When l  0 the only relevant spherical harmonic is Y00,              a gauge transformation.
+
+which is a constant. It follows that YA  YAB  0, and the                     V. ODD-PARITY SECTOR
+only nonvanishing metric perturbations are
+
+pab  habY00;        pAB  r2K ABY00;        (4.28)                      A. Perturbation fields and gauge transformations
+
+the fields ha and G are not defined. The freedom to perform               The odd-parity sector refers to those components of the
+a gauge transformation is contained in a  aY00, A 
+0, and the perturbations transform as                                  metric perturbation that can be expanded in terms of the
+                                                                       odd-parity spherical harmonics Xlm A and Xlm AB. Recalling the
+hab ! h0ab  hab ÿ rab ÿ rba;               (4.29)                      notation 4gab  gab  pab, 4gaB  paB, and 4gAB 
+                                                                       r2 AB  pAB for the perturbed metric, the odd-parity sec-
+                                                                       tor of the metric perturbation is
+
+                 K ! K0  K ÿ 2 raa:        (4.30)                                               pab  0;                (5.1)
+                                     r                                                                                 (5.2)
+                                                                                                X                      (5.3)
+                                                                                paB                 hlmXlm;
+There is no analogue here of the gauge-invariant quantities
+h~ab and K~ that were introduced in the general case. The                                             aB
+relevant field equations for hab and K are the Qab and Q[
+equations of Eqs. (4.13) and (4.15), respectively, in which                                     lm
+we set l  0, h~ab  hab, and K~  K. The Qa and Q]
+equations of Eqs. (4.14) and (4.16), respectively, are not                              X
+                                                                                pAB  hlm 2 Xlm AB:
+defined. It is well known [3] that in the case of a vacuum
+                                                                                             lm
+
+                                                                       In most of this section the sums over l are taken to begin at
+                                                                       l  2; there is no odd-parity perturbation with l  0, and
+
+                                           104003-6
+GRAVITATIONAL PERTURBATIONS OF THE . . .                                            PHYSICAL REVIEW D 71, 104003 (2005)
+
+the case l  1 will be considered separately in Sec. V E.                   Our final results are
+
+The  fields  hlm  and  hlm 2  are  defined  on  M2    and  they  depend    Pa  ÿh~a  rarbh~b  2 rbrah~b ÿ rarbh~b
+                                                                                                            r
+               a
+
+on the coordinates xa only. They are closely related to the
+
+quantities first introduced by Regge and Wheeler [1], who                        2 ~b ll  1 ~
+                                                                              ÿ 2 rarbh  2 ha;
+worked exclusively in terms of the usual Schwarzschild                                                                     (5.8)
+
+coordinates (t, r). In these coordinates (discarding                          r                   r
+
+spherical-harmonic labels) we have ht  h0 and hr  h1.                                             P  rah~a;
+
+Except for a sign--refer back to the discussion following                                                                   (5.9)
+                                                                                                                           (5.10)
+Eq. (3.11)--the function h2 is identical to the correspond-              where  : gabrarb. The source terms are
+
+ing Regge-Wheeler quantity.                                                      a 16r aB 2 Z  lm
+
+Odd-parity gauge transformations are generated by a                              P                      T XB d ;
+
+dual vector field   0; A that is expanded as                                            ll  1
+
+                               X                                 (5.4)           16r4                Z
+                       A  lmXlm A ;                                                                       AB  lm
+
+                                   lm                                      P                            T XABd :           (5.11)
+
+in which lm depends on the coordinates xa only. Under                         l ÿ 1ll  1l  2
+such a transformation the perturbation quantities change
+according to (see Appendix B)                                            In Eqs. (5.10) and (5.11) the stress-energy tensor is imag-
+                                                                         ined to be given in fully contravariant form; TaB and TAB
+                       0                           2
+             ha ! ha  ha ÿ ra  ra;                               (5.5)   are its relevant components in the spacetime coordinates
+                                                   r                     (xa, A). In the event where the stress-energy tensor would
+
+                       h2 ! h02  h2 ÿ 2;                         (5.6)   be given in covariant or mixed form, its indices would
+                                                                         have to be raised with (gab, rÿ2 AB)--the inverse
+where we have discarded the spherical-harmonic labels for
+brevity (we shall continue with this practice until the end of           Schwarzschild metric --before evaluating the source
+the section). It is easy to show that the combinations
+                                                                         terms. In Eqs. (5.8) and (5.9) all lower-case Latin indices
+                                                                         are lowered and raised with gab and gab, respectively.
+
+                                                                            The perturbation equations are not all independent. By
+
+                                                                         virtue of the Bianchi identities, or the conservation
+
+                                                                         Eq. (2.10), they are related by
+
+                  ~                1            1                          raPa  2 raPa ÿ 2 l ÿ 1l  2 P  0:
+                  h a  ha ÿ rah2  rah2                           (5.7)
+                                   2            r                                                                          (5.12)
+                                                                                 r                   r
+
+are gauge invariant. Equation (5.6) reveals that one can                            C. Master equation
+always choose a gauge in which h2  0; this is the Regge-
+Wheeler gauge. Equation (5.7) implies that h~a  ha in the                  The Cunningham-Price-Moncrief function is defined by
+Regge-Wheeler gauge.
+                                                                                                                  
+                                                                                    2r            "ab r h~lm ÿ 2 r h~lm ;
+                                                                           lm :                                            (5.13)
+                  B. Perturbation equations                                odd l ÿ 1l  2                ab rab
+
+   The Ricci tensor of the Schwarzschild spacetime van-                  where "ab is the Levi-Civita tensor on the submanifold
+ishes, and as a consequence its perturbation is gauge-                   M2. Apart from a different normalization factor, this is a
+invariant. Its computation can therefore be carried out in               covariant generalization (first formulated by Gerlach and
+any convenient gauge, and as in the preceding section we                 Sengupta [10]) of the definition provided by Cunningham,
+shall adopt the Regge-Wheeler gauge. We substitute                       Price, and Moncrief [24], who worked with the usual
+Eqs. (5.1), (5.2), and (5.3), having set h2  0, into the                 Schwarzschild coordinates. Our definition (and normaliza-
+Ricci tensor of Appendix B. We simplify the result and                   tion) agrees with the odd-parity function considered by
+find that Rab vanishes, RaB is expanded in terms of Xlm B ,              Jhingan and Tanaka [25], who also worked with the
+and RAB in terms of Xlm AB. From the Ricci tensor we                     Schwarzschild coordinates, but in the frequency domain.
+compute the Einstein tensor and set the result equal to                  (The plethora of odd-parity functions and normalization
+8T. Each spherical-harmonic component of the field                      conventions is conveniently catalogued in the review ar-
+equations can then be extracted by involving the orthonor-               ticle by Nagar and Rezzolla [17].) The normalization
+mality relations (3.4) and (3.9) satisfied by the odd-parity             adopted in Eq. (5.13) will be seen to be convenient when
+harmonics. At the end of this calculation we take advan-                 we discuss gravitational radiation at future null infinity
+tage of the fact that h~a  ha in the Regge-Wheeler gauge.                (Sec. VI) and at the horizon (Sec. VII); our definition of
+This allows us to make the substitution ha ! h~a and there-              the odd-parity master function is well adapted to the de-
+fore to express the gauge-invariant Einstein tensor in terms             scription of radiation fields. It is noteworthy that it can also
+of gauge-invariant quantities.                                           be expressed as
+
+                                                                 104003-7
+KARL MARTEL AND ERIC POISSON                                                     PHYSICAL REVIEW D 71, 104003 (2005)
+
+                      2r "ab @ hlm  ÿ 2 r hlm;                                    ÿ Vodd RW  SRW;                        (5.19)
+         lm odd : l ÿ 1l  2
+                                     ab rab                     with the potential of Eq. (5.15) and a new source term given
+
+in terms of the original (gauge-dependent) perturbation         by   S 1 RW  ra  r 2  3M  aP ÿ Pa ÿ 1 ÿ P :
+quantities, and in terms of the partial differentiation opera-
+tor; the function is nonetheless gauge-invariant and a                 r                          r           r          (5.20)
+scalar.
+                                                                This covariant form for the source term is also a new result.
+   The perturbation Eqs. (5.8) and (5.9) give rise to a wave
+equation for the function odd (we resume our practice of                            E. Low multipoles
+discarding the spherical-harmonic labels). As in the pre-
+ceding section we simply state the final result: As a con-        To conclude our presentation of the odd-parity sector
+sequence of the field equations, the odd-parity master
+function satisfies the Regge-Wheeler equation                   we now handle the special cases l  0 and l  1.
+
+                                                                Additional details can be found in Appendix G of the paper
+
+                  ÿ Vodd odd  Sodd;                     (5.14)  by Zerilli [3].
+
+                                                                  When l  0 the only relevant spherical harmonic is Y00,
+
+with potential                                                  which is a constant. It follows that XA  XAB  0, and
+
+                          ll  1 6M                              we conclude that there is no odd-parity perturbation with
+                 Vodd  2 ÿ 3
+                               r        r               (5.15)  l  0.
+
+                                                                  The only surviving odd-parity spherical harmonics for
+
+and source term                                                 l  1 are X1m A , which are obtained from Y1m using
+                                                                Eq. (3.2). The tensorial harmonics X1m AB vanish, and the
+              Sodd  ÿ 2r l ÿ 1l  2 "abraPb:
+                                                        (5.16)  only surviving components of the metric perturbation are
+                                                                                         X
+                                                                                    paB  h1amX1m B :                     (5.21)
+The validity of Eqs. (5.14), (5.15), and (5.16) can be
+verified by brute-force evaluation of both sides of                                           m
+Eqs. (5.14). The general source term for the covariant
+Regge-Wheeler equation has never been presented in ex-          The  perturbations  h1m  can  be  altered  bPy a  gauge  trans-
+plicit form in the literature; it is given only implicity by
+Eq. (17) of Ref. [10]. We display it here for the first time,                         a
+and note that in the usual Schwarzschild coordinates (and       formation generated by a  0, A  m A 1mX1m; they
+in the frequency domain), Sodd agrees with the source term
+presented in Eq. (18) of Jhingan and Tanaka [25].               change according to
+
+                                                                                     0                     2
+                                                                          ha ! ha  ha ÿ ra  ra:                          (5.22)
+                                                                                                           r
+
+                D. Regge-Wheeler function                       There is no analogue here of the gauge-invariant fields h~a
+                                                                that were introduced in the general case. The relevant field
+   The Cunningham-Price-Moncrief function is a close            equation for ha is the Pa equation of Eq. (5.8), in which we
+cousin to the more familiar Regge-Wheeler function [1],         set l  1 and h~a  ha. The P equation of Eq. (5.9) is not
+whose covariant and gauge-invariant definition is               defined. It is well known [3] that in the case of a vacuum
+                                                                perturbation, the dipole component of the odd-parity met-
+                          lm : 1 rah~lm:                (5.17)  ric perturbation represents a shift (away from zero) in the
+                                                                angular-momentum parameter of the black hole.
+
+                          RW      r  a
+
+As we shall see in Secs. VI and VII, the Regge-Wheeler              VI. RADIATION AT FUTURE NULL INFINITY
+
+function is not well suited to describe the gravitational          To examine the gravitational perturbations near future
+
+radiation field, and in this paper we adopt the function        null infinity we adopt the retarded coordinates (u, r, , )
+
+lm   of  Eq.  (5.13)  as  the  fundamental  odd-parity  master  and express the two-dimensional Schwarzschild metric in
+odd
+                                                                the form of Eq. (2.3). In these coordinates, future null
+function. It is straightforward to use the perturbation equa-   infinity corresponds to taking the limit r ! 1 keeping u
+
+tions to show that these functions are related by               fixed, and our strategy will be to expand the metric pertur-
+                                                                bations in powers of rÿ1. In asymptotically Cartesian
+     RW  12 tara odd  r l ÿ 1l  2 raPa; (5.18)
+                                                                coordinates the radiative part of the metric would scale
+where ta  ÿ"abrb is the Killing vector of Eq. (2.7).            as rÿ1; transforming to spherical coordinates produces the
+Outside of sources, and apart from a factor of one-half,
+the Regge-Wheeler function is the time derivative of the        scalings
+Cunningham-Price-Moncrief function.
+                                                                    prad ab  Orÿ1;       prad aB  Or0;           prad AB  Or
+   The function of Eq. (5.17) also satisfies the Regge-                                                                      (6.1)
+Wheeler equation,
+                                                                for the radiative part of the metric perturbations. Our goal
+
+                                                        104003-8
+GRAVITATIONAL PERTURBATIONS OF THE . . .                                         PHYSICAL REVIEW D 71, 104003 (2005)
+
+is to isolate this, and to calculate how much energy and                               X                            (6.8)
+angular momentum is carried away by the radiation. We                    prad;even  r lemvenu; r  1Ylm :
+find it advantageous to work in gauge in which                               AB                                 AB
+
+                                                                                         lm
+
+tapab  0  tapaB;                          (6.2)                  It is obtained by integrating the Zerilli Eq. (4.25) and
+                                                                 evaluating the Zerilli-Moncrief function at r  1.
+
+where ta is the Killing vector of Eq. (2.7). In spite of the        We turn next to the odd-parity sector of Sec. V. The
+fact that ta is not a null vector (except on the even horizon,   gauge conditions imply hu  0, and the scalings of
+                                                                 Eq. (6.1) imply that we are looking for the r0 part of hr
+which is well outside our domain of consideration), this         and the r1 part of h2. These are determined by following
+                                                                 the same procedure as in the even-parity case, and we
+gauge happens to be a perfectly respectable ``radiation
+                                                                 obtain
+gauge.''
+   In this section we take l  2; as is well known, the low       hr  ÿ l ÿ 1l  2 b Z u u0du0  Orÿ2;                 (6.9)
+                                                                                 2r
+multipoles l  0 and l  1 do not contain radiative de-
+                                                                                 h2  bur  Or0;                      (6.10)
+grees of freedom. We assume that the matter distribution
+                                                                 where bu is not determined by the vacuum field equa-
+responsible for the radiation is confined to a bounded           tions. We see that the radiative part of the perturbation is
+                                                                 contained entirely in the function h2u; r. With the metric
+volume, and that our domain of consideration is outside          perturbation of Eqs. (6.9), (6.10) we may evaluate the
+                                                                 Cunningham-Price-Moncrief function of Eq. (5.13). The
+this volume; we shall therefore be solving the vacuum field      result is
+
+equations.                                                                       odd  bu  Orÿ1;                     (6.11)
+
+   We begin with the even-parity sector of Sec. IV. The          and we conclude that the radiative part of the odd-parity
+gauge conditions imply huu  hur  ju  0, and the scal-
+ings of Eq. (6.1) imply that we are looking for the rÿ1 part     sector is given by        lm oddu; r  1XAlmB:      (6.12)
+of hrr, K, and G, as well as the r0 part of jr. These can be                 rad;odd X
+determined by expanding the components of the metric
+perturbation in powers of rÿ1 and substituting them into                   pAB  r
+
+the field equations of Eqs. (4.13), (4.14), (4.15), and (4.16).                      lm
+The expansions for hrr, K, and G begin at order rÿ1 and
+each coefficient is a to-be-determined function of u; the        It is obtained by integrating the Regge-Wheeler Eq. (5.14)
+expansion for jr begins instead at order r0. The field
+equations return Qab, Qa, Q[, and Q] expanded in powers
+of rÿ1, and setting each coefficient to zero determines the
+
+metric perturbation. We obtain
+
+hrr  ÿ 3 ll  1 a Z u u0du0  Orÿ4;                                and evaluating the Cunningham-Price-Moncrief function
+              r
+                                          (6.3)                  at r  1. Notice that by virtue of Eq. (5.18), the radiative
+
+                                                                 field could instead be expressed in terms of the u-integral
+
+                                                                 of the Regge-Wheeler function. The need to perform this
+
+         jr  au  Orÿ2;                                           integration is inconvenient, and it is the simple relationship
+                  r
+                                          (6.4)                  of Eq. (6.12) that has motivated the adoption of the
+K  3 ll  1 a Z u u0du0  Orÿ4;             (6.5)
+         2r                                                      Cunningham-Price-Moncrief function as the fundamental
+
+                                                                 odd-parity master function.
+
+                                                                 The full radiative field is obtained from Eqs. (6.8) and
+
+                                                                 (6.12). We have prad ab  0  prad aB and
+                                                                                 X
+                                                                         prad  r  lm Ylm  lm Xlm ;                  (6.13)
+G  ÿ 2 a_ u  Orÿ2; (6.6)                                                 AB              even AB   odd AB
+         l ÿ 1l  2 r
+                                                                                 lm
+
+                                                                 where   lm      lm    u;  r    1  and    lm odd    lm oddu; r 
+                                                                                 even
+                                                                         even
+
+where au is a function that is not determined by the             1. As expected, the radiative field is transverse, and
+vacuum field equations, and a_ : da=du. We see that the
+radiative part of the perturbation is contained entirely in      tracefree by virtue of Eqs. (3.11). The two fundamental
+the function Gu; r. With the metric perturbation of
+Eqs. (6.3), (6.4), (6.5), and (6.6) we may evaluate the          polarizations of the gravitational wave can be defined by
+Zerilli-Moncrief function of Eq. (4.23). The result is
+                                                                 h : p=r2 and h : p=r2 sin. Using the compo-
+
+                                                                 nents of the tensorial spherical harmonics listed in
+
+                                                                 Appendix A, we obtain
+
+even  ÿ 2 l ÿ 1l  2 a_ u  Orÿ1;                                          1 X  @2 1                        
+
+                                                                                      lm                       lm
+                                          (6.7)                  h               even 2  ll  1 Y
+                                                                         r lm            @ 2
+                                                                                                   
+                                                                         ÿ odd lm im @ ÿ cos Ylm
+and we conclude that the radiative part of the even-parity                       sin @ sin                          (6.14)
+sector is given by
+
+                                          104003-9
+KARL MARTEL AND ERIC POISSON                                        PHYSICAL REVIEW D 71, 104003 (2005)
+
+and                                                             port of energy and angular momentum across the horizon is
+
+     h   1 X   lm     im  @          ÿ  cos lm                  pAB. [Refer to Poisson's Eq. (6.10), which establishes the
+                                                Y               equality between pAB and 1AB, the perturbation of the
+         r lm  even   sin @ sin
+
+               lm  @2 1                                         horizon's intrinsic metric.]
+
+                                             lm                 In this section we take l  2, as the low multipoles l  0
+          odd 2  ll  1 Y :
+                   @ 2                             (6.15)       and l  1 do not contain radiative degrees of freedom. We
+
+                                                                assume that the matter distribution responsible for the
+
+The energy and angular momentum carried away by the             radiation does not come near the event horizon; we shall
+
+gravitational radiation can be calculated using the tech-       therefore be solving the vacuum field equations in an
+
+niques developed by Thorne [29]. We compare our                 empty neighborhood of the event horizon.
+
+Eq. (6.13) to his Eq. (4.3), taking into account the relation-  We begin with the even-parity sector of Sec. IV. The
+
+ship between our tensorial harmonics and his pure-spin          gauge conditions of Eq. (7.1) imply that hvv  hvr  jv 
+
+harmonics (this is spelled out in Appendix A). Thorne's         0, so that hrr, jr, K, and G are the only nonvanishing
+
+mass multipole moments are thus seen to be proportional to      components of the metric perturbation. As stated above,
+
+  lemvenu; r  1, and his current moments are proportional       the radiation crossing the event horizon is described en-
+to lm oddu; r  1. Substituting these into Thorne's
+                                                                tirely by K and G evaluated at r  2M. The field equa-
+
+Eq. (4.16) we obtain                                            tions, however, imply that K vanishes on the horizon. This
+
+     dE 1 X                                                     is verified by expanding hrr, jr, K, and G in powers of f 
+                      l ÿ 1ll  1l  2                            1 ÿ 2M=r and substituting them into the field equations of
+         du 64 lm
+                                                                Eqs. (4.13), (4.14), (4.15), and (4.16). This calculation
+
+               hj  _  lm 2     j  _  lm oddj2i     (6.16)       reveals also that Gv; r  2M  av, a function that is
+
+                      evenj                                     not determined by the vacuum field equations. On the other
+
+for the averaged rate at which the energy escapes to future     hand, the expansions allow us to evaluate the Zerilli-
+
+null infinity. Substituting instead into Thorne's Eq. (4.23)    Moncrief function of Eq. (4.23), and the result is evenr 
+                                                                2M  2Mav. We conclude that on the horizon, the
+returns
+
+     dJ 1 X                                                     radiative part of the even-parity sector is given by
+
+                   l ÿ 1ll  1l  2im                                              X
+     du 64 lm                                                   pAB rad;even  2M lemvenv; r  2MYAlmB:
+                                                                                                                      (7.2)
+
+            h  lm _ lm   lm _ lm i                 (6.17)           lm
+
+               even even             odd odd
+
+for the averaged rate at which the angular momentum             It is obtained by integrating the Zerilli Eq. (4.25) and
+escapes to infinity. This is the component of the angular-      evaluating the Zerilli-Moncrief function at r  2M.
+momentum vector in the arbitrary z direction which defines
+the orientation of the angles  and . The overbar indicates         We turn next to the odd-parity sector of Sec. V. The
+complex conjugation, and it is not difficult to show that       gauge conditions imply hu  0, so that hr and h2 are the
+hdJ=dui is real. The averaging carried out in Eqs. (6.16)       only nonvanishing components of the metric perturbation.
+and (6.17) is over a characteristic time scale associated
+with the gravitational wave.                                    The radiation crossing the event horizon is described en-
+                                                                tirely by h2 evaluated at r  2M, and the field equations
+VII. RADIATION AT THE EVENT HORIZON                             imply that bv : h2v; r  2M remains as an undeter-
+                                                                mined function. They also imply that hrv; r  2M 
+   To examine the gravitational perturbations near the          cv, with
+event horizon we adopt the advanced coordinates (v, r,
+, ) and express the two-dimensional Schwarzschild                            cv : 2 l ÿ 1l  2 b Z v v0dv0:
+metric in the form of Eq. (2.4). We want to calculate how                                    8M
+much energy and angular momentum is transferred to the
+black hole by the perturbation, and we shall do so by           These statements are verified by expanding hr and h2 in
+following the methods devised by Poisson [31]. As in the        powers of f  1 ÿ 2M=r and substituting them into
+preceding section we impose the gauge conditions
+                                                                Eqs. (5.8) and (5.9). The expansions allow us also to
+
+                                                                evaluate the Cunningham-Price-Moncrief function of
+
+                                                                Eq. (5.13), and the result is
+
+                   tapab  0  tapaB                 (7.1)        oddr  2M  ÿ 4M dc l ÿ 1l  2 dv  ÿ 12M bv:
+
+on the metric perturbation; ta is still the Killing vector of   We conclude that on the horizon, the radiative part of the
+Eq. (2.7). Recall that this vector is null on the event
+horizon, and Eq. (7.1), evaluated at r  2M, is equivalent       odd-parity sector is given by
+to Poisson's Eq. (6.5). Poisson then shows that the part of
+the metric perturbation which is associated with the trans-     prad;odd  ÿ2MX lm v; r  2MXlm :                       (7.3)
+                                                                AB                            odd         AB
+
+                                                                    lm
+
+                                                   104003-10
+GRAVITATIONAL PERTURBATIONS OF THE . . .                                         PHYSICAL REVIEW D 71, 104003 (2005)
+
+It is obtained by integrating the Regge-Wheeler Eq. (5.14)              Xlm   ÿ 1 @ sin @ Ylm;     Xlm  sin @ Ylm:
+
+and evaluating the Cunningham-Price-Moncrief function                                                
+
+at r  2M. Notice that by virtue of Eq. (5.18), the radiative                                                     @
+
+field could instead be expressed in terms of the v-integral        According to Eq. (3.6) we have
+
+of the Regge-Wheeler function; this would give rise to                  lm  @2 1     
+
+Poisson's Eq. (7.3), a less convenient expression.                                        lm
+                                                                        Y        ll  1 Y ;
+                                                                            @2 2
+The full radiative field is obtained by adding Eqs. (7.2)                lm  @2  ÿ cos @ Ylm  ;
+                                                                        Y 
+and (7.3). We have           lm Ylm ÿ  lm oddXlm AB;  (7.4)                 @@ sin @
+                          X                                             lm  @2                                    
+                             even AB
+            prad AB  2M 
+
+                 lm                                                                             @1        2         lm
+                                                                        Y  2  sin cos  ll  1sin  Y :
+where  lm      lemvenv; r  2M and      lm odd         lm oddv; r            @                   @ 2
+
+       even
+
+2M. This result should be compared with Eq. (6.13). The            And according to Eq. (3.7) we have
+
+rates at which the gravitational perturbation transfers en-               lm 1  @2   ÿ cos @ Ylm  ;
+                                                                        X  ÿ
+ergy and angular momentum to the black hole can now be
+
+calculated using the method described in Sec. VII of                           sin @@ sin @
+
+Poisson [31]. Our Eq. (7.4) replaces his Eq. (7.5), and the               lm 1  @2 1               @2 @ lm 
+                                                                        X  sin 2 ÿ                   2 ÿ cos Y ;
+rest of the calculation is identical. The final results are
+       dE 1 X
+                                                                            2     @ sin @                 @
+                                                                        lm  @2                     @ lm 
+                             l ÿ 1ll  1l  2
+       dv 64 lm
+                                                                        X  sin       ÿ cos Y :
+                                                                                 @@                @
+                 hj  _  lm 2     j  _  lm oddj2i      (7.5)
+
+                        evenj
+
+and  dJ 1 X                                                           The tensorial harmonics Ylm AB and Xlm AB can be related to
+                                                                   the spherical-harmonic functions of spin-weight s  2
+                 l ÿ 1ll  1l  2im                                  [28]. Let mA and m A be a complex orthonormal basis on the
+     dv 64 lm                                                      unit two-sphere, with mA  2ÿ1=21; i sin. The relation-
+                                                                   ship is then
+          h  lm _ lm   lm _ lm i:                     (7.6)
+               even even         odd odd                                                1 p
+                                                                               Ylm AB  l ÿ 1ll  1l  2
+These equations replace Poisson's Eqs. (7.8) and (7.9).
+Notice the similarity between Eqs. (7.5) and (6.16), and                                2
+between Eqs. (7.6) and (6.17). In Eq. (7.6), J represents the
+component of the hole's angular-momentum vector in                                       ÿ2YlmmAmB 2 Ylmm Am B
+the arbitrary z direction which defines the orientation of
+the angles  and . The overbar indicates complex con-               and
+jugation. The averaging carried out in Eqs. (7.5) and (7.6) is                             i p
+over a characteristic time scale associated with the gravi-
+tational perturbation.                                                        Xlm AB  ÿ l ÿ 1ll  1l  2
+                                                                                          2
+
+                                                                                        ÿ2YlmmAmB ÿ2 Ylmm Am B;
+
+                  ACKNOWLEDGMENTS                                  where sYlm are the spin-weighted spherical harmonics.
+                                                                   These equations can be compared with Eqs. (2.38e) and
+   We are grateful to Alessandro Nagar for his criticism of        (2.38f) of Ref. [29]. This reveals that our tensorial har-
+an earlier version of this paper. This work was supported          monics are intimately related to the ``pure-spin'' harmon-
+by the National Science and Engineering Research Council           ics used by Thorne. The relationship is
+of Canada.
+                                                                                        s
+APPENDIX A: COMPONENTS OF THE VECTOR                                           Ylm AB  1 l ÿ 1ll  1l  2TAB E2;lm
+AND TENSOR SPHERICAL HARMONICS, AND
+                                                                                          2
+  RELATIONSHIP WITH OTHER SPHERICAL
+                        HARMONICS                                  and
+
+   We first list the components of the tensorial harmonics                             s
+introduced in Sec. III. According to Eq. (3.1) we have                        Xlm AB  1 l ÿ 1ll  1l  2TAB B2;lm:
+
+                                                                                         2
+
+       Ylm   @@ Ylm;           Ylm  @ Ylm:                         Notice that the pure-spin harmonics TAB E2;lm and TAB B2;lm are
+                                 @                                 normalized on the unit two-sphere. Our convention here
+                                                                   differs from Thorne's, who inserts a factor of rÿ1 in mA and
+According to Eq. (3.2) we have
+                                                                   m A in order to normalize them on a two-sphere of radius r.
+
+                                                             104003-11
+KARL MARTEL AND ERIC POISSON                                                          PHYSICAL REVIEW D 71, 104003 (2005)
+
+APPENDIX B: PERTURBATION OF THE RICCI                          riantly constant relative to the connection ÿabc; for ex-
+  TENSOR FOR A GENERAL SPHERICALLY-                            ample ra AB  0.
+   SYMMETRIC BACKGROUND SPACETIME
+                                                                  A straightforward calculation returns the components of
+The perturbed spacetime metric is written as                   the perturbed connection, which we denote 4ÿ 
+                                                               ÿ . We obtain
+4gab  gab  pab;        4gaB  paB;
+                                                               ÿabc  Cabc;
+            4gAB  r2 AB  pAB;
+                                                               ÿbC a  1 DCp b a  rbp C a ÿ rapbC ÿ 1 rbp C a ;
+where (gab, r2 AB) are the components of the background                 2                        r
+metric and (pab, paB, pAB) are the components of the
+perturbation. In this Appendix we allow the background         ÿaBC  1 DBpaC  DCpaB ÿ rapBC  rrm BCpam;
+                                                                           2
+metric to be completely general, so long as it is spherically
+                                                               ÿAbc  12r2 rbpcA  rcpbA ÿ DApbc;
+symmetric; we do not restrict it to be the Schwarzschild
+metric. We raise lower-case Latin indices with gab, the        ÿ bC A  2r2 1 DCpbA ÿ DApbC  rbp C A  ÿ r31 rbp C A ;
+
+inverse to gab, and we raise upper-case Latin indices with     ÿ BC A  r21 C BC A  1r rm BCpmA;
+  AB, the inverse to AB. The inverse perturbed metric is
+
+thus
+
+4gab  gab ÿ pab;       4gaB  ÿ 1 paB;                          where ra : rar,
+                                   r2
+
+         4gAB  21      AB ÿ 1 pAB;                                      Cabc : 1 rcpab  rbpac ÿ rapbc;
+                  r          r4                                                   2
+
+up to terms quadratic in the perturbations.                    and
+
+   Covariant differentiation with respect to the coordinates            CABC : 1 DCpAB  DBpAC ÿ DApBC:
+xa on the submanifold M2 is indicated with ra:ragbc                                2
+0. Covariant differentiation with respect to the coordinates
+A on the unit two-sphere is indicated with DA:DA BC               The Ricci tensor for the perturbed spacetime is equal to
+0. Quantities which depend only on xa are covariantly          the background Ricci tensor R plus its perturbation
+constant relative to the connection ÿABC; for example          R. We obtain
+DAr  0. Quantities which depend only on A are cova-
+
+Rab  rmC ab m  2r rmC ab m ÿ 12 rarbpmm ÿ 2r2 1 DMDMpab  2r2 1 DMrapbM  rbpaM ÿ 2r2 1 rarbp M M
+
+       2r3 1 rarbp M M  rbrap M M  ÿ r41 rarb ÿ rrarbrp M M ;
+
+RaB  1 DBrmpma ÿ rapmm  1 rapmm ÿ 1 paB ÿ rmrap B m  ÿ 1 rarmp B m ÿ rmrap B m 
+      2                       r                       2                     r
+
+      ÿ 21 rarm  rrarmrp B m  2 1 DMDBpaM ÿ DMpaB  2 1 raDMp B M ÿ DBp M M 
+         r                                        2r                    2r
+
+      ÿ 31 raDMp B M ÿ DBp M M ;
+         r
+
+                     pmn ÿ 1 gmnpk                                      ÿ 1 DADBpmm  1 rmDAp B m  DBp A m 
+
+RAB      AB  rrmrn                             k     rmrn  rrmrnrpmn
+                       2 2 2 
+       1 rm    ABDMpmM ÿ 12 pAB  r21 DMC AB M ÿ 2r2 1 DADBp M M  1r rmrm pAB ÿ 12
+         r                                                                                       AB pM M
+
+         2m            1 M
+      ÿ r2 r rm pAB ÿ 2 ABp M ;
+
+where  : gabrarb. These expressions can be simpli-                Under a gauge transformation generated by the dual
+fied by involving Eqs. (2.6) and (2.8) when the background     vector field   a; A, the components of the metric
+                                                               perturbation change according to
+spacetime is the Schwarzschild spacetime.
+
+                                                         104003-12
+GRAVITATIONAL PERTURBATIONS OF THE . . .                                                 PHYSICAL REVIEW D 71, 104003 (2005)
+
+ pab ! p0ab : pab ÿ rab ÿ rba;                                    It can be shown that when the background Ricci tensor
+ paB ! p0aB : paB ÿ raB ÿ DBa  2 raB;                             vanishes, Rab, RaB, and RAB are all invariant under this
+                                                                  transformation. We use this property in Secs. IV and V.
+                                                    r
+ pAB ! p0AB : pAB ÿ DAB ÿ DBA ÿ 2rrmm AB:
+
+ [1] T. Regge and J. A. Wheeler, Phys. Rev. 108, 1063 (1957).     [16] A. Nagar, G. Diaz, J. A. Pons, and J. A. Font, Phys. Rev. D
+ [2] C. V. Vishveshwara, Phys. Rev. D 1, 2870 (1970).                   69, 124028 (2004).
+ [3] F. J. Zerilli, Phys. Rev. D 2, 2141 (1970).
+ [4] S. Chandrasekhar, The Mathematical Theory of Black           [17] A. Nagar and L. Rezzolla, gr-qc/0502064.
+                                                                  [18] H. Kodama, A. Ishibashi, and O. Seto, Phys. Rev. D 62,
+      Holes (Clarendon, Oxford, 1983).
+ [5] V. P. Frolov and I. D. Novikov, Black Hole Physics: Basic          064022 (2000).
+                                                                  [19] H. Kodama and A. Ishibashi, Prog. Theor. Phys. 110, 701
+      Concepts and New Developments (Kluwer, Dordrecht,
+      1998).                                                            (2003).
+ [6] K. Martel, Phys. Rev. D 69, 044025 (2004).                   [20] A. Ishibashi and H. Kodama, Prog. Theor. Phys. 110, 901
+ [7] M. Sasaki and H. Tagoshi, Living Rev. Relativity 6,
+      6 (2004), [Online article]: cited on http://www.                  (2003).
+      livingreviews.org/lrr-2003-6.                               [21] H. Kodama and A. Ishibashi, Prog. Theor. Phys. 111, 29
+ [8] R. Gleiser, C. Nicasio, R. Price, and J. Pullin, Phys. Rep.
+      325, 41 (2000).                                                   (2004).
+ [9] V. Moncrief, Ann. Phys. (N.Y.) 88, 323 (1974).               [22] S. Kopeikin, J. Ramirez, B. Mashhoon, and M. Sazhin,
+[10] U. H. Gerlach and U. K. Sengupta, Phys. Rev. D 19, 2268
+      (1979).                                                           Phys. Lett. A 292, 173 (2001).
+[11] U. H. Gerlach and U. K. Sengupta, Phys. Rev. D 22, 1300      [23] V. Mukhanov, H. Feldman, and R. Brandenberger, Phys.
+      (1980).
+[12] C. Gundlach and J. M. Martin-Garcia, Phys. Rev. D 61,              Rep. 215, 203 (1992).
+      084024 (2000).                                              [24] C. T. Cunningham, R. H. Price, and V. Moncrief,
+[13] J. M. Martin-Garcia and C. Gundlach, Phys. Rev. D 64,
+      024012 (2001).                                                    Astrophys. J. 224, 643 (1978).
+[14] O. Sarbach and M. Tiglio, Phys. Rev. D 64, 084016            [25] S. Jhingan and T. Tanaka, Phys. Rev. D 67, 104018 (2003).
+      (2001).                                                     [26] K. Martel, Ph.D. thesis, University of Guelph, 2003.
+[15] C. Clarkson and R. Barrett, Classical Quantum Gravity 20,    [27] C. W. Misner, K. S. Thorne, and J. A. Wheeler, Gravitation
+      3855 (2003).
+                                                                        (Freeman, San Francisco, 1973).
+                                                                  [28] J. Goldberg, A. MacFarlane, E. Newman, F. Rohrlich, and
+
+                                                                        E. Sudarshan, J. Math. Phys. (N.Y.) 8, 2155 (1967).
+                                                                  [29] K. S. Thorne, Rev. Mod. Phys. 52, 299 (1980).
+                                                                  [30] C. O. Lousto and R. H. Price, Phys. Rev. D 55, 2124
+
+                                                                        (1997).
+                                                                  [31] E. Poisson, Classical Quantum Gravity 21, R153 (2004).
+
+104003-13
+

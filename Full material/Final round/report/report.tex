@@ -1,0 +1,135 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{booktabs,array}
+\usepackage[table]{xcolor}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[section]{placeins}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=green!40!black,urlcolor=blue!60!black]{hyperref}
+\numberwithin{equation}{section}
+\graphicspath{{../figures/}}
+\captionsetup{font=small,labelfont=bf}
+\setlist{itemsep=2pt,topsep=3pt}
+\newcommand{\sq}{\sqrt{f_R}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\RR}{\mathcal R}
+\definecolor{qcol}{RGB}{235,104,52}
+\definecolor{icol}{RGB}{42,120,214}
+\definecolor{lcol}{RGB}{27,175,122}
+\newtcolorbox{question}{colback=qcol!6,colframe=qcol!80!black,boxrule=0.6pt,arc=2pt,left=6pt,right=6pt,top=3pt,bottom=3pt,
+  fonttitle=\bfseries\small,title=Question}
+\newtcolorbox{keyidea}{colback=icol!6,colframe=icol!80!black,boxrule=0.6pt,arc=2pt,left=6pt,right=6pt,top=3pt,bottom=3pt,
+  fonttitle=\bfseries\small,title=Key idea}
+\newtcolorbox{learned}{colback=lcol!6,colframe=lcol!70!black,boxrule=0.6pt,arc=2pt,left=6pt,right=6pt,top=3pt,bottom=3pt,
+  fonttitle=\bfseries\small,title=What we learned}
+\newtcolorbox{answers}{colback=black!3,colframe=black!60,boxrule=0.6pt,arc=2pt,left=6pt,right=6pt,top=3pt,bottom=3pt,
+  fonttitle=\bfseries,title=Short answers}
+\sloppy
+
+\title{\textbf{Plus, cross, even and odd}\\[4pt]
+\large Polarization of gravitational waves reflected by a thin shell and by a black hole,\\
+and the relative importance of the two parities}
+\author{Final project, gravitational-wave course}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study how the two polarizations $h_+$ and $h_\times$ of a gravitational wave are affected by a spherical compact object:
+a thin shell with flat interior and Schwarzschild exterior, compared with a Schwarzschild black hole. The two gauge-invariant
+master functions, even (Zerilli--Moncrief) and odd (Cunningham--Price--Moncrief), are not the two polarizations. They
+are $E$- and $B$-type patterns that both contribute to $h_+$ and $h_\times$, related by a $45^\circ$ rotation of the polarization,
+and they carry energy with equal weight. Spherical symmetry and parity forbid any mixing between them. A pure-$h_\times$
+axisymmetric wave therefore always comes back as pure $h_\times$. A general wave does change polarization, because the
+object reflects the two parities with different complex amplitudes: it behaves as a birefringent mirror. For a black
+hole the Chandrasekhar transformation gives this ``retardance'' in closed form, $\Phi=2\arctan[12M\omega/(\ell-1)\ell(\ell+1)(\ell+2)]$.
+It implies a universal long-wavelength helicity-flip cross section of exactly $4\pi M^2/3$, which we recover from a
+partial-wave sum. A shell reflects all the energy in both parities but with different phases. Near its cavity, trapped
+and matter resonances the polarization conversion becomes complete. In the time domain, the same incident pulse
+returns with visibly different waveforms in the two parities: only the even one rings at the shell's matter frequency
+and triggers the instability of the static shell. We end with a practical answer to the question of which parity matters.
+\end{abstract}
+
+\begin{answers}
+\begin{enumerate}[leftmargin=1.4em]
+\item \textbf{Even/odd vs $+/\times$.} Each parity produces both polarizations. The odd field is the even field rotated by
+$45^\circ$ in polarization. Only for axisymmetric ($m=0$) modes is ``even $=h_+$, odd $=h_\times$'' literally true.
+\item \textbf{Can $h_\times$ become $h_+$ on reflection?} Not for a wave of pure parity: parity is exactly conserved by any
+spherically symmetric object, so an axisymmetric $h_\times$ wave returns as pure $h_\times$. A wave with both parities does
+change polarization, because $S_{\rm even}\ne S_{\rm odd}$. The object is a birefringent mirror, even a black hole.
+\item \textbf{Which parity matters more?} In energy neither: equal weights, equal content in a plane wave, and equal
+reflected energy for a non-absorbing object. In physics the even sector is the richer one: it alone couples to the
+shell's matter (resonances, instability). For slow sources the even sector dominates the emission, and the odd one is
+suppressed by $\sim v^2/36$ in power.
+\end{enumerate}
+\end{answers}
+
+\tableofcontents
+\newpage
+
+%==========================================================================================
+\section{Setting and plan}\label{sec:intro}
+The object is a static thin shell of radius $R>2M$ with flat interior and Schwarzschild exterior. It is supported by a
+surface pressure $p=\sigma(1-\sq)/4\sq$ with $f_R=1-2M/R$, the only static configuration (Ipser and Sikivie
+\cite{IS84}; Poisson \cite{Poisson04}, Ch.~3). Its perturbations are described outside by the Regge--Wheeler \cite{RW57} and
+Zerilli \cite{Zerilli70} equations for the master functions of Martel and Poisson \cite{MP05}, and inside by the flat
+wave equation at the blueshifted frequency $\nu=\omega/\sq$. The shell enters through the linearized Israel junction
+conditions \cite{Israel66}:
+\begin{itemize}
+\item odd parity: $\Psi$ continuous and $[\partial_x\Psi]=\Delta\Psi$, a $\delta$-barrier of strength $\Delta=\sq(1-\sq)/R$ in the
+tortoise coordinate $x$;
+\item even parity: a frequency-dependent $2\times2$ transfer matrix, which includes the radial motion of the shell and the
+compression of its fluid (adiabatic index $\Gamma=2$).
+\end{itemize}
+The even sector contains ``matter modes'', one of which is unstable \cite{PSP26}. A Schwarzschild black hole
+\cite{Vishveshwara70,Chandrasekhar83} is used as a reference throughout.
+
+The plan follows the questions in the box above:
+Sec.~\ref{sec:pol} relates $(\Psi_{\rm even},\Psi_{\rm odd})$ to $(h_+,h_\times)$;
+Sec.~\ref{sec:rule} derives the selection rule and the ``birefringent mirror'' description;
+Sec.~\ref{sec:bh} solves the black-hole case exactly;
+Sec.~\ref{sec:shell} computes the retardance and the polarization conversion of shells;
+Sec.~\ref{sec:plane} computes the helicity-flip cross section of a plane wave;
+Sec.~\ref{sec:time} shows reflected waveforms of the same incident $h_+$ pulse in the two parities;
+Sec.~\ref{sec:which} answers which parity matters.
+Units $G=c=1$; time dependence $e^{-i\omega t}$; frequencies in units of $1/M$.
+
+\input{sec_formalism.tex}
+\input{sec_bh.tex}
+\input{sec_shell.tex}
+\input{sec_time.tex}
+\input{sec_sources.tex}
+\input{sec_concl.tex}
+
+%==========================================================================================
+\begin{thebibliography}{99}\small
+\bibitem{RW57} T.~Regge and J.~A.~Wheeler, Stability of a Schwarzschild singularity, Phys.\ Rev.\ \textbf{108}, 1063 (1957).
+\bibitem{Zerilli70} F.~J.~Zerilli, Effective potential for even-parity Regge--Wheeler gravitational perturbation equations, Phys.\ Rev.\ Lett.\ \textbf{24}, 737 (1970).
+\bibitem{Vishveshwara70} C.~V.~Vishveshwara, Scattering of gravitational radiation by a Schwarzschild black-hole, Nature \textbf{227}, 936 (1970).
+\bibitem{MP05} K.~Martel and E.~Poisson, Gravitational perturbations of the Schwarzschild spacetime: a practical covariant and gauge-invariant formalism, Phys.\ Rev.\ D \textbf{71}, 104003 (2005); K.~Martel, PhD thesis, University of Guelph (2004).
+\bibitem{IS84} J.~Ipser and P.~Sikivie, Gravitationally repulsive domain wall, Phys.\ Rev.\ D \textbf{30}, 712 (1984).
+\bibitem{Poisson04} E.~Poisson, \emph{A Relativist's Toolkit} (Cambridge University Press, 2004).
+\bibitem{Israel66} W.~Israel, Singular hypersurfaces and thin shells in general relativity, Nuovo Cimento B \textbf{44}, 1 (1966).
+\bibitem{PSP26} T.~Pitre, B.~Schneider and E.~Poisson, Self-gravitating thin shells are dynamically unstable on all angular scales, Phys.\ Rev.\ D \textbf{113}, 124055 (2026).
+\bibitem{Pani09} P.~Pani, E.~Berti, V.~Cardoso, Y.~Chen and R.~Norte, Gravitational wave signatures of the absence of an event horizon. I. Nonradial oscillations of a thin-shell gravastar, Phys.\ Rev.\ D \textbf{80}, 124047 (2009).
+\bibitem{Boyanov25} V.~Boyanov, V.~Cardoso, K.~D.~Kokkotas and J.~Redondo-Yuste, Dynamical response of viscous objects to gravitational waves, Phys.\ Rev.\ Lett.\ \textbf{135}, 151402 (2025).
+\bibitem{Chandrasekhar83} S.~Chandrasekhar, \emph{The Mathematical Theory of Black Holes} (Oxford University Press, 1983), Ch.~4.
+\bibitem{Goldberg67} J.~N.~Goldberg, A.~J.~MacFarlane, E.~T.~Newman, F.~Rohrlich and E.~C.~G.~Sudarshan, Spin-$s$ spherical harmonics and $\eth$, J.\ Math.\ Phys.\ \textbf{8}, 2155 (1967).
+\bibitem{Thorne80} K.~S.~Thorne, Multipole expansions of gravitational radiation, Rev.\ Mod.\ Phys.\ \textbf{52}, 299 (1980).
+\bibitem{Blanchet14} L.~Blanchet, Gravitational radiation from post-Newtonian sources and inspiralling compact binaries, Living Rev.\ Relativ.\ \textbf{17}, 2 (2014).
+\bibitem{FHM88} J.~A.~H.~Futterman, F.~A.~Handler and R.~A.~Matzner, \emph{Scattering from Black Holes} (Cambridge University Press, 1988).
+\bibitem{Peters76} P.~C.~Peters, Differential gravitational scattering cross section, Phys.\ Rev.\ D \textbf{13}, 775 (1976).
+\bibitem{DeLogi77} W.~K.~De~Logi and S.~J.~Kov\'acs, Gravitational scattering of zero-rest-mass plane waves, Phys.\ Rev.\ D \textbf{16}, 237 (1977).
+\bibitem{Dolan08} S.~R.~Dolan, Scattering and absorption of gravitational plane waves by rotating black holes, Class.\ Quantum Grav.\ \textbf{25}, 235002 (2008).
+\bibitem{Leaver85} E.~W.~Leaver, An analytic representation for the quasi-normal modes of Kerr black holes, Proc.\ R.\ Soc.\ Lond.\ A \textbf{402}, 285 (1985).
+\bibitem{Cardoso2016PRL} V.~Cardoso, E.~Franzin and P.~Pani, Is the gravitational-wave ringdown a probe of the event horizon?, Phys.\ Rev.\ Lett.\ \textbf{116}, 171101 (2016).
+\bibitem{CardosoPani2019} V.~Cardoso and P.~Pani, Testing the nature of dark compact objects: a status report, Living Rev.\ Relativ.\ \textbf{22}, 4 (2019).
+\bibitem{Kamionkowski97} M.~Kamionkowski, A.~Kosowsky and A.~Stebbins, Statistics of cosmic microwave background polarization, Phys.\ Rev.\ D \textbf{55}, 7368 (1997).
+\end{thebibliography}
+\end{document}

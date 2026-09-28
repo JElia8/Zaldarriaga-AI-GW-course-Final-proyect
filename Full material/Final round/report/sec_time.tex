@@ -1,0 +1,82 @@
+%==========================================================================================
+\section{Waveforms: the same incident $h_+$ pulse in the two parities}\label{sec:time}
+\begin{question}
+What does a detector see if the same pulse arrives once carried by the even master function and once by the odd one?
+\end{question}
+\paragraph{Set-up.} For a single $(\ell,m)$ the angular factor in Eq.~\eqref{eq:spin} is the same for the incident and the
+reflected wave. So $h_+$ and $h_\times$ at any fixed direction are that angular factor times $\Psi_{\rm in}(v)$ before the
+reflection and $\Psi_{\rm out}(u)$ after it. For instance, for $m=0$ the even channel is literally ``incident $h_+$, reflected
+$h_+$'', and the odd channel is the same with $h_\times$. We therefore compare the reflected $\Psi_{\rm out}(u)$ of the two
+parities for the same incident pulse,
+\begin{equation}
+\Psi_{\rm in}(v)=e^{-v^2/2\sigma^2}\cos(\omega_0v),\qquad \sigma=8M,\quad \omega_0=0.5/M,\qquad v=t+r_* ,
+\end{equation}
+by Fourier synthesis, $\Psi_{\rm out}(u)=\frac1{2\pi}\int S(\omega)\tilde\Psi_{\rm in}(\omega)e^{-i\omega u}\dd\omega$, with $u=t-r_*$. The
+integral is done with a Filon-type quadrature on the adaptive frequency grid, so the narrow resonances are resolved.
+
+\paragraph{Causality and the instability.} The fluid shell has an unstable even-parity matter mode at $\omega=i\gamma$.
+There, $S_{\rm even}$ has a pole in the upper half plane, and the real-axis integral is then \emph{not} the causal response.
+The causal (retarded) response is obtained by moving the contour above the pole:
+\begin{equation}
+\Psi^{\rm causal}_{\rm out}(u)=\Psi^{\rm real\ axis}_{\rm out}(u)-i\,{\rm Res}_{\omega=i\gamma}\big[S_{\rm even}\tilde\Psi_{\rm in}\big]\,e^{\gamma u}.
+\end{equation}
+The residue must be computed directly. For ${\rm Im}\,\omega>0$ the outgoing solution decays with $r$, so we project the
+exterior solution onto the in/out asymptotic solutions at a moderate radius. This reproduces the real-axis $S$ to
+$10^{-8}$, and Newton iteration on $B_{\rm in}=0$ returns the pole exactly at the known unstable frequency:
+$0.1332058i$ ($R=3M$), $0.2442921i$ ($2.2M$), $0.0401379i$ ($6M$). The residues, stable to three digits against the
+projection radius, are tiny: $7.5\times10^{-5}i$, $8.2\times10^{-6}i$ and $1.1\times10^{-5}i$. The unstable mode lives in the
+shell's matter and is only weakly coupled to waves coming from infinity. For this pulse its amplitude at $u=0$ is
+$3.9\times10^{-7}$ ($R=3M$), $1.4\times10^{-8}$ ($2.2M$) and $2.3\times10^{-8}$ ($6M$). It reaches the amplitude of the incident
+pulse at $u\approx111M$, $74M$ and $438M$ respectively.
+
+\paragraph{Check.} For the odd channel the result was compared with a direct time-domain (leapfrog) evolution of
+$\partial_t^2\Psi=\partial_x^2\Psi-V\Psi-\Delta\,\delta(x-x_R)\Psi$ that shares no code with the frequency-domain calculation. With
+source and detector far from the object ($x=450M$ and $350M$), and the $O(1/\omega r)$ near-zone factors of the in/out
+solutions included, the two agree to $0.4\%$ ($R=3M$) and $0.9\%$ ($2.2M$) of the peak (Fig.~\ref{fig:lf}).
+
+\begin{figure}[p]\centering
+\includegraphics[width=0.49\textwidth]{r4_f06_time_bh.pdf}\hfill
+\includegraphics[width=0.49\textwidth]{r4_f07_time_R3.pdf}\\[2mm]
+\includegraphics[width=0.49\textwidth]{r4_f08_time_R22.pdf}\hfill
+\includegraphics[width=0.49\textwidth]{r4_f09_time_log.pdf}
+\caption{Reflected waveforms of the same incident pulse, carried by the odd (blue) or even (orange) master function. Top
+left: black hole. Top right: shell at $3M$. Bottom left: shell at $2.2M$. Dotted: the growing matter mode of the even
+channel, added causally. Bottom right: long-time view (log scale) for $R=6M$ and $3M$. The even channel keeps ringing at
+the matter frequency and is eventually overtaken by the unstable mode; the odd channel just decays. The floor at
+$\sim10^{-5}$ is numerical.}\label{fig:time}
+\end{figure}
+
+\paragraph{What the waveforms show (Fig.~\ref{fig:time}).}
+\begin{itemize}
+\item \textbf{Black hole.} The two waveforms are almost identical. The even one is the odd one passed through the
+all-pass filter $(\lambda_\ell-12M\partial_u)/(\lambda_\ell+12M\partial_u)$, the time-domain form of Eq.~\eqref{eq:bhphase}. This
+gives a delay of $\simeq24M/\lambda_\ell=1M$ for $\ell=2$ at low frequency. Both ring down at the same QNM.
+\item \textbf{Shell at $3M$.} The prompt reflection is again nearly the same in both parities (the retardance is only
+$\sim10^\circ$ in this band). The difference is at late times: the even channel keeps a weak ringing at the matter frequency
+$\omega M=0.197$, with a decay time $\sim3000M$. On top of it the unstable mode grows as $e^{0.133u/M}$ and dominates after
+$\sim110M$. The odd channel has neither.
+\item \textbf{Shell at $2.2M$.} Both parities ring in their trapped modes, at slightly different frequencies ($0.421$ odd,
+$0.447$ even) and dampings ($0.035$ vs $0.044$). The two waveforms dephase visibly after a few cycles, and the unstable
+mode takes over the even channel after $\sim74M$.
+\item \textbf{Shell at $6M$.} The prompt reflections are indistinguishable. The even channel carries a long matter
+ringing at $\omega M=0.089$ at the $10^{-5}$ level and blows up after $\sim440M$.
+\end{itemize}
+
+\paragraph{Polarization in the time domain.} For a pulse with equal $E$ and $B$ content, the part that comes back with the
+orthogonal polarization is $(\Psi^{\rm even}_{\rm out}-\Psi^{\rm odd}_{\rm out})/2$ (Fig.~\ref{fig:rot}). It carries $3.7\%$ of the
+reflected energy for the black hole and $1.0\%$ for the $R=3M$ shell (stable part), concentrated at the edges of the pulse,
+where the phase difference acts. In the shell case the rotated component then persists at late times, carried by the
+even-only matter ringing.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.49\textwidth]{r4_f10_converted_time.pdf}\hfill
+\includegraphics[width=0.49\textwidth]{r4_f11_leapfrog_check.pdf}
+\caption{Left: preserved and rotated parts of a reflected pulse with equal $E$ and $B$ content. Right: check of the
+frequency-domain synthesis against an independent time-domain evolution (odd channel).}\label{fig:rot}\label{fig:lf}
+\end{figure}
+
+\begin{learned}
+Plotted as $h_+(t)$, the even and odd reflections of the same pulse look alike during the prompt response. Their
+difference grows with time: in the dephasing of the trapped modes, in the even-only matter ringing, and above all in the
+even-only instability of the static shell.
+\end{learned}

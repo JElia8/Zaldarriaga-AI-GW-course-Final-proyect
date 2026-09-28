@@ -1,0 +1,10 @@
+(1) phi-equation check: 0
+(1) z-coefficient check: 0
+    c [(-2*M + R2)/R2, (6*M - 2*R2)/R2, (-6*M + R2)/R2, 2*M/R2]
+    d [(6*M + 2*I*R2**2*omega - 2*R2)/R2, (-12*M + 2*R2)/R2, 6*M/R2]
+    e [(6*M - R2*lambda)/R2, -6*M/R2]
+(2) Chandrasekhar map RW->Zerilli residual: 0
+
+real	0m1.478s
+user	0m0.000s
+sys	0m0.000s

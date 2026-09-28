@@ -1,0 +1,35 @@
+(a) max |det T^C sqrt f - 1| : real w 1.1e-12, complex w 9.2e-13  (300 random samples, R in [2.35,30], l=2..5)
+(b) max |Im T^C|/|T^C| for real w: 0.0e+00 ;  max flux mismatch 1.6e-13
+(c) M=1e-04: |T^C - 1| = 4.0e-05, |T^A - 1| = 4.0e-05
+(c) M=1e-06: |T^C - 1| = 4.0e-07, |T^A - 1| = 2.0e-06
+(c) M=1e-08: |T^C - 1| = 4.0e-09, |T^A - 1| = 4.7e-09
+(d) det T^C sqrt f - 1 : double vs 40-digit
+    R=2.30  double: 1.0e-09   mp: 1.0e-09   cond(A)=3.4e+02
+    R=2.20  double: 1.3e-07   mp: 2.2e-16   cond(A)=3.7e+02
+    R=2.10  double: 1.6e-05   mp: 2.2e-16   cond(A)=6.5e+02
+    R=2.05  double: 5.2e-03   mp: 0.0e+00   cond(A)=1.8e+03
+    R=2.02  double: 8.7e-01   mp: 3.3e-16   cond(A)=9.3e+04
+    R=2.01  double: 1.0e+00   mp: 2.7e-15   cond(A)=8.1e+09
+(e) model A: spread of T over all C(8,6)=28 choices of imposed rows (w, R=3, l=2)
+    w=  0.5  28 well-posed choices; max rel. spread vs first-round choice 4.54e+00 ; lstsq vs choice 4.92e-01
+    w=  2.0  28 well-posed choices; max rel. spread vs first-round choice 7.21e+01 ; lstsq vs choice 5.96e-01
+    w= 10.0  28 well-posed choices; max rel. spread vs first-round choice 1.84e+03 ; lstsq vs choice 7.04e-01
+    w= 50.0  28 well-posed choices; max rel. spread vs first-round choice 4.62e+04 ; lstsq vs choice 7.12e-01
+(f) model A R=3: local exponent of |R+T-1| between wM=0.5 and 1.0: -1.76
+(f) model A R=3: local exponent of |R+T-1| between wM=1.0 and 2.0: -2.00
+(f) model A R=6: local exponent of |R+T-1| between wM=0.5 and 1.0: -2.03
+(f) model A R=6: local exponent of |R+T-1| between wM=1.0 and 2.0: -2.01
+(f) model A R=10: local exponent of |R+T-1| between wM=0.5 and 1.0: -2.01
+(f) model A R=10: local exponent of |R+T-1| between wM=1.0 and 2.0: -2.00
+(f) model A, R=3, extended frequency range (first-round Method 1):
+    w=  2.0  |R+T-1| = 3.804e-02   R = 1.605e-02   constraint = 6.77e-02
+    w=  4.0  |R+T-1| = 9.493e-03   R = 3.887e-03   constraint = 3.55e-02   exponent -2.00
+    w=  8.0  |R+T-1| = 2.372e-03   R = 9.637e-04   constraint = 1.80e-02   exponent -2.00
+    w= 16.0  |R+T-1| = 5.929e-04   R = 2.404e-04   constraint = 9.01e-03   exponent -2.00
+    w= 32.0  |R+T-1| = 1.482e-04   R = 6.008e-05   constraint = 4.51e-03   exponent -2.00
+(g) high frequency: |T^C_even - T_odd| and T^C_even[0,:] (Psi continuity) at R=6, l=2
+    w=   0.5  |T_even - T_odd| = 1.526e-01   T_even row 0 = [0.9547, -0.1526]
+    w=   2.0  |T_even - T_odd| = 9.627e-03   T_even row 0 = [0.9972, -0.0096]
+    w=  10.0  |T_even - T_odd| = 4.070e-03   T_even row 0 = [0.9999, -0.0004]
+    w=  50.0  |T_even - T_odd| = 4.122e-03   T_even row 0 = [1.0000, -0.0000]
+    w= 200.0  |T_even - T_odd| = 4.124e-03   T_even row 0 = [1.0000, -0.0000]

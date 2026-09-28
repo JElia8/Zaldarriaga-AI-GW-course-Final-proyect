@@ -1,0 +1,218 @@
+[
+ {
+  "w": 0.2,
+  "eps": 0.2,
+  "Phi_in_minus_half_ln_f": 0.014862661272440736,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.017803959029092705,
+  "wrong: no delta (Delta = 0)": 0.061854182052643036,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.009840288916554212,
+  "wrong: Delta = 2x first round": 0.019129042866884945
+ },
+ {
+  "w": 0.2,
+  "eps": 0.1,
+  "Phi_in_minus_half_ln_f": 0.007585392806341185,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.009763101036971441,
+  "wrong: no delta (Delta = 0)": 0.06125414456669992,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.022255940796624157,
+  "wrong: Delta = 2x first round": 0.03295861080252868
+ },
+ {
+  "w": 0.2,
+  "eps": 0.05,
+  "Phi_in_minus_half_ln_f": 0.0038349441503882087,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.005087510928636297,
+  "wrong: no delta (Delta = 0)": 0.06054135763445974,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.02918440885526284,
+  "wrong: Delta = 2x first round": 0.04060080723080244
+ },
+ {
+  "w": 0.2,
+  "eps": 0.025,
+  "Phi_in_minus_half_ln_f": 0.001928553747201911,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.002592627830848189,
+  "wrong: no delta (Delta = 0)": 0.060060273557009845,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.03279865375558171,
+  "wrong: Delta = 2x first round": 0.044564912036264864
+ },
+ {
+  "w": 0.2,
+  "eps": 0.0125,
+  "Phi_in_minus_half_ln_f": 0.0009671159941329055,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.0013080921929960248,
+  "wrong: no delta (Delta = 0)": 0.05978570410528118,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.034637227387050495,
+  "wrong: Delta = 2x first round": 0.0465752751348389
+ },
+ {
+  "w": 0.2,
+  "eps": 0.00625,
+  "Phi_in_minus_half_ln_f": 0.0004842766130302989,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.0006569279406478185,
+  "wrong: no delta (Delta = 0)": 0.05963955127182371,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.03556345216592675,
+  "wrong: Delta = 2x first round": 0.047586416414520515
+ },
+ {
+  "w": 0.5,
+  "eps": 0.2,
+  "Phi_in_minus_half_ln_f": 0.014862661272440736,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.037463694051594956,
+  "wrong: no delta (Delta = 0)": 0.13075266048284995,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.0194348349995316,
+  "wrong: Delta = 2x first round": 0.03818480988847241
+ },
+ {
+  "w": 0.5,
+  "eps": 0.1,
+  "Phi_in_minus_half_ln_f": 0.007585392806341185,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.018838167615544542,
+  "wrong: no delta (Delta = 0)": 0.11546719808193236,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.039552732234069285,
+  "wrong: Delta = 2x first round": 0.05869800625379377
+ },
+ {
+  "w": 0.5,
+  "eps": 0.05,
+  "Phi_in_minus_half_ln_f": 0.0038349441503882087,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.009366387397825412,
+  "wrong: no delta (Delta = 0)": 0.1068917659717311,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.049242668372633525,
+  "wrong: Delta = 2x first round": 0.06840542857300709
+ },
+ {
+  "w": 0.5,
+  "eps": 0.025,
+  "Phi_in_minus_half_ln_f": 0.001928553747201911,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.0046581802071715556,
+  "wrong: no delta (Delta = 0)": 0.10237917499358837,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.05389891782757934,
+  "wrong: Delta = 2x first round": 0.07301720850731197
+ },
+ {
+  "w": 0.5,
+  "eps": 0.0125,
+  "Phi_in_minus_half_ln_f": 0.0009671159941329055,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.002321253029465373,
+  "wrong: no delta (Delta = 0)": 0.1000698411577369,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.05616654343256628,
+  "wrong: Delta = 2x first round": 0.07524850848141995
+ },
+ {
+  "w": 0.5,
+  "eps": 0.00625,
+  "Phi_in_minus_half_ln_f": 0.0004842766130302989,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.0011584636636132282,
+  "wrong: no delta (Delta = 0)": 0.09890246783166771,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.05728352457027159,
+  "wrong: Delta = 2x first round": 0.0763437263493643
+ },
+ {
+  "w": 1.0,
+  "eps": 0.2,
+  "Phi_in_minus_half_ln_f": 0.014862661272440736,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.04724077469426128,
+  "wrong: no delta (Delta = 0)": 0.05643100351869512,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.0400369487456061,
+  "wrong: Delta = 2x first round": 0.037291500607268845
+ },
+ {
+  "w": 1.0,
+  "eps": 0.1,
+  "Phi_in_minus_half_ln_f": 0.007585392806341185,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.024146589168520118,
+  "wrong: no delta (Delta = 0)": 0.03338211150661727,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.016844535124511877,
+  "wrong: Delta = 2x first round": 0.014047002642648647
+ },
+ {
+  "w": 1.0,
+  "eps": 0.05,
+  "Phi_in_minus_half_ln_f": 0.0038349441503882087,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.012665620520561941,
+  "wrong: no delta (Delta = 0)": 0.02234567671830203,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.004974467156130433,
+  "wrong: Delta = 2x first round": 0.0020190406124857823
+ },
+ {
+  "w": 1.0,
+  "eps": 0.025,
+  "Phi_in_minus_half_ln_f": 0.001928553747201911,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.0065595262586114,
+  "wrong: no delta (Delta = 0)": 0.016603932254359306,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.0014424150118158732,
+  "wrong: Delta = 2x first round": 0.004522270570862724
+ },
+ {
+  "w": 1.0,
+  "eps": 0.0125,
+  "Phi_in_minus_half_ln_f": 0.0009671159941329055,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.003348451971714713,
+  "wrong: no delta (Delta = 0)": 0.01361855976313216,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.004844732382932667,
+  "wrong: Delta = 2x first round": 0.008000884948455798
+ },
+ {
+  "w": 1.0,
+  "eps": 0.00625,
+  "Phi_in_minus_half_ln_f": 0.0004842766130302989,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.0016930774559940592,
+  "wrong: no delta (Delta = 0)": 0.01208825336759682,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.006605822513646941,
+  "wrong: Delta = 2x first round": 0.009804096159282828
+ },
+ {
+  "w": 2.0,
+  "eps": 0.2,
+  "Phi_in_minus_half_ln_f": 0.014862661272440736,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.12237376829560256,
+  "wrong: no delta (Delta = 0)": 0.13610321620773438,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.11191051723506612,
+  "wrong: Delta = 2x first round": 0.10799015998570714
+ },
+ {
+  "w": 2.0,
+  "eps": 0.1,
+  "Phi_in_minus_half_ln_f": 0.007585392806341185,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.370605516174321,
+  "wrong: no delta (Delta = 0)": 0.44017478512115554,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.3102330045358019,
+  "wrong: Delta = 2x first round": 0.28589528583075025
+ },
+ {
+  "w": 2.0,
+  "eps": 0.05,
+  "Phi_in_minus_half_ln_f": 0.0038349441503882087,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.27497483164625286,
+  "wrong: no delta (Delta = 0)": 0.4620828553489257,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.1469545162154282,
+  "wrong: Delta = 2x first round": 0.1033762025430652
+ },
+ {
+  "w": 2.0,
+  "eps": 0.025,
+  "Phi_in_minus_half_ln_f": 0.001928553747201911,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.07075474039226866,
+  "wrong: no delta (Delta = 0)": 0.17423936308815202,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.008319403591125448,
+  "wrong: Delta = 2x first round": 0.012115017842772483
+ },
+ {
+  "w": 2.0,
+  "eps": 0.0125,
+  "Phi_in_minus_half_ln_f": 0.0009671159941329055,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.025116929231347528,
+  "wrong: no delta (Delta = 0)": 0.09506400285119386,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.01751269590748428,
+  "wrong: Delta = 2x first round": 0.03159486205453279
+ },
+ {
+  "w": 2.0,
+  "eps": 0.00625,
+  "Phi_in_minus_half_ln_f": 0.0004842766130302989,
+  "first round  (Delta = 4 pi sigma sqrt f)": 0.010702784570317633,
+  "wrong: no delta (Delta = 0)": 0.06879726245398748,
+  "wrong: Delta = 4 pi sigma (no sqrt f)": 0.025026420523587323,
+  "wrong: Delta = 2x first round": 0.036896332367481396
+ }
+]

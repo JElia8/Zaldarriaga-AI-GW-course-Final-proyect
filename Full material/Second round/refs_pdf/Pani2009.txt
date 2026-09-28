@@ -1,0 +1,1542 @@
+arXiv:0909.0287v2 [gr-qc] 14 Dec 2009                 Gravitational wave signatures of the absence of an event horizon.
+
+                                                                   I. Nonradial oscillations of a thin-shell gravastar
+
+                                                   Paolo Pani,1,  Emanuele Berti,2, 3,  Vitor Cardoso,2, 4,  Yanbei Chen,3, § and Richard Norte3, ¶
+
+                                       1Dipartimento di Fisica, Universita` di Cagliari, and INFN sezione di Cagliari, Cittadella Universitaria 09042 Monserrato, Italy
+                                                                    Currently at Centro Multidisciplinar de Astrof´isica - CENTRA, Dept. de F´isica,
+                                                                        Instituto Superior T´ecnico, Av. Rovisco Pais 1, 1049-001 Lisboa, Portugal
+
+                                                    2Department of Physics and Astronomy, The University of Mississippi, University, MS 38677-1848, USA
+                                                          3Theoretical Astrophysics 350-17, California Institute of Technology, Pasadena, CA 91125, USA
+                                                                            4Centro Multidisciplinar de Astrof´isica - CENTRA, Dept. de F´isica,
+                                                                        Instituto Superior T´ecnico, Av. Rovisco Pais 1, 1049-001 Lisboa, Portugal
+
+                                                            Gravitational waves from compact objects provide information about their structure, probing
+                                                         deep into strong-gravity regions. Here we illustrate how the presence or absence of an event horizon
+                                                         can produce qualitative differences in the gravitational waves emitted by ultra-compact objects. In
+                                                         order to set up a straw-man ultra-compact object with no event horizon, but which is otherwise
+                                                         almost identical to a black hole, we consider a nonrotating thin-shell model inspired by Mazur
+                                                         and Mottola's gravastar, which has a Schwarzschild exterior, a de Sitter interior and an infinitely
+                                                         thin shell with finite tension separating the two regions. As viewed from the external space-time,
+                                                         the shell can be located arbitrarily close to the Schwarzschild radius, so a gravastar might seem
+                                                         indistinguishable from a black hole when tests are only performed on its external metric. We study
+                                                         the linearized dynamics of the system, and in particular the junction conditions connecting internal
+                                                         and external gravitational perturbations. As a first application of the formalism we compute polar
+                                                         and axial oscillation modes of a thin-shell gravastar. We show that the quasinormal mode spectrum
+                                                         is completely different from that of a black hole, even in the limit when the surface redshift becomes
+                                                         infinite. Polar QNMs depend on the equation of state of matter on the shell and can be used
+                                                         to distinguish between different gravastar models. Our calculations suggest that low-compactness
+                                                         gravastars could be unstable when the sound speed on the shell vs/c 0.92.
+
+                                                              I. INTRODUCTION                      of  the  Milky  Way,  infer  an  intrinsic  diameter  of      +16  mi-
+
+                                          Black holes (BHs), once considered an exotic mathe-                                                                37-10
+                                       matical solution to Einstein's field equations, have now    croarcseconds, even smaller than the expected apparent
+                                       been widely accepted as astronomical objects [1, 2, 3, 4].
+                                       Stellar-mass BHs are believed to be the final stage of      size of the event horizon of the presumed BH [6]. Some of
+                                       the evolution of sufficiently massive stars. Massive BHs
+                                       seem to populate the center of many galaxies at low red-    the exotic alternatives to a BH (such as "fermion balls")
+                                       shift, and must have played an important role in the
+                                       formation of structure in the universe. Most evidence       are incompatible with the observations [7] and any dis-
+                                       supporting the astrophysical reality of BHs comes from
+                                       the weak-gravity region, i.e. from observations probing     tribution of individual objects within such a small region
+                                       the space-time several Schwarzschild radii away from the
+                                       event horizon. Attempts to rule out possible alterna-       (with the possible exception of dark matter particles or
+                                       tives to BHs usually rely on general relativity being the
+                                       correct theory of gravity, and/or on constraints on the     asteroids, which however should be ejected by three-body
+                                       equation of state of matter at high densities. For mas-
+                                       sive BHs the most precise measurements so far come from     interactions with stars) would be gravitationally unstable
+                                       observations of stellar proper motion at the center of our
+                                       own galaxy, indicating the presence of a "dark object" of   [8, 9]. In a recent attempt to probe the event horizon,
+                                       mass M  (4.1 ± 0.6) × 106M [5]. Recent millimeter
+                                       and infrared observations of Sagittarius A, the compact     Broderick and Narayan have analyzed the observations
+                                       source of radio, infrared and X-ray emission at the center
+                                                                                                   of Ref. [6]. If the object at the center of our galaxy had
+                                       Electronic address: paolo.pani@ca.infn.it
+                                       Electronic address: berti@phy.olemiss.edu                   a surface it would be hot enough to glow with a steady
+                                       Electronic address: vitor.cardoso@ist.utl.pt
+                                       §Electronic address: yanbei@tapir.caltech.edu               emission of infrared light, but no such glow has been de-
+                                       ¶Electronic address: norte@caltech.edu
+                                                                                                   tected [10]. This and similar arguments are inevitably
+
+                                                                                                   dependent on the gas distribution and on details of the
+
+                                                                                                   accretion process, and they really set lower limits on the
+
+                                                                                                   gravitational redshift corresponding to the hypothetical
+
+                                                                                                   surface replacing the event horizon (see e.g. [11] for a re-
+
+                                                                                                   view). Indeed, some hold the view that an observational
+
+                                                                                                   proof of the existence of event horizons based on electro-
+
+                                                                                                   magnetic observations is fundamentally impossible [12].
+
+                                                                                                   For these reasons, model-independent tests of the strong-
+
+                                                                                                   field dynamics of BHs and studies of the gravitational
+
+                                                                                                   radiation signatures of event horizons are necessary to
+
+                                                                                                   confirm or disprove the BH paradigm [13, 14].
+
+                                                                                                      Gravitational wave detectors offer a new way of ob-
+                                                                                                   serving BHs, complementing the wealth of information
+                                                                                                   from present electromagnetic observations [4]. As first
+                                                                                                   proposed by Ryan [15, 16], an exquisite map of the ex-
+ternal space-time of BHs (outside the innermost stable                                                                                 2
+orbit, if there is any) can be constructed by observing
+the gravitational waveform emitted when a small com-          the vicinity of the BH horizon. The model effectively
+pact object spirals into the putative supermassive BH         replaces the BH event horizon by a transition layer (or
+at the center of a galaxy with the Laser Interferometer       shell) and the BH interior by a segment of de Sitter space
+Space Antenna (LISA). As an extension of Ryan's work,         [33, 34]. Mazur and Mottola argued for the thermo-
+Li and Lovelace considered the small object's tidal cou-      dynamic stability of the model. A dynamical stability
+pling with the central object and showed that by study-       analysis by Visser and Wiltshire [35] confirmed that a
+ing details of radiation reaction, information about the      simplified version of the gravastar model by Mazur and
+space-time region within the orbit can also be obtained       Mottola is also stable under radial perturbations for some
+[17]. Ryan's proposal to map space-times using inspi-         physically reasonable equations of state for the transition
+ral waveforms is promising, but the data analysis task is     layer. Chirenti and Rezzolla [36] first considered nonra-
+affected by a "confusion problem": the possibility of mis-    dial perturbations of gravastars, restricting attention to
+interpreting truly nonKerr waveforms by Kerr waveforms        the relatively simple case of oscillations with axial parity.
+with different orbital parameters [18, 19]. This ambigu-      They computed the dominant axial oscillation modes and
+ity was shown to be resolvable if the orbit is known to       found no instabilities. In analogy with previous studies
+be circular [15] or if one only probes the mass, spin and     of the oscillation modes of boson stars [29, 30, 31], they
+quadrupole moment of the object using waveforms gener-        confirmed that the axial QNM spectrum of gravastars
+ated in the weak-gravity region [20]. A different approach    can be used to discern a gravastar from a BH. In the
+to test the BH nature of ultra-compact objects is based       thin-shell limit, the axial QNM frequencies of Ref. [36]
+on measuring several of their free oscillation frequencies    and our own calculations recover Fiziev's calculation of
+("ringdown waves") and comparing them with the quasi-         the axial QNMs of ultracompact objects with a totally
+normal mode (QNM) spectrum of BHs [21]. These tests           reflecting surface [37].
+of the "no-hair theorem" require a signal-to-noise ratio
+which could be achieved by advanced Earth-based grav-            In this paper we study the stability with respect to
+itational wave interferometers and they are one of the        nonradial oscillations of a simplified "thin-shell" gravas-
+most promising science goals of LISA [22, 23, 24].            tar, retaining most of the essential features of the original
+                                                              model. We consider both axial perturbations (reproduc-
+   In this paper we explore how to test possible alterna-     ing and extending the results of Ref. [36]) and polar per-
+tives to the BH paradigm. We retain the "conservative"        turbations. In the polar case, the matching of interior
+assumption that general relativity is the correct theory      and exterior perturbations at the gravastar shell requires
+of gravity and we focus on possible tests of the existence    a more careful analysis because (unlike the axial case)
+(or absence) of an event horizon.                             polar perturbations of spherical objects actually induce
+                                                              motions of matter, which in turn couples back to gravi-
+   Theorists conceived several families of compact objects    tational perturbations. For this reason, nonspherical po-
+with no event horizons. For example, boson stars are          lar perturbations provide a more stringent test on the
+horizonless compact objects based on plausible models         gravastar's overall stability. Polar perturbations are also
+of particle physics at high densities, and they are (still)   crucial in studying the dynamics of objects orbiting the
+compatible with astrophysical observations [25, 26]. Be-      hypothetical gravastar. In order to treat polar pertur-
+ing indistinguishable from BHs in the Newtonian regime,       bations of a nonrotating thin-shell gravastar we set up
+boson stars are good "strawmen" for supermassive BHs.         a rather generic formalism combining standard pertur-
+The space-time of nonrotating spherical boson stars can       bation theory (in the Regge-Wheeler gauge) with Israel's
+approximate arbitrarily well a Schwarzschild geometry         junction conditions [38]. The formalism can be applied to
+even close to the event horizon, and being very compact       gravitational perturbations of any spherically symmetric
+it is not easily distinguishable from a BH by electromag-     space-time characterized by regions with different cosmo-
+netic observations [26, 27]. Building on Ryan's proposal,     logical constants separated by infinitely thin shells with
+Kesden et al. showed that the inspiral of a small compact     finite surface energy and tension. Because matter is con-
+object into a nonrotating boson star will emit a rather dif-  centrated on these shells, the junction conditions deduced
+ferent gravitational waveform at the end of the evolution,    here will be sufficient in describing the linear dynamics
+when the small object falls into the central potential well   of matter. Quite predictably, these conditions depend on
+of the boson star instead of disappearing into the event      the equation of state of the shell. As an application of
+horizon of a BH [28]. Several authors have computed           the formalism we study the QNM spectrum of polar and
+the QNM spectrum of boson stars, showing that it is re-       axial perturbations of gravastars, exploring the nonra-
+markably different from the QNM spectrum of BHs and           dial stability of these objects. Polar QNMs (unlike axial
+lending support to the feasibility of no-hair tests using     QNMs) depend on the equation of state of matter on the
+QNM measurements [29, 30, 31].                                shell: they can be used not only to distinguish a gravas-
+                                                              tar from a BH, but also to distinguish between different
+   Another proposed alternative to massive BHs, which         gravastar models. We also find that the imaginary part
+we shall focus on in this paper, are the so-called gravas-    of some QNMs seems to have a zero crossing when the
+tars [32]. The gravastar model assumes that the space-        gravastar is not very compact and the speed of sound on
+time undergoes a quantum vacuum phase transition in           the shell is superluminal, suggesting that some gravastar
+                                                                                                                    3
+
+models may be unstable under nonradial perturbations.            where the symbol "[[ ...]]" gives the "jump" in a given
+In a companion paper we will apply the formalism devel-          quantity across the spherical shell (or r = a), i.e.
+oped in this paper to study gravitational radiation from
+compact objects inspiraling into nonrotating gravastars.         [[A]]  A(a+) - A(a-) .                             (2.5)
+
+   The plan of the paper is as follows. In Section II            The indices i and j correspond to coordinates t, , and
+we review our static thin-shell gravastar model. Section          which parameterize curves tangential to the spheri-
+III sketches the calculation of axial and polar gravita-         cal shell, Kij = -inj is the extrinsic curvature, n =
+tional perturbations and of the matching conditions at           (0, 1, 0, 0)/ grr is the unit normal vector, and Sij is the
+the gravastar shell. Details of the matching procedure           surface stress-energy tensor
+are provided in Appendix A, and details of the QNM
+calculation are given in Appendix B. Our numerical re-           Sij = ( - )uiuj - ij ,                             (2.6)
+sults for the polar and axial QNM spectra are presented
+in Section IV and supported by analytical calculations in        where u = -1/gtt(1, 0, 0, 0) (or u = -1/gtt t) is
+the high-compactness limit in Appendix C.                        the four-velocity of mass elements on the shell and  =
+                                                                 g - nn is the induced 3-metric on the shell. We then
+   We use geometrical units (G = c = 1). The Fourier             have
+transform of the perturbation variables is performed by
+assuming a time dependence of the form eit. Greek                Sij - ij S = ( - )uiuj +  ij .                     (2.7)
+indices (µ ,  , . . . ) refer to the four-dimensional space-                     2             2
+time metric. Latin indices (i , j , . . . ) refer to the three-
+dimensional space-time metric on the shell. Latin indices        In the static, spherically symmetric case,         (2.8)
+at the beginning of the alphabet (a , b , . . . ) refer to the                                       grr
+spatial metric on a two-sphere.
+                                                                                       [[Kij ]] = 2 gij,r .
+
+                                                                 Discontinuities in the metric coefficients are then related
+
+         II. EQUILIBRIUM MODEL                                   to the surface energy and surface tension as [35]
+
+   The metric for a static thin-shell gravastar has the form                           f h     = 8( - 2) . (2.9)
+[35, 36]                                                         [[ h]] = -4a ,          f
+
+ds20 = -f (r)dt2 + 1 h(r) dr2 + r2(d2 + sin2 d2) . (2.1)         In order to summarize the above relations and reveal the
+                                                                 independent parameter space of a thin-shell gravastar we
+Here                                                             define
+
+          h(r) = 1 - 2M ,                                        Mv              4a3   ,  Ms  4a2 ,                 (2.10)
+
+              r                    r > a,                                           3
+                                 , r < a,
+         
+
+f (r) =    h(r) =  1 - 8 r2                  (2.2)               which would be the volume- and surface-energy contents
+
+                           3                                     of the gravastar. In terms of Mv, Ms and a, we can
+                                                                 obviously solve for , , and in addition we have
+
+where M is the gravastar mass measured by an outside             M = Mv + Ms           1 - 2Mv + Ms2 ,              (2.11)
+observer, and  = 3M/(4a3) is the "energy density" of                                          a 2a                  (2.12)
+the interior region. The coordinate system (t, r, , ) has                                                           .(2.13)
+been chosen in such a way that the thin shell occupies a          = 1 - 2M/a ,
+coordinate sphere with r = a. The space-time reduces to                  1 - 2Mv/a
+de Sitter for r < a, and to Schwarzschild for r > a. The
+junction conditions on the r = a surface have already            = 1             1 - 4Mv/a - 1 - M/a
+partially been chosen by requiring the induced metric to                 8a         1 - 2Mv/a  1 - 2M/a
+be continuous across the shell, which also dictates that
+f (r) be continuous at r = a, or                                 As a consequence, gravastar types can be specified by
+                                                                 the dimensionless parameters Mv/a and Ms/a. In this
+           1 - 2M =  1 - 8a2 .               (2.3)               paper we only consider a simplified version of the orig-
+           a                  3                                  inal Mazur-Mottola gravastar, which has vanishing sur-
+                                                                 face energy ( = 0) and
+
+In this paper we shall usually drop the dependence of f (r)      M = Mv, 8a = - 3M/a .                              (2.14)
+and h(r) on r. From the jump in the radial derivatives                                            1 - 2M/a
+of f we could easily obtain the two defining properties of
+this gravastar model: the surface energy density  and            However it is convenient to keep our notation general
+surface tension . The junction conditions read [38]:             enough, because nonradial oscillations of a gravastar will
+                                                                 in general produce nonzero variations of the surface en-
+           [[Kij ]] = 8 Sij - ij S ,         (2.4)               ergy (i.e.,  = 0).
+                                          2
+                                                                                                                4
+
+III. GRAVITATIONAL PERTURBATIONS                             with
+
+   In both the interior (de Sitter) and exterior
+(Schwarzschild) background space-times we consider per-
+turbations in the Regge-Wheeler gauge [39], writing
+
+ds2 = ds20 + (RWgµ )dxµdx   (3.1)
+
+                                                             -h0(t, r) 1 Ylm     h Y 0(t, r)sin  lm 
+                                                                         sin  
+          f (r)H0(t, r)Ylm  H1(t, r)Ylm                                                         
+                                                             -h1(t, r) 1 Ylm
+                            H2(t, r)Ylm                                  sin  
+                                h(r)
+                                                                 r2K(t, r)Ylm                   Ylm  
+                                                                                                     
+RWgµ  =                                                                          h1(t, r)sin         ,          (3.2)
+                                                                                                
+      
+
+                                                                                    0                
+
+                                                                                 r2 sin2 K(t, r)Ylm
+
+where Ylm(, ) denotes the ordinary spherical harmon-         In the de Sitter interior both axial and polar perturbations
+ics and "" stands for terms obtainable by symmetry. In       can be reduced to the study of the (frequency-domain)
+this gauge the perturbations split into two independent      master equation
+sets: the metric functions h0 and h1 are axial or odd par-
+ity perturbations, while H0 , H1 , H2 , K are polar or even         d +  2in 2 - Vin(r) in = 0 ,     r < a,     (3.4)
+parity perturbations. The linearized Einstein equations              dr2
+automatically require H0 = H2  H.
+                                                             where
+   In the rest of this section we work out perturbations of
+the gravastar space-time, including the dynamics of the                            l(l + 1)                     (3.5)
+shell itself, in three steps. In Sec. III A, we present the            Vin(r) = 2 f (r)
+well-known solution of the perturbation equations in de
+Sitter space-time in terms of hypergeometric functions                                r
+and choose the solution that is regular at the origin (r =
+0). In Sec. III B we review metric perturbations in the      and we introduced the tortoise coordinate, defined as
+Schwarzschild exterior. Finally, in Sec. III C we work out   usual by the condition dr/dr = f (r), which in this case
+the junction conditions relating the interior and exterior   yields
+Regge-Wheeler perturbations.
+                                                             r =     3 arctanh      8r2 1/2             r < a.  (3.6)
+                    A. The de Sitter interior                       8                  3,
+
+   The usual way to obtain the interior solution for per-    In terms of r, the master equation reads
+turbed stars is by direct integration of the system of
+ODEs [40, 41, 42]. Integrating a regular solution from              2in f  in 2 - Vin(r) in                     (3.7)
+the center would give boundary conditions at the stel-              +            +        2  = 0,
+lar radius (or, in the case of a gravastar, at the location         r2 f r             f
+of the shell). For the de Sitter interior (r < a) no nu-
+merical integrations are required, because a regular so-     where a prime denotes a derivative with respect to r.
+lution of the perturbation equations can be obtained in      Near the origin, solutions of Eq. (3.7) behave as Arl+1 +
+terms of hypergeometric functions [4, 43]. To establish      Br-l. By requiring regularity at the center (r = 0) we
+notation we review the basic equations below. Let us
+express the metric in terms of a compactness parame-         get, up to a multiplicative constant,
+ter C  (2M/a)3, related to the parameter µ = M/a of
+Ref. [36] by C = 8µ3. Then we have (assuming  = 0)           in = rl+1(1 - C(r/2M )2)-i M C
+
+ f (r) = 1 - 8 3 r2 = 1 - a3 2M r2  1 - C(r/2M )2 . (3.3)           l + 2 - i 2M C 1 + l - i 2M C      3 Cr2
+                                                                    F 2 , 2 , l + 2 , 4M 2                      , (3.8)
+
+                                                             where F (a, b, c, z) is the hypergeometric function [44].
+                                                             From in and its derivative we can get the axial per-
+
+                                                             turbation variables in the frequency domain [45]:
+
+                                                                    h1 = r in ,  h0 = - i d rin .               (3.9)
+                                                                           f               dr
+                                                                                                              5
+
+The polar metric functions K and H1 can be obtained            Note that if we make the appropriate choice for f (r),
+immediately from:                                              Eqs. (3.15)-(3.17) and the algebraic relation also apply
+
+             K = l(l + 1) in + din ,                   (3.10)  to the interior de-Sitter spacetime [cf. Eq. (3.12)].
+                       2r               dr             (3.11)     The Zerilli function Zout(r) [45], which satisfies a wave
+
+                   ir in din                   .               equation, and its spatial derivative are also constructed
+             H1 =                    +                         from H1 and K as
+
+                       f r dr                                                         H out - A3Kout
+                                                                            Zout = 1                    ,   (3.19)
+                                                                                             A2 - A1A3      (3.20)
+The quantity H(= H0 = H2) and its derivatives can then
+be found from the algebraic relation                                        dZout = A2Kout - A1H1out ,
+
+l(l + 1) - 1 - 2r2 K +                                                      dr               A2 - A1A3
+
+                                     -ir - i   l(l + 1)Cr  H1  where
+
+       2        ff                                8M 2
+
+- (l - 1)(l + 2) H = 0 .                               (3.12)         A1 =  6M 2 + /2 (1 + /2) r2 + 3/2M r  , (3.21)
+          2
+                                                                                      r (3M + r/2)2
+
+This procedure fixes all metric quantities and their                        i -3M 2 - 3/2 M r + r2/2        (3.22)
+derivatives in the interior. Here and henceforth in the               A2 =            r (3M + r/2) f ,      (3.23)
+paper we drop the dependence of h0, h1, H, H1 and K
+on  and r.                                                            A3 = i r
+                                                                                   f
+
+          B. The Schwarzschild exterior                        and  = (l - 1)(l + 2). The metric perturbations can then
+
+   In the Schwarzschild exterior, axial and polar pertur-      be obtained by integrating the Zerilli equation outwards,
+bations obey different master equations [46]. The deter-       starting from r = a+. It is also useful to recall that
+mination of the axial perturbation variables can still be      (in the exterior) we can switch from the Zerilli function
+reduced to the solution of the Regge-Wheeler equation          Zout(r) (3.20) to the Regge-Wheeler function out(r) by
+[39], a Schr¨odinger-like ODE identical to Eq. (3.7):
+                                                               using a differential relation between polar and axial vari-
+                                                               ables discussed in Chandrasekhar's book [46]:
+
+2out f  out 2 - Vout(r) out                                    -out = Zout - dZ , out        d = +Z out out - out ,
+                                                                                         dr   dr
+
+r2        +  f r       +          f  2  = 0,           (3.13)  where
+
+where                                                          ± = ( + 2) ± i ,  = ( + 2) + 6M f (r) .
+
+                          l(l + 1) 6M                                 12M                    12M r( r + 6M )
+
+             Vout = f          r  2 -3 .r              (3.14)  From Zout and dZout/dr we can easily compute out and
+                                                               dout/dr outside the shell and use them as initial condi-
+The metric can then be obtained from Eqs. (3.9), with          tions to integrate the Regge-Wheeler equation outwards.
+f (r) given by Eq. (2.2).                                      Leins et al. [47] showed that this procedure is convenient
+                                                               to compute polar oscillation modes by the continued frac-
+   The perturbed Einstein equations relate the polar vari-     tion method; more details on the QNM calculation are
+ables (K, H, H1) via three differential equations:             given in Appendix B.
+
+                        d (f H1) - i(H + K) = 0 , (3.15)                         C. The matching conditions
+                       dr
+                -iH1 + f (H - K) + f H = 0 , (3.16)               In this section we discuss the most delicate part of
+                                                               the perturbation problem, namely the junction condi-
+        H 1 f                        l(l + 1)                  tions for the Regge-Wheeler perturbation variables across
+K - + - K + i 2 H1 = 0 , (3.17)                                the shell. Here we only outline our strategy and present
+          r r 2f                        2r                     the results; more details are given in Appendix A. Tech-
+                                                               nically, the application of Israel's junction conditions is
+and an algebraic relation:                                     easier if the shell's world tube happens to coincide with a
+                                                               fixed coordinate sphere at constant radius. However this
+          l(l + 1) - 1 + rf       1 - rf       - 2r2 K         is incompatible with choosing the Regge-Wheeler gauge
+             2              2          2f           f          in both the interior and the exterior, which is convenient
+                                                               to cast the perturbation equations into simple forms. In
+       + -ir + i l(l + 1) f  H1
+                           4
+
+       - l(l + 1) - f + rf  H = 0.                     (3.18)
+             2              2
+                                                                                                                        6
+
+fact, such a choice of gauge does not leave any freedom.      when evaluated at (t, r, , ) = (t^, a, , ), the vector
+We must explicitly parametrize the 3-dimensional mo-           coincides with (t, r, , ), so that in the new co-
+tion of each mass element on the shell and then per-          ordinate system we will have
+form the matching on a moving shell. In order to take
+advantage of both the simplicity of the field equations                                 t¯  =  /       f (a) ,
+and the convenience of matching on a fixed coordinate
+sphere, we carry out the matching in the following way.                            
+We first construct a particular coordinate transformation                          
+(for both the exterior and interior space-times) such that                          r¯ = a ,
+in the new coordinate system, any mass on the shell re-                             ¯                                   (3.27)
+mains static on the coordinate sphere with r = a. In                                        =   ,
+this new coordinate system the metric perturbations will
+no longer be Regge-Wheeler, but will be augmented by                                ¯ =  ,
+quantities that carry information about how masses on
+the shell move in the Regge-Wheeler gauge. The stress-        where we are ignoring second-order corrections. The full
+energy tensor of masses on the shell will correspondingly     metric in the new coordinate system is
+be modified. We then carry out the matching at r = a
+and obtain junction conditions relating the interior and                      g¯ = g (0) + RWg + g ,                    (3.28)
+exterior metric perturbations, plus equations of motion
+for matter on the shell. As could be anticipated from         where g (0) is the static gravastar background metric,
+the general features of oscillations of nonrotating stars,    given by Eq. (2.1). The explicit form of µ and the corre-
+axial perturbations do not couple to matter motion and
+the axial junction conditions are very simple, basically      sponding changes in the metric components, Eq. (3.26),
+imposing continuity of the master variable  and of its
+first derivative. Polar perturbations, on the other hand,     are given in Appendix A, where the equations of motion,
+do couple to matter motion, so polar junction conditions
+do involve the shell dynamics, i.e. its equation of state.    as well as the gauge transformation, are presented sys-
+
+   We parametrize the world line of matter elements on        tematically in a multipole expansion. We then match
+the shell in terms of the coordinates (t, r, , ) as follows:
+                                                              components of g¯ along the shell, which now simply sits
+                                                              at (t^, a, , ), and apply Israel's junction conditions to
+                                                              the extrinsic curvature given by g¯. For axial perturba-
+                                                              tions these matching conditions read
+
+                                                                              [[h0]] = 0 ,                              (3.29)
+                                                                                                    hh1 = 0 .
+
+  t  =    /  f (a) + t(, , ) ,                                For thin shell gravastars h(r) is continuous across the
+                                                              shell, implying continuity of the Regge-Wheeler function
+                                                               and its derivative  across the shell [cf. Eq. (3.9)]. In
+                                                              more general cases where h(r) may have a discontinuity
+ r = a + r(, , ) ,                                            across the shell the axial junction conditions (3.29) show
+                                   (3.24)                     that  must also be discontinuous.
+     =       +  (,  ,  )  ,
+                                                                 The treatment of polar perturbations is more involved
+                                                              and it yields the following relations, determining the
+  =  + (, , ) ,                                               "jump" of the polar metric functions at the shell:
+
+where  and  identify physical mass elements on the                    [[K]] = 0 ,                                       (3.30)
+sphere, while  parametrizes their proper time. Note
+that the Lagrangian equations of motion will not be the               [[K]] = -8  ,                                     (3.31)
+same for the interior and exterior space-times. Therefore,                                f (a)
+points with the same t ,  and  coordinates are not in
+general the same when viewed from the interior and from               a2 2M [[H]] - [[H f ]] - 2f (a)[[H]] + 4i[[H1]]
+the exterior. As shown in Appendix A, the four-velocity
+of the mass element (, ) at the scaled proper time            = 16 f (a)(1 + 2vs2) .                                    (3.32)
+t^   / f (a) is, to leading order in the perturbation
+variables:                                                    Note that f (r) is continuous across the shell [cf.
+                                                              Eq. (2.3)]. The parameter vs in the equations above
+u = [f (a)]-1/2 (1 + t, r, ,  ) .  (3.25)                     depends on the equation of state on the thin shell,
+                                                               = ():
+We now carry out a gauge transformation which maps
+                                                                                     2      -   ,                       (3.33)
+the shell to a fixed location (note that two different gauge                                    =0
+                                                                                   vs
+transformations are required for the exterior and for the
+interior). For any general gauge transformation x¯¯ =         and it has the dimensions of a velocity. One might naively
+x - (xµ) we have, to first order in µ,
+
+g = g¯(x¯µ)-g(x¯µ) = ;(x¯µ)+;(x¯µ) , (3.26)                   interpret vs as the speed of sound on the thin shell and
+
+                                                              require vs  1, i.e. that the speed of sound cannot exceed
+
+where the semicolon represents a covariant derivative         the speed of light. Furthermore, for a shell of ordinary,
+with respect to the four-metric and g¯(x¯µ) is the metric
+                                                              stable  matter  we  would     have  v2   > 0.     The standard ar-
+tensor in the new coordinate system. We impose that,
+                                                                                                    s
+                                                              gument  used    to  deduce    that  v2   >  0  does  not  necessarily
+
+                                                                                                    s
+                                                                                                                                        7
+
+hold when one deals with exotic matter (as in the case of             suitably chosen grid of (R, I ) values, and make con-
+                                                                      tour plots of the curves along which the two functions
+gravastars and wormholes), so the specification of upper              are zero. The intersections of these curves are used as
+                                                                      initial guesses for the quasinormal frequencies; more pre-
+and lower bounds on vs may require a detailed micro-                  cise values are then obtained using Muller's method [52].
+                                                                      For fixed n (say, n = 0) this method singles out some spu-
+physical model of the exotic matter itself [48, 49]. In               rious roots besides the physical QNM frequencies. The
+                                                                      spurious roots can easily be ruled out, since they are not
+our discussion of gravastar stability we will consider the            present for different values of n. Looking for roots with
+                                                                      n = 0 is usually sufficient, but sometimes we get more
+whole range of vs, but we will primarily focus on the                 stable numerical solutions for n = 1 and n = 2 when the
+            v2                                                        QNMs have large imaginary part (I 1.5 or so).
+range  0           1.  The  application  of   the  polar  junction
+              s
+conditions is more involved than the axial case due to
+
+their complexity, which arises from the fact that polar
+
+perturbations couple to oscillations of the shell.
+
+Here we note that even though we have three quantities
+
+(K, H, H1) that satisfy a coupled system of first-order
+
+ODEs in both the interior and exterior, in each region                   The QNM spectrum with µ = 0.4 corresponds to the
+                                                                      empty (polar) and filled (axial) squares in the left panel
+there is an algebraic relation relating the three quanti-             of Fig. 1, respectively. Starting from µ = 0.4, we follow
+                                                                      each QNM as µ  0 and as µ  1/2 to produce the
+ties. For this reason we only need to impose two inde-                tracks displayed in the figure. For this value of vs some
+                                                                      of these tracks end at the origin in the limit µ  0, while
+pendent junction conditions, and Eqs. (3.30)-(3.32) pro-              others hit the pure-imaginary axis at some finite limiting
+                                                                      compactness µimag (e.g. µimag  0.24 for the first po-
+vide exactly two independent relations among K, H and                 lar mode). The mode frequencies usually move clockwise
+                                                                      in the complex plane (with the exception of QNMs dis-
+H1 (after eliminating ). Alternatively, the number of                 playing "loops") as µ is increased. The imaginary part
+                                                                      of both axial modes (continuous lines) and polar modes
+junction conditions can be obtained considering that all              (dashed lines) becomes very small as µ  1/2, i.e. when
+                                                                      the gravastar most closely approximates a BH. The be-
+metric perturbations can be expressed in terms of in and              havior is perhaps clearer from Fig. 2, where we separately
+                                                                      show the real and imaginary parts as functions of µ.
+out, and that each of these master variables satisfies a
+
+second-order ODE. More specifically, we use Eqs. (3.30)-
+
+(3.32) to determine two relations among (in, rin) and
+(out, rout), plus the corresponding .
+
+            IV. NUMERICAL RESULTS                                        For both axial and polar spectra the dependence of the
+                                                                      mode frequencies on the gravastar compactness resembles
+Some axial and polar QNM frequencies for a static                     that of "ordinary" ultracompact stars: see e.g. Fig. 3
+                                                                      of Ref. [53]. Intuitive models that capture most of the
+thin-shell gravastar, as computed by the continued frac-              physics of this problem have been presented in Refs. [54,
+                                                                      55]. In their terminology, modes that emerge from the
+tion method, are plotted in Figs. 1 and 2. The C++ code               origin in Fig. 1 when µ  0 are w-modes or curvature
+                                                                      modes, roughly corresponding to waves trapped inside
+used for the calculations is an update of the Fortran code            the star. Modes emerging from the imaginary axis at
+                                                                      some generally nonvanishing compactness are wII-modes
+used in Ref. [50] to verify and extend results on stellar             [47] or interface modes, and they are similar in nature to
+                                                                      acoustic waves scattered off a hard sphere [55, 56]. The
+oscillations by Kokkotas [51] and Leins, Nollert and Sof-             only qualitative difference with Fig. 3 of Ref. [53] are the
+                                                                      "loops" appearing for higher-order w-modes, for which
+fel [47]. For axial modes, our numerical results are in               we have no analytical understanding.
+
+excellent agreement with the thin-shell limit of the QNM
+
+frequencies computed by Chirenti and Rezzolla [36] and
+
+with Fiziev's calculation of the axial QNMs of ultracom-
+
+pact objects with a totally reflecting surface (compare                  The fact that w-modes are effectively waves "trapped
+
+figures 3 and 4 of Ref. [37]).                                        inside the star", while wII-modes are interface modes,
+
+To find the QNM frequencies we adopt the following                    similar to acoustic waves scattered off a hard sphere, is
+
+numerical procedure. We usually fix µ = 0.4 and (for                  also clear from the behavior of their wavefunctions in
+
+polar perturbations) we choose a constant value of vs.                the stellar interior. The real and imaginary parts of the
+
+In the calculations leading to Figs. 1 and 2 we chose,                wavefunctions are shown in Fig. 3 (see Ref. [47] for com-
+
+somewhat    arbitrarily,  v2   = 0.1.  Later  in   this  section  we  parison with the wavefunctions of ordinary stars). This
+
+                            s                                         figure shows eigenfunctions computed at the polar QNM
+will discuss the dependence of polar modes on vs.
+
+As explained in Appendix B, within the continued frac-                frequencies for the first four w-modes and wII-modes with
+
+tion method the complex QNM frequencies can be deter-                 l  =  2  and  v2   =  0.1.  The  plot  shows  that  w-modes  can  be
+
+                                                                                      s
+mined as the roots of any of the n equations fn() = 0                 thought of as standing waves inside the gravastar, and
+
+[cf. Eq. (B19)], where n is the "inversion index" of the              that the overtone number corresponds to the number of
+
+continued fraction. To locate QNMs we first fix a value               nodes in the real and imaginary parts of the eigenfunc-
+
+of µ (usually µ = 0.4). We compute the real and imag-                 tion. The situation is different for wII-modes, where the
+
+inary parts of fn() for a given inversion index n on a                wavefunction has a maximum close to the shell, as ex-
+                                                                                                                                                                  8
+
+   2.0                   3                    v2=0.1              2.0                     3                                                           v2=0.1
+   1.5                                     4    l=2               1.5               2                                                                   l=3
+   1.0                                                            1.0    1
+   0.5 1        2                              µ=0.10             0.5                                                                            4
+   0.0                                         µ=0.20             0.0
+2MI                                            µ=0.30          2MI
+     0.0                                       µ=0.40               0.0
+                1.0  2.0                       µ=0.49                    1.0                 2.0                                                 3.0              4.0
+                     2MR                                                      2M
+                                               3.0
+
+                                                                                                  R
+
+FIG. 1: First few axial (continuous lines) and polar (dashed lines) QNMs of a thin-shell gravastar with vs2 = 0.1. In the left
+panel we follow modes with l = 2 as the compactness µ varies. In the right panel we do the same for modes with l = 3. Along
+each track we mark by different symbols (as indicated in the legend) the points where µ = 0.1 , 0.2 , 0.3 , 0.4 and 0.49. Our
+numerical method becomes less reliable when 2M I is large and when the modes approach the pure-imaginary axis. Numbers
+next to the polar and axial modes refer to the overtone index N (N = 1 being the fundamental mode).
+
+2MR     v2=0.1                                            2.0 v2=0.1                                                                                   3
+     3 l=2                                                                                                                                                     4
+                                                                  l=2
+     2                                                                                                                                                2
+                                                           1.5
+
+                                                 4
+
+                                              3                2MI1.0
+
+     1 0.5
+
+                                                                                                                                              1
+
+                12
+
+     0                                                            0.0
+     0.0 0.1 0.2 µ 0.3 0.4 0.5 0.0 0.1 0.2 µ 0.3 0.4 0.5
+
+FIG. 2: Real (left) and imaginary (right) part of polar and axial QNMs with l = 2 as functions of µ for vs2 = 0.1. Linestyles
+are the same as in Fig. 1. Numbers refer to the overtone index.
+
+pected for interface modes.                                    The proof is based on the observation that the Zerilli
+                                                               wavefunction for polar modes is continuous in this limit.
+   One of our most important conclusions is that neither
+axial nor polar modes of a gravastar reduce to the QNMs           It is clear from the figures that axial and polar modes
+of a Schwarzschild BH when µ  1/2. In this limit,              do not have the same spectra for general values of µ.
+the real part of most modes is extremely small (much           However, figures 1, 2 and 4 provide evidence that axial
+smaller than the Schwarzschild result, 2M R  0.74734           and polar QNMs do become isospectral when the gravas-
+for the fundamental mode with l = 2 [4]). Indeed, the          tar compactness approaches that of a Schwarzschild BH
+QNM spectrum is drastically different from the QNM             (µ  0.5). An analytic proof of isospectrality in the
+spectrum of a Schwarzschild BH: when µ  1/2 the en-            high-compactness limit is given in Appendix C, where
+tire spectrum seems to collapse towards the origin. This       we show that in this limit both the Zerilli and Regge-
+is in sharp contrast with the Schwarzschild BH case and,       Wheeler functions are continuous at the shell.
+as first noted in Ref. [36], it can be used to discern a very
+compact gravastar from a BH. In Appendix C we prove               From the matching conditions (3.29), (3.30), (3.31)
+analytically that the QNM frequencies of a gravastar do        and (3.32) it is quite clear that polar QNMs (unlike ax-
+not reduce to those of a Schwarzschild BH as µ  1/2.           ial QNMs) should depend on vs, i.e. [by Eq. (3.33)] on
+                                                                                                                                                                                 9
+
+             1.0                                                                                                0.8
+
+             0.8        =1.44+1.37i                                                                                           =1.44+1.37i
+                        =3.42+1.38i                                                                             0.6           =3.42+1.38i
+
+             0.6        =5.11+1.52i                                                                                           =5.11+1.52i
+                        =6.73+1.63i                                                                             0.4 =6.73+1.63i
+Re((r)/(a))                                                                                        Im((r)/(a))
+             0.4
+                                                                                                0.2
+
+             0.2
+
+                                                                                                0.0
+             0.0
+
+     -0.2 -0.2
+
+     -0.4 l=2, µ=0.4                                                                               -0.4 l=2, µ=0.4
+
+             0.0 0.2 0.4 0.6 0.8 1.0 1.2                                                                        0.0 0.2 0.4 0.6 0.8 1.0 1.2
+
+                                        r                                                                                                  r
+
+                        =0.90+0.32i l=2, µ=0.4                                                                                =0.90+0.32i l=2, µ=0.4
+                        =1.16+1.20i                                                                0.15                       =1.16+1.20i
+             0.8        =1.08+2.48i                                                                                           =1.08+2.48i
+
+Re((r)/(a))             =1.04+3.63i                                        Im((r)/(a))                                        =1.04+3.63i
+
+             0.6                                                                                   0.10
+
+             0.4
+
+                                                                                               0.05
+             0.2
+
+             0.0                                                                                   0.00
+
+             0.0 0.2 0.4 0.6 0.8 1.0 1.2                                                                        0.0                     0.5    r                   1.0
+                                        r
+
+FIG. 3: Top row: real and imaginary part of the wavefunction in the interior for the first four w-modes. Bottom row: real and
+
+imaginary part of the wavefunction in the interior for the first four wII-modes. In both cases we consider polar QNMs with
+l = 2 and vs2 = 0.1.
+
+the equation of state on the shell. This is a new fea-                                             of Figs. 1 and 2. The dashed black line corresponds
+ture that does not arise in the case of axial perturbations
+[36]. The situation closely parallels the ordinary stellar                                         to the fundamental polar w-mode for a shell with low
+perturbation problem [42, 57]. The role played by the
+equation of state in the dynamical stability of gravas-                                            sound speed (vs2 = 0.1), corresponding to the fundamen-
+tars against spherically symmetric perturbations was dis-                                          tal polar w-mode of Figs. 1 and 2. The dash-dash-dotted
+cussed in Ref. [35]. Our calculations extend the consid-
+erations of that paper to nonradial oscillations.                                                  (red), dash-dotted (blue) and dotted (green) lines rep-
+
+                                                                                                   resent a marginally subluminal, imaginary sound speed
+
+                                                                                                   (vs2 = -0.99) and superluminal sound speeds (vs2 = -2
+                                                                                                   and          v2   = -4, respectively).      Nothing particularly strik-
+
+                                                                                                                  s
+                                                                                                   ing happens in this regime: QNM frequencies for polar
+    The vs-dependence of the modes is studied in Figs. 4, 5
+                                                                                                   and axial perturbations are different in all cases, but for
+and 6. In Fig. 4 we show the tracks described in the com-
+                                                                                                   large compactness the results become vs-independent and
+plex plane by the fundamental polar and axial w-mode
+                                                                                                   modes of different parity become approximately isospec-
+as we vary the compactness parameter µ. The funda-
+                                                                                                   tral, in agreement with the analytical results of Appendix
+mental axial mode does not depend on the equation of
+                                                                                                   C. Furthermore, as |vs|   the polar modes seem to
+state parameter, as expected, but the polar modes do
+                                                                                                   approach the axial mode. We can perhaps understand
+change as a function of vs. The standard argument used
+                                               v2                                                  this behavior if we think that the shell is effectively be-
+to   deduce       that  the  speed  of  sound       >  0  does  not  nec-
+                                                 s                                                 coming so stiff that matter decouples from the space-time
+essarily hold when one deals with exotic matter (as in
+                                                                                                   dynamics, and only the "space-time" character of the os-
+the case of gravastars and wormholes). Therefore, for
+                                                                                                   cillations survives.
+completeness, in the left panel of Fig. 4 we compute po-
+
+lar  QNMs         when  v2   < 0.   Different  linestyles correspond                                            The  situation     is  more  interesting  in  the  case  v2   >  0,
+
+                          s                                                                                                                                                s
+to different values of vs2, as indicated in the legend. The                                        displayed in the right panel of Fig. 4. At first (when
+
+solid black line reproduces the fundamental axial w-mode                                           v2                0.5  or  so)  the  modes  show  a    behavior  similar      to
+
+                                                                                                     s
+                                                                                                                                                     10
+
+     0.6             -0.10                                              l=2       0.8                                                        0.10
+                                                                                                                                             0.50
+                     -0.99                                                        0.7 l=2                                                    0.70
+                                                                                                                                             0.80
+                     -2.00                                                        0.6                                                        0.90
+                                                                                                                                             0.99
+     0.5 Axial -4.00                                                              0.5                                                        1.00
+                                                                                                                                             1.013
+     0.4                                                                          0.4                                                        1.014
+2MI                                                                                                                                          1.02
+                                                 2MI
+     0.3
+
+     0.2                                                                          0.3
+                                                                                                                Axial
+
+                                                                                  0.2
+
+      0.1                                                                         0.1
+
+     0.0                                                                          0.0
+       0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9                                      0.0 0.2 0.4 0.6 0.8 1.0 1.2
+
+                         2M                                                                           2M
+
+                                          R                                                                            R
+
+FIG. 4: Tracks of the fundamental polar and axial w-modes for different values of the "sound speed" parameter vs when vs2 < 0
+(left) and when vs2 > 0 (right). Different linestyles correspond to different values of vs2, as indicated in the legend.
+
+that    seen  for    v2   <  0,  albeit  in  the  opposite   direction     (i.e.  In the left (right) panel of Fig. 6 we show the real
+
+                       s                                                          (imaginary) parts of both families of QNMs as functions
+the real and imaginary parts of the QNM frequencies in-
+
+crease rather than decreasing when |vs| increases). When                          of µ for selected values of vs. Both the real and imaginary
+v2
+     =  0.7  a  cusp      develops,  and     as   the  speed  of    sound  ap-    part of the weakly damped modes tend to zero at some
+  s
+proaches      the    speed   of  light   (for    v2       0.9 in the figure)      finite, vs-dependent compactness µ. The range where
+                                                                                  weakly damped modes exist increases with vs2. The fact
+                                                   s                              that both the mode frequency and its damping tend to
+the modes "turn around" describing a loop in the com-
+
+plex plane. The area of this loop in the complex plane
+
+increases until the sound speed reaches a critical value                          zero at the critical compactness µcrit suggests that the
+
+1.013        v2           1.014  (corresponding        to    vcrit      1.007).   mode somehow "disappears" there, rather than undergo-
+
+               crit                                                               ing a nonradial instability, but this conjecture deserves
+For vs > vcrit the QNM behavior changes quite drasti-
+
+cally. The complex mode frequencies still approach the                            a more careful analytical study. Plots similar to those
+
+I = 0 axis clockwise as µ  0.5. However, as µ de-                                 shown in Fig. 6 show that the imaginary part of "or-
+
+creases the modes approach the axis I = 0 very rapidly                            dinary"   modes   with   v2      0.84 (vs        0.92) rapidly ap-
+
+                                                                                                             s
+along tracks which are now tangent to the lower branch                            proaches zero at some finite compactness µ while the real
+
+of the fundamental axial mode.                                                    part of the modes stays finite. We are unable to track
+                                                                                  QNMs numerically when 2M I 10-5 using the con-
+
+                                                                                  tinued fraction method, and in any case we cannot really
+
+     Even  more      interestingly,      when     v2   >  0  there  is  also  a   prove by numerical methods that I  0 at some finite
+                                                                                                                   v2
+                                                    s                             compactness    µ  >  0.  When         =  1.0134  the  two  family  of
+second family of QNMs with very small imaginary part.                                                                s
+                                                                                  modes approach each other along a cusp, but their fre-
+A plot of the eigenfunctions shows that these modes are
+                                                                                  quencies and damping times never cross. The "ordinary"
+similar in nature to the wII-modes. The trajectories de-
+                                                                                  family of modes exists all the way up to µ = 0.5 but it
+scribed in the complex plane by some of these weakly
+                                                                                  becomes unstable (in the sense that the imaginary part
+damped QNMs are shown in the left panel of Fig. 5.
+                                                                                  of the mode crosses the real axis with the real part re-
+For comparison, the right panel of Fig. 5 shows some of
+                                                                                  maining finite) at some finite, vs-dependent value of the
+the "ordinary" modes. These ordinary modes are the
+                                                                                  compactness µ.
+same as in the right panel of Fig. 4, except that this
+                                                                                  Summarizing, our numerical results suggest that (1)
+time we use a logarithmic scale for the imaginary part.
+                                                                                  weakly damped QNMs only exist when their compact-
+The second family of QNMs plotted in the left panel
+                                                                                  ness is smaller than some vs-dependent critical thresh-
+has very long damping, and in this sense it is similar to                                                               v2
+                                                                                  old  and  (2)  when  vs  >    0  and       0.84, the imaginary
+the s-modes of "ordinary" ultra-compact stars discussed                                                                   s
+                                                                                  part of a QNM crosses the real axis at another critical
+by Chandrasekhar and Ferrari [57]. There is, however,
+                                                                                  threshold whose value can be estimated by extrapola-
+an important difference: unlike the s-modes, which ex-
+                                                                                  tion. Nonrotating thin-shell gravastars should be unsta-
+ist only when a star is extremely compact, the weakly
+                                                                                  ble against nonradial perturbations when their compact-
+damped modes of a thin-shell gravastar only exist for
+                                                                                  ness is smaller than this critical value.
+small compactness µ < µcrit.
+    100 100                                                                                                                                                        11
+
+          l=2                                                                                                                                                  l=2
+
+    10-1               ISCO                                                                                              10-1
+
+    10-2                                                                                                              10-2
+
+2MI 10-3                                                                                                              2MI           0.10
+
+                                                                                                                0.10     10-3 0.70 0.50
+                                                                                                                0.50
+                                                                                                                                                  0.80
+    10 0.80 -4 0.70
+                                                                                                                                    0.90
+                                                                                                                0.90
+                                                                                                                1.00  10-4          0.99
+                                                                                                                                    1.00
+        -5                                                                                                                          1.013
+
+    10 0.0 0.2 0.4 0.6 0.8 1.0 1.2                                                                                                  1.014
+
+                         2M                                                                                                         1.02
+
+                                          R                                                                               -5
+
+                                                                                                                      10 0.0 0.2 0.4 0.6 0.8 1.0 1.2
+
+                                                                                                                                           2M
+
+                                                                                                                                                            R
+
+FIG. 5: Left: spectrum of the weakly damped family of QNMs. The vertical line corresponds to twice the orbital frequency
+of a particle in circular orbit at the ISCO: as we will discuss in a follow-up paper, only QNMs to the left of the line can be
+excited by a compact object inspiralling into the gravastar along quasi-circular orbits. In the case vs = 0.8 the mode "turns
+around" describing a loop in the complex plane. For vs 0.8 the modes move clockwise in the complex plane as µ increases.
+For vs 0.8 they move counterclockwise and they cross the real axis at finite compactness. To facilitate comparison, in the
+right panel we show again the right panel of Fig. 4 using a logarithmic scale for the imaginary part.
+
+    1.4                                                  l=2                                                             100   l=2
+    1.2
+    1.0         0.10                                                                                                     10-1
+                0.50
+2MR             0.90                                                                                                  2MI
+                1.00
+                1.013
+                1.014
+                1.10
+
+    0.8 10-2
+
+    0.6                                                                                                               10-3                              0.10
+    0.4                                                                                                               10-4                              0.50
+    0.2                                                                                                                                                 0.90
+                                                                                                                                                        1.00
+                                                                                                                                                        1.013
+                                                                                                                                                        1.014
+                                                                                                                                                        1.10
+
+         0.0 0.1 0.2 µ 0.3 0.4 0.5 0.0 0.1 0.2 µ 0.3 0.4 0.5
+
+FIG. 6: Real (left) and imaginary parts (right) of the fundamental polar w-mode for different values of the equation of state
+parameter vs. Different linestyles correspond to different values of vs2, as indicated in the legend. The horizontal line in the left
+
+panel corresponds to twice the orbital frequency of a particle in circular orbit at the ISCO: only modes below the line can be
+
+excited during a quasicircular inspiral.
+
+    The two thresholds are plotted in Fig. 7. Weakly                                                                     To validate results from the continued fraction method
+                                                                                                                      we used an independent numerical approach: the reso-
+damped QNMs with l = 2 exist only below the dashed                                                                    nance method [57, 58, 59], which is applicable to QNMs
+                                                                                                                      with I  R. The resonance method was first used by
+line and, according to our extrapolation of numerical re-                                                             Chandrasekhar and Ferrari in their analysis of gravita-
+                                                                                                                      tional wave scattering by constant-density, ultra-compact
+sults, thin-shell gravastars should be unstable to nonra-                                                             stars [57, 58]. Chandrasekhar and Ferrari showed that
+                                                                                                                      the radial potential describing odd-parity perturbations
+dial perturbations with l = 2 below the solid line (we                                                                of these stars displays a local minimum as well as a max-
+                                                                                                                      imum when the stellar compactness µ 0.39. If this
+verified that the instability condition for l = 3 is less                                                             minimum is sufficiently deep, quasi-stationary, "trapped"
+                                                                                                                      states can exist: gravitational waves can only leak out
+stringent than for l = 2). The dashed line extends up
+
+to  v2   <  1.0134,  where  our  numerical  search  for  weakly
+
+      s
+damped QNMs becomes impractical (the modes trace
+
+smaller and smaller loops in the complex plane and they
+
+seem to disappear when the compactness is still smaller
+
+than µ = 0.5).
+                                                                                                   12
+
+  0.5                                                             102 µ=0.40 µ=0.45
+
+  0.4                                                             101           µ=0.49
+
+  0.3                                                                           µ=0.4999
+
+  0.2
+
+   0.1
+
+  0.0
+     0.0 0.5 1.0 1.5 2.0 2.5 3.0
+
+                         v2
+
+                                      s
+
+FIG. 7: Significant thresholds in the (µ, vs2) plane. Thin-shell
+gravastars should be unstable with respect to nonradial per-
+turbations below the solid line, corresponding to "ordinary"
+QNM frequencies whose imaginary part crosses the zero axis
+while their real part stays finite. The dashed line corresponds
+to the "vanishing point" of weakly damped QNM frequencies,
+i.e. to the point where both their real and imaginary parts
+have a zero crossing. We could not find weakly damped modes
+in the region above the dashed line.
+µ                                                                 100
+                                                    V(r)
+
+                                                                  10-1
+
+                                                                  10-2                        l=2
+
+                                                                      -3  1  2  3                                                    4
+                                                                             r
+                                                                  10 0
+
+                                                                  FIG. 8: The potential governing axial and polar perturbations
+                                                                  for different values of the gravastar compactness µ  M/a,
+                                                                  where a is the location of the shell (see [57], showing a similar
+                                                                  plot for axial perturbations of constant-density stars). The
+                                                                  potential develops a minimum when µ 0.43. Note that the
+                                                                  polar and axial perturbations in the interior are both governed
+                                                                  by the same potential, given in Eq. 3.5 below.
+
+                                                                  V. CONCLUSIONS AND OUTLOOK
+
+to infinity by "tunneling" through the potential barrier.            In this work we have studied the nonradial perturba-
+The damping time of these modes is very long, so they             tions on nonrotating, thin-shell gravastars. It should not
+were dubbed "slowly damped" modes (or s-modes) [57].              be too hard to extend our formalism to the more com-
+                                                                  plex case of five-layer gravastars of the type originally
+   A straightforward analysis of Eq. (3.5) and an inspec-         proposed by Mazur and Mottola (see [36] for a treatment
+tion of Fig. 8 show that the axial potential for a gravas-        of the axial case).
+tar develops a minimum when µ 0.43. The compact-
+ness of ordinary stars is limited by the Buchdal limit               A presumably less trivial extension concerns rotating
+(µ < 4/9  0.4444), but since gravastars can be consid-            gravastars. Slowly rotating gravastars may be unstable
+erably more compact than this limit, s-modes can exist            against scalar perturbations because of an exponential
+all the way down to the "Schwarzschild limit" (µ  0.5).           growth of the perturbations due to superradiance, the
+These modes can be computed via the continued frac-               so-called "ergoregion instability" [60, 61]. An extension
+tion method, but since they are long-lived the resonance          of the present formalism can be used to study nonradial
+method, which is computationally very simple, provides            gravitational perturbations of slowly rotating gravastars
+very accurate estimates of their frequencies and damp-            and to discuss their ergoregion instability, which is be-
+ing times. We find that the resonance method and the              lieved to be stronger for gravitational perturbations [60].
+continued fraction method are in very good agreement              For gravastars this instability is due to superradiant grav-
+whenever the resonance method is applicable. In the               itational wave scattering in the ergoregion, so it is essen-
+limit µ  1/2 we have Im()  Re(), and all QNM                      tially the same as the "w-mode instability" discussed by
+frequencies can be interpreted as "trapped" states.               Kokkotas et al. for ultracompact stars [62]. The main
+                                                                  difference is that gravastars can be more compact than
+   The resonance method essentially confirms our contin-          constant-density stars, so we may expect the instability
+ued fraction results for modes with I  R. In par-                 to be stronger.
+ticular, it provides additional numerical evidence for the
+conjectured nonradial instability of thin-shell gravastars           Finally, our formalism can be applied to explore non-
+with low compactness. Despite the numerical evidence,             radial gravitational perturbations of nonrotating worm-
+an analytic confirmation of our estimates of the instabil-        holes, where the position of the throat plays a role similar
+ity threshold would be highly desirable.                          to the thin shell of a gravastar. Such an analysis could
+                                                                  confirm or disprove some conjectures on the similarity of
+                                                                  the QNM spectra of wormholes and BHs [63].
+
+                                                                     In follow-up work we will extend our study to ex-
+                                                                  plore QNM excitation by compact objects in closed orbits
+                                                                  around thin-shell gravastars (see [64, 65] for similar stud-
+                                                                                                    13
+
+ies considering the excitation of axial modes by scattering   can be used to reduce the problem to a wave equation.
+orbits). According to preliminary estimates by Norte, fol-    This means that we only need two conditions relating
+lowing the weak-gravity expansion of Poisson and Sasaki       these quantities from the two sides. Similarly, for axial
+[66] (extended by Li and Lovelace [17] to general bound-      perturbations we have h0 and h1, which satisfy a coupled
+ary conditions), the gravitational wave luminosity can        wave equation, and again we need only two conditions
+change dramatically at the resonances, while being very       connecting the interior and exterior.
+close to the BH value in nonresonant conditions. A weak-
+field study should provide a reasonably accurate estimate        Now we go directly to step (ii), and parametrize the
+of the orbital frequency at which the resonance occurs,       shell position as in Eqs. (3.24). Let us define
+but it can only provide a leading-order estimate of the ra-
+diated energy. A more precise characterization requires        t^   / f (a) ,  f (a)(F / ) .        (A1)
+the numerical integration of the perturbation equations       F  (F/t^) =                           (A2)
+[67, 68, 69, 70]. In a follow-up paper we will compare
+gravitational radiation from EMRIs in thin-shell gravas-      Note that t^ is simply a re-scaling of proper time of the
+tar space-times to the BH results of Refs. [71, 72, 73, 74].
+                                                              mass element, and that f (a) is common to the interior
+                          Acknowledgements
+                                                              and exterior, due to the requirement that the induced
+   This work was partially supported by FCT -                 metric is continuous. In the absence of perturbations, t^
+Portugal through projects PTDC/FIS/64175/2006,                coincides with t. Henceforth, we will use (t^, , ), to
+PTDC/FIS/098025/2008 and PTDC/FIS/098032/2008.                parametrize the mass element. As a consequence, the
+Y.C. was supported by NSF grants PHY-0653653 and              four-velocity u of the mass element (, ) would be as
+PHY-0601459, and the David and Barbara Groce Start-           in Eq. (3.25). Imposing that guu = -1, we actually
+up Fund at Caltech. E.B.'s research was supported by          have to require that
+NSF grant PHY-0900735.
+                                                                  (1 + 2t)gtt(t^+ t, a + r,  + ,  + ) = -1 ,
+  APPENDIX A: PERTURBATION EQUATIONS                                                       f (a)
+             AND MATCHING CONDITIONS                                                                                              (A3)
+
+   In this appendix we develop the formalism to study         which, to leading order, is
+polar and axial nonradial (linear) oscillations of an ob-
+ject consisting of a thin spherical shell separating two          f (a)r(t^, , ) + 2f (a)t(t^, , )  (A4)
+spherically symmetric regions. Though we are mainly           - RWgtt(t^, , ) = 0 .
+interested in thin-shell gravastars, we shall keep the dis-
+cussion as general as possible. We focus on a background      Here RWgtt is the tt-component of the metric perturba-
+metric of the form (2.1), keeping f (r) and h(r) generic.     tion in the Regge-Wheeler gauge.
+
+   The Regge-Wheeler gauge is incompatible with the re-          We will now carry out a gauge transformation, both
+quirement that the shell's world tube sits at a fixed loca-   in the exterior and in the interior, which maps the shell
+tion. We deal with this issue in two steps: (i) we choose a   to a fixed sphere. As explained in the main text, for any
+coordinate system (system A) such that perturbations in       general gauge transformation x¯¯ = x - (xµ) we have
+both the interior and exterior are in the Regge-Wheeler
+gauge; (ii) we write down the equations of motion of mass     µ   x¯µ x¯
+elements on the shell in this coordinate system (sepa-        g(x ) = g¯µ (x¯ ) 
+rately for the interior and the exterior), and try to ap-                      x x
+ply matching conditions on the boundary of this moving
+shell. We then transform to a new coordinate system              = g¯ - g¯  , - g¯µµ, x¯ ,          (A5)
+(system B) in which the shell is fixed, simplifying the
+matching procedure. System B is an auxiliary tool for         where we have ignored terms of second order in µ. Not-
+matching: when we consider perturbations of the gravas-       ing that
+tar induced (say) by orbiting particles we will mostly use
+system A, which is the usual Regge-Wheeler gauge.                g(xµ) = g(x¯µ + µ) ,               (A6)
+
+   Step (i) is a straightforward adaptation of formulas in    we obtain Eq. (3.26). This is the desired form, because
+Section III. In the Regge-Wheeler gauge, polar perturba-      we want to use µ to transform to a coordinate system
+tions are defined by three functions K, H and H1 for the      x¯µ where mass elements on the shell are fixed in spatial
+interior and exterior, respectively. These functions sat-
+isfy an algebraic relation and two coupled ODEs, which        location and move uniformly in the time direction: i.e.,
+                                                              for mass elements on the shell, x¯µ = (t^, a, , ). Then
+                                                              Israel's junction conditions will be applied to the Regge-
+
+                                                              Wheeler metric evaluated at a fixed coordinate location
+                                                              (t^, a, , ), and in terms of the transformation genera-
+                                                              tors (which are related to the motion of the shell in the
+
+                                                              Regge-Wheeler gauge).
+                                                                                                                  14
+
+Let us make four consecutive transformations                     where m, n and a run through  and . Here ab is again
+                                                                 defined with respect to the metric (A7), so that
+     =         [-f -1(r)y(t)Ylm, 0, 0, 0] ,
+
+(0)
+
+     =         [0, h(r)z(t)Ylm, 0, 0] ,                           = - = sin  .                                    (A13)
+
+(1)
+
+                   w(t)       w(t)                                  In terms of y and z, the normalization of the 4-velocity
+               0, 0, 2 Ylm,, 2 2 Ylm, ,                          would be written as
+(2) =                r        r sin 
+
+               0, 0, 2x(t)    Ylm,, - 2  x(t)    Ylm, ,          0 = -f (a)h(a)z(t^) + f (a)H(t^, a) - 2f (a)[-f -1(a)y(t^)]
+                                                                    = -f (a)h(a)z(t^) + f (a)H(t^, a) + 2y(t^) .
+(3) =              r sin                 r sin 
+
+or, by lowering indices,
+
+(0) = [y(t)Ylm, 0, 0, 0] ,                                       Here we note again that f+ = f-. In this new coordinate
+(1) = [0, z(t)Ylm, 0, 0] ,                                       system the metric is given by Eq. (3.28), where
+(2) = 0, 0, w(t)Ylm|, w(t)Ylm| ,
+(3) = 0, 0, x(t)Ylm|, x(t)Ylm| .                                 g = (1)g + (2)g + (3)g ,
+
+where the covariant derivative | is defined with respect         We are now in a position to match metric components
+to the 2-dimensional metric                                      along the shell, which simply sits at (t^, a, , ). Of
+                                                                 course, all of the matching conditions will be expressed
+                 Gab = d2 + sin2 d2 .                    (A7)    in terms of the Regge-Wheeler metric perturbations, and
+                                                                 the motion of the shell in the (internal and external)
+                                                                 Regge-Wheeler gauges. In the  and  directions, we
+                                                                 have
+
+We impose that, when evaluated at (t, r, , ) =                   x+(t^) = x-(t^),                                 (A14)
+(t^, a, , ), the vector  coincides with (t, r, , ),
+so that in the new coordinate system Eqs. (3.27) will            w+(t^) = w-(t^) ,                                (A15)
+be valid. Such a transformation leads to the following
+changes in the metric components:                                2h+(a)z+(t^) + aK+(t^, a) = 2h-(t^)z-(t^) + aK-(t^, a) .
+
+                                                                                                                  (A16)
+
+                   2y - ff y y y         
+
+                                                                 In the t and t directions we have, in addition,
+(0)gµ =                                   Ylm ,
+                                                         (A8)    y+(t^) = y-(t^) , h0+(t^, a) = h0-(t^, a) .      (A17)
+                                         
+
+                                                                 while in tt direction the matching condition is automat-
+                                                                 ically satisfied, with
+
+      -f hz z                                                    g¯tt(t^, a, , ) = -f (a) ,                       (A18)
+
+                      hh z z             z                       accurate up to first order in the perturbations. This is a
+(1)gµ =                 2rhz                        Ylm , (A9)   consistency check, since we have imposed that the four-
+                                                                 velocity of mass elements on the shell is
+             
+
+                              2rhz sin2 
+
+which are purely polar perturbations;
+
+                        w Ylm, w Ylm,                            u = (1/ f (a), 0, 0, 0) ,                        (A19)
+
+                      - r2w Ylm, - r2w Ylm,              (A10)   which should have a norm of -1. In simplified form, we
+(2)gµ =                                           ,              have
+                  2wYlm| 2wYlm| 
+
+                              2wYlm|                             [[x]] = [[w]] = [[y]] = [[h0]] = [[2hz + aK]]
+
+which are also polar perturbations, and finally                  = [[2y + f H - f hz]] = 0 .                      (A20)
+
+      x Ylm| x Ylm|                                              The symbol "[[ ...]]", as defined by Eq. (2.5), gives the
+                                                                 jump of any given quantity across the shell.
+                   - r2x Ylm| - r2x Ylm  | 
+(3)gµ =                                                 , (A11)     The four-velocity of mass elements on the shell is given
+                        x                x                       by Eq. (A19). The surface stress-energy tensor of the
+                                                                 shell is
+                        x                x
+
+which are axial perturbations. Here we have defined              Sjk = [ -  + ( - )Ylm]ujuk
+                                                                       - [ +  Ylm]jk ,
+     mn = maYlm|na + naYlm|ma ,                          (A12)                                                    (A21)
+                                                                                                                     15
+
+where j and k go through t,  and . Now let us try            We have
+to evaluate the extrinsic curvature of the shell at the
+location (t^, a, , ). First of all, we note that                S(1) = f  + [( - 2)(f H - hzf  + 2y)] , (A23)
+
+                      n = (0, 1, 0, 0)/g¯rr ,                   S(2) = -a(aK + 2hz + a) ,                            (A24)
+
+and the extrinsic curvature is                                  S(3) = -(y + w ) ,                                   (A25)
+
+               Kij = -inj = -nj,i + µjinµ ,                     S(4) = (h0 - x ) ,                                   (A26)
+
+where i, j run through t ,  , . Since n only has a              S(5) = -2w ,                                         (A27)
+nonzero r-component the first term vanishes, and we ob-
+tain                                                            S(6) = -x ,                                          (A28)
+
+                         Kij = g¯rr 1 rij .                  and                            L + 2h - ah
+                                                                      fh
+                                                             ¯ (1)
+                                                             K=         a    (H - aK ) + f hz              a  2      , (A29)
+
+                                                                         
+                                                             ¯ (2) a2 h   2(H 1 + z¨)
+                                                             K=         2       K -H +              f
+
+                                                                             + 1 + af         2K - H +
+                                                                                        2f        a
+
+                                                                             +  2(h - L) 2f h + f h
+   From the static configuration of the star, it is easy to                               2+
+obtain that                                                                            a               af
+
+                                                                                +  f f h - 2(f )2h + 2hf f           z , (A30)
+
+                                                                                              2f    2
+
+        f (a)                                                                aH1 + 2y + az + 1 + af  w , (A31)
+                                                             K¯ (3) = h
+Sjk =             -a2                  ,                                     2                             2f
+                                                                          a
+                        -a2 sin2 
+                                                             ¯ (4)  x - 2h0                            + h0 - h 1 ,
+                2f                                           K =h                         1 + af              2
+                  - a2                                                                          2f                   (A32)
+                                                                                    a
+K¯ jk = a h(a)          1 + 2f af                        
+                                                         ,                                    af 
+                                                             ¯ (5) 2 h az
+                                      1 + 2f af   sin2 
+
+                                                             K=       a2           +w 1+      2f       ,             (A33)
+
+                                                             ¯ (6)           h1 x             af 
+                                                             K = h - + 1+                              ,             (A34)
+where j , k = t ,  , . From this we have relations (2.9)                     2a               2f
+for static gravastars.
+                                                             where L = -l(l + 1). Here K¯ (4) and K¯ (6) are axial
+   Now let us focus on first-order quantities. The tensors   quantities. The junction condition on K¯ (6) yield
+Sjk and Kjk can each be decomposed into six terms: for
+example,                                                                                                             (A35)
+                                                                                     hh1 = 0,
+
+        S (1)                                                which together with [[h0]] = 0 completes the junction
+
+Sjk =          S (2)                 Ylm                     conditions for axial perturbations (the junction condition
+                                                             on K¯ (4) yields an equation of motion for the variable x).
+                      S(2) sin2                              For polar quantities, from [[K¯ (5)]] = 8S(5) we have
+
+                                                                                       
+
+                                                                                   [[ hz]] = 0 .                     (A36)
+
++ S  (3)                 Ylm                                 Then matching [[K¯ (3)]] = 8S(3) gives us an equation of
+                                                             motion for w, while matching [[K¯ (1,2)]] = 8S(1,2) yields
+               
+
+                                                                    h H - K                   2h h               hz
++ S  (4)  csc           csc  - sin                                         a              + 2-
+                                                                                              aa
+                                                Ylm
+
+               - sin                                         = 8 ,                                                   (A37)
+
+                                                                    h K - H + 2H 1
+                                                                                           f
+               0
+
++ S  (5)  Y| Y| 
+
+                  Y| Y|                                      - h 1 + af  H
+                                                                                 2f a
+                        
+
+               0
+
++ S  (6)     .                                    (A22)      +        h 2h f h f h                     hz = -16 .(A38)
+                                                                      - 2+             -
+                                                                      a a f 2f
+                                                                                                                      16
+
+The remaining equations are                                     describes the perturbed space-time outside the gravas-
+                                                                tar, becomes
+                                        
+[[K]] = -2[[ h]] hz/a = 8 hz ,               (A39)
+       f h                                                                  d2
+                                                                              2 +  - Vout  = 0 ,2                     (B1)
+                                                                                                                      (B2)
+[[H]] = f  hz = 8( - 2) hz , (A40)                                          dr
+
+ = -v2 ,                                     (A41)              with
+
+where v is defined as in Eq. (3.33).                                    Vout = 1 - 2M        l(l + 1) 6M
+   The formalism described above is more general than                                     r     r2 - r3
+
+we need for a static thin-shell gravastar. It can easily be     and the tortoise coordinate r = r + 2M ln(r/2M - 1).
+adapted to more general horizonless space-times and to          We shall now write the solution of the Regge-Wheeler
+static wormholes. For the Mazur-Mottolla gravastar, we          equation in a power-series form as follows. Defining z 
+have:                                                           1 - R2/r, where r = R2 is some point outside the shell
+                                                                of the gravastar, and introducing a function (z), related
+ = 0,   = - [[f ]] ,                                            to (r) by:
+                16 f (a)
+                                                                    (r) = (r - 2M )-i2Me-ir(z)  (r)(z) , (B3)
+[[f ]] = 0 = [[f ]] , [[f ]] = a2 6M ,    2  12M 2
+                                        [[f ]] = - 4 .
+                                             a
+
+Using the equations of Sec. III A above together with           one finds that  satisfies the differential equation:
+these junction conditions we obtain continuity conditions
+for the shell position, [[x]] = [[y]] = [[w]] = [[z]] = 0, and                  2            3 d2                     2 d
+the matching conditions for the axial and polar pertur-               (c0 + c1z + c2z + c3z ) 2 + (d0 + d1z + d2z )
+bations functions presented in the main text [Eqs. (3.29),                                   dz                       dz
+(3.30), (3.31) and (3.32)].
+                                                                + (e0 + e1z) = 0 .                                    (B4)
+
+                                                                The constants depend only on , l and R2 through the
+                                                                relations:
+
+  APPENDIX B: THE CONTINUED FRACTION                            c0 = 1 - 2M , c1 = 6M - 2 , c2 = 1 - 6M , c3 = 2M ,
+                                                                        R2          R2             R2                 R2
+                                 METHOD
+                                                                d0 = -2iR2 + 6M - 2 , d1 = 2 1 - 6M            , d2 = 6M ,
+   Our numerical search for the QNMs of gravastars is                       R2                     R2                    R2
+based on the continued fraction method, as modified in
+[47, 50]. The QNMs of an oscillating gravastar are so-                              e0 = 6M - l(l + 1) , e1 = - 6M .
+lutions of Eqs. (3.7) and (3.13) satisfying the boundary                                     R2                       R2
+conditions imposed by physical requirements:  should
+be regular at the origin, have the behavior of a purely         Let us now perform a power-series expansion of (z):
+outgoing wave at infinity and satisfy the junction condi-
+tions discussed in Section III C. The QNM frequencies                                                                 (B5)
+are the (complex) frequencies  = R + iR for which
+these requirements are satisfied.                                               (z) = anzn .
+
+   The numerical determination of the QNM frequencies                                        n=0
+is nontrivial, especially for modes with large imaginary
+parts (strongly damped modes). The reason is simple             By substituting this expression in Eq. (B4), the expan-
+to understand. Solutions of Eq. (3.13) representing out-
+going and ingoing waves at infinity have the asymptotic         sion coefficients an are found to satisfy a four-term re-
+behavior out  er/ and in  e-r/ as r  ,                          currence relation of the form:
+where  = 1/I is the damping time. Therefore, identi-
+fying by numerical integration the purely outgoing solu-              1a2 + 1a1 + 1a0 = 0 , n = 1 ,                 (B6)
+tions (that is, those solutions for which in is zero) be-             nan+1 + nan + nan-1 + nan-2 = 0 ,        n  2,
+comes increasingly difficult as the damping of the mode
+increases. The same problem occurs also in the case of          where:
+QNMs of BHs, and was solved by Leaver [75]. Leaver
+found a continued fraction relation that can be regarded              n = n(n + 1)c0 , n  1 ,                        (B7)
+as an implicit equation which identifies the quasinormal              n = (n - 1)nc1 + nd0 , n  1 ,
+frequencies, thus circumventing the need to perform an                n = (n - 2)(n - 1)c2 + (n - 1)d1 + e0 ,  n  1,
+integration out to large values of r. This method was                 n = (n - 3)(n - 2)c3 + (n - 2)d2 + e1 ,  n 2.
+subsequently adapted to the polar and axial oscillations
+of a star [47, 50]. The Regge-Wheeler equation, which           The coefficient a0 is a normalization constant, and it is
+                                                                irrelevant from the point of view of imposing outgoing-
+                                                                wave boundary conditions. The ratio a1/a0 can simply
+                                                                                                                            17
+
+be determined by imposing the continuity of  and            Dividing Eq. (B6) by n2an, keeping terms up to  n-3/2
+at r = R2, since from Eq. (B3) it follows that:
+                                                            and equating to zero the various terms in the expansion
+                                                            in powers of n-1/2 we find the relations:
+
+a0 = |z=0 = (R2) (R , 2)                             (B8)   c0 + c1 + c2 + c3 = 0 ,                                         (B15)
+                                                    . (B9)
+a1 = R2 (R2) + iR2 (R2)                                     2c0 + c1 - c3 = 0 ,
+a0 (R2)                         R2 - 2M                     h2 = 2iR2 ,
+                                                            k = - 3 + i(R2 + 2M ) .
+In the axial case, the values of (R2) and (R2) can
+be obtained by the taking the interior solution (3.8) at            4
+r = a- and applying the junction conditions (3.29) to de-
+termine the wavefunction in the exterior, i.e., at r = a+.  The first two of these equations are identities. Substitut-
+From then onwards, we can numerically integrate the         ing the second pair of equations in Eq. (B14) we get:
+
+Regge-Wheeler equation (3.13) up to r = R2. The re-                                                                         (B16)
+maining coefficients can then be determined by recur-
+                                                             lim an = n-3/4+i(R2+2M)e±2 2iR2n .
+sion from Eq. (B6). In the polar case we proceed in a
+similar way: we obtain the Zerilli function Zout and its    n
+
+derivative at r = a+ by imposing the matching condi-        According to a definition given by Gautschi [77], the so-
+tions (3.30)-(3.32). Then we use Eq. (3.24) to obtain the   lution of Eq. (B14) corresponding to the plus sign in
+                                                            Eq. (B16) is said to be dominant, whereas that corre-
+corresponding Regge-Wheeler function at r = a+, inte-       sponding to the minus sign is said to be minimal [77]. If
+grate forwards to find a0 and a1, and finally obtain the    we select the minimal solution the expansion (B5) is ab-
+remaining coefficients by recursion.                        solutely and uniformly convergent outside the star, pro-
+                                                            vided that we choose R2 such that R2/2 < a < R2 and
+   To apply the continued fraction technique, it is easier  R2 > 2. Furthermore, according to Eq. (B3), the solution
+to consider three-term recurrence relations. Leaver has     to Eq. (B1) behaves as a pure outgoing wave at infinity,
+                                                            i.e. it is the a QNM wavefunction. Thus, the key point is
+shown that the four-term recurrence relation (B6) can be    to identify the minimal solutions of Eq. (B14). Accord-
+reduced to a three-term recurrence relation by a gaussian   ing to a theorem due to Pincherle [77], if Eq. (B14) has
+                                                            a minimal solution then the following continued fraction
+elimination step [76]. Define:                              relation holds:
+
+               ^ a1          ^0 = -1 ,              (B10)
+               0 = ,
+                                                            a1 = -^1 ^1^2 ^2^3 . . .                                        (B17)
+                      a0                                    a0 ^1- ^2- ^3-
+
+where a1/a0 is obtained numerically from Eq. (B9). Now      where the continued fraction on the RHS is convergent
+set:                                                        and completely determined since the coefficients ^n, ^n
+                                                            and ^n, defined in eqs. (B11),(B12) are known functions
+^n = n , ^n = n ,               (n = 0, 1) ,                of . Moreover, from Eqs. (B9) and (B10) it is apparent
+^n = n , (n = 1) ,
+                                                    (B11)   that the dependence on the stellar model is all contained
+
+and for n  2:                                               in the ratio a1/a0. Keeping in mind the definitions (B10),
+                                                            Eq. (B17) can be recast in the form:
+                          ^        ^n-1n
+^n = n ,                  n = n -           ,
+                                      ^n-1                  ^ ^0^1 ^1^2 ^2^3
+                                                            0 = f0() = 0 -               ...                                (B18)
+^n = n - ^n-1n ,                                                            ^1- ^2- ^3-
+                ^n-1            ^n = 0 .            (B12)
+
+By this gaussian elimination, Eq. (B6) reduces to:          Using the inversion properties of continued fractions [78],
+                                                            the latter equation can be inverted n times to yield:
+
+                                                            ^ ^n-1^n ^n-2^n-1 ^0^1
+^nan+1 + ^nan + ^nan-1 = 0 .                        (B13)   0 = fn() = n -  ^n-1- ^n-2-  ...                            ^0
+
+The elimination step is not as trivial as it may seem,      - ^n^n+1 ^n+1^n+2 ^n+2^n+3 ... (B19)
+because in the process one of the three independent so-          ^n+1- ^n+2- ^n+3-
+lutions to Eq. (B6) is lost. It can be shown that this
+solution is not relevant for our purposes [47].             for n = 1, 2, .... These n conditions are analytically equiv-
+                                                            alent to Eq. (B18). However, since the functions fn()
+   We now turn to investigating the asymptotic behavior     have different convergence properties, each of them is
+of the coefficients an in the expansion (B5). Let us make   best suited to find the quasinormal frequencies in a given
+the ansatz:                                                 region of the complex  plane. This is the main reason
+                                                            for the accuracy and flexibility of the continued fraction
+lim an+1 = 1 + 1/2 h + k + . . .                    (B14)   technique.
+n an                         n     n
+                                                                                                                    18
+
+APPENDIX C: HIGH-COMPACTNESS LIMIT                            terms in a - 2M ,
+
+   To investigate the behavior at the surface of the gravas-    K(a-) = l(l + 1) + 2ia (a-) ,                       (C4)
+tar in the high-compactness limit, we use the z  1 - z                                  2a                          (C5)
+transformation law for the hypergeometric function [44],
+                                                                K(a-) = - -il(l + 1) + 2a (a-) ,
+    F (a, b, c, z)                                                                      2(a - 2M )
+= (1-z)c-a-b (c)(a + b - c)
+                                                                H1(a-) = -  a( a - i) (a-) ,                        (C6)
+                         (a)(b)                                                      a - 2M                         (C7)
+    ×F (c-a, c-b, c-a-b+1, 1-z)
++ (c)(c - a - b) F (a, b, -c+a+b+1, 1-z) . (C1)                 H1(a-) = -          ( a - i)(4M + ia2)      (a-) ,
+    (c - a)(c - b)
+                                                                                             (a - 2M )   2
+
+                                                                H0(a-) = -  a( a - i) (a-) ,                        (C8)
+                                                                                     a - 2M
+
+Using Eq. (3.8) in the limit when C  1 and r  a we              H0(a-) = -          ( a - 2i)(2M + ia2)     (a-) . (C9)
+get
+                                                                                             (a - 2M )   2
+
+                 iM (l + 32 )(-i2M )                          In the exterior we get
+                       ( 2 2+l-i2M )( 2 1+l-i2M )
+       2(a - r)                                               K(a+) = l(l + 1) + 2ia (a-) ,                         (C10)
+    +      a     -iM (l + 23 )(i2M ) . (C2)                                           2a                            (C11)
+                        ( 2 1+l+i2M )( 2 2+l+i2M )
+       2(a - r)                                               K(a+) = - -il(l + 1) + 4a (a-) ,
+           a                                                                          2(a - 2M )
+
+Within our conventions the first term is in-going, while      H1(a+) = -  M (i + 4M ) (a-) ,                        (C12)
+the second term is out-going near the surface. So it is                              a - 2M
+clear that in this regime both in- and out-going modes are
+present, and QNMs do not reduce to the Schwarzschild          H1(a+) = -     M (2M  + i)(1 - 4iM )          (a-), (C13)
+QNMs (which require only in-going waves). Furthermore,
+we can clearly see that in-going and out-going waves al-                                     (a - 2M )2
+ways have the same magnitude: the gravastar appears
+like a reflecting object, as suggested by [79]. Because       H0(a+) = - M (i + 4M ) (a-) ,                         (C14)
+this reflection happens in a polar coordinate system, it                             a - 2M                         (C15)
+can simply be interpreted as due to the fact that waves
+going into a lossless gravastar will re-emerge without loss.  H0 (a+)  =  H     (a  +  )  .
+Nevertheless, such a behavior already supports the con-                      1
+clusions of Ref. [60, 80], which showed that (for scalar
+fields) the ergoregion instability is more effective when     Notice that, even though H1 is not continuous at r = a,
+the surface of the compact objects behaves like a "per-       the Zerilli function is. Indeed, we get
+fect mirror" in this sense.
+                                                                Zout(a+) = (a-) , (a-) = (a+) . (C16)
+   It is easy to show that in the high-compactness limit
+                                                              Thus, we conclude that in the high-compactness limit,
+       (a-) = i a (a-) .    (C3)                              the master wavefunction for polar perturbations is con-
+                    a - 2M                                    tinuous across the shell. A trivial extension of the known
+                                                              Schwarzschild results then shows that polar and axial
+Solving for the metric quantities we find, up to dominant     perturbations are isospectral for large compactness, i.e.,
+                                                              when a  2M and µ  1/2.
+
+[1] F. Melia (2007), 0705.1537.                                     367, L32 (2006), astro-ph/0512194.
+[2] R. Narayan, New J. Phys. 7, 199 (2005), gr-qc/0506078.    [10] A. E. Broderick, A. Loeb, and R. Narayan (2009),
+[3] A. Mueller, PoS P2GC, 017 (2006), astro-ph/0701228.
+[4] E. Berti, V. Cardoso, and A. O. Starinets (2009),               0903.1105.
+                                                              [11] D. Psaltis (2008), 0806.1531.
+    0905.2975.                                                [12] M. A. Abramowicz, W. Kluzniak, and J.-P. Lasota, As-
+[5] A. M. Ghez et al. (2008), 0808.2870.
+[6] S. Doeleman et al., Nature 455, 78 (2008), 0809.2442.           tron. Astrophys. 396, L31 (2002), astro-ph/0207270.
+[7] R. Schodel et al., Nature 419, 694 (2002).                [13] W. Kundt (2009), 0905.1028.
+[8] E. Maoz, Astrophys. J. 494, L181 (1998), astro-           [14] M. Visser (2009), 0901.4365.
+                                                              [15] F. D. Ryan, Phys. Rev. D52, 5707 (1995).
+    ph/9710309.                                               [16] F. D. Ryan, Phys. Rev. D56, 1845 (1997).
+[9] M. Coleman Miller, Mon. Not. Roy. Astron. Soc. Lett.      [17] C. Li and G. Lovelace, Phys. Rev. D77, 064022 (2008),
+      gr-qc/0702146.                                                                                                                    19
+[18] N. A. Collins and S. A. Hughes, Phys. Rev. D69, 124022
+                                                                 [49] E. Poisson and M. Visser, Phys. Rev. D52, 7318 (1995),
+      (2004), gr-qc/0402063.                                           gr-qc/9506083.
+[19] K. Glampedakis and S. Babak, Class. Quant. Grav. 23,
+                                                                 [50] O. Benhar, E. Berti, and V. Ferrari, Mon. Not. Roy. As-
+      4167 (2006), gr-qc/0510057.                                      tron. Soc. 310, 797 (1999), gr-qc/9901037.
+[20] L. Barack and C. Cutler, Phys. Rev. D 75, 042003 (2007).
+[21] O. Dreyer et al., Class. Quant. Grav. 21, 787 (2004),       [51] K. D. Kokkotas, Mon. Not. Roy. Astron. Soc. 268, 1015
+                                                                       (1994).
+      gr-qc/0309007.
+[22] E. Berti, V. Cardoso, and C. M. Will, Phys. Rev. D73,       [52] W. Press, S. Teukolsky, W. Vetterling, and B. Flannery,
+                                                                       Numerical Recipes in C++ (Cambridge University Press,
+      064030 (2006), gr-qc/0512160.                                    Cambridge, UK, 2007), 3rd ed.
+[23] E. Berti, J. Cardoso, V. Cardoso, and M. Cavaglia, Phys.
+                                                                 [53] N. Andersson, Y. Kojima, and K. D. Kokkotas, Astro-
+      Rev. D76, 104044 (2007), 0707.1202.                              phys. J. 462, 855 (1996), gr-qc/9512048.
+[24] B. S. Sathyaprakash and B. F. Schutz, Living Rev. Rel.
+                                                                 [54] K. D. Kokkotas and B. F. Schutz, Gen. Rel. Grav. 18,
+      12, 2 (2009), 0903.0338.                                         913 (1986).
+[25] F. E. Schunck and E. W. Mielke, Class. Quant. Grav. 20,
+                                                                 [55] N. Andersson, Gen. Rel. Grav. 28, 1433 (1996).
+      R301 (2003), 0801.0307.                                    [56] E. Berti (1998), Laurea thesis (unpublished).
+[26] D. F. Torres, S. Capozziello, and G. Lambiase, Phys.        [57] S. Chandrasekhar and V. Ferrari, Proc. Roy. Soc. Lond.
+
+      Rev. D62, 104012 (2000), astro-ph/0004064.                       A434, 449 (1991).
+[27] F. S. Guzman, Phys. Rev. D73, 021501 (2006), gr-            [58] S. Chandrasekhar and V. Ferrari, Proc. Roy. Soc. Lond.
+
+      qc/0512081.                                                      A437, 133 (1992).
+[28] M. Kesden, J. Gair, and M. Kamionkowski, Phys. Rev.         [59] E. Berti, V. Cardoso, and P. Pani (2009), 0903.5311.
+                                                                 [60] V. Cardoso, P. Pani, M. Cadoni, and M. Cavaglia, Phys.
+      D71, 044015 (2005), astro-ph/0411478.
+[29] S. Yoshida, Y. Eriguchi, and T. Futamase, Phys. Rev.              Rev. D77, 124044 (2008), 0709.0532.
+                                                                 [61] C. B. M. H. Chirenti and L. Rezzolla, Phys. Rev. D78,
+      D50, 6235 (1994).
+[30] J. Balakrishna, R. Bondarescu, G. Daues, F. Sid-                  084011 (2008), 0808.4080.
+                                                                 [62] K. D. Kokkotas, J. Ruoff, and N. Andersson, Phys. Rev.
+      dhartha Guzman, and E. Seidel, Class. Quant. Grav. 23,
+      2631 (2006), gr-qc/0602078.                                      D70, 043003 (2004), astro-ph/0212429.
+[31] E. Berti and V. Cardoso, Int. J. Mod. Phys. D15, 2209       [63] T. Damour and S. N. Solodukhin, Phys. Rev. D76,
+      (2006), gr-qc/0605101.
+[32] P. O. Mazur and E. Mottola (2001), gr-qc/0109035.                 024016 (2007), 0704.2667.
+[33] G. Chapline, E. Hohlfeld, R. B. Laughlin, and D. I. Santi-  [64] Z. Andrade and R. H. Price, Phys. Rev. D60, 104037
+      ago, Int. J. Mod. Phys. A18, 3587 (2003), gr-qc/0012094.
+[34] P. O. Mazur and E. Mottola, Proc. Nat. Acad. Sci. 101,            (1999), gr-qc/9902062.
+      9545 (2004), gr-qc/0407075.                                [65] V. Ferrari and K. D. Kokkotas, Phys. Rev. D62, 107504
+[35] M. Visser and D. L. Wiltshire, Class. Quant. Grav. 21,
+      1135 (2004), gr-qc/0310107.                                      (2000), gr-qc/0008057.
+[36] C. B. M. H. Chirenti and L. Rezzolla, Class. Quant. Grav.   [66] E. Poisson and M. Sasaki, Phys. Rev. D51, 5753 (1995),
+      24, 4191 (2007), 0706.1513.
+[37] P. P. Fiziev, Class. Quant. Grav. 23, 2447 (2006), gr-            gr-qc/9412027.
+      qc/0509123.                                                [67] Y. Kojima, Prog. Theor. Phys. 77, 297 (1987).
+[38] W. Israel, Nuovo Cim. B44S10, 1 (1966).                     [68] L. Gualtieri, E. Berti, J. A. Pons, G. Miniutti,
+[39] T. Regge and J. A. Wheeler, Phys. Rev. 108, 1063
+      (1957).                                                          and V. Ferrari, Phys. Rev. D64, 104007 (2001), gr-
+[40] L. Lindblom and S. L. Detweiler, Astrophys. J. Suppl.             qc/0107046.
+      53, 73 (1983).                                             [69] J. A. Pons, E. Berti, L. Gualtieri, G. Miniutti,
+[41] S. Detweiler and L. Lindblom, Astrophys. J. 292, 12               and V. Ferrari, Phys. Rev. D65, 104021 (2002), gr-
+      (1985).                                                          qc/0111104.
+[42] S. Chandrasekhar and V. Ferrari, Proc. Roy. Soc. Lond.      [70] E. Berti, J. A. Pons, G. Miniutti, L. Gualtieri,
+      A432, 247 (1991).                                                and V. Ferrari, Phys. Rev. D66, 064013 (2002), gr-
+[43] V. Cardoso and M. Cavaglia, Phys. Rev. D74, 024027                qc/0208011.
+      (2006), gr-qc/0604101.                                     [71] T. Tanaka, M. Shibata, M. Sasaki, H. Tagoshi, and
+[44] M. Abramowitz and I. A. Stegun, Handbook of Mathe-                T. Nakamura, Prog. Theor. Phys. 90, 65 (1993).
+      matical Functions with Formulas, Graphs, and Mathe-        [72] E. Poisson, Phys. Rev. D47, 1497 (1993).
+      matical Tables (Dover, New York, 1972).                    [73] C. Cutler, E. Poisson, G. J. Sussman, and L. S. Finn,
+[45] F. J. Zerilli, Phys. Rev. D2, 2141 (1970).                        Phys. Rev. D47, 1511 (1993).
+[46] S. Chandrasekhar, The mathematical theory of black          [74] C. Cutler, D. Kennefick, and E. Poisson, Phys. Rev. D50,
+      holes (Clarendon, Oxford, UK, 1992).                             3816 (1994).
+[47] M. Leins, H. P. Nollert, and M. H. Soffel, Phys. Rev.       [75] E. W. Leaver, Proc. Roy. Soc. Lond. A402, 285 (1985).
+      D48, 3467 (1993).                                          [76] E. W. Leaver, Phys. Rev. D41, 2986 (1990).
+[48] M. Visser, Lorentzian wormholes: From Einstein to           [77] W. Gautschi, SIAM Rev. 9, 24 (1967).
+      Hawking (AIP, Woodbury, USA, 1995).                        [78] H. S. Wall, Analytic Theory Of Continued Fractions (D.
+                                                                       van Nostrand, 1948).
+                                                                 [79] H. Pfister, Class. Quant. Grav. 13, 2267 (1996).
+                                                                 [80] V. Cardoso, P. Pani, M. Cadoni, and M. Cavaglia, Class.
+                                                                       Quant. Grav. 25, 195010 (2008), 0808.1615.
+

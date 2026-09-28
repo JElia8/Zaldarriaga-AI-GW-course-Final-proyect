@@ -1,0 +1,18 @@
+Zerilli (1970) Eq.5 vs MP05 Eq.4.26 (times f): 0
+odd: vacuum Einstein residuals with h_t=(f/2)(r Psi)', h_r=-i w r Psi/(2f): [0, 0, 0, 0, 0]
+odd: MP05 (5.13) reproduces Psi: 0
+even: dG computed
+even: tracefree angular equation (coeff of Y', Y): (u_tanhalf**2*H0(r) - u_tanhalf**2*H2(r) - H0(r) + H2(r))/(2*u_tanhalf) | -lambda*H0(r)/2 + lambda*H2(r)/2
+even: first-order system  K' = (-2*I*M*lambda*H1(r) - 4*M*omega*r*H(r) + 6*M*omega*r*K(r) + I*lambda*r*H1(r) + 2*omega*r**2*H(r) - 2*omega*r**2*K(r))/(-4*M*omega*r**2 + 2*omega*r**3)
+                          H' = (-2*I*M*lambda*H1(r) - 8*M*omega*r*H(r) + 6*M*omega*r*K(r) + I*lambda*r*H1(r) - 2*I*omega**2*r**3*H1(r) + 2*omega*r**2*H(r) - 2*omega*r**2*K(r))/(-4*M*omega*r**2 + 2*omega*r**3)
+                         H1' = (-2*M*H1(r) - I*omega*r**2*H(r) - I*omega*r**2*K(r))/(-2*M*r + r**2)
+even: algebraic identity (from G_rr): (-2*I*M**2*lambda*H1(r) - 12*M**2*omega*r*H(r) + 6*M**2*omega*r*K(r) - 2*M*lambda*omega*r**2*H(r) + 2*M*lambda*omega*r**2*K(r) + I*M*lambda*r*H1(r) + 4*I*M*omega**2*r**3*H1(r) + 10*M*omega*r**2*H(r) - 6*M*omega*r**2*K(r) + lambda*omega*r**3*H(r) - lambda*omega*r**3*K(r) + 2*omega**3*r**5*K(r) - 2*I*omega**2*r**4*H1(r) - 2*omega*r**3*H(r) + 2*omega*r**3*K(r))/(8*M**2*omega*r**3 - 8*M*omega*r**4 + 2*omega*r**5)
+even: K = P*(24*M**2 + 6*M*lambda*r - 12*M*r + lambda**2*r**2 - 2*lambda*r**2)/(12*M*r**2 + 2*lambda*r**3 - 4*r**3) + dP*(-2*M + r)/r
+even: H1 = P*(6*I*M**2*omega + 3*I*M*lambda*omega*r - 6*I*M*omega*r - I*lambda*omega*r**2 + 2*I*omega*r**2)/(-12*M**2 - 2*M*lambda*r + 10*M*r + lambda*r**2 - 2*r**2) - I*dP*omega*r
+even: H = P*(-144*M**4 - 72*M**3*lambda*r + 216*M**3*r - 12*M**2*lambda**2*r**2 + 84*M**2*lambda*r**2 - 72*M**2*omega**2*r**4 - 120*M**2*r**2 - 2*M*lambda**3*r**3 + 14*M*lambda**2*r**3 - 24*M*lambda*omega**2*r**5 - 32*M*lambda*r**3 + 48*M*omega**2*r**5 + 24*M*r**3 + lambda**3*r**4 - 2*lambda**2*omega**2*r**6 - 4*lambda**2*r**4 + 8*lambda*omega**2*r**6 + 4*lambda*r**4 - 8*omega**2*r**6)/(-144*M**3*r**2 - 48*M**2*lambda*r**3 + 168*M**2*r**3 - 4*M*lambda**2*r**4 + 40*M*lambda*r**4 - 64*M*r**4 + 2*lambda**2*r**5 - 8*lambda*r**5 + 8*r**5) + dP*(-6*M**2 - 3*M*lambda*r + 6*M*r + lambda*r**2 - 2*r**2)/(6*M*r + lambda*r**2 - 2*r**2)
+saved vacuum_relations.pkl
+even: max residual of all 6 vacuum Einstein equations + MP05 (4.23) at 4 random rational points (exact arithmetic): 0
+
+real	0m33.303s
+user	0m0.015s
+sys	0m0.000s

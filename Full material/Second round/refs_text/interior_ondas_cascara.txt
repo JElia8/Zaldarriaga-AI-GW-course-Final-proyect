@@ -1,0 +1,286 @@
+Regular Wave Solutions of the Interior Regge-Wheeler and Zerilli
+
+                                 Equations
+
+                                      Inside a Thin Spherical Shell
+
+Setup: a thin spherical shell of matter sits at areal radius r = R. Outside (r > R) the spacetime
+is Schwarzschild with total mass M ; inside (r < R) it is vacuum. We solve the master (Regge-
+Wheeler/Zerilli) equations of Martel & Poisson (2005) [1] for a general perturbation of this interior
+region, in the frequency domain, imposing regularity at r = 0.
+
+Contents
+
+1 The interior background is Minkowski                               1
+
+2 The master equations and their M  0 limit                          1
+
+2.1 General-M equations (Martel & Poisson 2005 [1]) . . . . . . . . . . . . . . . . . . . . . . 1
+
+2.2 Interior limit M = 0 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+
+3 Frequency-domain solution: the Riccati-Bessel equation             2
+
+3.1 Separation of variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+
+3.2 Behavior at r = 0 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+
+3.3 Behavior at large argument -- these are genuine waves . . . . . . . . . . . . . . . . . . . 3
+
+3.4 Explicit low multipoles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+4 Result: the regular interior solution                              3
+
+4.1 Single mode . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+4.2 General regular wave packet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+A The Riccati-Bessel equation: general form                          4
+
+1 The interior background is Minkowski
+
+By Birkhoff's theorem, any spherically symmetric vacuum region of spacetime is (locally) isometric to
+a piece of the Schwarzschild solution with some mass parameter Mint,
+
+          ds2 = -fint dt2 + fint -1dr2 + r2d2,  fint = 1 - 2Mint .
+                                                                r
+
+The interior region 0  r < R is vacuum (the shell carries all the stress-energy, concentrated at r = R)
+and must be regular at r = 0: the Kretschmann scalar of Schwarzschild, RabcdRabcd = 48Mi2nt/r6,
+diverges at r = 0 unless Mint = 0. Hence
+
+          fint  1 = ds2 = -dt2 + dr2 + r2d2 (0  r < R),              (1)
+
+i.e. the interior is exactly flat Minkowski spacetime in spherical coordinates. We work with this back-
+ground throughout.
+
+                                         1
+2 The master equations and their M  0 limit
+
+2.1 General-M equations (Martel & Poisson 2005 [1])
+
+Outside sources, the even-parity (Zerilli-Moncrief) and odd-parity (Cunningham-Price-Moncrief) mas-
+ter functions lemven(t, r), lm odd(t, r) satisfy covariant wave equations on the (t, r) submanifold M2,
+
+                               ( - Veven)even lm = Seven lm , ( - Vodd)odd lm = Sodd lm , (2)
+
+with  := gabab and potentials
+
+                                1 2 [ ( µ + 2 6M ) 36M 2 (                       )]
+                                                                            2M
+                    Veven = 2 µ r2 + r3 + r4 µ + r , (3)
+
+                              l(l + 1) 6M
+                    Vodd = r2 - r3 , (4)
+
+where µ := (l - 1)((l + 2) and  :=) µ + 6M/r. In tortoise coordinates (dr/dr := f -1, f = 1 - 2M/r)
+one has  = f -1  -  t2  +  2      ,  so  these  equations  take  the  more  familiar  scattering  form
+
+                             r
+
+-t2P + r 2 P - V¯P P = f SP , V¯P := f VP , P  {even,odd}.                                              (5)
+
+2.2 Interior limit M = 0
+
+Inside the shell there is no matter for 0 < r < R (the shell's stress-energy is a distribution supported
+at r = R only), so Seven = Sodd = 0 there. Setting M = 0:
+
+                                                1 [ 2 µ + 2 ] µ + 2 l(l + 1)
+                 M=0 = µ, VevenM=0 = µ2 µ r2 = r2 = r2 , (6)
+
+using µ + 2 = (l - 1)(l + 2) + 2 = l(l + 1). Likewise
+
+                                                     Vodd M=0  = 2 l(l + 1) . (7)
+                                                                          r
+
+So the even- and odd-parity potentials coincide inside the shell: Veven = Vodd = l(l + 1)/r2.
+This is expected -- flat spacetime alone cannot distinguish the two parities dynamically at the level
+of the master scalar; the distinction re-enters only through how each P is built from the metric
+perturbation, and through the (different) junction conditions each imposes at r = R.
+
+    Since f  1, the tortoise coordinate is simply r = r, V¯P = VP , and  = -t2 + r2. Both
+master functions therefore obey the same source-free wave equation inside the shell:
+
+                 ( 2 2 l(l + 1) P )
+                   - t2 + r2 - r2 lm(t, r) = 0 , P = even, odd, 0 < r < R. (8)
+
+3 Frequency-domain solution: the Riccati-Bessel equation
+
+3.1 Separation of variables
+
+Write a monochromatic mode as Plm(t, r) = e-itl(r) (the radial equation does not depend on P , m,
+or the sign of ). Substituting into (8),
+
+                                           (               )
+                                l(r) + 2 - r2 l(l + 1) l(r) = 0. (9)
+
+                                                2
+This is the Riccati-Bessel equation [2, 3] (see Appendix A for its general form and derivation). With
+x := r, its two independent solutions are
+
+                       ^l(x) := x jl(x), y^l(x) := x yl(x),                                     (10)
+
+where jl, yl are the ordinary spherical Bessel functions of the first and second kind (solutions of x2u +
+2xu + [x2 - l(l + 1)]u = 0).
+
+3.2 Behavior at r = 0
+
+As x  0,
+
+                                   xl                            (2l - 1)!!
+                       jl(x)  (2l + 1)!! , yl(x)  - xl+1 , (11)
+
+so that
+
+              xl+1    (regular, vanishes as rl+1),                  (2l - 1)!!
+^l(x)                                                  y^l(x)  - xl (singular for l  1). (12)
+          (2l + 1)!!
+
+Regularity of the perturbed metric at the center of symmetry requires the standard multipole falloff
+l(r)  rl+1 as r  0 (the same condition that selects jl over yl for any regular source-free multipole
+field, e.g. electromagnetic or scalar, in flat space); the y^l branch must be discarded even for l = 0,
+where it stays finite (y^0(x) = - cos x) but does not vanish, hence does not correspond to a smooth
+(Cartesian-analytic) field at the origin. We therefore keep only
+
+                       l(r)  ^l(r) = r jl(r).                                                   (13)
+
+3.3 Behavior at large argument -- these are genuine waves
+
+As x  ,                                                ( l )
+
+                                ^l(x) - sin x - 2 , (14)
+
+i.e. an oscillatory, bounded (not exponentially growing or decaying) function of r for real  -- a standing
+
+spherical wave, regular at the center, exactly as required.
+
+3.4 Explicit low multipoles
+
+Using ^0(x) = sin x and the recursion ^l+1(x) = 2l+1 x ^l(x) - ^l-1(x) (with ^-1(x) := cos x):
+
+                       ^0(x) = sin x,                                                           (15)
+
+                       ^1(x) =  sin x  - cos x,                                                 (16)
+
+                                (x )
+                                   3                   3
+                       ^2(x) = x2 - 1 sin x - x cos x, (17)
+                                (        )             (         )
+                                   15 6                      15
+                       ^3(x) = x3 - x sin x - x2 - 1 cos x. (18)
+
+(Only l  2 carries gravitational-wave degrees of freedom; l = 0, 1 are non-radiative, as established in
+the companion formulario. ^2 is thus the physically leading case.)
+
+                                                    3
+4 Result: the regular interior solution
+
+4.1 Single mode
+
+For a single (real) frequency , the regular, oscillatory (wave) solution of both the interior Zerilli and
+interior Regge-Wheeler equations is
+
+even lm (t, r) = Aeven lm () ^l(r) e-it, odd lm (t, r) = Aodd lm () ^l(r) e-it,    (19)
+
+with Aeven lm (), Aodd lm ()  C arbitrary complex constants (amplitude and phase combined) for each
+(l, m, ) -- the two parities share the same radial profile ^l(r) but carry independent, in general
+
+complex, amplitudes, since they are independent physical degrees of freedom.
+
+4.2 General regular wave packet
+
+By linearity, the most general regular solution of (8) is a superposition over frequency, i.e. a Fourier
+
+integral in t alone:
+
+                                    
+
+                      Plm(t, r) =     d APlm() ^l(r) e-it, P = even, odd,          (20)
+
+                                   -
+
+with APlm() an arbitrary complex amplitude density, fixed in a full problem by initial data or by
+matching to the exterior Schwarzschild solution across the shell at r = R (not treated here). (^l(r)
+is well defined for  < 0 too, since jl(-x) = (-1)ljl(x) for integer l; the equation only ever depends
+on 2.) Every term is finite at r = 0; the real and imaginary parts are each purely oscillatory in t and
+
+(asymptotically) in r -- a regular standing gravitational wave confined to the flat interior.
+
+A The Riccati-Bessel equation: general form
+
+Bessel's equation of order  (real, not necessarily integer),
+
+                                   2 d2Z dZ      22
+                                   x 2 + x + (x -  )Z = 0,                         (21)
+                                      dx  dx
+
+is solved by the ordinary Bessel functions J(x), Y(x) (or the Hankel functions H(1,2)(x)). The spherical
+Bessel functions of order l are defined by
+
+                                                               
+                                                                   
+
+                                                   ul(x) := 2x Zl+1/2(x), (22)
+
+and satisfy the spherical Bessel equation
+                                     x2ul(x) + 2x ul(x) + [x2 - l(l + 1)]ul(x) = 0. (23)
+
+The Riccati-Bessel substitution wl(x) := x ul(x) removes the first-derivative term from (23) identically:
+writing ul = wl/x and substituting,
+
+                                      ( w 2w 2wl ) ( w wl )           = x wl ,
+                      x2ul + 2xul = x2 l - l +     + 2x l -                        (24)
+                                          x x2 x3               x x2
+
+so that (23) becomes, after multiplying through by x, the Riccati-Bessel equation
+
+                      [ 2          ]                            [     l(l + 1)  ]
+
+2                                                             
+x wl (x) + x - l(l + 1) wl(x) = 0  wl (x) + 1 - x2 wl(x) = 0. (25)
+
+                                              4
+The two forms are equivalent (divide/multiply by x2); the second is the one used in the body of
+
+this note, with x = r and l(l + 1)  l(l + 1) unchanged (it is already the flat-space centrifugal
+
+term). More generally, for any real order , replacing l(l + 1)  ( + 1) in (25) gives an equation
+solved by w(x) = x/2 Z+1/2(x) for any solution Z+1/2 of Bessel's equation of order  +1/2; this is
+precisely the family of one-dimensional Schr¨odinger-like equations with an inverse-square ("centrifugal")
+
+potential.
+
+For integer l, a standard basis of solutions of (25) is
+
+                                         x                                     x
+
+                   ^l(x) := x jl(x) = 2 Jl+1/2(x), y^l(x) := x yl(x) = 2 Yl+1/2(x), (26)
+
+with  ^l  regular  (  xl+1)  and  y^l  singular  (  x-l)  at  x  =  0;  the  combinations  ^ (1,2)  :=  ^l(x)  ±  i y^l(x)
+                                                                                           hl (x)
+
+(Riccati-Hankel functions) furnish the natural basis of purely outgoing/ingoing waves at x  , used
+
+e.g. for the exterior scattering problem (not needed here, since both are singular at the origin). The
+
+general solution of (25) is wl(x) = A ^l(x) + B y^l(x) for arbitrary constants A, B; regularity at x = 0
+
+sets B = 0, which is exactly the condition used in Sec. 3.2.
+
+Reference: Abramowitz & Stegun [2], §10.3 ("Riccati-Bessel Functions," p. 445); NIST Digital
+
+Library of Mathematical Functions [3], Chapter 10.
+
+References
+
+[1] K. Martel and E. Poisson, "Gravitational perturbations of the Schwarzschild spacetime: A practical
+    covariant and gauge-invariant formalism," Phys. Rev. D 71, 104003 (2005).
+
+[2] M. Abramowitz and I. A. Stegun, eds., Handbook of Mathematical Functions with Formulas, Graphs,
+    and Mathematical Tables, 9th printing (Dover, New York, 1972), §10.3, p. 445.
+
+[3] NIST Digital Library of Mathematical Functions, https://dlmf.nist.gov/10, Chapter 10 "Bessel
+    Functions."
+
+                                                          5
+

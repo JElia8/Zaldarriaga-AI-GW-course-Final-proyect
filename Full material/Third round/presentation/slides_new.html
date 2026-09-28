@@ -1,0 +1,283 @@
+<!-- @@TITLE -->
+<section class="slide" data-title="Title">
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+    <div class="kicker">Final project · gravitational waves</div>
+    <h1 style="font-size:52px;max-width:1080px">Gravitational waves meet a thin spherical shell</h1>
+    <p style="font-size:24px;color:var(--ink2);max-width:1000px;margin-top:6px">
+      Flat space inside, Schwarzschild outside. How much of a wave the shell sends back, how it rings,
+      and why it does not want to stay still.</p>
+    <div style="display:flex;gap:28px;margin-top:40px">
+      <div class="box" style="flex:1"><div class="kicker">Question</div>
+        <p class="small" style="margin:0">Reflection and transmission $\mathcal R(\omega),\mathcal T(\omega)$ and quasinormal modes
+        for odd and even gravitational perturbations of the simplest horizonless compact object.</p></div>
+      <div class="box" style="flex:1"><div class="kicker">Obstacle</div>
+        <p class="small" style="margin:0">A domain-wall shell always collapses. Which shell can be static, and is it stable?</p></div>
+      <div class="box" style="flex:1"><div class="kicker">Answer in one line</div>
+        <p class="small" style="margin:0">A pressure-supported shell: a δ-barrier for axial waves, black-hole-like when compact, ringing with
+        echoes, and slowly unstable.</p></div>
+    </div>
+  </div>
+  <div class="notes">~30 s. The simplest black-hole mimicker: a membrane of matter with nothing inside. Units G = c = 1;
+  frequencies in units of 1/M. The talk follows the line of thought of the project: background, junction, scattering,
+  ringing, stability, and back to the background.</div>
+</section>
+
+<!-- @@ROADMAP -->
+<section class="slide" data-title="Line of thought">
+  <h2>The line of thought <span class="tag">each answer raises the next question</span></h2>
+  <div class="cols">
+    <div class="col">
+      <table class="t" style="font-size:18px">
+        <tr><th>#</th><th>question</th><th>answer</th></tr>
+        <tr><td>1</td><td>Can the shell be static?</td><td>Only with pressure $p=\kappa(R)\sigma$ (fluid shell)</td></tr>
+        <tr><td>2</td><td>What do waves obey on each side?</td><td>RW / Zerilli outside, flat inside, $\nu=\omega/\sqrt{f_R}$</td></tr>
+        <tr><td>3</td><td>How does the shell enter?</td><td>odd: δ-barrier; even: 2×2 transfer matrix</td></tr>
+        <tr><td>4</td><td>How much does it reflect?</td><td>all at low $\omega$, none at high $\omega$, BH-like as $R\to2M$</td></tr>
+        <tr><td>5</td><td>How does it ring?</td><td>cavity, trapped (echo) and matter modes</td></tr>
+        <tr><td>6</td><td>Is the static shell stable?</td><td>No: one matter mode grows</td></tr>
+        <tr><td>7</td><td>So is step 1 consistent?</td><td>fluid shell: yes (slow growth); frozen wall: no</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="notes">~30 s. This is the map of the talk. Stress that step 7 closes the loop: the frequency-domain calculation
+  assumes a static background, and at the end we check whether that was legitimate.</div>
+</section>
+
+<!-- @@MASTER -->
+<section class="slide" data-title="Master equations">
+  <h2>Waves on each side: one wave equation per parity</h2>
+  <div class="cols">
+    <div class="col">
+      <div class="eq">$$\frac{d^2\Psi}{dr_*^2}+\big[\omega^2-V(r)\big]\Psi=0,\qquad r_*=r+2M\ln\!\Big(\frac{r}{2M}-1\Big)$$</div>
+      <p class="small">Gauge-invariant master functions (Martel &amp; Poisson 2005).</p>
+      <ul>
+        <li><b>odd</b> (Cunningham–Price–Moncrief): $V_{\rm RW}=f\,[\ell(\ell+1)/r^2-6M/r^3]$</li>
+        <li><b>even</b> (Zerilli–Moncrief): $V_{\rm Z}$ (Zerilli 1970)</li>
+        <li><b>inside</b>: $\Psi''+[\nu^2-\ell(\ell+1)/r^2]\Psi=0$, so $\Psi=\hat\jmath_\ell(\nu r)$ (Riccati–Bessel)</li>
+      </ul>
+      <div class="box" style="margin-top:6px"><div class="kicker">The interior clock runs slow</div>
+      <p class="small" style="margin:0">$dT=\sqrt{f_R}\,dt$ on the shell, so the same wave has frequency $\nu=\omega/\sqrt{f_R}$ inside:
+      it is blueshifted.</p></div>
+    </div>
+    <div class="col fig" style="flex:1.1"><img src="{{IMG:r3_f01_potential}}" alt="Effective potential"></div>
+  </div>
+  <div class="notes">~1 min. In a global tortoise coordinate the whole problem is a 1D wave equation: the flat centrifugal
+  barrier inside, the Schwarzschild barrier outside, and the shell between them. Dotted: what a black hole would have instead.
+  Everything about the shell is in the junction conditions.</div>
+</section>
+
+<!-- @@JUNCTION -->
+<section class="slide" data-title="Junction conditions">
+  <h2>How the shell enters the wave equation <span class="tag">linearized Israel conditions</span></h2>
+  <div class="cols" style="flex:0 0 auto">
+    <div class="col">
+      <div class="kicker">Odd parity: a δ-function barrier</div>
+      <div class="eq" style="font-size:17px">$$\Psi_+=\Psi_-,\qquad \Big[\frac{d\Psi}{dx}\Big]=\Delta\,\Psi,\qquad
+      \Delta=\frac{\sqrt{f_R}\,(1-\sqrt{f_R})}{R}=4\pi\sigma\sqrt{f_R}$$</div>
+      <p class="small" style="margin:0">The same for wall and fluid, and independent of $\omega$ and of the equation of state. The
+      background term $[K]^{(0)}$ cancels against the pressure, and odd waves do not move the matter.</p>
+    </div>
+    <div class="col">
+      <div class="kicker">Even parity: a 2×2 transfer matrix</div>
+      <div class="eq orange" style="font-size:17px">$$\begin{pmatrix}\Psi_+\\ \Psi_+'\end{pmatrix}=\mathsf T(\omega)\begin{pmatrix}\Psi_-\\ \Psi_-'\end{pmatrix},\qquad \det\mathsf T=f_R^{-1/2}$$</div>
+      <p class="small" style="margin:0">The shell is displaced radially (by different amounts in the two Regge–Wheeler gauges) and
+      its fluid oscillates. So $\Psi$ jumps, and $\mathsf T$ depends on $\omega,\ell,R/M,\Gamma$. $\det\mathsf T$ is exactly the flux-conservation condition.</p>
+    </div>
+  </div>
+  <div class="cols" style="margin-top:10px;min-height:0">
+    <div class="col fig" style="flex:1.1"><img src="{{IMG:r3_f09_thick_shell}}" alt="Thick shell limit"></div>
+    <div class="col" style="justify-content:center">
+      <p style="font-size:18px;margin:0">Independent test: take a <b>smooth</b> shell of thickness ε (anisotropic fluid,
+      $V\supset4\pi\rho\,e^{2\Phi}$) and let $\varepsilon\to0$.</p>
+      <p style="font-size:18px">It converges linearly to the derived $\Delta$, and to no alternative.</p>
+    </div>
+  </div>
+  <div class="notes">~1.5 min. Method: perturb the Israel conditions, with each side in its own Regge–Wheeler gauge and a
+  perturbed embedding for the shell. Symbolic algebra throughout. Odd parity is very simple: a repulsive delta potential
+  whose strength is the surface density times the redshift. Even parity is a genuine 2x2 matching.</div>
+</section>
+
+<!-- @@RT -->
+<section class="slide" data-title="Reflection and transmission">
+  <h2>How much does the shell reflect?</h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.1"><img src="{{IMG:r3_f02_reflectivity_odd}}" alt="Reflectivity"></div>
+    <div class="col">
+      <p style="margin-top:0;font-size:18px">The closed system reflects everything ($|S|=1$). To measure the <b>object</b>, we <b>open the
+      interior</b>: whatever crosses the shell is let go, as a horizon would.</p>
+      <div class="eq" style="font-size:17px">$$\mathcal R=\Big|\frac{B_{\rm out}}{B_{\rm in}}\Big|^2,\quad \mathcal T=\frac{1}{|B_{\rm in}|^2},\quad \mathcal R+\mathcal T=1$$</div>
+      <ul>
+        <li style="font-size:17px">$\omega\to0$: $\mathcal R\to1$. Long waves are reflected.</li>
+        <li style="font-size:17px">Compact shells: the transition sits at the barrier top, as for a black hole.</li>
+        <li style="font-size:17px">Dilute shells: the transition sits at $\omega R\sim\ell$ (flat centrifugal barrier).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="notes">~1 min. Emphasize the definition: with the interior opened, the black hole becomes a limit of the same
+  problem. Energy conservation R + T = 1 holds to 1e-10 and is a real test of the junction matrix.</div>
+</section>
+
+<!-- @@LIMITS -->
+<section class="slide" data-title="Two limits">
+  <h2>Two limits <span class="tag">transparent at high frequency · black-hole-like when compact</span></h2>
+  <div class="cols">
+    <div class="col fig"><img src="{{IMG:r3_f03_highfreq_law}}" alt="High frequency law"></div>
+    <div class="col fig"><img src="{{IMG:r3_f04_bh_limit}}" alt="Black-hole limit"></div>
+  </div>
+  <div class="cols" style="flex:0 0 auto;margin-top:8px">
+    <div class="col"><div class="eq" style="font-size:17px">$$\omega\to\infty:\quad \mathcal R\simeq\frac{\Delta^2}{4\omega^2+\Delta^2}\ \to0$$</div>
+      <p class="small" style="margin:0">Only the δ-barrier survives. Even parity follows the same law: the fluid's inertia no longer matters.</p></div>
+    <div class="col"><div class="eq" style="font-size:17px">$$R\to2M:\quad \Delta\to0,\quad \mathcal R\to\mathcal R_{\rm BH}\ \text{(Vishveshwara 1970)}$$</div>
+      <p class="small" style="margin:0">The shell sinks into the redshifted throat. The approach is slow, $\propto(R-2M)^{1/2}$.</p></div>
+  </div>
+  <div class="notes">~1 min. Left: log-log, both parities collapse onto the delta-barrier law; the dip in the odd curve is an
+  interference between the barrier and the shell reflections. Right: the reflectivity tends to the black-hole one. Keep this
+  in mind: the reflectivity has a black-hole limit, but the ringing does not.</div>
+</section>
+
+<!-- @@QNM -->
+<section class="slide" data-title="Quasinormal modes">
+  <h2>How the shell rings <span class="tag">quasinormal modes</span></h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.2"><img src="{{IMG:r3_f05_qnm_plane}}" alt="QNMs"></div>
+    <div class="col">
+      <p style="margin-top:0;font-size:18px">QNMs: the regular interior solution, carried through the shell, is purely outgoing at infinity.</p>
+      <ul>
+        <li style="font-size:17px"><b>Cavity modes</b>, $\omega\sim1/R$. For dilute shells, $\omega R\approx n\pi-\tfrac{i}{2}\ln[2\ell(\ell+1)R/M]$: a leaky box.</li>
+        <li style="font-size:17px"><b>Trapped modes</b> for $R<3M$: caught between the interior and the photon-sphere barrier.
+        ${\rm Im}\,\omega M\approx-10^{-6}$ at $R=2.01M$. These are the <b>echoes</b>.</li>
+        <li style="font-size:17px"><b>Matter modes</b> (even): oscillations of the shell itself, $\omega\sim(M/R^3)^{1/2}$.</li>
+      </ul>
+      <div class="box"><p class="small" style="margin:0"><b>None</b> of them tends to the black-hole QNMs (stars) as $R\to2M$. The
+      black hole rings because waves leak into the horizon; the shell sends them back.</p></div>
+    </div>
+  </div>
+  <div class="notes">~1 min. Contrast with the previous slide: the reflectivity is continuous in the black-hole limit, the
+  spectrum is not. Trapped modes become exponentially long-lived as the shell approaches 2M.</div>
+</section>
+
+<!-- @@ECHO -->
+<section class="slide" data-title="Echoes in the time domain">
+  <h2>The same pulse on a black hole and on a shell <span class="tag">time-domain simulation</span></h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.15"><img src="{{IMG:r3_f11_timedomain}}" alt="Time domain"></div>
+    <div class="col">
+      <div class="fig" style="flex:0 0 auto"><img src="{{IMG:r3_f12_waveform}}" alt="Waveform"></div>
+      <table class="t" style="margin-top:10px;font-size:16px">
+        <tr><th>object</th><th>late-time fit</th><th>QNM (frequency domain)</th></tr>
+        <tr><td>black hole</td><td>$0.3731-0.0885i$</td><td>$0.3737-0.0890i$</td></tr>
+        <tr><td>shell $R=2.2M$</td><td>$0.4215-0.0352i$</td><td>$0.4211-0.0350i$</td></tr>
+      </table>
+      <p class="small" style="margin:6px 0 0 0">The black hole rings down in $\sim30M$. The compact shell keeps ringing at its trapped mode.
+      All three share the exterior power-law tail.</p>
+    </div>
+  </div>
+  <div class="notes">~1 min. Leapfrog evolution of the odd l = 2 equation with the delta barrier, independent of the
+  frequency-domain code. The fitted frequencies agree to about 1e-3, a direct confirmation of the spectrum. Next slide:
+  run it live.</div>
+</section>
+
+<!-- @@INSTAB -->
+<section class="slide" data-title="The instability">
+  <h2>The static shell is unstable <span class="tag">even-parity matter modes</span></h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.15"><img src="{{IMG:r3_f06_matter_modes}}" alt="Matter modes"></div>
+    <div class="col">
+      <p style="margin-top:0">Four matter modes per $\ell$. One is purely imaginary with ${\rm Im}\,\omega>0$:</p>
+      <div class="eq orange" style="font-size:18px">$$\omega\,(R^3/M)^{1/2}=0.608\,i\qquad(M/R=0.2,\ \Gamma=2,\ \ell=2)$$</div>
+      <ul>
+        <li style="font-size:17px">It agrees with Pitre, Schneider &amp; Poisson (2026), who used a completely different method, at every compactness.</li>
+        <li style="font-size:17px"><b>Newtonian origin</b>: a pressure-supported self-gravitating membrane buckles.
+        $\varsigma^4-S\varsigma^2+P=0$ gives $1.505$ and $0.515\,i$ (stars).</li>
+        <li style="font-size:17px">The growth time is $\simeq1.6\,(R^3/M)^{1/2}$: slow compared with the waves.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="notes">~1 min. The shell is held up by tangential pressure against its own gravity; l >= 2 deformations run away.
+  This is ordinary Newtonian physics, and GR shifts the numbers by O(M/R). A by-product: the constant term of PSP26's quartic
+  (7.6) contains a misprint; their closed form (7.8) is right.</div>
+</section>
+
+<!-- @@CONSIST -->
+<section class="slide" data-title="Back to the background">
+  <h2>Back to step 1: is the background slow enough?</h2>
+  <div class="cols">
+    <div class="col fig"><img src="{{IMG:r3_f07_timescales}}" alt="Timescales"></div>
+    <div class="col fig"><img src="{{IMG:r3_f10_modelA_ambiguity}}" alt="Model A ambiguity"></div>
+  </div>
+  <div class="cols" style="flex:0 0 auto;margin-top:8px">
+    <div class="col"><p style="font-size:17px;margin:0"><span class="pill ok">fluid shell</span> Instability rate
+      $0.6(M/R^3)^{1/2}\ll$ wave frequencies. Scattering and QNMs are a good adiabatic idealization.</p></div>
+    <div class="col"><p style="font-size:17px;margin:0"><span class="pill bad">frozen wall</span> Collapses on $R/\sqrt2$, as fast
+      as the waves. Its even junction is inconsistent (8 equations, 6 unknowns). Which 2 equations you drop changes $\mathcal R$ at $O(1)$.</p></div>
+  </div>
+  <div class="notes">~1 min. This closes the loop. For the frozen wall the odd sector is identical to the fluid shell (the
+  delta barrier), but the even sector is undetermined by the approximation: from total reflection to the delta law
+  depending on the prescription. It would need a genuinely time-dependent treatment.</div>
+</section>
+
+<!-- @@VALID -->
+<section class="slide" data-title="Validation">
+  <h2>Why we trust the numbers</h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.1"><img src="{{IMG:r3_f08_validation}}" alt="Validation"></div>
+    <div class="col">
+      <table class="t">
+        <tr><th>check</th><th>result</th></tr>
+        <tr><td>energy $|\mathcal R+\mathcal T-1|$</td><td>$\lesssim6\times10^{-10}$</td></tr>
+        <tr><td>transfer matrix vs shooting, $\mathcal R,\mathcal T$</td><td>$\lesssim10^{-9}$</td></tr>
+        <tr><td>same, 397 QNMs</td><td>median $4\times10^{-12}$, worst $6\times10^{-5}$</td></tr>
+        <tr><td>Schwarzschild $\ell=2,n=0$</td><td>$0.3736716844-0.0889623157i$</td></tr>
+        <tr><td>BH reflectivity (Vishveshwara)</td><td>$1.55\times10^{-2}$ at $(2M\omega)^2=1$</td></tr>
+        <tr><td>WKB orders 1, 3, 6</td><td>rel. error $7\%$, $0.15\%$, $0.02\%$</td></tr>
+        <tr><td>even junction $\det\mathsf T\sqrt{f_R}$</td><td>$1\pm10^{-12}$</td></tr>
+        <tr><td>matter modes vs PSP26 · Newtonian limit</td><td>agree</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="notes">~45 s. Two independent methods: continued-fraction exterior plus transfer matrix, and direct shooting.
+  Black-hole benchmarks from Leaver and Berti et al. Every limit is reproduced.</div>
+</section>
+
+<!-- @@TAKE -->
+<section class="slide" data-title="Take-home">
+  <h2>Take-home messages</h2>
+  <div class="cols">
+    <div class="col">
+      <ol style="padding-left:26px">
+        <li>A thin shell with flat interior is static only with <b>positive pressure</b> $p=\sigma(1-\sqrt{f_R})/4\sqrt{f_R}$. Domain walls and dust collapse.</li>
+        <li>For odd waves the shell is a <b>repulsive δ-potential</b>, $\Delta=\sqrt{f_R}(1-\sqrt{f_R})/R$. For even waves it is a
+        flux-conserving 2×2 matrix that carries the shell's own dynamics.</li>
+        <li>$\mathcal R(\omega)$: opaque at low frequency, transparent at high ($\propto\omega^{-2}$), black-hole-like as $R\to2M$.</li>
+        <li>The ringing is <b>not</b> black-hole-like: cavity modes, long-lived trapped modes (echoes), and matter modes.</li>
+        <li>The static shell is <b>unstable</b> (a Newtonian buckling mode) but slowly, so the results stand. The frozen domain wall is not a controlled model.</li>
+      </ol>
+    </div>
+    <div class="col" style="flex:0.75">
+      <div class="box">
+        <div class="kicker">Documents</div>
+        <p class="small" style="margin:0">5-page summary, full paper with the explicit line of thought, and the code
+        (<code>First round/code</code>, <code>Third round/code</code>).</p>
+      </div>
+      <div class="box" style="margin-top:14px">
+        <div class="kicker">Key references</div>
+        <p class="tiny" style="margin:0">Regge &amp; Wheeler 1957 · Zerilli 1970 · Vishveshwara 1970 · Israel 1966 · Ipser &amp; Sikivie 1984 ·
+        Poisson 2004 · Martel &amp; Poisson 2005 · Leaver 1985 · Iyer &amp; Will 1987 · Pani et al. 2009 ·
+        Boyanov et al. 2025 · Yang, Bonga &amp; Pan 2023 · Pitre, Schneider &amp; Poisson 2026</p>
+      </div>
+    </div>
+  </div>
+  <div class="notes">~30 s. Wrap up.</div>
+</section>
+
+<!-- @@BACKUP1 -->
+<section class="slide" data-title="Backup: multipoles and EOS">
+  <h2>Backup: multipoles, parity and equation of state</h2>
+  <div class="cols">
+    <div class="col fig"><img src="{{IMG:r3_f13_multipoles}}" alt="Multipoles"></div>
+    <div class="col fig"><img src="{{IMG:r3_f14_eos}}" alt="EOS"></div>
+  </div>
+  <p class="small" style="margin:8px 0 0 0">Higher $\ell$ see a higher barrier. Even and odd differ at intermediate frequencies, so the
+  shell breaks the isospectrality of Schwarzschild. $\Gamma$ matters only near the narrow matter resonances.</p>
+  <div class="notes">Backup slide for questions.</div>
+</section>

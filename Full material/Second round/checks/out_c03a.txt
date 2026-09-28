@@ -1,0 +1,12 @@
+component (0, 3) computed
+component (1, 3) computed
+component (2, 3) computed
+(0, 3) : (3*I*omega*h1(r)*m(r) + r**2*(I*omega*h1(r)*Derivative(Phi(r), r) - I*omega*Derivative(h1(r), r) + 16*pi*U(r)*p_t(r)*exp(Phi(r)) + 16*pi*U(r)*rho(r)*exp(Phi(r)) - 16*pi*h0(r)*p_t(r) + 2*h0(r)*Derivative(Phi(r), r)**2 + 2*h0(r)*Derivative(Phi(r), (r, 2)) + Derivative(Phi(r), r)*Derivative(h0(r), r) - Derivative(h0(r), (r, 2))) + r*(-2*I*omega*h1(r)*m(r)*Derivative(Phi(r), r) + I*omega*h1(r)*Derivative(m(r), r) - 2*I*omega*h1(r) + 2*I*omega*m(r)*Derivative(h1(r), r) - 4*h0(r)*m(r)*Derivative(Phi(r), r)**2 - 4*h0(r)*m(r)*Derivative(Phi(r), (r, 2)) - 2*h0(r)*Derivative(Phi(r), r)*Derivative(m(r), r) - 2*m(r)*Derivative(Phi(r), r)*Derivative(h0(r), r) + 2*m(r)*Derivative(h0(r), (r, 2)) + Derivative(h0(r), r)*Derivative(m(r), r)) + 2*h0(r)*m(r)*Derivative(Phi(r), r) - 4*h0(r)*Derivative(m(r), r) + 6*h0(r) - m(r)*Derivative(h0(r), r))/(2*r**2)
+(1, 3) : (omega*r**3*(-omega*h1(r) + I*Derivative(h0(r), r))/2 - I*omega*r**2*h0(r) + r**3*(-8*pi*p_t(r) + Derivative(Phi(r), r)**2 + Derivative(Phi(r), (r, 2)))*h1(r)*exp(2*Phi(r)) + r**2*(-2*m(r)*Derivative(Phi(r), r)**2 - 2*m(r)*Derivative(Phi(r), (r, 2)) - Derivative(Phi(r), r)*Derivative(m(r), r) + Derivative(Phi(r), r))*h1(r)*exp(2*Phi(r)) + r*(-m(r)*Derivative(Phi(r), r) - Derivative(m(r), r) + 2)*h1(r)*exp(2*Phi(r)) + h1(r)*m(r)*exp(2*Phi(r)))*exp(-2*Phi(r))/r**3
+(2, 3) : I*omega*h0(r)*exp(-2*Phi(r))/2 + h1(r)*Derivative(Phi(r), r)/2 + Derivative(h1(r), r)/2 - h1(r)*m(r)*Derivative(Phi(r), r)/r - h1(r)*Derivative(m(r), r)/(2*r) - m(r)*Derivative(h1(r), r)/r + h1(r)*m(r)/(2*r**2)
+theta-phi: I*omega*h0(r)*exp(-2*Phi(r))/2 + 2*pi*r*h1(r)*p_r(r) - 2*pi*r*h1(r)*rho(r) + Derivative(h1(r), r)/2 - m(r)*Derivative(h1(r), r)/r + h1(r)*m(r)/r**2
+r-phi   : (-omega**2*r**2*h1(r) + I*omega*r**2*Derivative(h0(r), r) - 2*I*omega*r*h0(r) + 4*h1(r)*exp(2*Phi(r)))*exp(-2*Phi(r))/(2*r**2)
+h0 from theta-phi eq -> [I*(r**2*(4*pi*r*h1(r)*p_r(r) - 4*pi*r*h1(r)*rho(r) + Derivative(h1(r), r)) - 2*r*m(r)*Derivative(h1(r), r) + 2*h1(r)*m(r))*exp(2*Phi(r))/(omega*r**2)]
+check first-derivative structure (should be 0): 0
+V found = (-4*pi*r**3*(p_r(r) - rho(r)) + 6*r - 6*m(r))*exp(2*Phi(r))/r**3
+V found - e^{2Phi}[l(l+1)/r^2 - 6m/r^3 + 4pi(rho - p_r)] = 0

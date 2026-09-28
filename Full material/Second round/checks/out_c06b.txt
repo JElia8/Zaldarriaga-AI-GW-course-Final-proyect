@@ -1,0 +1,17 @@
+C:\Users\JUAMPI\Desktop\Proyecto final Zaldarriaga\Second round\checks\c06b_followup.py:16: RuntimeWarning: invalid value encountered in divide
+  out = max(out, (num/den).max())
+(1) model A, R=3, l=2: normalized max residual over ALL 8 rows, per choice of 6 imposed rows
+  w=  0.5 first-round rows [0, 1, 2, 3, 6, 7]: 1.00e+00 | best choice [0, 1, 2, 3, 4, 5]: 0.00e+00 | 2nd best 0.00e+00 | worst 1.00e+00 | lstsq 1.00e+00 | row-normalised lstsq 1.00e+00, |T_n - T_first|/|T| = 5.85e-01
+  w=  2.0 first-round rows [0, 1, 2, 3, 6, 7]: 1.00e+00 | best choice [0, 1, 2, 3, 4, 5]: 0.00e+00 | 2nd best 0.00e+00 | worst 1.00e+00 | lstsq 1.00e+00 | row-normalised lstsq 1.00e+00, |T_n - T_first|/|T| = 6.93e-01
+  w= 10.0 first-round rows [0, 1, 2, 3, 6, 7]: 1.00e+00 | best choice [0, 1, 2, 3, 4, 7]: 0.00e+00 | 2nd best 0.00e+00 | worst 1.00e+00 | lstsq 1.00e+00 | row-normalised lstsq 1.00e+00, |T_n - T_first|/|T| = 7.03e-01
+  w= 50.0 first-round rows [0, 1, 2, 3, 6, 7]: 0.00e+00 | best choice [0, 1, 2, 3, 4, 7]: 0.00e+00 | 2nd best 0.00e+00 | worst 1.00e+00 | lstsq 1.00e+00 | row-normalised lstsq 1.00e+00, |T_n - T_first|/|T| = 7.04e-01
+(2) T_even^C - T_odd element by element (l=2)
+  R= 3.0 w=    10  dT = [[-3.70e-04, -6.83e-04], [-1.323e-01, 5.66e-04]]   Delta_even/Delta_odd = 0.4578
+  R= 3.0 w=   100  dT = [[-3.70e-06, -6.83e-06], [-1.329e-01, 5.66e-06]]   Delta_even/Delta_odd = 0.4554
+  R= 3.0 w=  1000  dT = [[-3.70e-08, -6.83e-08], [-1.329e-01, 5.66e-08]]   Delta_even/Delta_odd = 0.4553
+  R= 6.0 w=    10  dT = [[-1.11e-04, -3.85e-04], [-4.070e-03, 1.23e-04]]   Delta_even/Delta_odd = 0.8913
+  R= 6.0 w=   100  dT = [[-1.11e-06, -3.85e-06], [-4.124e-03, 1.23e-06]]   Delta_even/Delta_odd = 0.8899
+  R= 6.0 w=  1000  dT = [[-1.11e-08, -3.85e-08], [-4.124e-03, 1.23e-08]]   Delta_even/Delta_odd = 0.8899
+  R=10.0 w=    10  dT = [[-3.13e-05, -1.78e-04], [1.248e-03, 3.27e-05]]   Delta_even/Delta_odd = 1.1058
+  R=10.0 w=   100  dT = [[-3.13e-07, -1.78e-06], [1.240e-03, 3.27e-07]]   Delta_even/Delta_odd = 1.1051
+  R=10.0 w=  1000  dT = [[-3.13e-09, -1.78e-08], [1.240e-03, 3.27e-09]]   Delta_even/Delta_odd = 1.1051

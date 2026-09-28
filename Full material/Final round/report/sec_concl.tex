@@ -1,0 +1,40 @@
+%==========================================================================================
+\section{Conclusions}\label{sec:concl}
+\begin{enumerate}
+\item \textbf{Polarizations vs parities.} $h_+-ih_\times=\frac1{2r}\sum\sqrt{(\ell+2)!/(\ell-2)!}\,(\Psi_{\rm even}-i\Psi_{\rm odd})\,{}_{-2}Y^{\ell m}$. The even
+and odd master functions are $E$- and $B$-type patterns related by a $45^\circ$ rotation of the polarization. Each
+contributes to both $h_+$ and $h_\times$; only for $m=0$ is even $=+$ and odd $=\times$.
+\item \textbf{Selection rule.} Spherical symmetry and parity forbid even--odd mixing for any spherical object. A wave of
+pure parity keeps its parity: an axisymmetric $h_\times$ wave cannot come back as $h_+$.
+\item \textbf{Birefringent mirror.} A wave containing both parities does change polarization, because
+$S_{\rm even}\ne S_{\rm odd}$. A black hole is a pure retarder with $\Phi=2\arctan[12M\omega/(\ell-1)\ell(\ell+1)(\ell+2)]$, exactly,
+from the Chandrasekhar transformation (verified numerically to $5\times10^{-8}$).
+\item \textbf{Universal long-wavelength helicity flip.} $\sigma_{\rm flip}\to4\pi M^2/3$ for any spherical compact object. We
+derived this from a partial-wave sum that equals $1/108$ exactly, and it agrees with the classic Schwarzschild cross
+section.
+\item \textbf{Shell-specific polarization effects.} Complete polarization conversion occurs in narrow bands at the even-only
+matter resonance. Conversions of a few per cent (up to $19\%$ for $R=2.2M$) occur between the even and odd trapped
+resonances. With an absorbing interior, the even parity is reflected up to an order of magnitude more strongly near the
+barrier top.
+\item \textbf{Waveforms.} The same incident pulse gives nearly identical prompt reflections in the two parities. The even
+channel differs at late times: dephased trapped ringing, a long ringing at the matter frequency, and the growing unstable
+mode. The latter is weakly excited (residue $\sim10^{-5}$) but dominates after $\sim74$--$440M$, depending on $R$.
+\item \textbf{Which parity matters.} In energy neither: the weights are equal, a plane wave contains both equally, and the
+reflected energies are equal for a non-absorbing object. In physics, the even parity carries all the coupling to the
+matter and is the dominant emission channel of slow sources. The odd parity is simpler and universal, a $\delta$-barrier.
+\end{enumerate}
+
+\paragraph{Methods and checks.} Reflection amplitudes come from the exact junction conditions of the shell (odd: analytic;
+even: $2\times2$ matrix from the linearized Israel equations), a regular flat interior, and high-accuracy integration of the
+Regge--Wheeler and Zerilli equations. The checks are:
+\begin{itemize}
+\item the black-hole phase ratio against the Chandrasekhar formula ($5\times10^{-8}$);
+\item $|S|=1$ for the shells ($10^{-15}$);
+\item the universal low-frequency retardance and helicity-flip cross section;
+\item the unstable-pole position against the known matter mode (seven digits);
+\item the odd-channel waveforms against an independent time-domain evolution ($<1\%$).
+\end{itemize}
+
+\paragraph{Code.} \texttt{code/parity\_study.py}: all computations, cached in \texttt{data/}. \texttt{code/residue.py}:
+residue of $S_{\rm even}$ at the unstable pole. \texttt{code/make\_figures\_r4.py}: figures; numbers quoted in the text are in
+\texttt{code/numbers\_r4.json}.

@@ -1,0 +1,11 @@
+\file{derive_junction.py} was re-run in fresh copies. For the even sector (\file{even:C}, 32\,s;
+\file{even:A}, 43\,s) the log lines of the first round are reproduced verbatim (background residual 0, $\ddot R$ for the
+wall, ranks $8/8$ and $6/8$, residual $4.62\times10^{-15}$ and $7.12\times10^{-3}$, the test matrices $\mathsf T$), the
+pickled symbolic matrices $\mathsf A,\mathsf B$ (and $\ddot R$) are \emph{structurally identical} to the first round's,
+and the exported Python modules are identical apart from the UTF-8 byte-order mark and the final line ending. For the
+odd sector the full script did not finish within 35 minutes: after exporting the matrices it attempts an optional
+symbolic \texttt{sympy.solve}/\texttt{simplify} of the system (whose output is only printed; the first-round log also
+stops before that line). Calling the script's \texttt{derive()} function directly, the odd $\mathsf A,\mathsf B$ of models C
+and A are obtained in 1\,s; they differ from the stored ones only in the printed form of the expressions and agree
+numerically to $1.5\times10^{-13}$ (the resulting $\mathsf T$ to $3\times10^{-15}$) at random complex parameters. Hence
+all four generated junction systems are reproducible (R3 \OK).

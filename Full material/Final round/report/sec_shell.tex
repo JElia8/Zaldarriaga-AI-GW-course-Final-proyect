@@ -1,0 +1,117 @@
+%==========================================================================================
+\section{The shell as a polarizing mirror}\label{sec:shell}
+\begin{question}
+The shell has no horizon and absorbs nothing, so $|S_{\rm even}|=|S_{\rm odd}|=1$. How different are the phases, and when
+does the polarization change appreciably?
+\end{question}
+We computed $S_{\rm even}(\omega)$ and $S_{\rm odd}(\omega)$ for $\ell=2$ and $R=6M$, $3M$ and $2.2M$. The physical, regular interior
+was carried through the junction conditions and the exterior was integrated to large radius. Near the narrow
+resonances the frequency grid was refined adaptively (up to $\sim1400$ frequencies per curve). Numerically
+$|S|=1$ holds to $10^{-15}$ in both parities, as it must. Figures~\ref{fig:ret} and \ref{fig:conv} show the retardance
+$\Phi=\arg(S_{\rm even}/S_{\rm odd})$ and the converted fraction $\sin^2(\Phi/2)$.
+
+\begin{figure}[t]\centering
+\includegraphics[width=0.49\textwidth]{r4_f03_shell_retardance.pdf}\hfill
+\includegraphics[width=0.49\textwidth]{r4_f04_conversion.pdf}
+\caption{Left: retardance between the parities for three shells and the black hole ($\ell=2$). Right: fraction of the
+reflected power that comes back in the orthogonal polarization, for a wave with equal $E$ and $B$ content. For the
+black hole the dotted line multiplies by the reflectivity, i.e.\ it is the fraction of the \emph{incident} power.}
+\label{fig:ret}\label{fig:conv}
+\end{figure}
+
+\paragraph{Low frequency: universal.} For $\omega M\lesssim0.1$ all shells follow the black-hole curve
+$\Phi=2\arctan(12M\omega/24)$. At $\omega M=0.05$ we find $\Phi=2.86^\circ$ for $R=2.2M$ and $3M$ and $2.84^\circ$ for $6M$, against
+$2.86^\circ$ from Eq.~\eqref{eq:bhphase}. Long waves never reach the surface. They are reflected by the exterior
+Schwarzschild field, whose even/odd phase difference is fixed by the Chandrasekhar transformation. The structure of the
+object enters only at higher order (tidal response).
+
+\paragraph{The matter resonance: complete conversion.} The even sector has a long-lived matter mode, an oscillation of
+the shell's fluid, at $\omega M=0.0894-0.00005i$ ($R=6M$), $0.1971-0.0003i$ ($3M$) and $0.1859-0.00003i$ ($2.2M$). The odd sector
+has nothing there. Across the resonance the phase of $S_{\rm even}$ winds by $2\pi$ while $S_{\rm odd}$ stays smooth. The
+retardance therefore sweeps through $180^\circ$ and the conversion reaches $\sin^2(\Phi/2)=1$: in a narrow band, of width
+$\sim|{\rm Im}\,\omega|$, the shell \emph{rotates the polarization of the reflected wave completely}. This is the clearest
+answer to ``can $h_\times$ become $h_+$'': an $\ell=2$, $m=\pm2$ wave that arrives as pure $h_\times$ at the equator
+(pure odd) comes back as pure $h_\times$. But a wave arriving with equal $E$ and $B$ parts at the matter frequency comes back
+with its polarization rotated by $90^\circ$, for instance $h_+=h_\times$ returning as $h_+=-h_\times$.
+
+\paragraph{Intermediate frequencies: small but structured.} Away from the matter resonance the retardance oscillates
+around zero. The two parities have cavity and trapped resonances at slightly different frequencies (e.g.\ $0.421-0.035i$
+odd and $0.447-0.044i$ even at $R=2.2M$). The frequency-averaged converted fraction on $0.1<\omega M<1$ is $0.08\%$ ($R=6M$),
+$0.7\%$ ($3M$) and $1.7\%$ ($2.2M$), with a maximum of $19\%$ between the two trapped resonances of the $R=2.2M$ shell. At high
+frequency the wave crosses the transparent shell and bounces off the centre, and both parities acquire the same phase:
+$\Phi\to0$.
+
+\paragraph{Contrast with the black hole.} For a black hole the retardance keeps growing with frequency. At high
+frequency, however, almost nothing is reflected, so the converted fraction of the \emph{incident} power (dotted curve)
+peaks at $\simeq2\%$ near the barrier top and then falls. A shell returns everything, so its polarization
+signature can be much stronger (complete, at the matter resonance) but is confined to narrow bands.
+
+\begin{learned}
+Parity is conserved, but polarization is not. A compact shell acts as a retarder whose retardance is universal at low
+frequency, oscillates at intermediate frequency, and sweeps through $180^\circ$ at the even-only matter resonance, where the
+conversion is complete.
+\end{learned}
+
+%------------------------------------------------------------------------------------------
+\subsection{An absorbing interior: the parities are also reflected with different strength}
+If the interior is replaced by a perfect absorber (only an ingoing wave inside, as a horizon would do), the object
+also acquires a \emph{diattenuation}: $\RR_{\rm even}\ne\RR_{\rm odd}$ (Fig.~\ref{fig:open}). The two reflectivities coincide at
+low and high frequency. Around the barrier top the even parity is reflected more strongly: by a factor of up to $3.4$
+($R=2.2M$) and $18$ ($R=6M$), and by a large factor at $R=3M$ near $\omega M\approx0.55$, where the odd reflectivity has an
+interference zero. The ratio never drops below $0.98$. The black hole has $\RR_{\rm even}=\RR_{\rm odd}$ exactly. Such a
+diattenuating mirror turns an unpolarized wave into a partially polarized one, with an excess of the even ($E$-type)
+pattern.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.6\textwidth]{r4_f12_open_ratio.pdf}
+\caption{Ratio of the even to the odd reflectivity when the interior absorbs everything that crosses the shell.}\label{fig:open}
+\end{figure}
+
+%==========================================================================================
+\section{Plane waves: how much helicity is reversed}\label{sec:plane}
+\begin{question}
+A distant source sends a circularly polarized plane wave onto the object. What fraction of the scattered radiation has the
+opposite helicity?
+\end{question}
+A plane wave of definite helicity has, for every $\ell\ge2$, equal-magnitude even and odd components combined as
+$\Psi_{\rm even}\pm i\Psi_{\rm odd}$. After scattering, the helicity-preserving amplitude of partial wave $\ell$ is
+$(S_{\rm even}+S_{\rm odd})/2-1$ and the helicity-reversing amplitude is $(S_{\rm even}-S_{\rm odd})/2$. By orthogonality of the
+spin-weighted harmonics the helicity-reversing cross section is
+\begin{equation}
+\sigma_{\rm flip}(\omega)=\frac{\pi}{\omega^2}\sum_{\ell\ge2}(2\ell+1)\,\frac{|S^\ell_{\rm even}-S^\ell_{\rm odd}|^2}{4}.
+\label{eq:sflip}
+\end{equation}
+Unlike the total cross section, which diverges because of the long-range Newtonian potential, $\sigma_{\rm flip}$ is
+\emph{finite}. The Newtonian phase is common to both parities and cancels in the difference.
+
+\paragraph{Black hole, exactly.} With Eq.~\eqref{eq:bhphase}, $|S_{\rm even}-S_{\rm odd}|^2/4=\RR_\ell\sin^2\arctan(12M\omega/\lambda_\ell)$,
+where $\RR_\ell$ is the reflectivity of partial wave $\ell$. As $\omega\to0$, $\RR_\ell\to1$ and
+\begin{equation}
+\sigma_{\rm flip}\to144\pi M^2\sum_{\ell\ge2}\frac{2\ell+1}{[(\ell-1)\ell(\ell+1)(\ell+2)]^2}=144\pi M^2\cdot\frac1{108}=\frac{4\pi}{3}M^2 .
+\label{eq:4pi3}
+\end{equation}
+The sum can be done in closed form (symbolic summation gives exactly $1/108$). The result coincides with the angular integral of the
+helicity-reversing part, $M^2\sin^4(\theta/2)$, of the classic long-wavelength cross section
+$\dd\sigma/\dd\Omega=M^2[\cos^8(\theta/2)+\sin^8(\theta/2)]/\sin^4(\theta/2)$ \cite{Peters76,DeLogi77,FHM88,Dolan08}:
+$\int M^2\sin^4(\theta/2)\,\dd\Omega=4\pi M^2/3$. The partial-wave formalism, the relative normalization of the two parities
+and the Chandrasekhar phase are therefore all consistent with the known result.
+
+\paragraph{Shells.} Evaluating Eq.~\eqref{eq:sflip} numerically ($\ell$ up to $\sim2.2\,\omega R+7$, last term below
+$5\times10^{-4}$ of the sum) gives Fig.~\ref{fig:sflip}. At $\omega M=0.02$ all objects give $\sigma_{\rm flip}=4.188M^2$, the
+universal value~\eqref{eq:4pi3}. The helicity flip at long wavelengths depends only on the mass. At higher frequency the
+curves separate. The dilute shell ($R=6M$) flips less than a black hole around $\omega M\sim0.1$--$0.5$, because its partial
+waves pass through the shell and the centre almost symmetrically. The compact shells flip more than the black hole for $\omega M\gtrsim0.4$, where the black hole absorbs almost everything, and
+the $R=2.2M$ shell shows sharp peaks (up to $\sim24M^2$ on our grid) at the trapped resonances of the higher multipoles.
+These peaks are only partly resolved by the frequency grid.
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.66\textwidth]{r4_f05_sigma_flip.pdf}
+\caption{Helicity-reversing cross section, Eq.~\eqref{eq:sflip}, for the black hole (numerical, and the closed form with
+numerical reflectivities) and three shells. Dashed: the universal long-wavelength value $4\pi M^2/3$.}\label{fig:sflip}
+\end{figure}
+
+\begin{learned}
+Any spherical compact object reverses the helicity of long gravitational waves with cross section $4\pi M^2/3$,
+independent of its structure. Structure-dependent polarization signatures appear at $\omega\sim1/R$ and are strongest near
+resonances.
+\end{learned}

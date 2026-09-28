@@ -1,0 +1,547 @@
+PHYSICAL REVIEW D  VOLUME 30, NUMBER 4                                              15 AUGUST 1984
+
+                   Gravitationally repulsive domain wall
+
+                                            J. Ipser and P. Sikivie
+                   Physics Department, University of Florida, Gainesville, Florida 32611
+
+                                          (Received7 November 1983)
+
+  The Gauss-Codazzi formalism is used to obtain exact solutions to Einstein's equations in the pres-
+ence of domain walls. Domain walls are shown to have repulsive gravitational fields. The most
+general solution to Einstein's equations for a planar domain wall is obtained. Also, the motion of a
+spherical domain wall in an asymptotically flat space-timeis derived.
+
+                        I. INTRODUCTION                                        respectively, the tension and the surface energy density of
+                                                                               the wall (for a domain wall, r=a). It appears that, unless
+   Recent investigations in cosmology have focused in a                        r = + a , the weak-field approximation of Einstein's equa-
+special way on the role of particle physics in the evolution                   tions has static solutions to which no static solution of the
+of the Universe into its presently observed state. Particle                    exact Einstein equations corresponds. This results in
+theories suggest that phase transitions of various kinds                       some uncertainty as to how to interpret the solutions to
+occur in the early Universe and produce important effects                      the linearized equations.
+that until fairly recently, had been largely ignored. In the
+"inflationary Universe" cosmology,' for example, an early                         In this paper, we address the questions raised above by
+phase transition fills the Universe with a false vacuum for                    finding exact solutions to Einstein's equations in the pres-
+awhile, causing an exponential de Sitter-type expansion                        ence of domain walls. We use the Gauss-Codazzi formal-
+until the true vacuum takes over, and thereby providing a                      ism for describing the geometry of surfaces embedded in
+possible solution to the horizon and flatness problems of                      higher-dimensional curved spaces (Sec. 11). From the
+the standard cosmological model. Phase transitions can                         Gauss-Codazzi equations we derive an unambiguous
+also give birth to solitonlike structures such as monopoles,                   answer to the question whether and in what sense domain
+strings, and domain walls.2                                                    walls haye repulsive gravitational fields: for an observer
+                                                                               to ride along next to a domain wall, he must fire a rocket
+   Within the context of general relativity, domain walls                      away from the wall (or use some other means to balance
+are immediately recognizable as especially unusual and in-                     the wall's repulsion), or the wall must accelerate toward
+teresting sources of gravity. As was pointed out by                            him, or both. In Sec. 111, we derive the motion of a spher-
+Zel'dovich, Kobzarev, and ~ k u n t,h~e stress-energy of                       ical domain wall in an asymptotically flat space-time. We
+domain walls is composed of surface energy density and                         find that such a wall always collapses to a black hole, and
+strong tension in two spatial directions, with the magni-                      that it is always attractive to a distant observer. This
+tude of the tension equal to that of the surface energy                        latter property is not inconsistent with the repulsive char-
+density. This is interesting because there are several indi-                   acter of domain walls because the spherical domain wall
+cations that tension acts as a repulsive source of gravity in                  accelerates towards its center, thereby increasing its
+general relativity, whereas pressure is attractive. This is                    separation from an initially comoving external geodesic
+evident, for example, from the Raychaudhuri equation re-                       observer. In Sec. IV, we consider "planar" walls, i.e.,
+lating the expansion of geodesic congruences to the local                      walls which are homogeneous and isotropic in their two
+stress-energy and from the way the pressure of spherical                       spacelike directions. We show that there are no
+stellar models appears in the relativistic equations govern-                   reflection-symmetric static solutions to Einstein's equa-
+ing their s t r ~ c t u r e I. t~ is also implied by the fact that a           tions for a planar wall unless r = +a. Next we derive the
+domain-wall-dominated Universe expands like R -t2,                             most general reflection-symmetric solution to Einstein's
+where R is the cosmological scale parameter and t is                           equations for a planar domain wall ( ~ = a )W.e isolate
+cosmological time.3 The question thus arises whether                           and analyze in detail the unique solution which is free of
+domain walls exhibit repulsive gravitational fields, and, if                   curvature singularities. It corresponds to a uniform gravi-
+yes, what are the implications thereof.                                        tational field in which observers on either side are repelled
+                                                                               by the wall with constant acceleration 2 r G N a , where GN
+   vilenkin5 addressed this question by linearizing                            is Newton's gravitational constant. Finally, in Sec. V, we
+Einstein's equations (weak-field approximation) in the                         discuss our results and draw some conclusions.
+presence of a plane static wall. He found that the linear-
+ized equations admit static solutions, and that these do                          Throughout, we adopt the convention in which the
+indeed correspond to repulsive gravitational fields. As
+Vilenkin pointed out, however, the static solutions to the                     space-time metric has signature - + + +.
+linearized equations do not properly match up to the
+known general exact static solution with planar symmetry,                                11. THE GAUSS-CODAZZI FORMALISM
+except for the special case r = f a , where r and a are,
+                                                                                  We wish to solve Einstein's equations in the presence of
+                                                                         - 30  stress-energy sources confined to three-dimensional time-
+
+                                                                               712  @ 1984 The American Physical Society
+-30  GRAVITATIONALLY REPULSIVE DOMAIN WALL                                                                        713
+
+like hypersurfaces (infinitesimally thin shells of stress-      The following form a complete set of equations to solve
+energy). Following ~ s r a e l ,w~e shall use the Gauss-        Einstein's equations in the presence of a thin wall: (1)
+Codazzi formalism, which greatly streamlines the formu-         Einstein's equations off S. (2) Equations (2.6) and (2.8),
+lation of the problem.                                          and continuity of the metric gab across S . (3) A suitable
+                                                                description of the matter on S, such as Eq. (2.9) below,
+                          A. The equations                      augmented by an equation of state. (4) Initial data.
+
+   Let S denote a three-dimensional timelike hypersurface                      B. The surface stress-energy tensor
+
+containing stress-energy and let r be its unit spacelike           We shall restrict our attention to sources for which
+normal (Car+=1). The three-metric intrinsic to the hy-
+                                                                where ua is the four-velocity of any observer whose world
+persurface S is                                                 line lies within S and who sees no energy flux in his local
+                                                                frame, and where a and 7 are, respectively, the surface en-
+where gab is the four-metric of space-time. Let Va denote       ergy density (energy per unit area) and tension measured
+the covariant derivative associated with gaband let             by that observer. For a dust wall, T=O. For a domain
+                                                                wall, T=o and hence
+The extrinsic curvature aabof S is then defined by
+                                                                Since ( h a b ) = d i a g ( - l , + l , + 1 , 0 ) in the local frame of
+In terms of the extrinsic curvature, the contracted forms       any observer moving within the surface, it is clear that all
+of the first and second Gauss-Codazzi equations are             such observers measure the same surface energy density
+                                                                and tension: Motion parallel to a (pure) domain wall is
+     3~ +aabaab-a2-=- 2 ~ , b r g,~                 (2.4a)      undetectable.
+
+     h a b ~ c ~ b c - ~ a a = ~ b.c h              (2.4b)         For the choice (2.9),the conservation equation (2.8a)be-
+                                                                comes
+Here 3~ is the Ricci scalar curvature of the three-
+geometry hubof S, a=aaaa,nd Gabis the Einstein tensor           The parts of this equation parallel to and perpendicular to
+in four-dimensional space-time.                                 u a are, respectively,
+
+   In the situations of interest to us, the stress-energy ten-
+sor Tab of four-dimensional space-time has a &function
+singularity on S. This implies that the extrinsic curvature
+aabhas a jump discontinuity across S, since T a b is analo-
+gous to the gradient of the Newtonian gravitational poten-
+tial. Hence, one is led to introduce on S
+
+and                                                                  D ~ ( U U ~ ) - T D ~b U= ~                  (2.124
+
+                                                                and
+
+where 1 is the proper distance through S in the direction       It follows immediately that for domain walls (?=a)o, is
+                                                                a constant, i.e., o has the same value at all events on the
+of the normal p, and where the subscripts f refer to            three-dimensional timelike surface S. Whereas for dust
+                                                                walls ( ~ = 0 )w, e have D ~ ( ~ u ~ ) w=hoich, states that the
+values just off the surface on the side determined by the       total amount of dust is conserved.
+
+direction of ir.Using Einstein's and the Gauss-Codazzi
+
+equations, one can show that (cf. Refs. 4 and 6)
+
+                                                                     C . Attractive energy and repulsive tension
+
+One also introduces                                                Particularly useful combinations of the equations of
+                                                                Sec. I1A involve the accelerations of observers who hover
+Then, by virtue of Eq. (2.6), the sums and differences of       just off S on either side. Let the vector field u a be ex-
+Eq. (2.4) on opposite sides of S yield in vacuo (i.e., if Tab   tended off S in a smooth fashion. The acceleration
+vanishes off S)
+                                                                     ua~aub=(hbc+~b~c)ua~auc
+
+                                                                     =hbcua~auC--~buauC~ac                        (2.13)
+
+                                                                has a jump discontinuity across S since rr,, has such a
+                                                                discontinuity. The perpendicular components of the ac-
+                                                                celerations of observers hovering just off S on either side
+                                                                satisfy [using Eq. (2.8c)I
+714                          J. IPSER A N D P. SIKIVIE                                                                       - 30
+
+                                                                               2rrGNu away from the wall, whereas to hover next to a
+
+                                                                               domain wall, one should fire a jet engine whose thrust per
+
+                                                                               unit mass is 2%-GNatowards the domain wall. Of course,
+
+                                                                               if the wall itself is being accelerated, only the difference of
+
+and                                                                            the accelerations of the observers hovering on either side
+
+                                                                               is a measure of the wall's gravitational pull or push. And
+
+                                                                               that is precisely what Eq. (2.14b)expresses.
+
+The covariant equation (2.14b) states an interesting gen-                                            111. SPHERICAL WALLS
+eral result about the gravitational properties of walls.
+Consider first the case of a plane wall with reflection sym-                      In this section we shall obtain the asymptotically flat
+metry. In that case                                                            solutions to Einstein's equations for spherically symmetric
+                                                                               domain walls. For as long as possible, we shall proceed
+It follows that an observer who wishes to remain station-                      without specifying the relationship between a and-r. Our
+ary next to the wall must accelerate away from the wall if                     analysis closely parallels that of Israel, who obtained the
+                                                                               solutions for dust walls.
+(0-27) > 0, and towards it if (0-27) < 0. In this sense, a
+                                                                                  For a spherical shell of stress-energy, let the unit nor-
+wall is attractive or repulsive depending on whether a-27                      mal point in the outward radial direction. It is well
+is positive or negative. T o hover next to a dust wall, one                    known that asymptotic flatness and spherical symmetry
+should fire a jet engine whose thrust per unit mass is                         require the exterior geometry to be Schwarzschild,
+                                                                               whereas the interior geometry is flat (Birkhoff's theorem).
+                                                                               Hence,
+
+     =- 1      2GNM  Id2+ 1  - 1
+                                d r 2 + r 2 ( d 0 2 + s i n 2 ~ d d 2f)or r > R ( t )
+
+and
+
+    ( d s 2 ) - = - d ~ ~ + d r ~ + r ~ ( d e ~ + s i nfo~r ~r d< Rd ~( t)) .
+
+Here M is the mass as measured by a distant external ob-
+server and
+
+     r =R (t)                (3.2)
+
+is the equation of the wall. One finds for the components
+
+of u a and ( a = t or T, r, 0, 4 , in that order)
+
+                                                                               Substitution into Eq. (2.14) then yields the equations of
+                                                                               motion
+
+Here a dot denotes a derivative with respect to proper                              (a-
+time of an observer moving with four-velocity u a at the
+wall, and                                                                      Equation (3.7a) tells us that R is always negative if 7 2 0 .
+                                                                               Hence, a spherical wall with r 2 0 always collapses to a
+                                                                               black hole, regardless of its size. Another result is the ex-
+                                                                               pression for the mass
+
+These expressions and the definitions (2.21, (2.31, and (2.7)
+imply that
+
+                                                                               obtained by eliminating R from Eq. (3.7). This expression
+                                                                               implies that, independently of the value of T, the mass M
+                                                                               is positive definite (because a is always positive), and
+- 30  GRAVITATIONALLY REPULSIVE DOMAIN WALL                          715
+
+hence a distant observer is always attracted by the spheri-          and
+cal domain wall.
+                                                                     where a subscript comma denotes differentiation with
+   By Birkhoff's theorem, M is a constant. Consequently,             respect to the coordinates following it.
+if the conservation laws (2.12) can be solved for u in terms
+                                                                        The most general reflection-symmetric solution to Eq.
+of R and R , then (3.8) yields a first integral of the equa-         (4.2a) is
+tions of motion and the solution is obtainable by a quad-
+rature. As we already noted in Sec. I1 B, the conservation           where F and G are arbitrary functions. Substitution of
+laws are solved easily for domain walls ( ~ = u = c o n s t a n t )
+and for dust walls (T=O, u ~ ~ = c o n s t a n t )In. these cases,   (4.3) into (4.2)yields for z > 0
+
+one verifies quickly that Eqs. (3.7) guarantee that M = O ;
+and further, that the remaining equations of the formal-
+ism are all automatically satisfied.
+
+   Equation (3.8) implies that
+
+where R, is the maximum value of R, i.e., the value for              and
+which R=O. Our analysis breaks down for
+                                                                     where a prime denotes differentiation of a function with
+R > 1/4vGNu, since a spherical shell that large is already           respect to its argument. The nontrivial solutions to Eqs.
+                                                                     (4.4) separate into two classes distinguished by the vanish-
+within its Schwarzschild radius RSch=2GNM. Note that,
+for fixed u , the ratio Rm/RsCh decreases towards unity              ing or nonvanishing of F' or G'.
+
+with increasing R, .                                                             I . Class I: F1=O or G'=O (but not both)
+                                                                        Suppose G'=O. Then Eq. (4.44 implies that
+   Finally, in the present circumstance, note the sense in
+which spherical shells with T / U > exhibit repulsive                for z > 0, where H and K are arbitrary; and Eq. (4.4a)
+characteristics. According to Eq. (3.61, both internal and
+external observers must accelerate inward in order to keep           then becomes
+
+up with the collapsing shell when 7./u > 3 (this is obvious          which implies that
+
+for the internal observer since he is in a flat region); but,        for all z. In Eq. (4.7) we have used the reflection symme-
+of the two, the external observer must accelerate more               try of the metric.
+
+strongly. If T/U < +, it is the internal observer who must              Similarly, if F' =0,
+
+accelerate more strongly.                                                                2. Class 11: FF'#Oand G '#O
+                                                                        In this case, Eqs. (4.4a) and (4.4b) can be solved for v,,
+                       IV. PLANAR WALLS                              and v,,:
+
+   In this section we shall solve Einstein's equations for
+the gravitational fields of domain walls under the follow-
+ing symmetry conditions. (1) The wall is homogeneous
+and isotropic in its two space dimensions. (2) The space-
+time geometry is reflection symmetric with respect to the
+wall. Under these conditions, we can find a coordinate
+system in which the wall is in the z = O "plane" and in
+which the geometry has the form
+
+For a lack of a better word, we refer to this case as that of
+the planar wall.
+
+          A. The vacuum equations and their solutions
+
+   The solutions to the vacuum Einstein equations for the
+metric (4.1) are well known.' We shall briefly review their
+derivation. Substituting (4.1) into the definition of the
+Ricci tensor Rab and setting Rob= O yields
+
+                                                                     for z > 0. Equation ( 4 . 4 ~i)s then automatically satisfied.
+                                                                     Since, for z > 0, F'=F, = -F,, G' =G, =G,, and so forth,
+
+                                                                     Eqs. (4.9)are readily integrated with the result
+                                               J. IPSER AND P. SIKIVIE                                          - 30
+
+                                                                 The junction conditions are Eqs. (2.6) and (2.8). Equa-
+                                                                 tions (2.8b) and ( 2 . 8 ~a)re trivially satisfied, since by sym-
+
+                                                                 metry, Fab=O. Equation (2.6) yields
+
+for all z. Co is the constant of integration.
+
+B. The junction conditions at z =0
+
+   The functions appearing in the above solutions are            The ( t , t ) and ( x , x ) components of this equation are,
+                                                                 respectively,
+determined by satisfying the Gauss-Codazzi junction con-
+                                                                      v,, I + = -Y,,I - =~ T G N( u-2.r)eY("O'
+ditions of Sec. I1 at z =O. The vectors u a and p defined
+
+in Sec. I1 have components ( a =t,z,x,y)
+
+(ua)=(e-",O,O,O) , (p)=(O,e-",O,O)             (4.11)                                                           (4.15a)
+
+in the coordinate system (4.1). The metric intrinsic to the      and
+wall at z = O is
+
+          =O for a or b=z ;                                      The perpendicular component (2.12b) of the conservation
+and the extrinsic curvature is                                   equation (2.8a) is vacuous, as it should be, whereas the
+                                                                 parallel component (2.12a) yields
+                    =O for a or b=z .
+                                                                      u(F+G)~-'/" / z = O = C 1,                (4.16)
+
+                                               (4.13)            where C1 is a constant of integration. To obtain (4.16) we
+                                                                 have assumed T/U to be a constant as is the case for both
+                                                                 dust walls and domain walls. Finally, Eq. (2.8d) yields
+
+where it is to be understood that                                I
+
+   As an intermediate step in deriving Eq. (4.17) from Eq.       implied by Eq. (4.15b). And Eq. (4.16) just tells us that
+(8d),one obtains the scalar curvature 3~ of the z = O wall,      a=constant, something we already know to be generally
+                                                                 true for domain walls. Combining Eqs. (4.7) and (4.15b)
+where B' and B" are defined analogously to v'. Equation          yields
+(4.17) implies that a necessary condition for a static solu-
+                                                                 which assures that Eq. (4.15a) is satisfied as well. Conse-
+tion is T = f u, a result promised in the Introduction. One      quently, the general class-I domain-wall solution for
+                                                                 G' =0 has nonvanishing metric components
+readily verifies that for T = +a there is a static solution5
+
+                                                                 where F is an arbitrary function. Note that
+
+that satisfies all equations (4.101, (4.15), (4.16), and (4.17)       F > O and F'>O                            (4.22)
+provided E = - 4 ~ G ~ u T. his solution has the unique
+form appropriate for a static vacuum solution with planar        are required by Eq. (4.15b) and our demand that x,y,z be
+symmetry,' and we shall encounter it again shortly.              spacelike coordinates, whereas t is a timelike coordinate.
+
+                C . The solutions for domain walls                  Similarly, the general class-I domain-wall solution for
+                                                                 F'= 0 has nonvanishing metric components
+   In this subsection we shall derive all planar-domain-
+wall solutions.                                                  with the requirement that G > 0 and G' < 0.
+
+            I . Class I: F'=O or G'=O (but not both)                Taub's analyses7 reveal that all class-I solutions are flat
+
+   Suppose G'=O and ?=a. The equations we must solve
+are (4.7), (4.151, (4.16), and (4.17). Actually, Eq. (4.17) is
+-30  GRAVITATIONALLY REPULSIVE DOMAIN WALL                                                                    717
+
+in the vacuum off the wall. In fact, these solutions, in-        and that Eq. (4.17) follows from Eqs. (4.10), (4.27), and
+cluding the domain-wall structure, are equivalent to one         (4.28). Differentiating (4.27) on both sides yields
+another. For the solutions (4.21), one sees this by per-
+forming the coordinate transformation
+
+for z > 0, and similarly for z <0.                               Consequently, Eq. (4.28) is implied by Eq. (4.27) and the
+                                                                 requirement F' 2 # ~ ' 2. Conversely, Eq. (4.28) implies
+   In terms of the new coordinates, the metric takes the
+Minkowski form                                                   F'# -Gf unless F1=G'=O, which is not allowed. Also
+
+                                                                 F ' = G f is not allowed because it would yield e2"=0. It
+
+                                                                 follows that all class-I1 solutions are obtained by solving
+                                                                 Eq. (4.27) with the requirements F' 2 # ~ ' 2 and
+                                                                 F 1 ( t ) - G f ( t )>O.
+
+                                                                    ~ a u b 'has shown that all class-I1 empty-space solutions
+
+                                                                 are equivalent to one another. Indeed, taking the z > 0 re-
+
+                                                                 gion for definiteness and performing the coordinate
+                                                                 transformation
+
+and the location of the domain wall ( z = 0 ) is given by        one finds
+
+In the new coordinates, the domain wall is thus bent into        for the geometry of space-time in the new coordinates.
+a segment of a sphere defined by Eq. (4.26) and the coor-
+                                                                 Note that X > O since x and y are spatial coordinates.
+dinate restriction F'(t -z) > 0. If we analytically extend
+                                                                 Note also that there is a curvature singularity at X =O.
+the solution (4.25) in the obvious way into the region           Substitution of (4.30)into Eq. (4.27)yields
+F ' ( t -z) <O, we pick up the remainder of the sphere
+                                                                 for the motion of the domain wall. The domain-wall
+which now completely encloses the original z > 0 side of         solutions corresponding to Eqs. (4.31) and (4.32) fall into
+                                                                 one of two subclasses, depending on whether Co<O or
+the wall within its interior. In the Minkowski coordinates
+therefore, this planar domain wall is not a plane at all, but    Co >0.
+rather an accelerating sphere. The sphere comes in from
+large distances, at near the speed of light in the far past; it     If Co<O, X is a spatial coordinate and Y is a time
+                                                                 coordinate. The equation of motion (4.32) becomes
+has constant outward acceleration 2 r G N a , halts its col-
+lapse and reexpands. By reflection symmetry, it is clear         Hence as time k Y advances, the domain wall slows down
+
+that the z < 0 side of the wall in the original coordinates is   as it comes in from X = + W , turns around at
+
+also enclosed by an outwardly accelerating sphere in the         X = 1/ ( 2 a ~ ~I Co o)/ ~, and subsequently heads back out
+Minkowski coordinates there. This behavior is permitted
+on both sides because we have not demanded asymptotic            to X = + W . We now determine which one of the two re-
+flatness.
+                                                                 gions on opposite sides of the domain wall in the ( X ,Y)
+   The locally repulsive nature of the domain wall is evi-
+dent. Indeed. the exhibited motion of the wall in the Min-       coordinates is the side corresponding to z >0 in the origi-
+kowski coordinate systems requires an observer riding
+with the wall to accelerate toward it, regardless of which       nal coordinates. Equations (4.30) yield
+side he is on, with acceleration 2n-GNa. Further, every
+geodesic observer sees the wall accelerating away from
+him with acceleration 2n-GNa.
+
+                   2. Class 11: F'+O and G'+O                    The first equation and the demand F' -G' > 0 imply not
+                                                                 only that Y advances with t along the domain wall, but
+   We must solve Eqs. (4.101, (4.151, (4.16), and (4.17) for
+T=U. Again Eq. (4.16) just tells us that a=constant.             also that the normal vector has X component
+One readily shows that Eqs. (4.101, (4.15a), and (4.15b) are
+equivalent to Eq. (4.101, the requirement that
+F'(t )-G'( t )> 0 and the following two equations:
+
+                                                                 X-- ax 2-  -(j7'-G')e-V<0                    (4.35)
+
+                                                                 6 - az6-
+
+                                                                 there. Therefore the z > 0 side is that containing X =O.
+
+                                                                 Hence, because (4.31) has a curvature singularity at X =0,
+718                                            J. IPSER AND P. SIKIVIE   - 30
+
+we must reject the class-I1 solution for Co <O. Note that cosmological constraints require v to lie in the range lo8
+
+if the curvature singularity at X = O had happened to lie G ~ V < V <1012 G ~ v . ' ~ I-f,' ~on the other hand, the
+
+outside the Z > 0 region under consideration, the present domain wall stretched over the horizon is outside our
+
+solution would be no less acceptable than the class-I solu- presently observable universe, it may have escaped our no-
+
+tion discussed earlier.                                          tice because its gravitational field is one of constant ac-
+
+We next turn to the class-I1 solution with Co > 0. X is celeration and therefore does not produce any tidal ef-
+
+now a time coordinate and Y a space coordinate. Accord- fects.
+
+ing to Eq. (4.34), Y increases as time advances along the        Our results are also of relevance to the evolution of
+
+domain wall; and according to Eq. (4.32), the domain domain walls in the early Universe, and to a discussion of
+
+wall emerges from a spacelike singularity at X =O. Again the primordial density perturbations that such domain
+
+the solution is rejected, leaving only the class-I solution as walls produce. The results of Sec. I11 imply that a
+
+possibly of physical relevance.                                  domain wall of size larger than ( 4 7 ~ ~ ~ i~s 7a -bllack
+
+                                                                 hole. Closed domain walls of size less than (~TG,P,Tu)-'
+
+                 V. CONCLUSIONS                                  are likely also to collapse to black holes by radiating away
+
+   We have found that domain walls have repulsive gravi-         their asphericity. The collapse of closed domain walls
+tational fields, as had been anticipated by ~ i l e n k i n . ~  would provide us with a new source of primordial black
+Equation (2.14b), which has general validity, states this        holes which may find their way into the halos of galaxies.
+result and expresses clearly what is to be understood            In axion models, the domain walls appear when the
+thereby. The repulsive character of domain walls is also         Universe has cooled to a temperature T = l GeV. If
+well illustrated by the unique (class-I) solution to             N = 1 (that is to say, if the axion model has a unique vac-
+Einstein's equations in the presence of a planar domain          uum), the domain walls have initial size of order l o p 4 sec,
+wall. For this solution, geodesic observers on either side       the age of the Universe at that time.12'13 These domain
+are repelled by the wall with uniform "acceleration"             walls are of both the open and closed variety. The black
+2.nGNu. "Practical" examples of planar domain walls              holes produced by the collapse of the closed domain walls
+with reflection symmetry that one might consider are a           would have mass of order
+
+domain wall stretched by a static hoop and a domain wall
+
+stretched over the cosmological horizon. In the first case,
+
+a test particle placed next to the domain wall would be re-      If black holes of such characteristic mass have found their
+pelled by it, whereas a distant test particle, more than the     way into galactic halos, they probably would have gone
+hoop's diameter away, would be attracted by the domain
+
+wall-hoop system. Indeed, in an asymptotically flat              undetected.16
+space-time, everything (provided it has positive total ener-
+gy) is gravitationally attractive from far away. This is            If the axion model has multiply degenerate vacuums
+
+                                                                 ( N> 1), l1 causality implies that there is at least of order
+
+true in particular of the spherical domain wall discussed one domain wall per horizon at any time after t ~ 1 0 - ~
+
+in Sec. 111. Even though all domain walls are repulsive in sec. This is because causally disconnected regions of the
+
+the sense of Eq. (2.14b), a distant observer is attracted to- Universe will in general be in different vacuums. With
+
+wards the center of a spherical domain wall. As was em- one domain wall per horizon, the Universe's energy densi-
+
+phasized at the end of Sec. 111, these two statements are        I ] ty becomes domain-wall dominated at cosmological time
+not contradictory because the spherical domain wall ac-
+celerates inward.                                                  - 10" GeV .
+
+   Next, let us consider a domain wall stretched over the        tdw 32n-GNa4 . 6 X 10-'sec (5.3)
+
+cosmological horizon. It derives its stability from causali-     After tdw the large-scale expansion of the Universe goes
+                                                                 like R - t 2 , where R is the cosmological scale parameter.3
+ty. If the domain wall is so close by that it traverses a re-    Here "large scale" means length scales comprising many
+gion of the Universe that we can observe sufficiently well       domain bubbles. One might question whether such a
+today, its presence would be detected by the fact that it re-    domain-wall-dominated Universe is in disagreement with
+pels heavenly bodies on either side. Axion model~,~-''           observation since our presently observable Universe would
+which have been proposed to explain the absence of P and         be completely inside a domain bubble, far from any
+CP violation in the strong interactions, have recently been      domain walls. The trouble, however, is that the amount
+shown to have domain walls.""2 In that case, the magni-          of matter in our neighborhood of the Universe is that
+tude of the acceleration is
+
+              8mav2              4   1                           same amount which was contained in our domain bubble
+27TGNu"27TGN 2"27TGN f ?rm.rr~
+              N                                                  at time tdw,that is to say, much less than what we observe
+                                                                 today.
+                         -           [ ]u      1
+                                                                    Finally, it may be interesting to consider theories in
+                            lo5 sec  10'' GeV  - N ' (I.')       which there is a near-perfect degeneracy of the vacuum,
+                                                                 but with a very slight breaking of the degeneracy present.
+
+where ma is the axion mass, N is the number of vacuums In that case the domain walls disappear after a time of or-
+
+of the axion             and u is the magnitude of the vac- der5,"
+
+uum expectation value that breaks the UpQ(l)quasisym- tB"-0 (5.4)
+metry of Peccei and ~ ~ i n n . ~ - 'A' strophysical and            AZ'
+-30  GRAVITATIONALLY REPULSIVE DOMAIN WALL                        719
+
+provided tB <td, and provided the decay time, in which a          fore they disappear may become the seed masses from
+                                                                  which galaxies evolved in a hierarchical clustering model
+disconnected domain wall within its horizon can radiate           of galaxy formation. The hierarchical-clustering model is
+                                                                  the appropriate one" t o a n axion-dominated universe.15
+itself away, is smaller than tB. In (5.4), A X is the
+                                                                                         ACKNOWLEDGMENTS
+energy-density difference between the almost-degenerate
+vacuums. tg is the size of domains for which the differ-             The work reported here was supported in part by grants
+ences in volume energy are of the order of the surface en-        from the Department of Energy (Contract No. DE-AS-
+                                                                  05-8 1-ER40008) and from the National Science Founda-
+ergy. Once the domain walls have average size t g , the           tion (PHT-8300190).
+degeneracy-breaking effects become important and the
+true vacuum takes over. If tB is sufficiently large, the
+density perturbations produced by t h e domain walls be-
+
+'A. Guth, Phys. Rev. D 23, 347 (1981).                            12A. Vilenkin and A. E. Everett, Phys. Rev. Lett. 48, 1867
+%ee, e.g., T. W. B. Kibble, J. Phys. A 9 , 1387 (1976); A. D .
+                                                                    (1982).
+  Linde, Rep. Prog. Phys. 42, 389 (1979).
+                                                                  13For a recent review of axion-related topics, see P. Sikivie,
+3 ~ a B. . Zel'dovich, I. Yu. Kobzarev, and L. B. Okun, Zh.         University of Florida Report No. UFTP-83-6, 1983, presented
+  Eksp. Teor. Fiz. 67, 3 (1974)[Sov. Phys. JETP 40, 1 (1975)].      at the Gif-sur-Yvette Summer School in Particle Physics,
+                                                                     1982 (unpublished).
+4See, e.g., C. W. Misner, K. S. Thorne, and J. A. Wheeler, Grav-
+                                                                  14D. A. Dicus, E. W. Kolb, V. L. Teplitz, and R. V. Wagoner,
+   itation (Freeman, San Francisco, 1973).                          Phys. Rev. D 22, 839 (1980);M. Fukugita, S. Watamura, and
+5A. Vilenkin, Phys. Rev. D 23, 852 (1981).                          M. Yoshimura, Phys. Rev. Lett. 48, 1522 (1982).
+
+6W. Israel, Nuovo Cimento m ,1 (1966).                            15L. Abbott and P. Sikivie, Phys. Lett. m, 133 (1983); J.
+                                                                   Preskill, M. Wise, and F. Wilczek, ibid. a, 127 (1983);M.
+'A. H. Taub, Ann. Math. 53, 472 (1951);Phys. Rev. 103,454          Dine and W. Fischler, ibid. m,137 (1983).
+
+   (1956).                                                        1 6 ~ . Ipser and R. Price, Astrophys, J. 216, 578 (1977).
+                                                                  ''5. Ipser and P. Sikivie, Phys. Rev. Lett. 50, 925 (1983);F. W.
+8R. D. Peccei and H. Quinn, Phys. Rev. Lett. 58,1440 (1977).
+                                                                    Stecker and Q. Shafi, ibid. 50, 928 (1983);M. S. Turner, F.
+9S. Weinberg, Phys. Rev. Lett. @, 223 (1978);F. Wilczek, ibid.
+                                                                   Wilczek, and A. Zee, Phys. Lett. m,35 (1983).
+ a,279 (1978).
+
+1°J. Kim, Phys. Rev. Lett. 43, 103 (1979);M. Dine, W. Fischler,
+
+ and M. Srednicki, Phys. Lett. m,199 (1981).
+
+llP. Sikivie, Phys. Rev. Lett. 48, 1156 (1982).
+

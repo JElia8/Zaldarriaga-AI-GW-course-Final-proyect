@@ -1,0 +1,6 @@
+s = open('paper.tex', encoding='utf8').read()
+n1 = s.count('\\begin{vbox}')
+s = s.replace('\\begin{vbox}', '\\begin{verifbox}').replace('\\end{vbox}', '\\end{verifbox}')
+s = s.replace('\\cite{Killingbeck78},', '\\cite{Killingbeck78,FernandezCastro87},')
+open('paper.tex', 'w', encoding='utf8').write(s)
+print('replaced', n1)
