@@ -1,0 +1,2 @@
+l=0  Newtonian varsigma^2 = [(2*Gamma - 3)/2]    relativistic, C -> 0: (2*Gamma - 3)/2
+l=1  Newtonian varsigma^2 = [(3*Gamma - 4)/2, 0]    relativistic, C -> 0: (3*Gamma - 4)/2

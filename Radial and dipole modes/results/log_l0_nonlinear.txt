@@ -1,0 +1,8 @@
+R3_in   R0=3.0 delta=-1e-03  M=0.99999990  rest mass=1.035898  horizon=True  tau_end=45.6  t_end=98.2 {'linear_growth_proper': np.float64(0.131107)}
+         R range reached: [2.0002, 2.9970]
+R3_out  R0=3.0 delta=+1e-03  M=0.99999990  rest mass=1.035898  horizon=False  tau_end=3000.0  t_end=4118.6 {'linear_growth_proper': np.float64(0.131107)}
+         R range reached: [3.0030, 9.4949]
+R6_in   R0=6.0 delta=-1e-02  M=1.00000269  rest mass=1.039158  horizon=False  tau_end=1500.0  t_end=1837.0 {'measured_Omega_proper': np.float64(0.036579), 'linear_Omega_proper': np.float64(0.036588)}
+         R range reached: [5.9400, 6.0609]
+R6_out  R0=6.0 delta=+1e-02  M=1.00000261  rest mass=1.039158  horizon=False  tau_end=1500.0  t_end=1837.2 {'measured_Omega_proper': np.float64(0.036584), 'linear_Omega_proper': np.float64(0.036588)}
+         R range reached: [5.9409, 6.0600]

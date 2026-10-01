@@ -1,0 +1,12 @@
+{
+ "x_causal_marginal": 0.3952949624907765,
+ "R_causal_marginal": 2.370393146851167,
+ "R_causal_marginal_dipole": 2.25,
+ "dipole_R6_G2": {
+  "smallest_sv": 1.1981770915252413e-16,
+  "X_m/X_p": -0.6822591989689457,
+  "s/(sigma0 X_p)": -3.3371173070873845
+ },
+ "newton_com_R1e+04": -5.000750015593525e-05,
+ "newton_com_R1e+06": -5.00205723286129e-07
+}

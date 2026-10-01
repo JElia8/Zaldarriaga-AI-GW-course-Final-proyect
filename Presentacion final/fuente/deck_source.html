@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El cascarón esférico</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+:root{
+  --bg:#f4f3ef; --slide:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#8a8984; --rule:#dedcd6;
+  --blue:#2a78d6; --orange:#eb6834; --aqua:#1baf7a; --yellow:#eda100; --red:#c43b3a; --violet:#4a3aa7;
+  --card:#ffffff; --good:#1f8a4c; --warn:#b86e00; --bad:#c43b3a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+  font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:center center;
+  background:var(--slide);box-shadow:0 10px 40px rgba(0,0,0,.12);border-radius:6px;overflow:hidden}
+.slide{position:absolute;inset:0;padding:44px 60px 50px 60px;display:none;flex-direction:column}
+.slide.active{display:flex}
+h1{font-size:44px;margin:0 0 10px 0;letter-spacing:-.5px}
+h2{font-size:32px;margin:0 0 14px 0;letter-spacing:-.3px}
+h2 .tag{font-size:15px;font-weight:600;color:var(--muted);margin-left:10px;vertical-align:middle}
+p,li{font-size:20px;line-height:1.42;color:var(--ink)}
+ul{margin:6px 0 0 0;padding-left:24px}
+li{margin:4px 0}
+.small{font-size:16px;color:var(--ink2)}
+.tiny{font-size:13px;color:var(--muted)}
+.cols{display:flex;gap:28px;flex:1;min-height:0}
+.col{flex:1;min-width:0;display:flex;flex-direction:column}
+.fig{background:#fff;border:1px solid var(--rule);border-radius:6px;padding:6px;display:flex;align-items:center;justify-content:center}
+.fig img{max-width:100%;max-height:100%;display:block}
+.eq{background:#f7f6f2;border-left:4px solid var(--blue);padding:8px 14px;margin:8px 0;font-size:20px;border-radius:0 4px 4px 0}
+.eq.orange{border-color:var(--orange)} .eq.aqua{border-color:var(--aqua)}
+.box{border:1px solid var(--rule);border-radius:8px;padding:10px 14px;background:#fff}
+.kicker{font-size:15px;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue);font-weight:700;margin-bottom:4px}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:14px;font-weight:600;border:1px solid}
+.ok{color:var(--good);border-color:var(--good)} .warn{color:var(--warn);border-color:var(--warn)} .bad{color:var(--bad);border-color:var(--bad)}
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:15px;color:var(--ink2);margin:6px 0}
+.controls button,.controls select{font:inherit;padding:4px 12px;border:1px solid var(--rule);border-radius:5px;background:#fff;cursor:pointer}
+.controls button:hover{border-color:var(--blue)}
+.controls input[type=range]{width:150px}
+canvas{background:#fff;border:1px solid var(--rule);border-radius:6px;display:block}
+#bar{position:absolute;left:0;bottom:0;height:4px;background:var(--blue);transition:width .25s}
+#num{position:absolute;right:18px;bottom:12px;font-size:13px;color:var(--muted)}
+#hint{position:absolute;left:18px;bottom:12px;font-size:13px;color:var(--muted)}
+.notes{display:none}
+#notes{position:fixed;left:0;right:0;bottom:0;max-height:30vh;overflow:auto;background:#1f1f1d;color:#f3f2ee;
+  font-size:15px;line-height:1.45;padding:12px 20px;display:none;z-index:10}
+table.t{border-collapse:collapse;font-size:16px}
+table.t td,table.t th{border-bottom:1px solid var(--rule);padding:5px 10px;text-align:left}
+table.t th{color:var(--ink2);font-weight:600}
+.legend{display:flex;gap:16px;font-size:14px;color:var(--ink2);flex-wrap:wrap}
+.legend span::before{content:"";display:inline-block;width:18px;height:3px;margin-right:6px;vertical-align:middle;background:var(--c)}
+.navbtn{position:absolute;top:50%;width:34px;height:60px;margin-top:-30px;border:none;background:transparent;font-size:30px;color:var(--muted);cursor:pointer}
+#prev{left:2px}#next{right:2px}
+.step{flex:1;border:1px solid var(--rule);border-radius:8px;padding:8px 12px;background:#fff;position:relative}
+.step .kicker{font-size:13px;margin-bottom:2px}
+.step p{font-size:15px;line-height:1.35;margin:0;color:var(--ink2)}
+.arrowR{align-self:center;font-size:24px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div id="stage">
+
+<!-- @@SLIDE Portada -->
+<section class="slide" data-title="Portada">
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+    <div class="kicker">GW &amp; AI course · proyecto final</div>
+    <h1 style="font-size:52px;max-width:1120px">Ondas gravitatorias y objetos compactos: el problema del cascarón esférico</h1>
+    <p style="font-size:24px;color:var(--ink2);max-width:1040px;margin-top:6px">
+      Un cascarón delgado de materia, vacío por dentro y Schwarzschild por fuera: cuánto refleja una onda gravitatoria,
+      cuáles son sus modos cuasinormales, y qué les pasa a las polarizaciones $h_+$ y $h_\times$.</p>
+    <p style="font-size:22px;margin:14px 0 0 0"><b>Juan Pablo Elia</b></p>
+  </div>
+  <div class="notes">~10 s. El objeto compacto sin horizonte más simple posible: una membrana de materia con nada adentro.
+  Unidades $G=c=1$; las frecuencias se dan en unidades de $1/M$, con $M$ la masa del objeto.</div>
+</section>
+
+<!-- @@SLIDE Problema -->
+<section class="slide" data-title="Problema">
+  <div class="kicker">Problema / pregunta</div>
+  <h2>¿Cómo ve una onda gravitatoria a un objeto compacto sin horizonte?</h2>
+  <div class="cols">
+    <div class="col" style="flex:0.95">
+      <svg viewBox="0 0 630 470" width="100%" height="100%" aria-label="Esquema del cascarón">
+        <defs>
+          <radialGradient id="gin" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#eef5fd"/><stop offset="1" stop-color="#dbe9fa"/></radialGradient>
+          <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#eb6834"/></marker>
+          <marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#2a78d6"/></marker>
+        </defs>
+        <rect x="0" y="0" width="630" height="470" fill="#fbfaf7"/>
+        <text x="20" y="32" font-size="17" fill="#52514e">exterior: Schwarzschild, masa M</text>
+        <text x="20" y="54" font-size="15" fill="#8a8984">ds² = −f dt² + dr²/f + r² dΩ²,  f = 1 − 2M/r</text>
+        <circle cx="280" cy="255" r="150" fill="url(#gin)" stroke="#0b0b0b" stroke-width="5"/>
+        <circle cx="280" cy="255" r="58" fill="none" stroke="#8a8984" stroke-dasharray="5 6" stroke-width="1.5"/>
+        <text x="280" y="250" font-size="15" text-anchor="middle" fill="#8a8984">r = 2M</text>
+        <text x="280" y="268" font-size="13" text-anchor="middle" fill="#8a8984">(sin horizonte: R &gt; 2M)</text>
+        <text x="280" y="175" font-size="17" text-anchor="middle" fill="#2a78d6">interior: plano</text>
+        <text x="280" y="196" font-size="14" text-anchor="middle" fill="#52514e">ds² = −dT² + dr² + r²dΩ²</text>
+        <text x="440" y="130" font-size="16" fill="#0b0b0b">cascarón en r = R</text>
+        <text x="440" y="150" font-size="14" fill="#52514e">energía por unidad de área ε,</text>
+        <text x="440" y="168" font-size="14" fill="#52514e">presión superficial p</text>
+        <path d="M445,160 L405,185" stroke="#0b0b0b" stroke-width="1.2"/>
+        <path d="M540,300 C 505,292 470,300 440,292" stroke="#eb6834" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+        <path d="M545,330 q-10,-12 -20,0 q-10,12 -20,0 q-10,-12 -20,0 q-10,12 -20,0" stroke="#eb6834" stroke-width="2" fill="none"/>
+        <text x="445" y="365" font-size="15" fill="#eb6834">onda incidente</text>
+        <path d="M430,215 C 470,205 500,210 540,200" stroke="#2a78d6" stroke-width="3" fill="none" marker-end="url(#ab)"/>
+        <text x="478" y="238" font-size="15" fill="#2a78d6">reflejada</text>
+        <path d="M280,395 L280,445" stroke="#2a78d6" stroke-width="2" stroke-dasharray="4 4"/>
+        <text x="290" y="440" font-size="14" fill="#52514e">el reloj interior atrasa:  dT = √f(R) dt</text>
+      </svg>
+    </div>
+    <div class="col">
+      <div class="box"><div class="kicker">Contexto</div>
+        <p class="small" style="margin:0">Un agujero negro perturbado oscila con <b>modos cuasinormales</b>: frecuencias complejas $\omega$,
+        con ${\rm Re}\,\omega$ la frecuencia y $-{\rm Im}\,\omega$ el amortiguamiento. Los detectores ya los miden. ¿Un objeto igual de compacto
+        pero <b>sin horizonte</b> tendría los mismos modos?</p>
+        <p class="small" style="margin:6px 0 0 0"><b>Ecos:</b> sin horizonte, la onda que entra al objeto no desaparece. Queda rebotando entre
+        su interior y la barrera que rodea al objeto, y cada vez sale un poco: después de la señal principal llegan repeticiones
+        retrasadas y más débiles.</p></div>
+      <p style="font-size:17px;margin:10px 0 2px 0"><b>Modelo.</b> El objeto más simple: un cascarón delgado de materia. Birkhoff + regularidad
+      en el centro $\Rightarrow$ interior plano; afuera, Schwarzschild. Las <b>condiciones de juntura de Israel</b> pegan ambos lados en $r=R$.
+      Es un banco de pruebas para una estrella.</p>
+      <p style="font-size:17px;margin:6px 0 2px 0"><b>Preguntas:</b></p>
+      <ol style="padding-left:26px;margin:0">
+        <li style="font-size:17px">¿Puede el cascarón estar quieto?</li>
+        <li style="font-size:17px">¿Cuánto refleja, $\mathcal R(\omega)$, y cuáles son sus modos cuasinormales?</li>
+        <li style="font-size:17px">Las perturbaciones se separan en dos paridades, par e impar, según cómo cambian bajo una inversión espacial. ¿Qué les pasa a $h_+$ y $h_\times$? ¿Importa más una de las dos?</li>
+      </ol>
+    </div>
+  </div>
+  <div class="notes">~40 s. Con los modos cuasinormales de agujeros negros ya observados, una pregunta natural es si un objeto sin
+  horizonte se distinguiría. El cascarón es lo más simple: afuera se ve exactamente como un agujero negro de masa M, adentro es
+  espacio plano. Tres preguntas, en este orden: si hay un fondo estático, cómo dispersa y cuáles son sus modos, y qué ven las dos
+  polarizaciones.</div>
+</section>
+
+<!-- @@SLIDE Primer obstáculo -->
+<section class="slide" data-title="Primer obstáculo">
+  <h2>Primer obstáculo: ¿puede el cascarón estar quieto? <span class="tag">simulación</span></h2>
+  <div class="controls">
+    <button id="aPlay">▶ play</button><button id="aReset">↺ reset</button>
+    <label>radio $R/M$ <input id="aR" type="range" min="3" max="12" step="0.5" value="6"> <span id="aRv">6.0</span></label>
+    <label>cascarón fluido, modo a mostrar <select id="aMode"><option value="u">modo inestable (ω = iγ: crece)</option><option value="s">modo estable (ω real: oscila)</option></select></label>
+    <label>velocidad <input id="aSpeed" type="range" min="0.2" max="4" step="0.1" value="1"></label>
+  </div>
+  <canvas id="cvA" width="1160" height="370"></canvas>
+  <div style="display:flex;gap:20px;margin-top:8px">
+    <div style="flex:0 0 560px"><p style="font-size:16px;margin:0"><span class="pill bad">pared de dominio</span> Presión $p=-\varepsilon$:
+      tensión pura, como una membrana estirada ($\varepsilon$ = energía por unidad de área). Tensión y gravedad tiran hacia adentro:
+      colapsa en $\sim R/\sqrt2$, tan rápido como oscilan las ondas. No sirve como fondo estático.</p></div>
+    <div style="flex:1"><p style="font-size:16px;margin:0"><span class="pill ok">cascarón fluido</span> Presión $p=\kappa\varepsilon$, con
+      $\kappa=(1-\sqrt{f_R})/4\sqrt{f_R}>0$ y $f_R=1-2M/R$: equilibrio exacto. Sus modos de materia (paridad par, cada $\ell\ge2$) son cuatro:
+      dos <b>estables</b>, $\omega\simeq\pm1.27\,(M/R^3)^{1/2}$, que oscilan, y dos imaginarios puros, $\pm i\gamma$. El de $+i\gamma$ crece:
+      es <b>inestable</b>, con $\gamma\simeq0.61\,(M/R^3)^{1/2}$, lento frente a las ondas.</p></div>
+  </div>
+  <div class="notes">~35 s. Darle play. Izquierda: una pared de dominio soltada desde el reposo colapsa y forma un agujero negro
+  (el reloj lejano la ve congelarse en r = 2M). Derecha: el fluido con la presión justa está en equilibrio exacto. Si se lo deforma
+  con forma cuadrupolar (ℓ = 2), la deformación evoluciona según uno de dos tipos de modo: el estable oscila (elegirlo en el menú) y
+  el inestable crece exponencialmente, de acuerdo con Pitre, Schneider y Poisson (2026). Los números son para M/R = 0.2 e índice
+  adiabático 2. Como el inestable crece lento comparado con el período de las ondas, el cascarón fluido sirve como fondo.</div>
+</section>
+
+<!-- @@SLIDE Dos paridades -->
+<section class="slide" data-title="Dos paridades">
+  <h2>Las dos paridades llegan al cascarón <span class="tag">simulación, cuadrupolo axisimétrico ($\ell=2$, $m=0$)</span></h2>
+  <div class="controls">
+    <button id="qPlay">▶ play</button><button id="qReset">↺ reset</button>
+    <label>radio <select id="qR"><option value="6" selected>R = 6M</option><option value="10">R = 10M</option></select></label>
+    <label>ωM <input id="qW" type="range" min="0.25" max="1" step="0.05" value="0.45"> <span id="qWv">0.45</span></label>
+    <label>velocidad <input id="qSp" type="range" min="1" max="10" step="1" value="4"></label>
+  </div>
+  <canvas id="cvQ" width="1160" height="350"></canvas>
+  <div style="display:flex;gap:18px;align-items:center;margin-top:6px;font-size:14px;color:var(--ink2)">
+    <div style="flex:0 0 auto;width:120px;height:14px;border-radius:3px;background:linear-gradient(90deg,#2a78d6,#ffffff,#eb6834)"></div>
+    <div><b>Cómo leerlo.</b> Corte del espacio por un plano que contiene al eje de simetría. El color es la onda entrante,
+    $\Psi(t,r)\sin^2\theta$, con $\Psi$ la amplitud de la perturbación de cada paridad: <span style="color:var(--orange)"><b>naranja</b></span> = cresta, <span style="color:var(--blue)"><b>azul</b></span> = valle;
+    una onda esférica que converge, atraviesa el cascarón y vuelve a salir. Los <span style="color:var(--violet)"><b>puntos violetas</b></span> son partículas
+    libres en el frente del cascarón. En general cada paridad produce $h_+$ <b>y</b> $h_\times$; sólo en este caso
+    axisimétrico ($m=0$) la par deforma únicamente en $+$ y la impar únicamente en $\times$.</div>
+  </div>
+  <div class="cols" style="flex:0 0 auto;margin-top:8px;gap:20px">
+    <div class="col"><div class="eq" style="font-size:15px;margin:0"><b>Impar (axial):</b> $\Psi$ es continua y su derivada salta,
+      $\big[\tfrac{d\Psi}{dx}\big]=\Delta\,\Psi$, $\ \Delta=4\pi\varepsilon\sqrt{f_R}$: una barrera $\delta$. No depende de $\omega$ ni de cómo responde la materia.</div></div>
+    <div class="col"><div class="eq orange" style="font-size:15px;margin:0"><b>Par (polar):</b> la onda mueve y comprime la materia, que tiene
+      modos propios. $\Psi$ y $\Psi'$ saltan según una regla que depende de $\omega$ y de la ecuación de estado.</div></div>
+  </div>
+  <div class="notes">~50 s. $\Psi$ es la "función maestra" de cada paridad: una combinación de las componentes de la perturbación
+  métrica que cumple una ecuación de onda 1D. No es $h_+$ ni $h_\times$: en general cada paridad produce las dos polarizaciones
+  ($h_+-ih_\times\propto\Psi_{\rm par}-i\Psi_{\rm impar}$ por un armónico de espín $-2$, que es complejo si $m\neq0$). Sólo para m = 0 la
+  impar es antisimétrica ante la reflexión $\phi\to-\phi$, y entonces sólo puede cizallar en $\times$; la par, simétrica, sólo en $+$. La onda impar cizalla el anillo en diagonal y atraviesa el cascarón sin deformarlo: para ella el cascarón es sólo una
+  barrera δ cuya altura depende de la energía superficial ε. La par estira y aprieta el anillo y además deforma el cascarón. La
+  propagación de Ψ es la ecuación real (Regge–Wheeler / Zerilli con la barrera δ); la deformación del cascarón par es un oscilador
+  forzado a la frecuencia del modo de materia estable, con amplitud exagerada: esa parte es ilustrativa.</div>
+</section>
+
+<!-- @@SLIDE Resultado principal -->
+<section class="slide" data-title="Resultado principal">
+  <div class="kicker">Resultado principal</div>
+  <h2>Refleja como un agujero negro… pero sus modos cuasinormales son otros</h2>
+  <div class="cols" style="gap:20px">
+    <div class="col" style="flex:1.35">
+      <div class="controls" style="margin-top:0">
+        <button id="wPlay">▶ play</button><button id="wReset">↺ reset</button>
+        <label><select id="wR"><option value="2.2" selected>R = 2.2M (ultracompacto)</option><option value="3">R = 3M</option><option value="6">R = 6M</option></select></label>
+        <label>ω₀M <input id="wW" type="range" min="0.15" max="1.2" step="0.05" value="0.35" style="width:100px"> <span id="wWv">0.35</span></label>
+        <label><input id="wD" type="checkbox" checked> barrera δ</label>
+        <label>vel. <input id="wSp" type="range" min="1" max="12" step="1" value="6" style="width:80px"></label>
+      </div>
+      <canvas id="cvW" width="650" height="215"></canvas>
+      <canvas id="cvS" width="650" height="132" style="margin-top:6px"></canvas>
+      <p class="tiny" style="margin:4px 0 0 0">Paquete impar $\ell=2$. Eje: coordenada tortuga $x$ (la luz recorre $dx=\pm dt$). Arriba: $\Psi(x)$,
+      el potencial efectivo que ve la onda (gris; su pico es la barrera del fotón, $r\approx3M$) y el interior plano (azul).
+      Abajo: $\log_{10}|\Psi|$ en un detector lejano; los picos que siguen al primero son los ecos.</p>
+      <p class="tiny" style="margin:4px 0 0 0"><i>Nota:</i> "reflejada" es la parte de cada multipolo que vuelve a salir hacia el infinito,
+      en cualquier dirección. Nada rebota en el horizonte: la onda lo esquiva o cae en él.</p>
+    </div>
+    <div class="col">
+      <div class="fig" style="flex:0 0 auto;padding:3px;height:190px"><img src="{{IMG:r_limite_bh_es}}" alt="Reflectividad del cascarón frente al agujero negro"></div>
+      <p style="font-size:14px;margin:3px 0 6px 0"><b>Cuánto refleja</b> (impar, $\ell=2$): cuando $R\to2M$, $\mathcal R(\omega)$ tiende a la del agujero negro.</p>
+      <div class="fig" style="flex:0 0 auto;padding:3px;height:190px"><img src="{{IMG:modos_es}}" alt="Modos cuasinormales"></div>
+      <p style="font-size:14px;margin:3px 0 0 0"><b>Sus modos</b> no tienden a los del agujero negro (estrellas). Para $R<3M$ la onda queda
+      atrapada entre el interior y la barrera del fotón y vive muchísimo más (escala logarítmica): al salir de a poco produce los ecos.</p>
+    </div>
+  </div>
+  <div class="notes">~55 s. Darle play con R = 2.2M: parte del paquete rebota en la barrera, parte entra al interior, cruza el
+  centro y vuelve a salir de a poco: un tren de ecos; abajo se ve que la señal decae mucho más lento que la de un agujero negro
+  (~30M). Con R = 3M y ω ~ 0.45 los ecos se ven separados. Figuras: la reflectividad converge a la de Schwarzschild (Vishveshwara
+  1970) cuando el cascarón se acerca a 2M, mientras que los modos no convergen: el modo atrapado vive ~30M para R = 2.2M y ~10⁶M para
+  R = 2.01M, contra ~11M del agujero negro. Lo que el horizonte absorbe, el cascarón lo devuelve.</div>
+</section>
+
+<!-- @@SLIDE Polarizaciones -->
+<section class="slide" data-title="Polarizaciones">
+  <div class="kicker">Pregunta 3</div>
+  <h2>¿Qué les pasa a $h_+$ y $h_\times$? ¿Importa más una paridad?</h2>
+  <div class="cols" style="gap:24px">
+    <div class="col" style="flex:1.05">
+      <div class="fig" style="flex:0 0 auto;padding:4px"><img src="{{IMG:par_impar_es}}" alt="Reflectividad par e impar"></div>
+      <p class="small" style="margin:6px 0 0 0">Reflectividad de la paridad par (línea llena) e impar (punteada), $\ell=2$, con el interior
+      absorbente: lo que cruza el cascarón no vuelve, como en un agujero negro. Para el agujero negro las dos coinciden.</p>
+    </div>
+    <div class="col">
+      <div class="box"><div class="kicker">No se mezclan</div>
+        <p class="small" style="margin:0">El cascarón es esférico, así que par e impar nunca se mezclan. En general cada paridad produce $h_+$
+        <b>y</b> $h_\times$; sólo para $m=0$ par $=h_+$ e impar $=h_\times$. En ese caso un $h_\times$ puro vuelve $h_\times$ puro, y un $h_+$ puro vuelve $h_+$.</p></div>
+      <div class="box" style="margin-top:10px"><div class="kicker">Pero la polarización cambia</div>
+        <p class="small" style="margin:0">Una onda que tiene de las dos (por ejemplo $h_+=h_\times$) vuelve con otra polarización: cada paridad se
+        refleja con otra fase, como en un cristal birrefringente. Pasa a la polarización ortogonal hasta $\sim0.2\%$ ($R=6M$), $\sim2\%$ ($R=3M$)
+        o $19\%$ ($R=2.2M$), y el $100\%$ en la resonancia de la materia, que sólo existe en la par.</p></div>
+      <div class="box" style="margin-top:10px"><div class="kicker">¿Cuál importa más?</div>
+        <p class="small" style="margin:0">En energía, ninguna: llevan energía con el mismo peso y, con el interior cerrado, las dos se reflejan al
+        $100\%$. Si el interior absorbe, la <b>par se refleja más</b> (figura; hasta $\sim18$ veces para $R=6M$). Además sólo la par mueve la materia
+        y domina en fuentes lentas (es el cuadrupolo de masa).</p></div>
+    </div>
+  </div>
+  <div class="notes">~40 s. Respuesta a la tercera pregunta. La paridad se conserva exactamente; la polarización no, porque las dos
+  paridades vuelven con fases distintas. El efecto suele ser chico salvo cerca de la resonancia de la materia, donde la polarización
+  rota 90 grados (diapositiva extra interactiva). Para el problema que interesa, la par es la más importante: refleja más y es la
+  única que ve la dinámica de la materia.</div>
+</section>
+
+<!-- @@SLIDE Validación -->
+<section class="slide" data-title="Validación">
+  <div class="kicker">Validación</div>
+  <h2>¿Cómo sabemos que está bien?</h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.05"><img src="{{IMG:r3_f08_validation}}" alt="Validación"></div>
+    <div class="col">
+      <div class="box"><div class="kicker">Consistencia interna</div>
+        <ul style="margin:0">
+          <li style="font-size:15px">Energía: $|\mathcal R+\mathcal T-1|\lesssim6\times10^{-10}$ (figura, líneas llenas).</li>
+          <li style="font-size:15px">La conservación del flujo en la juntura par ($\det\mathsf T\,\sqrt{f_R}=1\pm10^{-12}$) <b>no</b> se impuso: sale sola.</li>
+          <li style="font-size:15px">Dos métodos: juntura + solución exterior en serie, e integración directa de la ecuación desde el centro (<i>shooting</i>): $10^{-9}$ en $\mathcal R$ (punteadas).</li>
+        </ul></div>
+      <div class="box" style="margin-top:10px"><div class="kicker">Límites conocidos</div>
+        <ul style="margin:0">
+          <li style="font-size:15px">Agujero negro: el modo $0.3736716844-0.0889623157i$ [1] y la reflectividad [2].</li>
+          <li style="font-size:15px">Un cascarón de espesor $d$ (fluido suave, paridad impar) tiende a la barrera $\delta$ cuando $d\to0$.</li>
+          <li style="font-size:15px">Alta frecuencia: $\mathcal R\to\Delta^2/4\omega^2$. Modos de materia: límite newtoniano derivado de cero.</li>
+        </ul></div>
+      <div class="box" style="margin-top:10px"><div class="kicker">Comparaciones independientes</div>
+        <ul style="margin:0">
+          <li style="font-size:15px">Evolución temporal vs dominio de frecuencia: $0.4215-0.0352i$ vs $0.4211-0.0350i$.</li>
+          <li style="font-size:15px">Inestabilidad: coincide con [3], que usa otro método.</li>
+          <li style="font-size:15px">Un segundo agente de IA auditó todo sin poder modificarlo.</li>
+        </ul></div>
+    </div>
+  </div>
+  <p class="tiny" style="margin:6px 0 0 0;color:var(--ink2)">[1] E. W. Leaver, Proc. R. Soc. Lond. A <b>402</b>, 285 (1985).
+  &nbsp; [2] C. V. Vishveshwara, Nature <b>227</b>, 936 (1970). &nbsp; [3] T. Pitre, B. Schneider, E. Poisson, Phys. Rev. D <b>113</b>, 124055 (2026).</p>
+  <div class="notes">~40 s. Tres niveles: identidades internas (la mejor es la conservación del flujo en la juntura par, que nadie
+  impuso y vale a precisión de máquina), límites conocidos (agujero negro, newtoniano, cascarón de espesor finito) y comparaciones con
+  métodos o trabajos independientes. La figura: el balance de energía y la diferencia entre los dos métodos, muy por debajo de la
+  precisión pedida (línea roja).</div>
+</section>
+
+<!-- @@SLIDE Hacia una estrella -->
+<section class="slide" data-title="Hacia una estrella">
+  <div class="kicker">Lo que se traslada a un problema más difícil</div>
+  <h2>Del cascarón a una estrella <span class="tag">simulación, paridad impar, $\ell=2$</span></h2>
+  <div class="cols" style="gap:20px">
+    <div class="col" style="flex:1.3">
+      <div class="controls" style="margin-top:0">
+        <button id="xPlay">▶ play</button><button id="xReset">↺ reset</button>
+        <label>radio (los dos) <select id="xR"><option value="2.5" selected>R = 2.5M</option><option value="3.5">R = 3.5M</option><option value="6">R = 6M</option></select></label>
+        <label>ω₀M <input id="xW" type="range" min="0.15" max="1" step="0.05" value="0.4" style="width:100px"> <span id="xWv">0.40</span></label>
+        <label>vel. <input id="xSp" type="range" min="1" max="12" step="1" value="6" style="width:80px"></label>
+      </div>
+      <canvas id="cvX" width="640" height="268"></canvas>
+      <canvas id="cvXs" width="640" height="128" style="margin-top:6px"></canvas>
+      <p class="tiny" style="margin:4px 0 0 0">Estrella: $V=e^{\nu}\big[\ell(\ell+1)/r^2-6m/r^3+4\pi(\rho-p)\big]$, con $m(r)$ la masa encerrada,
+      $\rho$ y $p$ la densidad y presión, $e^\nu$ el corrimiento al rojo. El término $4\pi(\rho-p)$ es la materia; la barrera $\delta$ del cascarón es su límite delgado.</p>
+    </div>
+    <div class="col">
+      <div class="box"><div class="kicker">Qué muestra la simulación</div>
+        <p class="small" style="margin:0;font-size:15px">El mismo paquete de onda impar contra dos objetos con igual masa $M$ y radio $R$.
+        <b>Arriba</b>, el cascarón: toda la masa en la superficie (barrera $\delta$). <b>Al medio</b>, una estrella con la misma masa repartida
+        uniformemente en el volumen: un potencial finito, con un escalón en la superficie porque ahí la densidad se corta de golpe. En gris, el potencial que ve la onda. <b>Abajo</b>, lo que mide un detector lejano
+        ($\log|\Psi|$ vs $t$): <span style="color:var(--blue)">cascarón</span> y <span style="color:var(--violet)">estrella</span>; el primer
+        paquete es la onda entrante pasando hacia adentro, lo que sigue es lo que vuelve. Con $R=2.5M$ los dos atrapan la onda
+        y dan ecos, más duraderos en la estrella; con $R=6M$ ninguno.</p></div>
+      <ul style="margin:8px 0 0 0;padding-left:20px">
+        <li style="font-size:15px"><b>Par e impar</b> siguen separadas en cualquier estrella esférica.</li>
+        <li style="font-size:15px"><b>Impar:</b> la materia no oscila; sólo cuenta cómo está distribuida. El cascarón es el caso límite: primer test para cualquier código.</li>
+        <li style="font-size:15px"><b>Par:</b> la diferencia real. Se deforma toda la estrella, con modos de fluido que dependen de la ecuación de estado.</li>
+        <li style="font-size:15px"><b>Ecos</b> sólo si $R<3M$; una estrella de neutrones típica tiene $R\approx5$–$7M$.</li>
+        <li style="font-size:15px"><b>La inestabilidad</b> del cascarón es propia de una membrana: no se traslada.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="notes">~45 s. Lo que hice: resolví la misma ecuación de onda impar para dos objetos con igual masa y radio, cambiando sólo
+  cómo está distribuida la materia. Para la paridad impar, un fluido perfecto no oscila y la estrella es sólo un potencial finito (el escalón en la superficie es el salto de densidad, de altura 3Mf_R/R³; en una estrella real, con densidad que cae a cero en la superficie, desaparece); el
+  cascarón es la misma física concentrada en una superficie (verificado con un cascarón de espesor finito). Con R = 2.5M los dos tienen
+  la barrera del fotón por fuera y atrapan la onda; en la estrella duran más. La paridad par es
+  donde la estrella es realmente más difícil: responde el fluido de todo el interior. Lo que no se traslada es la inestabilidad.</div>
+</section>
+
+<!-- @@SLIDE Experiencia con IA -->
+<section class="slide" data-title="Experiencia con IA">
+  <div class="kicker">Experiencia / aprendizaje</div>
+  <h2>Investigar con agentes de IA: separar al que produce del que verifica</h2>
+  <div style="display:flex;gap:8px;align-items:stretch">
+    <div class="step"><div class="kicker" style="color:var(--good)">0 · prompt</div><p>Lo armé junto con un agente: objetivos, entregables y verificaciones pedidas.</p></div>
+    <div class="arrowR">→</div>
+    <div class="step"><div class="kicker">1 · investigador</div><p>Derivación simbólica, código, figuras.<br><b>4 h 36 min · 1.7 M tokens</b><br><span class="tiny">+ 86 M leídos de caché</span></p></div>
+    <div class="arrowR">→</div>
+    <div class="step"><div class="kicker" style="color:var(--orange)">2 · auditor</div><p>Revisa cada afirmación sin poder tocar nada.<br><b>2 h 51 min · 2.3 M tokens</b><br><span class="tiny">+ 86 M leídos de caché</span></p></div>
+    <div class="arrowR">→</div>
+    <div class="step"><div class="kicker">3 · síntesis</div><p>Resumen, paper y charla.<br><b>1 h 53 min · 0.4 M tokens</b><br><span class="tiny">+ 12 M leídos de caché</span></p></div>
+    <div class="arrowR">→</div>
+    <div class="step"><div class="kicker">4 · nueva pregunta</div><p>$h_+$, $h_\times$ y paridades.<br><b>1 h 14 min · 0.6 M tokens</b><br><span class="tiny">+ 40 M leídos de caché</span></p></div>
+  </div>
+  <p class="tiny" style="margin:4px 0 0 0">Tokens = entrada nueva + salida, con subagentes. Total ≈ 5.2 M (con 0.2 M de preguntas y ajustes finales). Aparte, el modelo relee todo el contexto en cada turno: en total ≈ 257 M tokens leídos de caché, que se facturan a ~10% del precio de la entrada.</p>
+  <div class="cols" style="margin-top:8px;flex:0 0 auto">
+    <div class="col" style="flex:1.15">
+      <div class="box"><div class="kicker" style="color:var(--orange)">Lo que encontró el auditor → cómo lo resolvió</div>
+        <ul style="margin:0">
+          <li style="font-size:15px">Sector par de la pared congelada: cambiaba $O(1)$ según qué ecuaciones se descartaban → calculó $\mathcal R$ con cada elección; se declaró no predictivo y se adoptó el fluido.</li>
+          <li style="font-size:15px">Tiempo de colapso mal estimado → integró la ecuación de movimiento: $R/\sqrt2$, no $(R^3/M)^{1/2}$.</li>
+          <li style="font-size:15px">Precisión exagerada ($10^{-8}$) → recomparó los dos métodos en 397 modos: peor caso $6\times10^{-5}$.</li>
+          <li style="font-size:15px">Modos que faltaban → buscó los polos de la matriz de juntura: un par estable y un inestable con $\ell=4$.</li>
+          <li style="font-size:15px">Errata en Pitre et al. (2026, Ec. 7.6) → rederivó el cascarón newtoniano. Autor mal citado → corrigió la referencia.</li>
+        </ul></div>
+    </div>
+    <div class="col">
+      <div class="box"><div class="kicker" style="color:var(--good)">Trucos que sirven</div>
+        <ul style="margin:0">
+          <li style="font-size:15px"><b>Armar el prompt inicial con un agente.</b> Con todo bien especificado, la primera ronda trabajó 4.5 h sola y salió muy bien.</li>
+          <li style="font-size:15px">Pedir siempre <b>límites conocidos</b> y un <b>segundo método</b>. Las identidades que nadie impuso son el mejor test.</li>
+          <li style="font-size:15px">Los resúmenes de la IA son más optimistas que sus propios datos: contrastar con los archivos de salida.</li>
+          <li style="font-size:15px">SymPy para el álgebra de las junturas: inviable a mano en un tiempo razonable.</li>
+          <li style="font-size:15px">Guardar cada prompt y pedir documentos autocontenidos.</li>
+        </ul></div>
+    </div>
+  </div>
+  <div class="notes">~50 s. El flujo de trabajo fue en rondas. Me sirvió mucho armar el prompt inicial con ayuda de un agente: con
+  objetivos, entregables y verificaciones bien definidos, la primera ronda trabajó sola 4.5 horas y el resultado fue muy bueno. La
+  lección principal: el mismo agente que produce un resultado no es buen juez de ese resultado. Un segundo agente, sin permiso de
+  escritura sobre el original, encontró errores reales y hasta una errata en un paper; sus correcciones entraron en la ronda de
+  síntesis. El patrón más común fue que el resumen decía más de lo que mostraban los números.</div>
+</section>
+
+<!-- @@SLIDE Para llevar -->
+<section class="slide" data-title="Para llevar">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px">
+    <h2 style="margin-top:6px">Para llevar</h2>
+    <div class="box" style="text-align:center;padding:10px 26px">
+      <p style="font-size:26px;margin:0;font-weight:700">¡Gracias!</p>
+      <p style="font-size:17px;margin:2px 0 0 0">Juan Pablo Elia · <span class="small">GW &amp; AI course</span></p>
+    </div>
+  </div>
+  <div class="cols" style="margin-top:6px">
+    <div class="col" style="flex:1.25">
+      <ol style="padding-left:26px;margin:0">
+        <li style="font-size:17px">Un cascarón con interior plano sólo está quieto con <b>presión positiva</b>. Aun así tiene un modo de materia inestable, pero crece lento.</li>
+        <li style="font-size:17px">En el dominio de frecuencias el cascarón es una <b>regla lineal</b>: conecta $(\Psi,\Psi')$ de adentro con los de afuera,
+        y par e impar <b>nunca se mezclan</b>. Impar: $\Psi$ continua y $\Psi'$ salta $\Delta\Psi$, igual a toda frecuencia. Par: el salto depende de $\omega$ y de la materia.</li>
+        <li style="font-size:17px">Refleja como un agujero negro cuando $R\to2M$, pero sus <b>modos cuasinormales son otros</b>: modos atrapados y ecos.</li>
+        <li style="font-size:17px">La paridad se conserva, la polarización no: el cascarón refleja cada paridad con otra fase, como un cristal
+        birrefringente. En energía ninguna paridad domina. La <b>par</b> lleva la dinámica de la materia (se deforma, se comprime, tiene modos propios);
+        la <b>impar</b> sólo ve la distribución de materia del fondo, como un potencial (en el cascarón, la barrera $\delta$ de la pared; en una estrella, un potencial finito repartido en el volumen).</li>
+        <li style="font-size:17px">Con IA: un agente que produce, otro que audita, y siempre contra límites conocidos.</li>
+      </ol>
+    </div>
+    <div class="col">
+      <div class="fig" style="flex:0 0 auto"><img src="{{IMG:r4_f08_time_R22}}" alt="El mismo pulso en las dos paridades"></div>
+      <p class="small" style="margin:6px 0 0 0">El mismo pulso reflejado por un cascarón $R=2.2M$, llevado por la paridad impar (azul) o por la par (naranja).
+      La reflexión casi coincide; sólo la par excita el modo de materia inestable (punteado).</p>
+    </div>
+  </div>
+  <div class="notes">~20 s. Cierre. Las diapositivas que siguen son extra, para preguntas.</div>
+</section>
+
+<!-- @@SLIDE Extra: polarización -->
+<section class="slide" data-title="Extra: polarización">
+  <h2>Extra: ¿la reflexión convierte $h_\times$ en $h_+$? <span class="tag">interactivo, $\ell=2$, $m=0$</span></h2>
+  <div class="controls">
+    <label>objeto <select id="pObj"><option value="bh">agujero negro</option><option value="6">cascarón R = 6M</option>
+      <option value="3" selected>cascarón R = 3M</option><option value="2.2">cascarón R = 2.2M</option></select></label>
+    <label>ωM <input id="pW" type="range" min="0.004" max="1.2" step="0.0005" value="0.30" style="width:240px"> <span id="pWv"></span></label>
+    <label>fino <input id="pF" type="range" min="-0.002" max="0.002" step="0.000002" value="0" style="width:140px"></label>
+    <button id="pRes">ir a la resonancia de materia</button><button id="pPlay">▶ animar</button>
+  </div>
+  <div class="cols" style="gap:16px">
+    <div class="col" style="flex:0 0 300px">
+      <ol style="padding-left:22px;margin:0">
+        <li style="font-size:15px">Un $h_\times$ puro ($m=0$) es sólo impar: vuelve $h_\times$ puro, porque par e impar no se mezclan.</li>
+        <li style="font-size:15px">Ahora mandamos $h_+=h_\times$ (línea punteada): mitad par, mitad impar.</li>
+        <li style="font-size:15px">El cascarón devuelve toda la energía de cada paridad, pero con <b>fases distintas</b>. La diferencia es el retardo
+        $\Phi=\arg(S_{\rm par}/S_{\rm impar})$ (izquierda).</li>
+        <li style="font-size:15px">Al recombinarse, el desfase convierte la línea en una <b>elipse</b> (derecha), como una lámina birrefringente en óptica.
+        Vuelve una fracción $\sin^2(\Phi/2)$ en la polarización ortogonal.</li>
+        <li style="font-size:15px">En la resonancia de materia (sólo par) $\Phi$ pasa por $180^\circ$: la onda vuelve rotada, $h_+=-h_\times$.</li>
+      </ol>
+    </div>
+    <div class="col" style="flex:1"><div style="display:flex;gap:12px;zoom:0.72">
+      <canvas id="cvP1" width="640" height="420"></canvas>
+      <canvas id="cvP2" width="500" height="420"></canvas>
+    </div></div>
+  </div>
+  <div class="notes">Para preguntas. $S$ es la amplitud de reflexión de cada paridad: lo que vuelve dividido lo que llega. A baja
+  frecuencia todos los objetos dan el mismo retardo que el agujero negro (efecto universal del campo exterior). En la resonancia de
+  materia, que sólo existe en la paridad par, la fase de $S_{\rm par}$ da una vuelta entera y la conversión es completa en una banda
+  angosta (~1e-4): usar el control fino o el botón.</div>
+</section>
+
+<!-- @@SLIDE Extra: cascarón vs estrella -->
+<section class="slide" data-title="Extra: cascarón vs estrella">
+  <h2>Extra: qué se traslada del cascarón a una estrella</h2>
+  <table class="t" style="font-size:16px">
+    <tr><th></th><th>cascarón (este trabajo)</th><th>estrella</th></tr>
+    <tr><td><b>par / impar</b></td><td>no se mezclan</td><td>igual: vale para todo objeto esférico sin rotación</td></tr>
+    <tr><td><b>impar</b></td><td>barrera $\delta$, $\Delta=4\pi\varepsilon\sqrt{f_R}$; la materia no oscila</td><td>potencial finito con $4\pi(\rho-p)$; el fluido no oscila; el cascarón es su límite delgado (verificado)</td></tr>
+    <tr><td><b>par</b></td><td>salto de $(\Psi,\Psi')$ que depende de $\omega$; 4 modos de materia por $\ell$</td><td>ecuaciones acopladas en todo el interior; modos de fluido y del espacio-tiempo; depende de la ecuación de estado</td></tr>
+    <tr><td><b>deformación</b></td><td>la onda par mueve la superficie y comprime la materia ($\delta\varepsilon$)</td><td>deforma superficie e interior; a baja frecuencia es la deformación de marea (números de Love)</td></tr>
+    <tr><td><b>ecos</b></td><td>modos atrapados si $R<3M$</td><td>sólo estrellas ultracompactas, $R<3M$; una estrella de neutrones típica tiene $R\approx5$–$7M$</td></tr>
+    <tr><td><b>baja frecuencia</b></td><td>universal: sólo depende de $M$</td><td>igual</td></tr>
+    <tr><td><b>inestabilidad $\ell\ge2$</b></td><td>pandeo de una membrana sostenida por presión tangencial</td><td>no se espera: la estrella se sostiene por su gradiente de presión</td></tr>
+  </table>
+  <p class="small" style="margin:12px 0 0 0">La columna "estrella" resume resultados conocidos de perturbaciones estelares y lo que se espera; no se calculó en este
+  trabajo, salvo la evolución impar de la estrella de densidad uniforme de la diapositiva "Del cascarón a una estrella".</p>
+  <div class="notes">Para preguntas.</div>
+</section>
+
+<!-- @@SLIDE Extra: ecos -->
+<section class="slide" data-title="Extra: ecos">
+  <h2>Extra: el mismo pulso sobre un agujero negro y sobre cascarones</h2>
+  <div class="cols">
+    <div class="col fig" style="flex:1.2"><img src="{{IMG:r3_f11_timedomain}}" alt="Dominio temporal"></div>
+    <div class="col fig"><img src="{{IMG:r3_f05_qnm_plane}}" alt="Modos cuasinormales"></div>
+  </div>
+  <p class="small" style="margin:8px 0 0 0">Izquierda: el agujero negro se apaga en $\sim30M$; el cascarón $R=2.2M$ sigue oscilando en su modo atrapado.
+  Todos comparten la cola de ley de potencias del exterior. Derecha: modos cuasinormales impares en el plano complejo; ninguno tiende a los de
+  Schwarzschild (estrellas negras).</p>
+  <div class="notes">Para preguntas.</div>
+</section>
+
+<div id="bar"></div><div id="num"></div><div id="hint">← → teclas · N notas · O índice</div>
+<button class="navbtn" id="prev" aria-label="anterior">‹</button><button class="navbtn" id="next" aria-label="siguiente">›</button>
+</div>
+<div id="notes"></div>
+
+<script>
+/* ------------------------------------------------------------------ deck */
+const slides=[...document.querySelectorAll('.slide')];let cur=0;
+function fit(){const s=Math.min(innerWidth/1300,innerHeight/740);document.getElementById('stage').style.transform=`translate(-50%,-50%) scale(${s})`;}
+addEventListener('resize',fit);fit();
+function show(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle('active',k===cur));
+  document.getElementById('bar').style.width=((cur+1)/slides.length*100)+'%';
+  document.getElementById('num').textContent=(cur+1)+' / '+slides.length+' · '+slides[cur].dataset.title;
+  const n=slides[cur].querySelector('.notes');document.getElementById('notes').innerHTML=n?('<b>Notas:</b> '+n.innerHTML):'';
+  try{location.hash=cur+1}catch(e){}
+  onSlide(cur);}
+addEventListener('keydown',e=>{if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT')return;
+  if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(cur+1)}
+  if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(cur-1)}
+  if(e.key==='n'||e.key==='N'){const el=document.getElementById('notes');el.style.display=el.style.display==='block'?'none':'block'}
+  if(e.key==='o'||e.key==='O'){overview()}
+  if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1);});
+document.getElementById('prev').onclick=()=>show(cur-1);document.getElementById('next').onclick=()=>show(cur+1);
+let tx=null;addEventListener('touchstart',e=>{tx=e.touches[0].clientX});addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(cur+(d<0?1:-1));tx=null});
+function overview(){const t=slides.map((s,k)=>`${k+1}. ${s.dataset.title}`).join('\n');const k=prompt('Ir a la diapositiva:\n'+t,cur+1);if(k)show(parseInt(k)-1);}
+document.addEventListener('DOMContentLoaded',()=>{if(window.renderMathInElement)renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});});
+window.addEventListener('load',()=>{if(window.renderMathInElement)renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});});
+
+const C={good:'#1f8a4c',blue:'#2a78d6',orange:'#eb6834',aqua:'#1baf7a',yellow:'#eda100',ink:'#0b0b0b',ink2:'#52514e',muted:'#8a8984',rule:'#dedcd6',red:'#c43b3a',violet:'#4a3aa7'};
+function hidpi(cv){const r=window.devicePixelRatio||1;if(cv._s)return cv.getContext('2d');const w=cv.width,h=cv.height;cv.style.width=w+'px';cv.style.height=h+'px';cv.width=w*r;cv.height=h*r;const g=cv.getContext('2d');g.scale(r,r);cv._s=1;cv._w=w;cv._h=h;return g;}
+
+/* ------------------------------------------------------------------ physics helpers (M = 1) */
+function wallTrajectory(Rm){           // domain wall from rest at Rm; returns arrays of (tau, t, R)
+  const M=1, sm=Math.sqrt(1-2*M/Rm), a0=(1-sm)/Rm;        // a(R) = 4 pi sigma R = a0 R
+  const rate=R=>{const a=a0*R, al=(2*M/(a*R)+a)/2; return Math.sqrt(Math.max(al*al-1,0));};
+  const beta=R=>{const a=a0*R, al=(2*M/(a*R)+a)/2; return al-a;};
+  const Rend=0.03, umax=Math.sqrt(Rm-Rend), N=4000;
+  const T=[0],Tt=[0],RR=[Rm]; let tau=0,t=0,frozen=false;
+  for(let i=0;i<N;i++){const u0=umax*i/N,u1=umax*(i+1)/N,um=(u0+u1)/2,R=Rm-um*um;
+    const d=2*um*(u1-u0)/Math.max(rate(R),1e-12); tau+=d;
+    const f=1-2*M/R; if(!frozen&&f>1e-9){t+=d*beta(R)/f;} else frozen=true;
+    T.push(tau);Tt.push(frozen?Infinity:t);RR.push(Rm-u1*u1);}
+  return {tau:T,t:Tt,R:RR};
+}
+function ringMode(R){                   // model-C matter-mode frequencies (l=2, Gamma=2), fits to the computed modes
+  const x=1/R, sc=Math.pow(R,-1.5);
+  return {gamma:(0.5147+0.41*x+0.36*x*x)*sc, wst:(1.505-0.95*x-1.2*x*x)*sc};
+}
+function lambertW(z){let w=z<3?Math.log(1+z)*0.8:Math.log(z)-Math.log(Math.log(z));for(let i=0;i<60;i++){const ew=Math.exp(w),f=w*ew-z;const dw=f/(ew*(w+1)-(w+2)*f/(2*w+2));w-=dw;if(Math.abs(dw)<1e-13*(1+Math.abs(w)))break;}return w;}
+function rOfX(x){return 2*(1+lambertW(Math.exp(x/2-1)));}            // inverse tortoise coordinate (exterior)
+function vRW(r,lam){const f=1-2/r;return f*(lam/(r*r)-6/(r**3));}     // lam = l(l+1)
+function vZ(r,ll){const n=(ll-2)/2,f=1-2/r;                             // Zerilli potential, n = (l-1)(l+2)/2
+  return f*(2*n*n*(n+1)*r**3+6*n*n*r*r+18*n*r+18)/(r**3*(n*r+3)**2);}
+
+/* ------------------------------------------------------------------ collapse animation */
+const A={play:false,t:0,Rm:6,traj:null,last:null};
+function aInit(){A.Rm=parseFloat(document.getElementById('aR').value);document.getElementById('aRv').textContent=A.Rm.toFixed(1);
+  A.traj=wallTrajectory(A.Rm);A.t=0;aDraw();}
+function interp(xs,ys,x){if(x<=xs[0])return ys[0];for(let i=1;i<xs.length;i++){if(xs[i]>=x){const s=(x-xs[i-1])/(xs[i]-xs[i-1]);return ys[i-1]+s*(ys[i]-ys[i-1]);}}return ys[ys.length-1];}
+function arrow(g,x0,y0,x1,y1,col){g.strokeStyle=col;g.fillStyle=col;g.lineWidth=2;g.beginPath();g.moveTo(x0,y0);g.lineTo(x1,y1);g.stroke();
+  const a=Math.atan2(y1-y0,x1-x0);g.beginPath();g.moveTo(x1,y1);g.lineTo(x1-8*Math.cos(a-0.4),y1-8*Math.sin(a-0.4));g.lineTo(x1-8*Math.cos(a+0.4),y1-8*Math.sin(a+0.4));g.closePath();g.fill();}
+function aDraw(){const cv=document.getElementById('cvA'),g=hidpi(cv),W=cv._w,H=cv._h;g.clearRect(0,0,W,H);
+  const Rm=A.Rm,tr=A.traj,tauEnd=tr.tau[tr.tau.length-1];
+  // ---- left: wall, drawn in its own proper time tau
+  const tau=Math.min(A.t,tauEnd), Rw=interp(tr.tau,tr.R,tau);
+  const cx=175,cy=182,scale=128/Rm;
+  g.fillStyle='#f7f6f2';g.fillRect(0,0,560,H);
+  g.fillStyle=C.ink;g.font='600 17px Segoe UI, sans-serif';g.fillText('Pared de dominio (p = −ε), soltada desde el reposo',16,26);
+  if(Rw<2){g.fillStyle='#111';g.globalAlpha=0.85;g.beginPath();g.arc(cx,cy,2*scale,0,7);g.fill();g.globalAlpha=1;
+    g.fillStyle=C.ink;g.font='600 14px Segoe UI';g.textAlign='center';g.fillText('agujero negro',cx,cy+2*scale+20);g.textAlign='left';}
+  g.setLineDash([5,5]);g.strokeStyle=C.muted;g.lineWidth=1.2;g.beginPath();g.arc(cx,cy,2*scale,0,7);g.stroke();g.setLineDash([]);
+  g.fillStyle='rgba(42,120,214,0.10)';g.beginPath();g.arc(cx,cy,Rw*scale,0,7);g.fill();
+  g.strokeStyle=C.ink;g.lineWidth=4;g.beginPath();g.arc(cx,cy,Math.max(Rw*scale,1),0,7);g.stroke();
+  if(Rw>2.2){for(let k=0;k<8;k++){const th=k*Math.PI/4+0.2,x0=cx+(Rw*scale+22)*Math.cos(th),y0=cy+(Rw*scale+22)*Math.sin(th);
+      arrow(g,x0,y0,cx+(Rw*scale+4)*Math.cos(th),cy+(Rw*scale+4)*Math.sin(th),C.orange);}}
+  g.fillStyle=C.ink2;g.font='14px Segoe UI';
+  g.fillText('R = '+Rw.toFixed(2)+' M',16,H-62);g.fillText('tiempo propio de la pared  τ = '+tau.toFixed(1)+' M',16,H-42);
+  const tFar=interp(tr.tau,tr.t,tau);g.fillText('reloj lejano  t = '+(isFinite(tFar)?tFar.toFixed(1)+' M':'∞ (se congela en r = 2M)'),16,H-22);
+  g.fillStyle=C.orange;g.fillText('tensión + gravedad: hacia adentro',330,H-22);
+  const px=350,py=50,pw=190,ph=120;g.strokeStyle=C.rule;g.strokeRect(px,py,pw,ph);
+  g.strokeStyle=C.blue;g.lineWidth=2;g.beginPath();for(let i=0;i<tr.tau.length;i+=20){const x=px+pw*tr.tau[i]/tauEnd,y=py+ph*(1-tr.R[i]/Rm);i?g.lineTo(x,y):g.moveTo(x,y);}g.stroke();
+  g.setLineDash([3,3]);g.strokeStyle=C.muted;g.beginPath();g.moveTo(px,py+ph*(1-2/Rm));g.lineTo(px+pw,py+ph*(1-2/Rm));g.stroke();g.setLineDash([]);
+  g.fillStyle=C.red;g.beginPath();g.arc(px+pw*tau/tauEnd,py+ph*(1-Rw/Rm),4,0,7);g.fill();
+  g.fillStyle=C.muted;g.font='12px Segoe UI';g.fillText('R(τ)/R_m',px+4,py+14);g.fillText('r = 2M',px+pw-44,py+ph*(1-2/Rm)-4);
+  g.fillText('colapsa en τ = '+tauEnd.toFixed(1)+' M',px,py+ph+16);
+  // ---- right: model C, exterior time
+  const ox=580;g.fillStyle=C.ink;g.font='600 17px Segoe UI';g.fillText('Cascarón fluido (p = κε > 0), estático y deformado (ℓ = 2)',ox+16,26);
+  const md=ringMode(Rm),mode=document.getElementById('aMode').value,tc=A.t;
+  let eps; if(mode==='u'){eps=Math.min(0.004*Math.exp(md.gamma*tc),0.45);} else {eps=0.12*Math.cos(md.wst*tc)*Math.exp(-0.001*tc);}
+  const cx2=ox+175,cy2=190,Rpx=118;
+  g.setLineDash([5,5]);g.strokeStyle=C.muted;g.lineWidth=1.2;g.beginPath();g.arc(cx2,cy2,Rpx,0,7);g.stroke();g.setLineDash([]);
+  g.fillStyle='rgba(42,120,214,0.10)';g.strokeStyle=C.ink;g.lineWidth=4;g.beginPath();
+  for(let k=0;k<=240;k++){const th=2*Math.PI*k/240,P2=0.5*(3*Math.cos(th)**2-1),r=Rpx*(1+eps*P2);const x=cx2+r*Math.sin(th),y=cy2-r*Math.cos(th);k?g.lineTo(x,y):g.moveTo(x,y);}
+  g.closePath();g.fill();g.stroke();
+  for(let k=0;k<6;k++){const th=k*Math.PI/3+0.5,x0=cx2+(Rpx-6)*Math.cos(th),y0=cy2+(Rpx-6)*Math.sin(th);
+    arrow(g,x0,y0,cx2+(Rpx+22)*Math.cos(th),cy2+(Rpx+22)*Math.sin(th),C.aqua);
+    arrow(g,cx2+(Rpx+44)*Math.cos(th+0.25),cy2+(Rpx+44)*Math.sin(th+0.25),cx2+(Rpx+24)*Math.cos(th+0.25),cy2+(Rpx+24)*Math.sin(th+0.25),C.orange);}
+  g.fillStyle=C.ink2;g.font='14px Segoe UI';
+  const tx=ox+372;g.fillStyle=C.aqua;g.fillText('presión: empuja afuera',tx,62);g.fillStyle=C.orange;g.fillText('gravedad: tira adentro',tx,82);
+  g.font='600 15px Segoe UI';g.fillStyle=mode==='u'?C.red:C.good;
+  g.fillText(mode==='u'?'modo INESTABLE (ℓ = 2)':'modo ESTABLE (ℓ = 2)',tx,130);
+  g.font='14px Segoe UI';g.fillStyle=C.ink2;
+  const L=mode==='u'?['ω = i·'+md.gamma.toFixed(4)+'/M','(imaginaria pura)','la deformación crece','como e^(γt), con','1/γ = '+(1/md.gamma).toFixed(1)+' M']
+                    :['ω ≈ '+md.wst.toFixed(4)+'/M','(real)','la deformación oscila','sin crecer, con','período '+(2*Math.PI/md.wst).toFixed(1)+' M'];
+  L.forEach((t,k)=>g.fillText(t,tx,152+19*k));
+  g.fillText('t = '+tc.toFixed(1)+' M (exterior)',tx,262);
+  g.fillStyle=C.muted;g.font='12px Segoe UI';g.fillText('punteado: cascarón sin deformar',tx,H-40);g.fillText('amplitud exagerada',tx,H-22);
+}
+function aLoop(ts){if(!A.play){A.last=null;return;}if(A.last===null)A.last=ts;const dt=(ts-A.last)/1000;A.last=ts;
+  A.t+=dt*4*parseFloat(document.getElementById('aSpeed').value);aDraw();requestAnimationFrame(aLoop);}
+document.getElementById('aPlay').onclick=()=>{A.play=!A.play;document.getElementById('aPlay').textContent=A.play?'❚❚ pausa':'▶ play';if(A.play)requestAnimationFrame(aLoop);};
+document.getElementById('aReset').onclick=()=>{A.t=0;aDraw();};
+document.getElementById('aR').oninput=aInit;document.getElementById('aMode').onchange=()=>{A.t=0;aDraw();};
+
+/* ------------------------------------------------------------------ two parities hitting the shell */
+// Psi(t,x) of each parity is evolved with the real 1D equation (flat interior, RW or Zerilli exterior, delta barrier at the
+// shell). The picture is a meridional cut: colour = Psi(r) sin^2(theta) (the m = 0 radiation pattern of both h+ and hx).
+// A ring of free particles on the front of the shell shows the polarization (+ for even, x for odd). The even shell is
+// deformed by a forced oscillator at the stable matter-mode frequency: illustrative, amplitude exaggerated.
+const Q={play:false};
+function qInit(){
+  const R=parseFloat(document.getElementById('qR').value),w0=parseFloat(document.getElementById('qW').value),ll=6;
+  document.getElementById('qWv').textContent=w0.toFixed(2);
+  const s=Math.sqrt(1-2/R),xR=R+2*Math.log(R/2-1),rmin=0.03*R,xL=xR-(R-rmin)/s,h=0.05,L=2.25*R;
+  const wid=Math.min(Math.max(0.7*2*Math.PI/w0,5),12),r0=L+3.2*wid,x0=r0+2*Math.log(r0/2-1),xMax=x0+5*wid+15;
+  const N=Math.round((xMax-xL)/h)+1,x=new Float64Array(N),Vo=new Float64Array(N),Ve=new Float64Array(N);
+  let iR=0;for(let i=0;i<N;i++){x[i]=xL+i*h;if(x[i]<xR){const r=R+s*(x[i]-xR);Vo[i]=Ve[i]=s*s*ll/(r*r);iR=i;}
+    else{const r=rOfX(x[i]);Vo[i]=vRW(r,ll);Ve[i]=vZ(r,ll);}}
+  iR+=1;const Delta=s*(1-s)/R,dt=0.5*h;
+  const F=xi=>Math.exp(-xi*xi/(2*wid*wid))*Math.cos(w0*xi);
+  const mk=V=>{const u=new Float64Array(N),um=new Float64Array(N);for(let i=0;i<N;i++){u[i]=F(x[i]-x0);um[i]=F(x[i]-x0-dt);}
+    u[0]=um[0]=0;return {V,u,um,un:new Float64Array(N),obs:[]};};
+  // pixel -> grid map of the meridional cut (P x P pixels over [-L,L]^2)
+  const P=150,idx=new Int32Array(P*P),wgt=new Float32Array(P*P),ang=new Float32Array(P*P);
+  for(let b=0;b<P;b++)for(let a=0;a<P;a++){const X=((a+0.5)/P*2-1)*L,Z=(1-(b+0.5)/P*2)*L,r=Math.hypot(X,Z),k=b*P+a;
+    if(r<rmin||r>L*1.45){idx[k]=-1;continue;}
+    const xx=r>R?r+2*Math.log(r/2-1):xR+(r-R)/s,fi=(xx-xL)/h;idx[k]=Math.min(Math.floor(fi),N-2);wgt[k]=fi-idx[k];ang[k]=X*X/(r*r);}
+  const md=ringMode(R);
+  Object.assign(Q,{R,w0,s,xR,xL,h,N,L,iR,Delta,dt,P,idx,wgt,ang,t:0,k:0,odd:mk(Vo),even:mk(Ve),
+    wm:md.wst,xi:0,vxi:0,kap:(w0*w0-md.wst*md.wst),tMax:(x0-xR)+3*wid+110});
+  if(!Q.off){Q.off=document.createElement('canvas');}Q.off.width=P;Q.off.height=P;
+  qDraw();}
+function qStep(n){const {N,h,dt,iR}=Q,c=dt*dt/(h*h),d2=dt*dt,dl=Q.Delta/h;
+  for(let k=0;k<n;k++){
+    for(const S of [Q.odd,Q.even]){const u=S.u,um=S.um,un=S.un,V=S.V;
+      for(let i=1;i<N-1;i++){const v=(i===iR)?V[i]+dl:V[i];un[i]=2*u[i]-um[i]+c*(u[i+1]-2*u[i]+u[i-1])-d2*v*u[i];}
+      un[0]=0;un[N-1]=u[N-1]-(dt/h)*(u[N-1]-u[N-2]);S.um=u;S.u=un;S.un=um;}
+    const ps=Q.even.u[iR];Q.vxi+=dt*(-Q.wm*Q.wm*Q.xi-0.002*Q.wm*Q.vxi+Q.kap*ps);Q.xi+=dt*Q.vxi;   // shell displacement (even)
+    Q.t+=dt;Q.k++;
+    if(Q.k%4===0){Q.odd.obs.push([Q.t,Q.odd.u[iR],0]);Q.even.obs.push([Q.t,ps,Q.xi]);}}}
+function qPanel(g,ox,par){
+  const S=par?Q.even:Q.odd,{P,idx,wgt,ang,L,R}=Q,u=S.u;
+  const og=Q.off.getContext('2d'),img=og.createImageData(P,P),d=img.data;
+  for(let k=0;k<P*P;k++){let v=0;if(idx[k]>=0){const i=idx[k];v=(u[i]*(1-wgt[k])+u[i+1]*wgt[k])*ang[k];}
+    const tt=Math.tanh(1.4*v),a=Math.abs(tt),c=tt>0?[235,104,52]:[42,120,214];
+    d[4*k]=255+(c[0]-255)*a;d[4*k+1]=255+(c[1]-255)*a;d[4*k+2]=255+(c[2]-255)*a;d[4*k+3]=255;}
+  og.putImageData(img,0,0);
+  const fx=ox+10,fy=30,FS=312,cx=fx+FS/2,cy=fy+FS/2,sc=FS/(2*L);
+  g.imageSmoothingEnabled=true;g.drawImage(Q.off,fx,fy,FS,FS);g.strokeStyle=C.rule;g.lineWidth=1;g.strokeRect(fx,fy,FS,FS);
+  g.fillStyle=C.ink;g.font='600 16px Segoe UI';
+  g.fillText(par?'Paridad par (polar)':'Paridad impar (axial)',ox+10,20);
+  // shell: tilted wireframe + meridional outline
+  const eps=par?0.16*Math.max(-1.3,Math.min(1.3,0.6*Q.xi)):0,P2=c=>0.5*(3*c*c-1),tl=0.32,ct=Math.cos(tl),st=Math.sin(tl);
+  const proj=(th,ph)=>{const rr=R*(1+eps*P2(Math.cos(th))),X=rr*Math.sin(th)*Math.cos(ph),Y=rr*Math.sin(th)*Math.sin(ph),Z=rr*Math.cos(th);
+    return [cx+X*sc,cy-(Y*st+Z*ct)*sc,Y*ct-Z*st];};
+  const line=pts=>{for(let i=1;i<pts.length;i++){const p=pts[i-1],q=pts[i];g.globalAlpha=(p[2]+q[2])/2>0?0.12:0.45;
+    g.beginPath();g.moveTo(p[0],p[1]);g.lineTo(q[0],q[1]);g.stroke();}g.globalAlpha=1;};
+  g.strokeStyle=C.ink;g.lineWidth=1;
+  for(let m=0;m<6;m++){const pts=[];for(let j=0;j<=48;j++)pts.push(proj(Math.PI*j/48,m*Math.PI/6));line(pts);
+    const pt2=[];for(let j=0;j<=48;j++)pt2.push(proj(Math.PI*j/48,m*Math.PI/6+Math.PI));line(pt2);}
+  for(const th of [Math.PI/4,Math.PI/2,3*Math.PI/4]){const pts=[];for(let j=0;j<=72;j++)pts.push(proj(th,2*Math.PI*j/72));line(pts);}
+  g.lineWidth=3.5;g.strokeStyle=C.ink;g.beginPath();
+  for(let j=0;j<=180;j++){const th=2*Math.PI*j/180,rr=R*(1+eps*P2(Math.cos(th)));const X=cx+rr*Math.sin(th)*sc,Y=cy-rr*Math.cos(th)*sc;j?g.lineTo(X,Y):g.moveTo(X,Y);}
+  g.stroke();
+  // ring of free particles on the front of the shell (tangent plane = screen plane)
+  const hd=Math.max(-0.55,Math.min(0.55,0.9*u[Q.iR])),rr=0.3*R*sc;
+  g.setLineDash([3,3]);g.strokeStyle=C.muted;g.lineWidth=1;g.beginPath();g.arc(cx,cy,rr,0,7);g.stroke();g.setLineDash([]);
+  g.fillStyle=C.violet;
+  for(let k=0;k<12;k++){const a=2*Math.PI*k/12,X0=Math.cos(a),Y0=Math.sin(a);
+    const X=par?X0*(1-hd/2):X0+hd/2*Y0,Y=par?Y0*(1+hd/2):Y0+hd/2*X0;
+    g.beginPath();g.arc(cx+rr*X,cy-rr*Y,3.2,0,7);g.fill();}
+  // right column: legend and time trace
+  const tx=ox+340;g.font='14px Segoe UI';g.fillStyle=C.ink2;
+  const lines=par?['La onda deforma el cascarón','y comprime su materia,','que tiene modos propios.']
+                 :['El cascarón no se deforma:','es sólo una barrera δ que','refleja parte de la onda.'];
+  lines.forEach((s,k)=>g.fillText(s,tx,52+20*k));
+  g.fillStyle=C.violet;g.fillText(par?'anillo: se estira en + (m = 0)':'anillo: se cizalla en × (m = 0)',tx,124);
+  g.fillStyle=C.muted;g.font='12px Segoe UI';g.fillText('color: onda entrante Ψ·sin²θ',tx,146);g.fillText('(corte meridional del espacio)',tx,162);
+  const bx=tx,by=180,bw=225,bh=160,T1=Q.tMax,X=v=>bx+bw*v/T1,Y=v=>by+bh/2-bh*0.45*Math.max(-1.05,Math.min(1.05,0.6*v));
+  g.strokeStyle=C.rule;g.lineWidth=1;g.strokeRect(bx,by,bw,bh);g.beginPath();g.moveTo(bx,by+bh/2);g.lineTo(bx+bw,by+bh/2);g.stroke();
+  g.strokeStyle=C.orange;g.lineWidth=1.2;g.beginPath();S.obs.forEach((p,k)=>{k?g.lineTo(X(p[0]),Y(p[1])):g.moveTo(X(p[0]),Y(p[1]));});g.stroke();
+  g.strokeStyle=C.ink;g.lineWidth=2;g.beginPath();S.obs.forEach((p,k)=>{k?g.lineTo(X(p[0]),Y(p[2])):g.moveTo(X(p[0]),Y(p[2]));});g.stroke();
+  g.font='12px Segoe UI';g.fillStyle=C.orange;g.fillText('Ψ en el cascarón',bx+4,by+14);
+  g.fillStyle=C.ink;g.fillText(par?'deformación del cascarón':'deformación = 0',bx+4,by+30);
+  g.fillStyle=C.muted;g.fillText('t = '+Q.t.toFixed(0)+' M',bx+bw-58,by+bh-6);
+}
+function qDraw(){const cv=document.getElementById('cvQ'),g=hidpi(cv),W=cv._w;g.clearRect(0,0,W,cv._h);
+  g.fillStyle='#fbfaf7';g.fillRect(0,0,W/2-6,cv._h);
+  qPanel(g,0,false);qPanel(g,W/2+4,true);
+  g.strokeStyle=C.rule;g.beginPath();g.moveTo(W/2,8);g.lineTo(W/2,cv._h-8);g.stroke();}
+function qLoop(){if(!Q.play)return;qStep(parseInt(document.getElementById('qSp').value)*6);qDraw();
+  if(Q.t<Q.tMax)requestAnimationFrame(qLoop);else{Q.play=false;document.getElementById('qPlay').textContent='▶ play';}}
+document.getElementById('qPlay').onclick=()=>{if(Q.t>=Q.tMax)qInit();Q.play=!Q.play;document.getElementById('qPlay').textContent=Q.play?'❚❚ pausa':'▶ play';if(Q.play)requestAnimationFrame(qLoop);};
+document.getElementById('qReset').onclick=()=>{Q.play=false;document.getElementById('qPlay').textContent='▶ play';qInit();};
+['qR','qW'].forEach(id=>document.getElementById(id).onchange=()=>{Q.play=false;document.getElementById('qPlay').textContent='▶ play';qInit();});
+document.getElementById('qW').oninput=()=>{document.getElementById('qWv').textContent=parseFloat(document.getElementById('qW').value).toFixed(2);};
+
+/* ------------------------------------------------------------------ wave packet on the shell (odd parity) */
+const Wv={play:false};
+function wInit(){
+  const R=parseFloat(document.getElementById('wR').value),w0=parseFloat(document.getElementById('wW').value),l=2,lam=6;
+  document.getElementById('wWv').textContent=w0.toFixed(2);
+  const s=Math.sqrt(1-2/R),xR=R+2*Math.log(R/2-1),rmin=0.06*R,xL=xR-(R-rmin)/s,xMax=620,h=0.05;
+  const N=Math.round((xMax-xL)/h)+1;const x=new Float64Array(N),V=new Float64Array(N),r=new Float64Array(N);
+  let iR=0;for(let i=0;i<N;i++){x[i]=xL+i*h;if(x[i]<xR){r[i]=R+s*(x[i]-xR);V[i]=s*s*lam/(r[i]*r[i]);iR=i;}else{r[i]=rOfX(x[i]);V[i]=vRW(r[i],lam);}}
+  iR=iR+1; const Delta=s*(1-s)/R;
+  const dt=0.5*h,x0=115,wid=Math.min(Math.max(1.2*2*Math.PI/w0,8),22);
+  const F=xi=>Math.exp(-xi*xi/(2*wid*wid))*Math.cos(w0*xi);
+  const u=new Float64Array(N),um=new Float64Array(N);for(let i=0;i<N;i++){u[i]=F(x[i]-x0);um[i]=F(x[i]-x0-dt);}
+  u[0]=0;um[0]=0;
+  Object.assign(Wv,{R,w0,s,xR,xL,xMax,h,N,x,V,r,iR,Delta,dt,u,um,un:null,k:0,t:0,obs:[],iObs:Math.round((75-xL)/h),delta:document.getElementById('wD').checked});
+  wDraw();}
+function wStep(n){const {N,h,dt,V,iR}=Wv;const c=dt*dt/(h*h),d2=dt*dt;const dlt=Wv.delta?Wv.Delta/h:0;
+  if(!Wv.un||Wv.un.length!==N)Wv.un=new Float64Array(N);
+  for(let k=0;k<n;k++){const u=Wv.u,um=Wv.um,un=Wv.un;
+    for(let i=1;i<N-1;i++){const v=(i===iR)?V[i]+dlt:V[i];un[i]=2*u[i]-um[i]+c*(u[i+1]-2*u[i]+u[i-1])-d2*v*u[i];}
+    un[0]=0;un[N-1]=u[N-1]-(dt/h)*(u[N-1]-u[N-2]);
+    Wv.um=u;Wv.u=un;Wv.un=um;                     // rotate buffers (no allocation)
+    Wv.t+=dt;Wv.k=(Wv.k||0)+1;if(Wv.k%4===0)Wv.obs.push([Wv.t,Wv.u[Wv.iObs]]);}}
+function wDraw(){const cv=document.getElementById('cvW'),g=hidpi(cv),W=cv._w,H=cv._h;g.clearRect(0,0,W,H);
+  const {x,V,u,N,xR,xL}=Wv;const X0=xL-2,X1=150,L=44,Rr=W-12,T=16,B=H-30;const X=v=>L+(Rr-L)*(v-X0)/(X1-X0);const Yu=v=>T+(B-T)*(0.5-0.42*v);
+  let Vmax=0;for(let i=0;i<N;i++){if(x[i]>X1)break;if(x[i]>xR-0.2*(xR-xL)&&V[i]>Vmax)Vmax=V[i];}Vmax=Math.max(Vmax,Wv.w0*Wv.w0*1.2);
+  g.fillStyle='rgba(42,120,214,0.10)';g.fillRect(X(xL),T,X(xR)-X(xL),B-T);
+  g.fillStyle='rgba(138,137,132,0.22)';g.beginPath();g.moveTo(X(X0),B);for(let i=0;i<N;i++){if(x[i]>X1)break;g.lineTo(X(x[i]),B-(B-T)*0.9*Math.min(V[i]/Vmax,1.05));}g.lineTo(X(X1),B);g.closePath();g.fill();
+  g.strokeStyle=C.muted;g.setLineDash([4,4]);g.beginPath();const yw=B-(B-T)*0.9*Wv.w0*Wv.w0/Vmax;g.moveTo(L,yw);g.lineTo(Rr,yw);g.stroke();g.setLineDash([]);
+  g.fillStyle=C.muted;g.font='12px Segoe UI';g.fillText('ω₀² (energía del paquete)',Rr-150,yw-4);
+  g.strokeStyle=C.ink;g.lineWidth=3;g.beginPath();g.moveTo(X(xR),T);g.lineTo(X(xR),B);g.stroke();
+  g.strokeStyle=C.orange;g.lineWidth=1.6;g.beginPath();let st=false;for(let i=0;i<N;i+=2){if(x[i]>X1)break;const y=Yu(u[i]);st?g.lineTo(X(x[i]),y):g.moveTo(X(x[i]),y);st=true;}g.stroke();
+  g.strokeStyle=C.rule;g.lineWidth=1;g.beginPath();g.moveTo(L,B);g.lineTo(Rr,B);g.stroke();
+  g.fillStyle=C.ink2;g.font='12px Segoe UI';for(let v=-20;v<=150;v+=20){if(v<X0)continue;g.fillText(v,X(v)-8,B+15);}
+  g.fillText('x / M  (coordenada tortuga)',Rr-170,B+27);
+  g.fillStyle=C.blue;g.font='13px Segoe UI';g.fillText('interior plano',X(xL)+4,T+16);g.fillStyle=C.ink;g.fillText('cascarón',X(xR)+6,T+32);
+  g.fillStyle=C.ink2;g.font='600 14px Segoe UI';g.fillText('t = '+Wv.t.toFixed(0)+' M',Rr-80,T+18);g.font='13px Segoe UI';
+  g.strokeStyle=C.aqua;g.lineWidth=1;g.setLineDash([2,3]);g.beginPath();g.moveTo(X(75),T);g.lineTo(X(75),B);g.stroke();g.setLineDash([]);
+  g.fillStyle=C.aqua;g.fillText('detector',X(75)+4,T+48);
+  const cs=document.getElementById('cvS'),q=hidpi(cs),W2=cs._w,H2=cs._h;q.clearRect(0,0,W2,H2);
+  const L2=44,R2=W2-12,T2=10,B2=H2-26,tMax=800;const Xt=v=>L2+(R2-L2)*v/tMax,Yl=v=>T2+(B2-T2)*(0-v)/8;
+  q.strokeStyle=C.rule;q.beginPath();q.moveTo(L2,T2);q.lineTo(L2,B2);q.lineTo(R2,B2);q.stroke();
+  q.fillStyle=C.ink2;q.font='12px Segoe UI';for(let e=0;e>=-8;e-=2)q.fillText('1e'+e,6,Yl(e)+4);for(let v=0;v<=tMax;v+=100)q.fillText(v,Xt(v)-8,B2+14);
+  q.fillText('t / M en el detector',R2-120,B2+24);
+  q.strokeStyle=C.aqua;q.lineWidth=1.3;q.beginPath();Wv.obs.forEach((p,k)=>{const y=Yl(Math.max(Math.log10(Math.abs(p[1])+1e-12),-8));k?q.lineTo(Xt(p[0]),y):q.moveTo(Xt(p[0]),y);});q.stroke();
+}
+function wLoop(){if(!Wv.play)return;const n=parseInt(document.getElementById('wSp').value)*8;wStep(n);wDraw();if(Wv.t<800)requestAnimationFrame(wLoop);else{Wv.play=false;document.getElementById('wPlay').textContent='▶ play';}}
+document.getElementById('wPlay').onclick=()=>{Wv.play=!Wv.play;document.getElementById('wPlay').textContent=Wv.play?'❚❚ pausa':'▶ play';if(Wv.play)requestAnimationFrame(wLoop);};
+document.getElementById('wReset').onclick=()=>{Wv.play=false;document.getElementById('wPlay').textContent='▶ play';wInit();};
+['wR','wW','wD'].forEach(id=>document.getElementById(id).onchange=()=>{Wv.play=false;document.getElementById('wPlay').textContent='▶ play';wInit();});
+document.getElementById('wW').oninput=()=>{document.getElementById('wWv').textContent=parseFloat(document.getElementById('wW').value).toFixed(2);};
+
+/* ------------------------------------------------------------------ shell vs uniform-density star (odd parity) */
+// Both objects have mass M = 1 and radius R. Shell: flat interior + delta barrier (Delta = sqrt f_R (1 - sqrt f_R)/R).
+// Star: Schwarzschild interior solution (uniform density, needs R > 9M/4); its axial potential is
+// V = e^nu [l(l+1)/r^2 - 6m/r^3 + 4 pi (rho - p)] in the tortoise coordinate dx = e^{(lambda-nu)/2} dr.
+const X={play:false};
+function xModel(kind,R,w0){
+  const ll=6,h=0.05,xMax=620,fR=1-2/R,sf=Math.sqrt(fR),xR=R+2*Math.log(R/2-1),rmin=0.03*R;
+  let xL,rIn,Vin;
+  if(kind==='shell'){xL=xR-(R-rmin)/sf;rIn=x=>R+sf*(x-xR);Vin=r=>fR*ll/(r*r);}
+  else{const c=2/R**3,rho=3/(4*Math.PI*R**3),n=6000,rs=new Float64Array(n),xs=new Float64Array(n);
+    const dxdr=r=>{const q=Math.sqrt(1-c*r*r);return 1/(q*(1.5*sf-0.5*q));};
+    rs[n-1]=R;xs[n-1]=xR;
+    for(let i=n-2;i>=0;i--){rs[i]=rmin+(R-rmin)*i/(n-1);xs[i]=xs[i+1]-0.5*(dxdr(rs[i])+dxdr(rs[i+1]))*(rs[i+1]-rs[i]);}
+    xL=xs[0];let j=0;
+    rIn=x=>{while(j<n-2&&xs[j+1]<x)j++;const s=(x-xs[j])/(xs[j+1]-xs[j]);return rs[j]+s*(rs[j+1]-rs[j]);};
+    Vin=r=>{const q=Math.sqrt(1-c*r*r),enu=(1.5*sf-0.5*q)**2,p=rho*(q-sf)/(3*sf-q);   // m(r)/r^3 = M/R^3
+      return enu*(ll/(r*r)-6/R**3+4*Math.PI*(rho-p));};}
+  const N=Math.round((xMax-xL)/h)+1,x=new Float64Array(N),V=new Float64Array(N);let iR=0;
+  for(let i=0;i<N;i++){x[i]=xL+i*h;if(x[i]<xR){V[i]=Vin(rIn(x[i]));iR=i;}else V[i]=vRW(rOfX(x[i]),ll);}
+  iR+=1;const dt=0.5*h,x0=115,wid=Math.min(Math.max(1.2*2*Math.PI/w0,8),22);
+  const F=xi=>Math.exp(-xi*xi/(2*wid*wid))*Math.cos(w0*xi);
+  const u=new Float64Array(N),um=new Float64Array(N);for(let i=0;i<N;i++){u[i]=F(x[i]-x0);um[i]=F(x[i]-x0-dt);}u[0]=um[0]=0;
+  return {kind,x,V,N,iR,xL,xR,h,dt,u,um,un:new Float64Array(N),dl:kind==='shell'?sf*(1-sf)/R/h:0,obs:[],iObs:Math.round((75-xL)/h)};}
+function xInit(){const R=parseFloat(document.getElementById('xR').value),w0=parseFloat(document.getElementById('xW').value);
+  document.getElementById('xWv').textContent=w0.toFixed(2);
+  Object.assign(X,{R,w0,t:0,k:0,M:[xModel('shell',R,w0),xModel('star',R,w0)]});xDraw();}
+function xStep(n){for(let k=0;k<n;k++){for(const S of X.M){const {N,h,dt,V,iR,dl}=S,c=dt*dt/(h*h),d2=dt*dt,u=S.u,um=S.um,un=S.un;
+      for(let i=1;i<N-1;i++){const v=(i===iR)?V[i]+dl:V[i];un[i]=2*u[i]-um[i]+c*(u[i+1]-2*u[i]+u[i-1])-d2*v*u[i];}
+      un[0]=0;un[N-1]=u[N-1]-(dt/h)*(u[N-1]-u[N-2]);S.um=u;S.u=un;S.un=um;}
+    X.t+=X.M[0].dt;X.k++;if(X.k%4===0)X.M.forEach(S=>S.obs.push([X.t,S.u[S.iObs]]));}}
+function xDraw(){const cv=document.getElementById('cvX'),g=hidpi(cv),W=cv._w,H=cv._h;g.clearRect(0,0,W,H);
+  const X0=Math.min(X.M[0].xL,X.M[1].xL)-2,X1=120,L=40,Rr=W-10,Xp=v=>L+(Rr-L)*(v-X0)/(X1-X0),sh=(H-28)/2;
+  X.M.forEach((S,k)=>{const T=6+k*sh,B=T+sh-8,Yu=v=>T+(B-T)*(0.5-0.42*v),{x,V,u,N,xR,xL}=S;
+    let Vmax=X.w0*X.w0*1.2;for(let i=0;i<N;i++){if(x[i]>X1)break;if(x[i]>xR-0.25*(xR-xL)&&V[i]>Vmax)Vmax=V[i];}
+    g.fillStyle=k?'rgba(74,58,167,0.10)':'rgba(42,120,214,0.10)';g.fillRect(Xp(xL),T,Xp(xR)-Xp(xL),B-T);
+    g.fillStyle='rgba(138,137,132,0.25)';g.beginPath();g.moveTo(Xp(xL),B);
+    for(let i=0;i<N;i++){if(x[i]>X1)break;g.lineTo(Xp(x[i]),B-(B-T)*0.9*Math.min(V[i]/Vmax,1.05));}g.lineTo(Xp(X1),B);g.closePath();g.fill();
+    if(!k){g.strokeStyle=C.ink;g.lineWidth=3;g.beginPath();g.moveTo(Xp(xR),T);g.lineTo(Xp(xR),B);g.stroke();}
+    else{g.strokeStyle=C.muted;g.setLineDash([3,3]);g.lineWidth=1;g.beginPath();g.moveTo(Xp(xR),T);g.lineTo(Xp(xR),B);g.stroke();g.setLineDash([]);}
+    g.strokeStyle=C.orange;g.lineWidth=1.5;g.beginPath();let st=false;
+    for(let i=0;i<N;i+=2){if(x[i]>X1)break;const y=Yu(u[i]);st?g.lineTo(Xp(x[i]),y):g.moveTo(Xp(x[i]),y);st=true;}g.stroke();
+    g.strokeStyle=C.rule;g.lineWidth=1;g.beginPath();g.moveTo(L,B);g.lineTo(Rr,B);g.stroke();
+    g.fillStyle=k?C.violet:C.blue;g.font='600 13px Segoe UI';
+    g.fillText(k?'estrella de densidad uniforme (potencial finito)':'cascarón delgado (barrera δ)',Xp(xR)+8,T+15);});
+  g.fillStyle=C.ink2;g.font='12px Segoe UI';for(let v=-20;v<=X1;v+=20){if(v<X0)continue;g.fillText(v,Xp(v)-8,H-12);}
+  g.fillText('x / M',Rr-40,H-12);g.font='600 13px Segoe UI';g.fillText('t = '+X.t.toFixed(0)+' M',Rr-70,sh-4);
+  g.strokeStyle=C.aqua;g.lineWidth=1;g.setLineDash([2,3]);g.beginPath();g.moveTo(Xp(75),6);g.lineTo(Xp(75),H-28);g.stroke();g.setLineDash([]);
+  g.fillStyle=C.aqua;g.font='12px Segoe UI';g.fillText('detector',Xp(75)+4,H-34);
+  const cs=document.getElementById('cvXs'),q=hidpi(cs),W2=cs._w,H2=cs._h;q.clearRect(0,0,W2,H2);
+  const L2=40,R2=W2-10,T2=10,B2=H2-24,tMax=700,Xt=v=>L2+(R2-L2)*v/tMax,Yl=v=>T2+(B2-T2)*(0-v)/8;
+  q.strokeStyle=C.rule;q.lineWidth=1;q.beginPath();q.moveTo(L2,T2);q.lineTo(L2,B2);q.lineTo(R2,B2);q.stroke();
+  q.fillStyle=C.ink2;q.font='12px Segoe UI';for(let e=0;e>=-8;e-=2)q.fillText('1e'+e,4,Yl(e)+4);
+  for(let v=0;v<=tMax;v+=100)q.fillText(v,Xt(v)-8,B2+14);
+  q.fillText('t / M en el detector:  log|Ψ|',R2-170,B2+22);
+  X.M.forEach((S,k)=>{q.strokeStyle=k?C.violet:C.blue;q.lineWidth=1.3;q.beginPath();
+    S.obs.forEach((p,j)=>{const y=Yl(Math.max(Math.log10(Math.abs(p[1])+1e-12),-8));j?q.lineTo(Xt(p[0]),y):q.moveTo(Xt(p[0]),y);});q.stroke();});
+  q.font='600 12px Segoe UI';q.fillStyle=C.blue;q.fillText('cascarón',R2-150,T2+12);q.fillStyle=C.violet;q.fillText('estrella',R2-80,T2+12);}
+function xLoop(){if(!X.play)return;xStep(parseInt(document.getElementById('xSp').value)*8);xDraw();
+  if(X.t<700)requestAnimationFrame(xLoop);else{X.play=false;document.getElementById('xPlay').textContent='▶ play';}}
+document.getElementById('xPlay').onclick=()=>{if(X.t>=700)xInit();X.play=!X.play;document.getElementById('xPlay').textContent=X.play?'❚❚ pausa':'▶ play';if(X.play)requestAnimationFrame(xLoop);};
+document.getElementById('xReset').onclick=()=>{X.play=false;document.getElementById('xPlay').textContent='▶ play';xInit();};
+['xR','xW'].forEach(id=>document.getElementById(id).onchange=()=>{X.play=false;document.getElementById('xPlay').textContent='▶ play';xInit();});
+document.getElementById('xW').oninput=()=>{document.getElementById('xWv').textContent=parseFloat(document.getElementById('xW').value).toFixed(2);};
+
+/* ------------------------------------------------------------------ polarization explorer */
+const POL={{DATA:pol}};
+const PRES={'6':0.0894169,'3':0.1970945,'2.2':0.1859167,'bh':0.3737};   // frequencies of maximal conversion
+const P={play:false,ph:0,last:null};
+function pOmega(){return Math.max(0.004,Math.min(1.2,parseFloat(document.getElementById('pW').value)+parseFloat(document.getElementById('pF').value)));}
+function pPhi(obj,w){
+  if(obj==='bh')return 2*Math.atan(12*w/24);
+  const d=POL[obj],W=d.w,Ph=d.p;let lo=0,hi=W.length-1;
+  if(w<=W[0])return Ph[0]; if(w>=W[hi])return Ph[hi];
+  while(hi-lo>1){const m=(lo+hi)>>1;if(W[m]>w)hi=m;else lo=m;}
+  const s=(w-W[lo])/(W[hi]-W[lo]);const c=(1-s)*Math.cos(Ph[lo])+s*Math.cos(Ph[hi]),sn=(1-s)*Math.sin(Ph[lo])+s*Math.sin(Ph[hi]);
+  return Math.atan2(sn,c);}
+function pRbh(w){const d=POL.bh;for(let i=1;i<d.w.length;i++){if(d.w[i]>=w){const s=(w-d.w[i-1])/(d.w[i]-d.w[i-1]);return d.R[i-1]+s*(d.R[i]-d.R[i-1]);}}return d.R[d.R.length-1];}
+function pCurve(g,obj,x0,y0,w,h,wa,wb,n){                     // draw Phi(omega) on [wa,wb] in the box
+  const X=v=>x0+w*(v-wa)/(wb-wa),Y=v=>y0+h*(0.5-v/(2*Math.PI));
+  g.strokeStyle=C.rule;g.lineWidth=1;g.strokeRect(x0,y0,w,h);
+  g.setLineDash([3,3]);g.beginPath();g.moveTo(x0,Y(0));g.lineTo(x0+w,Y(0));g.stroke();g.setLineDash([]);
+  const col={'bh':C.muted,'6':C.aqua,'3':C.blue,'2.2':C.orange}[obj];
+  g.strokeStyle=col;g.lineWidth=2;g.beginPath();let prev=null;
+  for(let k=0;k<=n;k++){const v=wa+(wb-wa)*k/n,p=pPhi(obj,v);
+    if(prev!==null&&Math.abs(p-prev)>Math.PI){g.stroke();g.beginPath();g.moveTo(X(v),Y(p));} else if(k===0)g.moveTo(X(v),Y(p)); else g.lineTo(X(v),Y(p));prev=p;}
+  g.stroke();
+  g.fillStyle=C.ink2;g.font='12px Segoe UI';g.fillText('+180°',x0-40,y0+10);g.fillText('0°',x0-22,Y(0)+4);g.fillText('−180°',x0-40,y0+h);
+  return {X,Y};}
+function pDraw(){
+  const obj=document.getElementById('pObj').value,w=pOmega();
+  document.getElementById('pWv').textContent=w.toFixed(6);
+  const phi=pPhi(obj,w),conv=Math.pow(Math.sin(phi/2),2),Rin=(obj==='bh')?pRbh(w):1;
+  const c1=document.getElementById('cvP1'),g=hidpi(c1),W=c1._w,H=c1._h;g.clearRect(0,0,W,H);
+  g.fillStyle=C.ink;g.font='600 14px Segoe UI';g.fillText('retardo Φ = arg(S_par / S_impar)',50,18);
+  const A=pCurve(g,obj,50,28,W-70,200,0.004,1.2,900);
+  g.strokeStyle=C.red;g.lineWidth=1.2;g.beginPath();g.moveTo(A.X(w),28);g.lineTo(A.X(w),228);g.stroke();
+  g.fillStyle=C.ink2;g.font='12px Segoe UI';for(let v=0;v<=1.2;v+=0.2)g.fillText(v.toFixed(1),A.X(v)-8,244);g.fillText('ωM',W-44,258);
+  const dz=0.003,B=pCurve(g,obj,50,268,W-70,120,w-dz,w+dz,400);
+  g.strokeStyle=C.red;g.beginPath();g.moveTo(B.X(w),268);g.lineTo(B.X(w),388);g.stroke();
+  g.fillStyle=C.ink2;g.fillText('zoom: ωM = '+(w-dz).toFixed(4)+' … '+(w+dz).toFixed(4),50,406);
+  g.fillStyle=C.red;g.beginPath();g.arc(B.X(w),B.Y(phi),4,0,7);g.fill();g.beginPath();g.arc(A.X(w),A.Y(phi),4,0,7);g.fill();
+  const c2=document.getElementById('cvP2'),q=hidpi(c2),W2=c2._w,H2=c2._h;q.clearRect(0,0,W2,H2);
+  const cx=W2/2,cy=200,S=130;
+  q.strokeStyle=C.rule;q.lineWidth=1;q.beginPath();q.moveTo(cx-S-20,cy);q.lineTo(cx+S+20,cy);q.moveTo(cx,cy-S-20);q.lineTo(cx,cy+S+20);q.stroke();
+  q.fillStyle=C.ink2;q.font='13px Segoe UI';q.fillText('h+',cx+S+6,cy-6);q.fillText('h×',cx+6,cy-S-8);
+  q.setLineDash([6,5]);q.strokeStyle=C.muted;q.lineWidth=2;q.beginPath();q.moveTo(cx-S*0.72,cy+S*0.72);q.lineTo(cx+S*0.72,cy-S*0.72);q.stroke();q.setLineDash([]);
+  q.strokeStyle=C.orange;q.lineWidth=3;q.beginPath();
+  for(let k=0;k<=200;k++){const t=2*Math.PI*k/200,hp=Math.cos(t-phi),hx=Math.cos(t);const x=cx+S*0.72*hp,y=cy-S*0.72*hx;k?q.lineTo(x,y):q.moveTo(x,y);}q.stroke();
+  const hp=Math.cos(P.ph-phi),hx=Math.cos(P.ph);q.fillStyle=C.orange;q.beginPath();q.arc(cx+S*0.72*hp,cy-S*0.72*hx,6,0,7);q.fill();
+  q.fillStyle=C.ink;q.font='600 14px Segoe UI';q.fillText('polarización incidente (punteada) y reflejada (naranja)',14,18);
+  q.font='14px Segoe UI';q.fillStyle=C.ink2;
+  q.fillText('Φ = '+(phi*180/Math.PI).toFixed(1)+'°',20,H2-62);
+  q.fillText('potencia en la polarización ortogonal: '+(100*conv).toFixed(conv<0.01?3:1)+' %',20,H2-40);
+  q.fillText('fracción de la potencia incidente reflejada: '+(obj==='bh'?(100*Rin).toPrecision(3)+' %':'100 % (sin absorción)'),20,H2-18);
+}
+function pLoop(ts){if(!P.play){P.last=null;return;}if(P.last===null)P.last=ts;P.ph+=(ts-P.last)/1000*3;P.last=ts;pDraw();requestAnimationFrame(pLoop);}
+function pInit(){
+  ['pObj','pW','pF'].forEach(id=>document.getElementById(id).oninput=pDraw);
+  document.getElementById('pObj').onchange=pDraw;
+  document.getElementById('pRes').onclick=()=>{const o=document.getElementById('pObj').value,sw=document.getElementById('pW');
+    sw.value=PRES[o];document.getElementById('pF').value=PRES[o]-parseFloat(sw.value);pDraw();};
+  document.getElementById('pPlay').onclick=()=>{P.play=!P.play;document.getElementById('pPlay').textContent=P.play?'❚❚ pausa':'▶ animar';if(P.play)requestAnimationFrame(pLoop);};
+  pDraw();}
+
+/* ------------------------------------------------------------------ init */
+let inited={};
+function onSlide(i){const t=slides[i].dataset.title;
+  if(t==='Primer obstáculo'&&!inited.a){aInit();inited.a=1;}
+  if(t==='Dos paridades'&&!inited.q){qInit();inited.q=1;}
+  if(t==='Resultado principal'&&!inited.w){wInit();inited.w=1;}
+  if(t==='Hacia una estrella'&&!inited.x){xInit();inited.x=1;}
+  if(t==='Extra: polarización'&&!inited.p){pInit();inited.p=1;}
+  if(/autoplay/.test(location.search)){                      // optional: start the simulations automatically
+    if(t==='Primer obstáculo'&&!A.play)document.getElementById('aPlay').click();
+    if(t==='Dos paridades'&&!Q.play)document.getElementById('qPlay').click();
+    if(t==='Resultado principal'&&!Wv.play)document.getElementById('wPlay').click();
+    if(t==='Hacia una estrella'&&!X.play)document.getElementById('xPlay').click();}}
+const h0=parseInt((location.hash||'#1').slice(1));show(isFinite(h0)?h0-1:0);
+</script>
+</body>
+</html>

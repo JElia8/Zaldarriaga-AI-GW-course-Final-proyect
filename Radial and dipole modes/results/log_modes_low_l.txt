@@ -1,0 +1,20 @@
+================================================================================
+l = 0
+independent rows: ['cont_tt@0', 'isr_tt@0', 'cont_thth@0', 'isr_thth@0']
+det = -8*I*pi*Omega*(x - 1)*(4*Gamma*x**3 - 4*Gamma*x**2 + 4*Omega**2*x**2 - 3*x**3 + x**2 + x + 1)/x**2
+factors containing Omega: [Omega, 4*Gamma*x**3 - 4*Gamma*x**2 + 4*Omega**2*x**2 - 3*x**3 + x**2 + x + 1]
+   root: omega^2 R^3/M = 0     (omega = sqrt(f) Omega, exterior time)
+   root: omega^2 R^3/M = (4*Gamma*x**2 - 3*x**2 - 2*x - 1)/(2*(x + 1))     (omega = sqrt(f) Omega, exterior time)
+   difference with the exact potential result (l0_potential.py): 0
+================================================================================
+l = 1
+independent rows: ['cont_tt@0', 'isr_tt@0', 'cont_tth@0', 'isr_tth@0', 'cont_thth@0', 'isr_thth@0']
+det = 5184*pi*Omega**2*(x - 1)**2*(12*Gamma*x**4 - 12*Gamma*x**2 + 12*Omega**2*x**3 + 4*Omega**2*x**2 - 9*x**4 - 6*x**3 + 8*x**2 + 6*x + 1)/(15625*x**3)
+factors containing Omega: [Omega, 12*Gamma*x**4 - 12*Gamma*x**2 + Omega**2*(12*x**3 + 4*x**2) - 9*x**4 - 6*x**3 + 8*x**2 + 6*x + 1]
+   root: omega^2 R^3/M = 0     (omega = sqrt(f) Omega, exterior time)
+   root: omega^2 R^3/M = (12*Gamma*x**2 - 9*x**2 - 6*x - 1)/(2*(3*x + 1))     (omega = sqrt(f) Omega, exterior time)
+   marginal Gamma (dipole): [(3*x + 1)**2/(12*x**2)]
+   small-C expansion: -15*C*Gamma/8 + 3*C/2 + 3*Gamma/2 - 2    (Newtonian PSP26 10.57: (3 Gamma - 4)/2)
+   dipole root - monopole Gamma1 comparison: dipole marginal - Gamma1 = [-1/(6*x**2)]
+   null space at Omega = 0 ( [X_m, a_p, X_p, b_p, s_0, w_0] ): [[-1, 0, 0, 1, 0, 0]]
+   eigenvector of the oscillating mode (normalized X_m = 1): [1, I*sqrt(3*x + 1)*sqrt(-12*Gamma*x**4 + 12*Gamma*x**2 + 9*x**4 + 6*x**3 - 8*x**2 - 6*x - 1)/(3*x**2*(-4*Gamma*x**2 + 3*x**2 + 4*x + 1)), (12*Gamma*x**2 - 9*x**2 - 6*x - 1)/(3*(4*Gamma*x**2 - 3*x**2 - 4*x - 1)), 2*(3*x + 1)/(3*(4*Gamma*x**2 - 3*x**2 - 4*x - 1)), (12*Gamma*x**4 - 12*Gamma*x**2 - 9*x**4 - 6*x**3 + 8*x**2 + 6*x + 1)/(8*pi*x*(4*Gamma*x**2 - 3*x**2 - 4*x - 1)), 4*I*Gamma*x*sqrt(3*x + 1)*sqrt(-12*Gamma*x**4 + 12*Gamma*x**2 + 9*x**4 + 6*x**3 - 8*x**2 - 6*x - 1)/(36*Gamma*x**4 + 24*Gamma*x**3 + 4*Gamma*x**2 - 27*x**4 - 54*x**3 - 36*x**2 - 10*x - 1)]

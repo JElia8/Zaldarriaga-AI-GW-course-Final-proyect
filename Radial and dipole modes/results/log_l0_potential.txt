@@ -1,0 +1,22 @@
+V(R0)   = 0    (must be 0: equilibrium)
+V'(R0)  = 0    (must be 0: equilibrium)
+V''(R0) = -(x - 1)*(4*Gamma*x**2 - 3*x**2 - 2*x - 1)/(2*R**2*x**2)
+
+omega_0^2 R^3/M  = (4*Gamma*x**2 - 3*x**2 - 2*x - 1)/(2*(x + 1))
+Gamma_crit(x) = [(3*x**2 + 2*x + 1)/(4*x**2)]
+Gamma_crit - Gamma_1(PSP26 3.16b) = [0]
+omega_0^2 R^3/M = K(x) (Gamma - Gamma_1),  K(x) = 2*x**2/(x + 1)
+   check dGamma-independence of K: 0
+
+small-C expansion of omega_0^2 R^3/M = -3*C*Gamma/2 + 5*C/4 + Gamma - 3/2
+R/M=   2.2  Gamma_1=5.1583   omega0^2 R^3/M: G=1.6 -0.4971  G=2 -0.4412  G=3 -0.3015
+R/M=   2.5  Gamma_1=3.1180   omega0^2 R^3/M: G=1.6 -0.4196  G=2 -0.3090  G=3 -0.0326
+R/M=   3.0  Gamma_1=2.3660   omega0^2 R^3/M: G=1.6 -0.3238  G=2 -0.1547  G=3 +0.2679
+R/M=   4.0  Gamma_1=1.9571   omega0^2 R^3/M: G=1.6 -0.2092  G=2 +0.0251  G=3 +0.6109
+R/M=   6.0  Gamma_1=1.7374   omega0^2 R^3/M: G=1.6 -0.1008  G=2 +0.1928  G=3 +0.9268
+R/M=  10.0  Gamma_1=1.6215   omega0^2 R^3/M: G=1.6 -0.0182  G=2 +0.3197  G=3 +1.1642
+R/M=  20.0  Gamma_1=1.5548   omega0^2 R^3/M: G=1.6 +0.0417  G=2 +0.4112  G=3 +1.3349
+R/M= 100.0  Gamma_1=1.5102   omega0^2 R^3/M: G=1.6 +0.0885  G=2 +0.4824  G=3 +1.4674
+
+Gamma = 2 marginal at x = 0.689898, R/M = 3.816497 (C = 0.262020)
+Gamma_1 at the energy-condition limit R = 25M/12: 9.499999999999998

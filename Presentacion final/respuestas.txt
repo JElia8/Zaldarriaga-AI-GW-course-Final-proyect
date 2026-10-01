@@ -1,0 +1,150 @@
+RESPUESTAS A LAS PREGUNTAS DEL PROMPT
+=====================================
+
+1) ¿El paper de Vishveshwara (1970) resuelve el problema con ondas entrantes y salientes, o la emisión del agujero negro?
+---------------------------------------------------------------------------------------------------------------
+Resuelve exactamente el problema de dispersión (scattering), no la emisión. Lo revisé en las páginas del paper
+(Nature 227, 936-938). Trabaja con la paridad impar (Regge-Wheeler), l = 2, y escribe la ecuación radial como
+d²Q/dx*² + (k² - V_eff) Q = 0, con k = 2Mω y x* = r/2M + ln(r/2M - 1). Impone:
+  * en el infinito (x* -> +inf):  Q -> A e^{-ikx*} + B e^{+ikx*}   (onda entrante A + onda reflejada B)
+  * en el horizonte (x* -> -inf): Q -> C e^{-ikx*}                  (sólo onda que entra al horizonte)
+y define, como en mecánica cuántica, R = |B/A|² y T = |C/A|². Su Fig. 2 es R en función de k² y la integra
+numéricamente. Después superpone frecuencias para mandar paquetes gaussianos y ve que lo reflejado "suena" con
+una frecuencia propia: es el descubrimiento de lo que hoy llamamos modos cuasinormales.
+Nuestra definición para el cascarón es la misma: abrimos el interior (lo que cruza el cascarón se deja ir, como
+hace el horizonte) y medimos R = |B_out/B_in|². Por eso el límite R -> 2M se compara directamente con su curva, y
+el valor R_BH = 1.55e-2 en (2Mω)² = 1 que usamos como test sale de ese mismo planteo.
+
+2) ¿Por qué el agujero negro no se "come" todos los modos? ¿Es porque sólo absorbe lo que es más chico que el horizonte?
+-------------------------------------------------------------------------------------------------------------------
+La idea va bien encaminada, pero quien decide no es el horizonte sino la barrera de potencial que está afuera.
+La onda ve un potencial efectivo V(r), con un pico cerca de la esfera de fotones (r ≈ 3M). Para l = 2 la altura
+del pico es M²V_max ≈ 0.15, o sea ωM ≈ 0.39. El horizonte absorbe todo lo que le llega, pero para llegar hay que
+cruzar la barrera:
+  * Ondas largas (ω² << V_max, longitud de onda >> unas decenas de M): se reflejan casi por completo antes de
+    llegar al horizonte. La parte que cruza por efecto túnel cae como T ∝ (Mω)^{2l+2}.
+  * Ondas cortas (ω² >> V_max): pasan por encima de la barrera y el horizonte las absorbe. En el límite geométrico
+    la sección eficaz de absorción es 27πM² (la "sombra" de la esfera de fotones).
+La escala que separa los dos regímenes es entonces la de la esfera de fotones (~3M, longitud de onda de unos 16M
+para l = 2), no el tamaño del horizonte. Es la transición de la curva R(ω) de la diapositiva 5.
+Sobre los "modos": los modos cuasinormales del agujero negro son ondas parcialmente atrapadas en la barrera de
+fotones, que se escapan hacia afuera y hacia el horizonte. El horizonte no los elimina: los amortigua (por eso
+Im ω < 0, con un tiempo de amortiguamiento de ~10M). En el cascarón no hay horizonte: lo que cruza la barrera rebota
+en el interior y vuelve a salir. Por eso la reflectividad se parece a la del agujero negro y los modos no.
+
+3) ¿Qué significa "shooting"?
+----------------------------
+Es integrar numéricamente la ecuación diferencial radial "disparando" desde un extremo. Se arranca en el centro con
+la solución regular (Riccati-Bessel), se cruza el cascarón aplicando la juntura y se integra hacia afuera hasta r
+grande, donde se ajusta la solución a B_in e^{-iωr*} + B_out e^{+iωr*}. Para los modos cuasinormales se busca la
+ω compleja que anula B_in. El otro método usaba la matriz de juntura junto con una solución exterior escrita como
+serie (fracción continua, tipo Leaver). Que los dos coincidan (10^-9 en R, y en los modos mediana 4e-12 y peor caso
+6e-5) es el test de consistencia.
+
+4) ¿Qué significa "Leaver" en la diapositiva de validación?
+---------------------------------------------------------
+E. W. Leaver (Proc. R. Soc. A 402, 285, 1985) inventó el método de fracciones continuas que da los modos
+cuasinormales de Schwarzschild con precisión de muchas cifras. Su valor para l = 2, n = 0,
+ωM = 0.3736716844 - 0.0889623157i, es la referencia estándar, y nuestro código lo reproduce. En la diapositiva
+dice "el modo ... de Leaver (1985)" en ese sentido: es el límite de agujero negro contra el que se compara.
+
+5) "Cascarón grueso": ¿eso no fue resuelto?
+------------------------------------------
+Sí fue resuelto, pero sólo como verificación y sólo para la paridad impar. Lo hizo el agente auditor (segunda
+ronda: Full material/Second round/checks/c03_axial_thick_shell_derive.py y c03b_axial_thick_shell_numeric.py;
+la figura es r3_f09_thick_shell). Pasos:
+  a) Derivó desde cero, con SymPy, la ecuación impar para un fondo esférico con fluido anisótropo suave. El
+     resultado es V = e^{2Φ}[l(l+1)/r² - 6m/r³ + 4π(ρ - p_r)].
+  b) Construyó un cascarón suave de espesor 2ε (perfil de densidad (1 - ((r-R)/ε)²)², masa M), integró la onda a
+     través de él y comparó con la juntura delgada.
+  c) La diferencia cae linealmente con ε (de 4e-2 a 1e-3 entre ε = 0.2M y 0.006M) y tiende a cero sólo para la
+     Δ derivada, no para las alternativas (Δ = 0, 2Δ, etc.).
+No se resolvió el problema par con espesor finito: eso sería ya el problema de una estrella o capa gruesa
+"de verdad". En la presentación lo aclaré: "Un cascarón de espesor ε (fluido suave, paridad impar) tiende a la
+barrera δ cuando ε -> 0".
+
+6) ¿La matriz de transferencia es diagonal (no mezcla par e impar)? ¿Es lineal?
+------------------------------------------------------------------------------
+Lineal sí, diagonal no. Son dos cosas distintas:
+  * Par e impar no se mezclan. Esto es exacto: el fondo es esférico e invariante ante paridad, así que en el
+    dominio de frecuencias (e^{-iωt}; dijiste "espacio de momentos", pero acá es frecuencia temporal) las dos
+    paridades son problemas separados. Si escribís la dispersión de las dos juntas, la matriz de reflexión
+    diag(S_par, S_impar) es diagonal. Esa es la "matriz de Jones" del espejo birrefringente.
+  * La matriz de transferencia de 2x2 es otra cosa. Actúa dentro de una misma paridad y conecta el vector
+    (Ψ, dΨ/dx) de adentro del cascarón con el de afuera. Es lineal porque las perturbaciones son lineales, pero no
+    es diagonal: mezcla Ψ con su derivada, y justamente así aparece el salto.
+      - Impar: [[1, 0], [Δ, 1]] en la variable tortuga (Ψ continua, Ψ' salta ΔΨ). Triangular, no depende de ω.
+        (En la variable r del código aparece como [[1,0],[(1-s)/(Rs), 1/s]], con s = sqrt(f_R).)
+      - Par: una matriz general T(ω), con det T = f_R^{-1/2}, que depende de ω, l, R/M y la ecuación de estado,
+        y tiene polos en las frecuencias de la materia.
+  Resumen: diagonal en paridad (par/impar), pero dentro de cada paridad una matriz 2x2 lineal no diagonal. En la
+  diapositiva "Para llevar" lo escribí sin la palabra "matriz": "el cascarón es una regla lineal que conecta
+  (Ψ, Ψ') de adentro con los de afuera, y par e impar nunca se mezclan".
+
+7) ¿Qué significaba "La IA tiende a sobreestimar y a cerrar la historia: leer los números, no los resúmenes"?
+---------------------------------------------------------------------------------------------------------
+Que los textos que escribió el primer agente (resúmenes, conclusiones, el PDF) eran más optimistas que sus propios
+archivos de salida. Ejemplos concretos que encontró el auditor:
+  * El texto decía que los dos métodos coincidían en los modos a ≲1e-8; los datos daban un peor caso de 6.4e-5.
+  * Decía que los errores WKB eran 7%, 0.15%, 0.02% sin aclarar que eran errores relativos.
+  * Presentaba el catálogo de modos como completo, y faltaban el par estable de materia para R ≤ 3M y un modo
+    inestable con l = 4.
+  * Presentaba los resultados pares de la pared congelada (modelo A) como una aproximación controlada, cuando
+    dependían O(1) de una elección arbitraria.
+"Cerrar la historia" = el agente tiende a entregar un relato redondo y deja de lado los cabos sueltos que no
+encajan. La recomendación es contrastar cada afirmación con los archivos de resultados (json, logs), no con el
+resumen. En la diapositiva lo reescribí así: "Los resúmenes de la IA son más optimistas que sus propios datos:
+contrastar con los archivos de salida".
+
+8) Tokens de cada paso
+---------------------
+Los saqué de los registros de las sesiones de Claude Code (~/.claude/projects/.../*.jsonl), sumando el uso de cada
+respuesta, incluidos los subagentes. Medida: "entrada nueva + salida" = input + cache_creation + output, sin contar
+las relecturas de caché (cache_read), que son el contexto releído en cada turno y suman decenas de millones
+(~85 M en cada ronda larga).
+  Ronda 1, investigador (24/09):        4 h 36 min  ->  1.24 M (principal) + 0.42 M (3 subagentes) = 1.66 M
+  Ronda 2, auditor (25/09):             2 h 51 min  ->  1.70 M + 0.62 M (3 subagentes)              = 2.32 M
+  Ronda 3, síntesis (28/09):            1 h 53 min  ->  0.36 M
+  Ronda 4, h+ y hx (28/09):             1 h 14 min  ->  0.63 M
+  Quinta ronda borrada + preguntas:                 ->  0.11 M
+  Paso final (renombrar, resumen):                  ->  0.13 M
+  Total del proyecto (sin la charla):               ≈  5.2 M
+  Aparte: modos radiales y dipolares (29/09) ≈ 0.37 M; esta charla, en curso.
+Ojo: la captura "Tokens usage.png" de la ronda 1 dice ~1.07 M. Esa cifra salió de un contador de contexto, con
+otro criterio; la de los registros (1.66 M) es más completa. El prompt inicial que armaste con un agente no está en
+estos registros (se hizo en otro lado), así que no lo pude contar.
+
+9) ¿Qué física lleva la paridad impar, dicho en general?
+-------------------------------------------------------
+La par lleva la dinámica de la materia: la onda la desplaza y la comprime, la materia tiene modos propios,
+resonancias e inestabilidad, y todo depende de la ecuación de estado. La impar no mueve la materia: para un fluido
+perfecto no hay fuerza restauradora axial (los modos de fluido impares tienen frecuencia cero). La onda impar sólo
+ve la distribución de materia del fondo, como un potencial: V ⊃ 4π(ρ - p) e^ν. En el cascarón ese término se
+concentra en una superficie y da la barrera δ con Δ = 4πσ sqrt(f_R). En una estrella es un potencial suave, del
+que el cascarón es el límite delgado. Por eso dije "la impar sólo ve la distribución de materia del fondo, como un
+potencial", y agregué en la diapositiva nueva una simulación que compara las dos cosas.
+
+10) Otras aclaraciones sobre los cambios
+---------------------------------------
+* Diapositiva 3: ahora dice explícitamente cuáles son los modos. Para cada l ≥ 2 el cascarón fluido tiene cuatro
+  modos de materia (paridad par): dos estables, ω ≈ ±1.27 (M/R³)^{1/2}, que oscilan (se amortiguan apenas por
+  emisión de ondas); y dos imaginarios puros, ω = ±iγ, de los cuales el de +iγ crece como e^{γt} (inestable,
+  γ ≈ 0.61 (M/R³)^{1/2} para M/R = 0.2, índice adiabático 2). La simulación indica cuál se está mostrando.
+* Diapositiva 4: agregué una leyenda que explica los colores (crestas y valles de la onda entrante en un corte
+  que contiene al eje) y el anillo de partículas. La deformación del cascarón par sigue siendo ilustrativa (oscilador
+  forzado a la frecuencia del modo de materia estable); la propagación de la onda es la ecuación real.
+* "Sonar" -> "modos (cuasinormales)" en todo el HTML.
+* La figura de reflectividad la regeneré en castellano y con márgenes mínimos (fuente/figuras_es.py). Las demás
+  figuras siguen en inglés (vienen de rondas anteriores).
+* Diapositiva de polarización (ahora extra): la reescribí como una secuencia de 5 pasos. Idea: un h× puro vuelve
+  h× puro, porque no hay mezcla; una onda mitad par y mitad impar vuelve con las dos mitades desfasadas, y ese
+  desfase convierte la polarización lineal en elíptica, como una lámina birrefringente.
+* Diapositiva nueva "Del cascarón a una estrella". La simulación es un cálculo real: evoluciona la onda impar
+  sobre el cascarón y sobre una estrella de densidad uniforme (solución interior de Schwarzschild, potencial axial
+  exacto de un fluido perfecto) con la misma M y R. Las viñetas sobre la parte par de una estrella (modos de fluido,
+  números de Love, estabilidad) son resultados conocidos o expectativas, no cálculos de este trabajo. Así lo dice la
+  tabla de la diapositiva extra.
+* Duración: con las diapositivas de la estrella y de h+/hx, la charla principal tiene 10 diapositivas (~6 min según las notas).
+  Si hace falta recortar, la candidata es la 3 (colapso).
+* La versión anterior de "Full material/Final round" quedó restaurada desde git: 3_presentation.html,
+  presentation/presentation.html, presentation/deck_source.html y README.md volvieron a la versión del commit.

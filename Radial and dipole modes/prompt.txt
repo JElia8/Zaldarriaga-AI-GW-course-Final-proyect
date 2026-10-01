@@ -1,0 +1,4 @@
+Context: the advisor suggested studying the oscillation modes of the shell (a collapsing shell, as in Landau & Lifshitz Vol. 2). Question 1 = the radial stability of the static shell (l = 0).
+
+Prompt:
+Yes. Try to anwser the question 1 for l=0 and l=1, if there is one. Make a new folder

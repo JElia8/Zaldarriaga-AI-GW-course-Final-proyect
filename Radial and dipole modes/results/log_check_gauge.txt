@@ -1,0 +1,2 @@
+l=0, exterior gauge fixing: omega^2 R^3/M = [(4*Gamma*x**2 - 3*x**2 - 2*x - 1)/(2*(x + 1))]
+l=1, exterior gauge fixing: omega^2 R^3/M = [(12*Gamma*x**2 - 9*x**2 - 6*x - 1)/(2*(3*x + 1))]

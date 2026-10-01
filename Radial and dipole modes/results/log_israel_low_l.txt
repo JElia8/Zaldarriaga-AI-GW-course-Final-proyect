@@ -1,0 +1,38 @@
+================================================================================
+l = 0
+zeroth-order residuals (background Israel eqs; must be empty): {}
+unknowns: [X_m, a_p, X_p, s_0]    number of rows: 12
+  cont_tt@0    [0, 2*I*Omega*x, (x - 1)*(x + 1)/x**2, 0]
+  isr_tt@0     [-2*(2*x - 1), 0, (x**2 + 1)/x, 8*pi]
+  cont_thth@0  [-2, 0, 2, 0]
+  isr_thth@0   [-Omega**2 + 2*x - 1, -I*Omega*(x - 1)*(x + 1), -(-4*Omega**2*x**2 + 7*x**4 - 4*x**2 + 1)/(4*x**3), -8*pi*Gamma*(x - 1)/(3*x + 1)]
+  cont_phph@0  [-32/25, 0, 32/25, 0]
+  isr_phph@0   [16*(-Omega**2 + 2*x - 1)/25, -16*I*Omega*(x - 1)*(x + 1)/25, -4*(-4*Omega**2*x**2 + 7*x**4 - 4*x**2 + 1)/(25*x**3), -128*pi*Gamma*(x - 1)/(25*(3*x + 1))]
+  cont_tt@1    [0, 2*I*Omega*x, (x - 1)*(x + 1)/x**2, 0]
+  isr_tt@1     [-2*(2*x - 1), 0, (x**2 + 1)/x, 8*pi]
+  cont_thth@1  [-2, 0, 2, 0]
+  isr_thth@1   [-Omega**2 + 2*x - 1, -I*Omega*(x - 1)*(x + 1), -(-4*Omega**2*x**2 + 7*x**4 - 4*x**2 + 1)/(4*x**3), -8*pi*Gamma*(x - 1)/(3*x + 1)]
+  cont_phph@1  [-288/169, 0, 288/169, 0]
+  isr_phph@1   [144*(-Omega**2 + 2*x - 1)/169, -144*I*Omega*(x - 1)*(x + 1)/169, -36*(-4*Omega**2*x**2 + 7*x**4 - 4*x**2 + 1)/(169*x**3), -1152*pi*Gamma*(x - 1)/(169*(3*x + 1))]
+rank at Omega = 3/10: 4    at Omega = 0: 3
+================================================================================
+l = 1
+zeroth-order residuals (background Israel eqs; must be empty): {}
+unknowns: [X_m, a_p, X_p, b_p, s_0, w_0]    number of rows: 16
+  cont_tt@0    [0, 6*I*Omega*x/5, 3*(x - 1)*(x + 1)/(5*x**2), 0, 0, 0]
+  isr_tt@0     [-12*x/5, 0, 3*(x**2 + 3)/(5*x), -12*x/5, 24*pi/5, 0]
+  cont_tth@0   [0, 4*x/5, 0, 4*I*Omega/5, 0, 0]
+  isr_tth@0    [4*I*Omega/5, -2*(x - 1)*(x + 1)/5, -4*I*Omega/(5*x), 4*I*Omega*x/5, 0, -2*(x - 1)*(3*x + 1)/(5*x)]
+  cont_thth@0  [-6/5, 0, 6/5, -6/5, 0, 0]
+  isr_thth@0   [3*(-Omega**2 + 2*x)/5, -3*I*Omega*(x - 1)*(x + 1)/5, -3*(-4*Omega**2*x**2 + 7*x**4 + 1)/(20*x**3), 6*x/5, -24*pi*Gamma*(x - 1)/(5*(3*x + 1)), 0]
+  cont_phph@0  [-96/125, 0, 96/125, -96/125, 0, 0]
+  isr_phph@0   [48*(-Omega**2 + 2*x)/125, -48*I*Omega*(x - 1)*(x + 1)/125, -12*(-4*Omega**2*x**2 + 7*x**4 + 1)/(125*x**3), 96*x/125, -384*pi*Gamma*(x - 1)/(125*(3*x + 1)), 0]
+  cont_tt@1    [0, 10*I*Omega*x/13, 5*(x - 1)*(x + 1)/(13*x**2), 0, 0, 0]
+  isr_tt@1     [-20*x/13, 0, 5*(x**2 + 3)/(13*x), -20*x/13, 40*pi/13, 0]
+  cont_tth@1   [0, 12*x/13, 0, 12*I*Omega/13, 0, 0]
+  isr_tth@1    [12*I*Omega/13, -6*(x - 1)*(x + 1)/13, -12*I*Omega/(13*x), 12*I*Omega*x/13, 0, -6*(x - 1)*(3*x + 1)/(13*x)]
+  cont_thth@1  [-10/13, 0, 10/13, -10/13, 0, 0]
+  isr_thth@1   [5*(-Omega**2 + 2*x)/13, -5*I*Omega*(x - 1)*(x + 1)/13, -5*(-4*Omega**2*x**2 + 7*x**4 + 1)/(52*x**3), 10*x/13, -40*pi*Gamma*(x - 1)/(13*(3*x + 1)), 0]
+  cont_phph@1  [-1440/2197, 0, 1440/2197, -1440/2197, 0, 0]
+  isr_phph@1   [720*(-Omega**2 + 2*x)/2197, -720*I*Omega*(x - 1)*(x + 1)/2197, -180*(-4*Omega**2*x**2 + 7*x**4 + 1)/(2197*x**3), 1440*x/2197, -5760*pi*Gamma*(x - 1)/(2197*(3*x + 1)), 0]
+rank at Omega = 3/10: 6    at Omega = 0: 5
